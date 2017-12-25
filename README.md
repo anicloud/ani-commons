@@ -1,2 +1,1 @@
-# ani-commons
-Ani.cloud Service Commons Library.
+ani-commons
