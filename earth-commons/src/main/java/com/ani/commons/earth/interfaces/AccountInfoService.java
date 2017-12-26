@@ -1,4 +1,4 @@
 package com.ani.commons.earth.interfaces;
 
-public class AccountInfoInterface {
+public interface AccountInfoService {
 }

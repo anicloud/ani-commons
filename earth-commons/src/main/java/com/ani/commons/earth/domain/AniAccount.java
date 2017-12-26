@@ -2,6 +2,9 @@ package com.ani.commons.earth.domain;
 
 import com.ani.commons.earth.enumeration.AccountType;
 
+import java.util.List;
+import java.util.Objects;
+
 public class AniAccount {
 
     Long id;
@@ -11,6 +14,7 @@ public class AniAccount {
     PhoneNum phoneNum;
     String email;
     String portraitUrl;
+    List<AniAccountGroup> groups;
 
     public AniAccount() {
     }
@@ -69,5 +73,19 @@ public class AniAccount {
 
     public void setPortraitUrl(String portraitUrl) {
         this.portraitUrl = portraitUrl;
+    }
+
+    private Integer hashCode = null;
+    
+    @Override
+    public int hashCode() {
+        if(this.hashCode == null)
+            this.hashCode = Objects.hashCode(this.id);
+        return this.hashCode;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj.hashCode() == this.hashCode;
     }
 }

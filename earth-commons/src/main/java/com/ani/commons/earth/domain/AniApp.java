@@ -1,5 +1,7 @@
 package com.ani.commons.earth.domain;
 
+import java.util.Map;
+
 public class AniApp {
 
     Long appId;
@@ -7,6 +9,7 @@ public class AniApp {
     String appDesc;
     String baseUrl;
     String appToken;
+    Map<Long, Long> clientsSidAccountId;
 
     public AniApp() {
     }
@@ -49,5 +52,36 @@ public class AniApp {
 
     public void setAppToken(String appToken) {
         this.appToken = appToken;
+    }
+
+    public Map<Long, Long> getClientsSidAccountId() {
+        return clientsSidAccountId;
+    }
+
+    public void setClientsSidAccountId(Map<Long, Long> clientsSidAccountId) {
+        this.clientsSidAccountId = clientsSidAccountId;
+    }
+
+    /**
+     * Set application session info
+     * <ul>
+     *     <li>
+     *         Check account info into Set values of key:<br/>
+     *         earth:[appId]:[sid] = Set[accountId]<br/>
+     *         in Redis
+     *     </li>
+     *     <li>
+     *         Insert current sessionId and accountId into Redis Set
+     *     </li>
+     *     <li>
+     *         App session info updated, all hosts sync from Redis
+     *     </li>
+     * </ul>
+     * @param appSid
+     * @param
+     * @exception com.ani.utils.exception.AniDataException App sid conflicted.
+     */
+    private void setClientSidAccount(Long appSid, AniAccount account) {
+        //TODO:
     }
 }
