@@ -1,9 +1,9 @@
 package com.ani.commons.earth.interfaces;
 
-import com.ani.commons.earth.dto.AniAccountAuthDto;
-import com.ani.commons.earth.dto.AniAccountLoginDto;
-import com.ani.commons.earth.dto.AniAppAuthDto;
-import com.ani.commons.earth.dto.AniAuthStateDto;
+import com.ani.commons.earth.dto.auth.AniAccountAuthDto;
+import com.ani.commons.earth.dto.auth.AniAccountLoginDto;
+import com.ani.commons.earth.dto.auth.AniAppAuthDto;
+import com.ani.commons.earth.dto.auth.AniAuthStateDto;
 import com.ani.utils.exception.AniAuthException;
 
 public interface AccountUniAuthService {

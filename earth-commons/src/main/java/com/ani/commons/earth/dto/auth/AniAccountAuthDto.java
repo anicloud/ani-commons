@@ -1,4 +1,4 @@
-package com.ani.commons.earth.dto;
+package com.ani.commons.earth.dto.auth;
 
 import com.ani.commons.earth.enumeration.AuthState;
 import com.ani.utils.dto.AniDto;

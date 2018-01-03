@@ -1,7 +1,5 @@
 package com.ani.commons.earth.domain;
 
-import com.ani.commons.earth.enumeration.AccountType;
-
 public class PhoneNum {
 
     PhoneRegion region;
@@ -14,4 +12,5 @@ public class PhoneNum {
         this.region = region;
         this.phoneNum = phoneNum;
     }
+
 }

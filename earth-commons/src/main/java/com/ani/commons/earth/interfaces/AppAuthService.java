@@ -1,8 +1,8 @@
 package com.ani.commons.earth.interfaces;
 
-import com.ani.commons.earth.dto.AniAppAuthDto;
-import com.ani.commons.earth.dto.AniAppSessionAuthDto;
-import com.ani.commons.earth.dto.AniAuthStateDto;
+import com.ani.commons.earth.dto.auth.AniAppAuthDto;
+import com.ani.commons.earth.dto.auth.AniAppSessionAuthDto;
+import com.ani.commons.earth.dto.auth.AniAuthStateDto;
 
 public interface AppAuthService {
 

@@ -1,34 +1,47 @@
-package com.ani.commons.earth.domain;
+package com.ani.commons.earth.dto;
 
+import com.ani.commons.earth.domain.AniAccountGroup;
+import com.ani.commons.earth.domain.PhoneNum;
 import com.ani.commons.earth.enumeration.AccountType;
+import com.ani.utils.dto.AniDto;
 
 import java.util.List;
-import java.util.Objects;
 
-public class AniAccount {
-
+/**
+ * Created by zhanglina on 17-12-27.
+ */
+public class AniAccountInfoDto extends AniDto{
     Long id;
     String name;
     byte[] password;
     AccountType type;
-    PhoneNum phoneNum;
+    PhoneNumDto phoneNumDto;
     String email;
     String portraitUrl;
-    List<AniAccountGroup> groups;
+    List<AniAccountGroupDto> groups;
 
-    public AniAccount(Long id, String name, byte[] password, AccountType type, PhoneNum phoneNum, String email, String portraitUrl, List<AniAccountGroup> groups, Integer hashCode) {
+    public AniAccountInfoDto(Long id, String name, byte[] password, AccountType type, PhoneNumDto phoneNumDto, String email, String portraitUrl, List<AniAccountGroupDto> groups) {
         this.id = id;
         this.name = name;
         this.password = password;
         this.type = type;
-        this.phoneNum = phoneNum;
+        this.phoneNumDto = phoneNumDto;
         this.email = email;
         this.portraitUrl = portraitUrl;
         this.groups = groups;
-        this.hashCode = hashCode;
     }
 
-    public AniAccount() {
+    public List<AniAccountGroupDto> getGroups() {
+
+        return groups;
+    }
+
+    public void setGroups(List<AniAccountGroupDto> groups) {
+        this.groups = groups;
+    }
+
+    public AniAccountInfoDto() {
+
     }
 
     public Long getId() {
@@ -63,12 +76,12 @@ public class AniAccount {
         this.type = type;
     }
 
-    public PhoneNum getPhoneNum() {
-        return phoneNum;
+    public PhoneNumDto getPhoneNumDto() {
+        return phoneNumDto;
     }
 
-    public void setPhoneNum(PhoneNum phoneNum) {
-        this.phoneNum = phoneNum;
+    public void setPhoneNumDto(PhoneNumDto phoneNumDto) {
+        this.phoneNumDto = phoneNumDto;
     }
 
     public String getEmail() {
@@ -86,22 +99,5 @@ public class AniAccount {
     public void setPortraitUrl(String portraitUrl) {
         this.portraitUrl = portraitUrl;
     }
-
-    private Integer hashCode = null;
-    
-    @Override
-    public int hashCode() {
-        if(this.hashCode == null)
-            this.hashCode = Objects.hashCode(this.id);
-        return this.hashCode;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return obj.hashCode() == this.hashCode;
-    }
-
-
-
 
 }
