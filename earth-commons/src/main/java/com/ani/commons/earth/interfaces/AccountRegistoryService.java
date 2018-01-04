@@ -19,11 +19,11 @@ import com.ani.utils.exception.AniRuleException;
 public interface AccountRegistoryService {
 
     //注册
-    public void sendPhoneVerificationCode(PhoneNumDto phoneNum, Long expireMs) throws AniDataException;
+    public String sendPhoneVerificationCode(PhoneNumDto phoneNum, Long expireMs) throws AniDataException;
 
     public void sendMailVerificationCode(EmailDto email, Long expireMs) throws AniDataException;
 
-    public void accountRegister(RegisterDto registerDto) throws AniRuleException,AniDataException;
+    public void accountRegister(RegisterDto registerDto) throws AniDataException;
 
     //关闭
     public void closeAccount(PwdDto pwdDto) throws AniDataException;
@@ -33,14 +33,14 @@ public interface AccountRegistoryService {
 
     public void changeEmail(AccountEmailVerificationDto accountEmailVerificationDto)throws AniDataException;
 
-    public void changePassword(PwdDto pwdDto, byte[] newPwd) throws AniDataException;
+    public void changePassword(PwdDto pwdDto, Byte[] newPwd) throws AniDataException;
 
     //找回密码
     public void retrievePassword(AccountVerificationDto verificationDto, String newPwd)throws AniDataException;
     //登录
-    public void loginByPhoneNumber(PhoneNumDto phoneNumDto,byte[] password) throws AniDataException;
+    public void loginByPhoneNumber(PhoneNumDto phoneNumDto,Byte[] password) throws AniDataException;
 
-    public void loginByEmail(EmailDto emailDto,byte[] password) throws AniDataException;
+    public void loginByEmail(EmailDto emailDto,Byte[] password) throws AniDataException;
 
     public void loginByVerificationCode(AccountVerificationDto verificationDto)throws AniDataException;
 }

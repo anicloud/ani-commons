@@ -4,7 +4,7 @@ import com.ani.commons.earth.dto.auth.AniAppAuthDto;
 import com.ani.commons.earth.dto.auth.AniAppSessionAuthDto;
 import com.ani.commons.earth.dto.auth.AniAuthStateDto;
 
-public interface AppAuthService {
+public interface AppClientAuthService {
 
     /**
      * <h2>Check ANISESSION cookie from app</h2>

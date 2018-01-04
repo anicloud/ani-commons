@@ -9,12 +9,12 @@ import com.ani.utils.exception.AniAuthException;
 public interface AccountUniAuthService {
 
     /**
-     * <h2>Check account login state by ANITGT cookie</h2>
-     * @param accountAuthDto
-     * @return Account authentication state
+     * <h2>validate url is legal</h2>
+     * @param appCallBackUrl
+     * @return void
      * @throws AniAuthException
      */
-    public AniAuthStateDto authAccount(AniAccountAuthDto accountAuthDto) throws AniAuthException;
+    public void validateUrl(String appCallBackUrl) throws AniAuthException;
 
     /**
      * <h2>Handling login form and set ANITGT cookie</h2>
@@ -25,11 +25,18 @@ public interface AccountUniAuthService {
     public AniAuthStateDto login(AniAccountLoginDto accountLoginDto) throws AniAuthException;
 
     /**
-     * <h2>Check app client ANITGT cookie and set ANISESSION cookie</h2>
-     * @param appAuthDto
-     * @return ANISESSION cookie for app
+     * <h2>Check account login state by ANITGT cookie</h2>
+     * @param accountAuthDto
+     * @return Account authentication state
      * @throws AniAuthException
      */
-    public AniAuthStateDto authApp(AniAppAuthDto appAuthDto) throws AniAuthException;
+    public AniAuthStateDto authAccount(AniAccountAuthDto accountAuthDto) throws AniAuthException;
+
+
+
+
+
+
+
 
 }

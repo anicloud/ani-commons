@@ -5,12 +5,12 @@ package com.ani.commons.earth.dto;
  */
 public class PwdDto {
     Long accountId;
-    byte[] password;
+    Byte[] password;
 
     public PwdDto() {
     }
 
-    public PwdDto(Long accountId, byte[] password) {
+    public PwdDto(Long accountId, Byte[] password) {
 
         this.accountId = accountId;
         this.password = password;
@@ -24,11 +24,11 @@ public class PwdDto {
         this.accountId = accountId;
     }
 
-    public byte[] getPassword() {
+    public Byte[] getPassword() {
         return password;
     }
 
-    public void setPassword(byte[] password) {
+    public void setPassword(Byte[] password) {
         this.password = password;
     }
 }
