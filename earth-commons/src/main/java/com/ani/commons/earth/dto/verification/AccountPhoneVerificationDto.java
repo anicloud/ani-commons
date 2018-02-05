@@ -14,16 +14,6 @@ public class AccountPhoneVerificationDto extends AccountVerificationDto{
         super();
     }
 
-//    @Override
-//    public String getCacheKey(String prefix) {
-//        return String.format(
-//                "%s:%s:%d:%s"
-//                , prefix
-//                , "phoneverf"
-//                , phoneNumDto.getRegionNum()
-//                , phoneNumDto.getPhoneNum());
-//    }
-
     public PhoneNumDto getPhoneNumDto() {
         return phoneNumDto;
     }

@@ -13,8 +13,6 @@ public class EmailDto extends RegistrationDto {
         this.email = email;
     }
 
-   
-    
     @Override
     public String getCacheKey(String prefix) {
         return String.format("%s:%s:%s", prefix, "emailverf", this.email);
