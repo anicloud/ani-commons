@@ -1,12 +1,12 @@
 package com.ani.commons.earth.dto.auth;
 
+import com.ani.commons.earth.enumeration.AuthOp;
 import com.ani.commons.earth.enumeration.AuthState;
-import com.ani.utils.dto.AniDto;
 
-public class AniAuthStateDto extends AniDto {
+public class AniAuthStateDto {
 
     AuthState authState;
-    String opUrl;
+    AuthOp authOp;
     String authCode;
 
     public AniAuthStateDto() {
@@ -20,12 +20,12 @@ public class AniAuthStateDto extends AniDto {
         this.authState = authState;
     }
 
-    public String getOpUrl() {
-        return opUrl;
+    public AuthOp getAuthOp() {
+        return authOp;
     }
 
-    public void setOpUrl(String opUrl) {
-        this.opUrl = opUrl;
+    public void setAuthOp(AuthOp authOp) {
+        this.authOp = authOp;
     }
 
     public String getAuthCode() {
