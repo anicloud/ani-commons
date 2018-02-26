@@ -22,10 +22,11 @@ public interface AccountUserRegistryService {
 
     /**
      * <h2>Register account number by email or phone.</h2>
-     * @param accountIdInfoDto
+     * @param accountIdVerifyDto
      * @throws AniRuleException
+     * update by zhanglina 2018-02-26 AccountIdInfoDto to AccountIdVerifyDto
      */
-    public AniAccount accountRegister(AccountIdInfoDto accountIdInfoDto) throws AniRuleException;
+    public AniAccount accountRegister(AccountIdVerifyDto accountIdVerifyDto) throws AniRuleException;
 
     public AniAccount accountRegister() throws AniRuleException;
 
@@ -42,6 +43,7 @@ public interface AccountUserRegistryService {
      * @param accountIdVerifyDto
      * @throws AniRuleException
      */
+
     public void modifyAccountIdInfo(AccountIdVerifyDto accountIdVerifyDto) throws AniRuleException;
 
     /**
