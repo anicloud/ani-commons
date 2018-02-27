@@ -5,7 +5,7 @@ import com.ani.commons.earth.dto.id.AccountIdInfoDto;
 /**
  * Created by zhanglina on 17-12-27.
  */
-public class AccountIdVerifyDto {
+public class AccountIdVerifyDto extends AccountIdInfoDto {
 
     private AccountIdInfoDto accountIdInfoDto;
 

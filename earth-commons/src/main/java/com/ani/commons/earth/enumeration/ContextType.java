@@ -1,6 +1,6 @@
 package com.ani.commons.earth.enumeration;
 
-public enum AuthOp {
+public enum ContextType {
     NORMAL,
     LOGIN,
     REGISTER

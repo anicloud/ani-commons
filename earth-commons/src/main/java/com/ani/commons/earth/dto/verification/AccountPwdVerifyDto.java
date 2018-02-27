@@ -3,7 +3,7 @@ package com.ani.commons.earth.dto.verification;
 /**
  * Created by zhanglina on 18-1-3.
  */
-public class AccountPwdVerifyDto {
+public class AccountPwdVerifyDto extends AccountVerifyDto {
 
     Long accountId;
     String password;

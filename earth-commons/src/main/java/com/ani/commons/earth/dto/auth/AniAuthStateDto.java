@@ -1,12 +1,12 @@
 package com.ani.commons.earth.dto.auth;
 
-import com.ani.commons.earth.enumeration.AuthOp;
+import com.ani.commons.earth.enumeration.ContextType;
 import com.ani.commons.earth.enumeration.AuthState;
 
 public class AniAuthStateDto {
 
     AuthState authState;
-    AuthOp authOp;
+    ContextType contextType;
     String authCode;
 
     public AniAuthStateDto() {
@@ -20,12 +20,12 @@ public class AniAuthStateDto {
         this.authState = authState;
     }
 
-    public AuthOp getAuthOp() {
-        return authOp;
+    public ContextType getContextType() {
+        return contextType;
     }
 
-    public void setAuthOp(AuthOp authOp) {
-        this.authOp = authOp;
+    public void setContextType(ContextType contextType) {
+        this.contextType = contextType;
     }
 
     public String getAuthCode() {
