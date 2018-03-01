@@ -9,7 +9,17 @@ public class AccountIdVerifyDto extends AccountIdInfoDto {
 
     private AccountIdInfoDto accountIdInfoDto;
 
+    private String aniSessionId;
+
     private String verificationCode;
+
+    public String getAniSessionId() {
+        return aniSessionId;
+    }
+
+    public void setAniSessionId(String aniSessionId) {
+        this.aniSessionId = aniSessionId;
+    }
 
     public AccountIdVerifyDto() {
     }

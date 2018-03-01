@@ -1,15 +1,16 @@
-package com.ani.commons.earth.domain.id;
+package com.ani.commons.earth.domain.Verify;
 
 import com.ani.commons.earth.enumeration.ContextType;
 
 /**
  * Created by zhanglina on 18-2-26.
  */
-public class VerifyCode {
+public abstract class VerifyCode {
 
     String code;
     Long sid;
-    ContextType contextType;
+
+//    ContextType contextType;
 
     public VerifyCode() {
     }
@@ -30,11 +31,4 @@ public class VerifyCode {
         this.sid = sid;
     }
 
-    public ContextType getContextType() {
-        return contextType;
-    }
-
-    public void setContextType(ContextType contextType) {
-        this.contextType = contextType;
-    }
 }
