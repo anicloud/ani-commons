@@ -15,14 +15,6 @@ public class AniPersonalAccount extends AniAccount {
      * Account name
      */
     String name;
-    /**
-     * Phone number with region code
-     */
-    Phone phoneNum;
-    /**
-     * Email
-     */
-    String email;
 
     public AniPersonalAccount() {
     }
@@ -35,20 +27,11 @@ public class AniPersonalAccount extends AniAccount {
         this.sex = sex;
     }
 
-
-    public Phone getPhoneNum() {
-        return phoneNum;
+    public String getName() {
+        return name;
     }
 
-    public void setPhoneNum(Phone phoneNum) {
-        this.phoneNum = phoneNum;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setName(String name) {
+        this.name = name;
     }
 }

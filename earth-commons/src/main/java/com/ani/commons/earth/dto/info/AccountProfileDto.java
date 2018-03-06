@@ -4,13 +4,23 @@ import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.utils.dto.AniDto;
 
-public class AccountProfileDto extends AniDto {
+public abstract class AccountProfileDto extends AniDto {
 
     Long accountId;
 
     String name;
 
-    String sex;
+    Long portraitId;
+
+    public Long getPortraitId() {
+        return portraitId;
+    }
+
+    public void setPortraitId(Long portraitId) {
+        this.portraitId = portraitId;
+    }
+
+    public abstract AccountType getAccountType();
 
     public AccountProfileDto() {
     }
@@ -29,13 +39,5 @@ public class AccountProfileDto extends AniDto {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
     }
 }

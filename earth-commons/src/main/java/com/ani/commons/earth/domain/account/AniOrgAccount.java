@@ -11,34 +11,27 @@ public class AniOrgAccount extends AniAccount {
      */
     String name;
 
+    String desc;
 
-    public Phone getPhoneNum() {
-        return phoneNum;
+    public String getName() {
+        return name;
     }
 
-    public void setPhoneNum(Phone phoneNum) {
-        this.phoneNum = phoneNum;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     public AniOrgAccount() {
 
     }
 
-    /**
-     * Phone number with region code
-     */
-    Phone phoneNum;
 
-    /**
-     * Email
-     */
-    String email;
 }

@@ -1,6 +1,4 @@
-package com.ani.commons.earth.domain.Verify;
-
-import com.ani.commons.earth.enumeration.ContextType;
+package com.ani.commons.earth.domain.verify;
 
 /**
  * Created by zhanglina on 18-2-26.

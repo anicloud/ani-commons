@@ -5,18 +5,9 @@ package com.ani.commons.earth.dto.verification;
  */
 public class AccountPwdVerifyDto extends AccountVerifyDto {
 
-    Long accountId;
     String password;
 
     public AccountPwdVerifyDto() {
-    }
-
-    public Long getAccountId() {
-        return accountId;
-    }
-
-    public void setAccountId(Long accountId) {
-        this.accountId = accountId;
     }
 
     public String getPassword() {

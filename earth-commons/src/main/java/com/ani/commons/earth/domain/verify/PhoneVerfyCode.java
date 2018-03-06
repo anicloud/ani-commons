@@ -1,4 +1,4 @@
-package com.ani.commons.earth.domain.Verify;
+package com.ani.commons.earth.domain.verify;
 
 import com.ani.commons.earth.domain.id.Phone;
 

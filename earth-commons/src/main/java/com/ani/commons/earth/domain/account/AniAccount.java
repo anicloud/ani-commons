@@ -1,4 +1,5 @@
 package com.ani.commons.earth.domain.account;
+import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.enumeration.AccountType;
 import java.util.Objects;
 public abstract class AniAccount {
@@ -22,7 +23,6 @@ public abstract class AniAccount {
      * File path rule: /[accountId]/[portraitId](timestamp).jpg
      */
     Long portraitId;
-
 
     public AniAccount() {
     }
