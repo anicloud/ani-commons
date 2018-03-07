@@ -5,16 +5,16 @@ package com.ani.commons.earth.dto.verification;
  */
 public class AccountPwdVerifyDto extends AccountVerifyDto {
 
-    String password;
+    Byte[] password;
 
     public AccountPwdVerifyDto() {
     }
 
-    public String getPassword() {
+    public Byte[] getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(Byte[] password) {
         this.password = password;
     }
 }
