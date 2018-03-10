@@ -1,34 +1,27 @@
 package com.ani.commons.earth.domain;
 
 import com.ani.commons.earth.enumeration.AuthState;
+import com.ani.utils.core.AniByte;
 
 import java.util.Date;
 
 public class AniSession {
 
-    Long sessionId;
-    Long accountId;
+    AniByte sessionId;
     AuthState authState;
     Date lastOp;
 
     public AniSession() {
     }
 
-    public Long getSessionId() {
+    public AniByte getSessionId() {
         return sessionId;
     }
 
-    public void setSessionId(Long sessionId) {
+    public void setSessionId(AniByte sessionId) {
         this.sessionId = sessionId;
     }
 
-    public Long getAccountId() {
-        return accountId;
-    }
-
-    public void setAccountId(Long accountId) {
-        this.accountId = accountId;
-    }
 
     public AuthState getAuthState() {
         return authState;

@@ -1,13 +1,14 @@
 package com.ani.commons.earth.dto.info;
 
 import com.ani.commons.earth.enumeration.AccountType;
+import com.ani.commons.earth.enumeration.Sex;
 
 /**
  * Created by zhanglina on 18-3-4.
  */
 public class AccountProfilePersonalDto extends AccountProfileDto {
 
-    String sex;
+    Sex sex;
 
     @Override
     public AccountType getAccountType() {
@@ -17,11 +18,11 @@ public class AccountProfilePersonalDto extends AccountProfileDto {
     public AccountProfilePersonalDto() {
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 }
