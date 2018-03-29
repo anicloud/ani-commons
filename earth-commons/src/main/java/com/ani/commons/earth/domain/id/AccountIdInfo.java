@@ -1,7 +1,10 @@
 package com.ani.commons.earth.domain.id;
 
-public class AccountIdInfo {
+import java.io.Serializable;
 
+public class AccountIdInfo implements Serializable {
+
+    private static final long serialVersionUID = -6244507694694096149L;
     Long accountId;
     Email accountEmail;
     Phone accountPhone;

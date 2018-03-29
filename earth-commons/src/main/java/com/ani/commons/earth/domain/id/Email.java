@@ -1,6 +1,8 @@
 package com.ani.commons.earth.domain.id;
 
-public class Email extends AccountId {
+import java.io.Serializable;
+
+public class Email extends AccountId implements Serializable {
 
     String email;
 

@@ -2,12 +2,19 @@ package com.ani.commons.earth.dto.verification;
 
 import com.ani.commons.earth.dto.auth.AniAccountAuthDto;
 import com.ani.commons.earth.dto.id.AccountIdInfoDto;
+import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
 
-public abstract class AccountVerifyDto {
+import java.io.Serializable;
 
+public abstract class AccountVerifyDto extends AniDto implements Serializable {
+
+    private static final long serialVersionUID = -3010439793781186488L;
+    @AniRequiredField
     private AccountIdInfoDto accountIdInfoDto;
 
-    private AniAccountAuthDto accountAuthDto;
+//    @AniRequiredField
+//    private AniAccountAuthDto accountAuthDto;
 
     public AccountVerifyDto() {
     }
@@ -20,11 +27,12 @@ public abstract class AccountVerifyDto {
         this.accountIdInfoDto = accountIdInfoDto;
     }
 
-    public AniAccountAuthDto getAccountAuthDto() {
-        return accountAuthDto;
-    }
 
-    public void setAccountAuthDto(AniAccountAuthDto accountAuthDto) {
-        this.accountAuthDto = accountAuthDto;
-    }
+//    public AniAccountAuthDto getAccountAuthDto() {
+//        return accountAuthDto;
+//    }
+//
+//    public void setAccountAuthDto(AniAccountAuthDto accountAuthDto) {
+//        this.accountAuthDto = accountAuthDto;
+//    }
 }

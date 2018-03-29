@@ -1,24 +1,31 @@
 package com.ani.commons.earth.dto.auth;
 
-import com.ani.commons.earth.enumeration.AuthState;
 import com.ani.utils.dto.AniDto;
 
-public class AniAccountAuthDto extends AniDto {
+import java.io.Serializable;
 
-    String anitgt;
+public class AniAccountAuthDto extends AniDto implements Serializable {
+
+    private static final long serialVersionUID = 7317114042514572675L;
+
+    String aniAccountToken;
 
     public AniAccountAuthDto() {
     }
 
-    public AniAccountAuthDto(String anitgt) {
-        this.anitgt = anitgt;
+    public AniAccountAuthDto(String aniAccountToken) {
+        this.aniAccountToken = aniAccountToken;
     }
 
-    public String getAnitgt() {
-        return anitgt;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
-    public void setAnitgt(String anitgt) {
-        this.anitgt = anitgt;
+    public String getAniAccountToken() {
+        return aniAccountToken;
+    }
+
+    public void setAniAccountToken(String aniAccountToken) {
+        this.aniAccountToken = aniAccountToken;
     }
 }

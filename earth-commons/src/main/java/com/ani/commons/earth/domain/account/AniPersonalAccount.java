@@ -3,10 +3,13 @@ package com.ani.commons.earth.domain.account;
 import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.enumeration.Sex;
 
+import java.io.Serializable;
+
 /**
  * Created by zhanglina on 18-2-27.
  */
-public class AniPersonalAccount extends AniAccount {
+public class AniPersonalAccount extends AniAccount implements Serializable {
+    private static final long serialVersionUID = -909456961243482140L;
     /**
      * Account sex
      */

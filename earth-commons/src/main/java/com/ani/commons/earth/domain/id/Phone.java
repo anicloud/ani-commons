@@ -1,24 +1,28 @@
 package com.ani.commons.earth.domain.id;
 
-public class Phone extends AccountId {
-/*modify by zhanglina 2018-02-26*/
-    Short region;
+import java.io.Serializable;
+
+public class Phone extends AccountId implements Serializable {
+    private static final long serialVersionUID = -1404713055789281247L;
+    /*modify by zhanglina 2018-02-26*/
+    String region;
     String phoneNum;
 
     public Phone() {
     }
 
-    public Phone(Short region, String phoneNum) {
-        this.region = region;
-        this.phoneNum = phoneNum;
-    }
-
-    public Short getRegion() {
+    public String getRegion() {
         return region;
     }
 
-    public void setRegion(Short region) {
+    public void setRegion(String region) {
         this.region = region;
+    }
+
+    public Phone(String region, String phoneNum) {
+
+        this.region = region;
+        this.phoneNum = phoneNum;
     }
 
     public String getPhoneNum() {

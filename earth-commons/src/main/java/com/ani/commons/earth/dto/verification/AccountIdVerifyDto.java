@@ -2,14 +2,17 @@ package com.ani.commons.earth.dto.verification;
 
 import com.ani.commons.earth.dto.auth.AniAccountAuthDto;
 import com.ani.commons.earth.dto.id.AccountIdInfoDto;
+import com.ani.utils.core.AniByte;
+
+import java.io.Serializable;
 
 /**
  * Created by zhanglina on 17-12-27.
  */
-public class AccountIdVerifyDto extends AccountVerifyDto {
+public class AccountIdVerifyDto extends AccountVerifyDto implements Serializable {
 
+    private static final long serialVersionUID = -4801011937925907280L;
     private String verificationCode;
-
     public AccountIdVerifyDto() {
     }
 

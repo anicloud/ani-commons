@@ -1,7 +1,10 @@
 package com.ani.commons.earth.dto.info;
 
-public class AccountGroupProfileDto {
+import java.io.Serializable;
 
+public class AccountGroupProfileDto implements Serializable {
+
+    private static final long serialVersionUID = -6134946490555179527L;
     Long groupId;
     String name;
 

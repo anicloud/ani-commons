@@ -20,8 +20,7 @@ public interface AccountInfoService {
 
     public List<AniAccount> findAccountsByEmail(List<Email> emailAdds);
 
-    public AniAccount modifyProfile(AccountProfileDto accountProfileDto);
 
-    public String uploadPortrait(Long accountId, FileInputStream imgFis);
+
 
 }

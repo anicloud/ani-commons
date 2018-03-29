@@ -7,6 +7,8 @@ import com.ani.utils.dto.AniDto;
  */
 public abstract class AccountIdInfoDto extends AniDto {
 
+    private static final long serialVersionUID = 1752652980676728527L;
+
     private Long accountId;
 
     public AccountIdInfoDto() {

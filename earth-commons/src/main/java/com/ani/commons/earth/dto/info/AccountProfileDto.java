@@ -1,26 +1,42 @@
 package com.ani.commons.earth.dto.info;
 
-import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.utils.dto.AniDto;
+import org.springframework.web.multipart.MultipartFile;
 
-public abstract class AccountProfileDto extends AniDto {
+import java.io.Serializable;
+
+public abstract class AccountProfileDto extends AniDto implements Serializable {
+
+    private static final long serialVersionUID = 2503867662892117241L;
 
     Long accountId;
 
     String name;
 
-    Long portraitId;
+    MultipartFile portrait;
+    String password;
+    protected AccountType accountType;
 
-    public Long getPortraitId() {
-        return portraitId;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPortraitId(Long portraitId) {
-        this.portraitId = portraitId;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public abstract AccountType getAccountType();
+    public MultipartFile getPortrait() {
+        return portrait;
+    }
+
+    public void setPortrait(MultipartFile portrait) {
+        this.portrait = portrait;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
+    }
 
     public AccountProfileDto() {
     }

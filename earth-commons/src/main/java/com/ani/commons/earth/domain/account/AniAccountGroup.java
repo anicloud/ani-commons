@@ -1,10 +1,12 @@
 package com.ani.commons.earth.domain.account;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 
-public class AniAccountGroup {
+public class AniAccountGroup implements Serializable {
 
+    private static final long serialVersionUID = -4738146609913572672L;
     Long groupId;
     String name;
     Set<AniAccount> members;

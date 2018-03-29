@@ -2,16 +2,18 @@ package com.ani.commons.earth.dto.info;
 
 import com.ani.commons.earth.enumeration.AccountType;
 
+import java.io.Serializable;
+
 /**
  * Created by zhanglina on 18-3-4.
  */
-public class AccountProfileOrgDto extends AccountProfileDto{
+public class AccountProfileOrgDto extends AccountProfileDto implements Serializable{
 
+    private static final long serialVersionUID = 6321585632641903271L;
     String desc;
 
-    @Override
-    public AccountType getAccountType() {
-        return AccountType.ORGANIZATION;
+    public AccountProfileOrgDto() {
+        this.accountType = AccountType.ORGANIZATION;
     }
 
     public String getDesc() {

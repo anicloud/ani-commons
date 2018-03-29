@@ -4,8 +4,11 @@ import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.utils.dto.AniDto;
 
-public class AccountInfoRegistryDto extends AniDto {
+import java.io.Serializable;
 
+public class AccountInfoRegistryDto extends AniDto implements Serializable{
+
+    private static final long serialVersionUID = -2345573422837440580L;
     String name;
     AccountType type;
     Phone phoneNum;

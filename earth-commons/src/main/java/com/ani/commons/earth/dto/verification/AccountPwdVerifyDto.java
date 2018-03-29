@@ -1,10 +1,15 @@
 package com.ani.commons.earth.dto.verification;
 
+import com.ani.utils.dto.AniDto;
+
+import java.io.Serializable;
+
 /**
  * Created by zhanglina on 18-1-3.
  */
-public class AccountPwdVerifyDto extends AccountVerifyDto {
+public class AccountPwdVerifyDto extends AccountVerifyDto implements Serializable{
 
+    private static final long serialVersionUID = -5129235984576413777L;
     Byte[] password;
 
     public AccountPwdVerifyDto() {

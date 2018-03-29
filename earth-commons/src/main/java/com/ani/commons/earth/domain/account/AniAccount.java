@@ -1,9 +1,12 @@
 package com.ani.commons.earth.domain.account;
 import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.enumeration.AccountType;
-import java.util.Objects;
-public abstract class AniAccount {
 
+import java.io.Serializable;
+import java.util.Objects;
+public abstract class AniAccount implements Serializable{
+
+    private static final long serialVersionUID = -1997253108936634154L;
     /**
      * Account logic id
      */

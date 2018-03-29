@@ -1,14 +1,38 @@
 package com.ani.commons.earth.domain.verify;
 
+import com.ani.utils.core.AniByte;
+
+import java.io.Serializable;
+
 /**
  * Created by zhanglina on 18-2-26.
  */
-public abstract class VerifyCode {
+public class VerifyCode implements Serializable{
+    private static final long serialVersionUID = 2598921477174630195L;
 
     String code;
-    Long sid;
 
+    String sid;
+
+    Long accountId;
 //    ContextType contextType;
+    String register;
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
+    }
+
+    public String getRegister() {
+        return register;
+    }
+
+    public void setRegister(String register) {
+        this.register = register;
+    }
 
     public VerifyCode() {
     }
@@ -21,12 +45,11 @@ public abstract class VerifyCode {
         this.code = code;
     }
 
-    public Long getSid() {
+    public String getSid() {
         return sid;
     }
 
-    public void setSid(Long sid) {
+    public void setSid(String sid) {
         this.sid = sid;
     }
-
 }

@@ -1,9 +1,12 @@
 package com.ani.commons.earth.interfaces;
 
-import com.ani.commons.earth.dto.auth.AniAuthStateDto;
-import com.ani.commons.earth.dto.auth.AniAccountAuthDto;
+import com.ani.commons.earth.domain.auth.AniAccountAuthState;
+import com.ani.commons.earth.domain.auth.AniAuthState;
 import com.ani.commons.earth.dto.verification.AccountVerifyDto;
 import com.ani.utils.exception.AniAuthException;
+import com.ani.utils.exception.AniRuleException;
+
+import java.util.Map;
 
 public interface AccountUniAuthService {
 
@@ -13,14 +16,15 @@ public interface AccountUniAuthService {
      * @return AniAuthStateDto
      * @throws AniAuthException
      */
-    public AniAuthStateDto login(AccountVerifyDto accountVerifyDto) throws AniAuthException;
+    public AniAccountAuthState login(String sessionId,AccountVerifyDto accountVerifyDto) throws AniAuthException,AniRuleException;
 
     /**
      * <h2>Check account login state by ANITGT</h2>
-     * @param accountAuthDto
+     * @param
      * @return Account authentication state
      * @throws AniAuthException
      */
-    public AniAuthStateDto checkSession(AniAccountAuthDto accountAuthDto) throws AniAuthException;
+    public AniAuthState checkIsAnonymous(String aniSessionId, String tgt,String targetUrl);
 
+    public void logout(String sessionId,String tgt);
 }
