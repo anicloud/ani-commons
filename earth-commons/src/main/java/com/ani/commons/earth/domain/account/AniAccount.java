@@ -15,7 +15,7 @@ public abstract class AniAccount {
     Boolean hasPwd;
 
     /**
-     * Account type
+     * Account valueType
      */
     AccountType type;
 
