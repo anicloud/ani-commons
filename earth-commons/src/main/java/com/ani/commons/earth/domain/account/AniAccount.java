@@ -18,7 +18,7 @@ public abstract class AniAccount implements Serializable{
     Boolean hasPwd;
 
     /**
-     * Account type
+     * Account valueType
      */
     AccountType type;
 
