@@ -15,8 +15,6 @@ public class AniObjectMaster extends AniObject {
     private Long ownerAccountId;
     private AniByte token;
     private Map<AniByte, ConnState> antennasState;
-
-
     public Long getOwnerAccountId() {
         return ownerAccountId;
     }

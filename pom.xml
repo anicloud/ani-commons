@@ -11,6 +11,7 @@
         <module>earth-commons</module>
         <module>octopus-commons</module>
     </modules>
+
     <url>http://maven.apache.org</url>
     <description>anicel-commons project.</description>
 
