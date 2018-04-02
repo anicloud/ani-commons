@@ -1,6 +1,9 @@
 package com.ani.commons.objmeta.dto.meta;
 
+import com.ani.utils.core.data.meta.AniMetaMapper;
 import com.ani.utils.dto.AniDto;
+
+import java.util.Objects;
 
 public abstract class AniMetaDto extends AniDto {
 
@@ -17,6 +20,35 @@ public abstract class AniMetaDto extends AniDto {
         this.metaId = metaId;
     }
 
-    //todo: hash & equals
 
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
+    }
+
+    public Integer getMetaId() {
+        return metaId;
+    }
+
+    public void setMetaId(Integer metaId) {
+        this.metaId = metaId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.groupId, this.metaId);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof AniMetaMapper)) return false;
+        AniMetaDto oneObj = (AniMetaDto) obj;
+        if (oneObj.groupId == this.groupId && oneObj.metaId == this.metaId)
+            return true;
+        else
+            return false;
+    }
 }

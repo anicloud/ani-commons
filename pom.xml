@@ -10,6 +10,7 @@
     <modules>
         <module>earth-commons</module>
         <module>octopus-commons</module>
+        <module>bus-commons</module>
     </modules>
 
     <url>http://maven.apache.org</url>
