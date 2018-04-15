@@ -4,5 +4,6 @@ public enum Sex {
     UNKNOWN,
     MALE,
     FEMALE,
-    TRANSEXUAL
+    TRANSEXUALM2F,
+    TRANSEXUALF2M
 }
