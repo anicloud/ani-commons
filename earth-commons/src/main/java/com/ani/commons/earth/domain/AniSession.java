@@ -14,6 +14,7 @@ public class AniSession implements Serializable  {
     AuthState authState;
     AccountType accountType;
     Long accountId;
+    Long aniSiteId;
     String targetUrl;
 
     public String getTargetUrl() {
@@ -37,6 +38,13 @@ public class AniSession implements Serializable  {
         this.lastOp = lastOp;
     }
 
+    public Long getAniSiteId() {
+        return aniSiteId;
+    }
+
+    public void setAniSiteId(Long aniSiteId) {
+        this.aniSiteId = aniSiteId;
+    }
 
     public String getSessionId() {
         return sessionId;

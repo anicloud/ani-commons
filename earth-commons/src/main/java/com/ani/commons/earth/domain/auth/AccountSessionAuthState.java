@@ -14,6 +14,4 @@ public class AccountSessionAuthState extends AniAuthState {
         this.sessionId = sessionId;
     }
 
-
-
 }

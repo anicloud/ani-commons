@@ -1,8 +1,8 @@
 package com.ani.commons.site.service;
 
-import com.ani.commons.site.domain.AccountSiteInfo;
-import com.ani.commons.site.domain.AniSite;
-import com.ani.commons.site.dto.AniSiteRegisterDto;
+import com.ani.commons.site.domain.site.AniSite;
+import com.ani.commons.site.dto.site.AniSiteDto;
+import com.ani.commons.site.dto.site.AniSiteRegisterDto;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import java.util.List;
  * Created by zhanglina on 18-4-2.
  */
 public interface AniSiteService {
-    public AniSite register(AniSiteRegisterDto siteRegisterDto);
-    public List<AniSite> getAniSiteByDevAccountId(Long accountId);
-    public List<AccountSiteInfo> getAccountInfoByAniSite(Long aniSiteId);
-    public void checkClientSecret(Long aniSiteId, String clientSecret);
+    public AniSite register(AniSiteRegisterDto siteRegister);
+    public AniSite update(AniSiteDto siteRegisterDto);
+    public List<AniSite> getAniSiteByDevAccountId(String accountId);
+    public void checkClientSecret(String aniSiteId, String clientSecret);
 }

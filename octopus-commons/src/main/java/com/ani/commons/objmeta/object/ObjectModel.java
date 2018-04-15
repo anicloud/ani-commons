@@ -1,6 +1,6 @@
 package com.ani.commons.objmeta.object;
 
-import com.ani.commons.objmeta.object.state.StateMachine;
+  import com.ani.commons.objmeta.object.state.StateMachine;
 import com.ani.commons.objmeta.object.stub.StubMapper;
 import com.ani.utils.core.AniByte;
 
@@ -11,7 +11,6 @@ import java.util.Objects;
 public class ObjectModel extends AniObjectMeta {
 
     private static final long serialVersionUID = -7225989167187564700L;
-
     private Long modelId;
     private String name;
     private AniByte token;

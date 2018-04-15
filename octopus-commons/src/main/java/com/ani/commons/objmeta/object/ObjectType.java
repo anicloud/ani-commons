@@ -3,7 +3,7 @@ package com.ani.commons.objmeta.object;
 public enum ObjectType {
     SERVICE(1),
     DEVICE(2),
-    SITE(4);
+    SITE(3);
 
     private final int id;
 

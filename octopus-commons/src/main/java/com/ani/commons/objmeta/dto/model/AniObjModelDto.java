@@ -10,14 +10,12 @@ import java.util.List;
 /**
  * Created by zhanglina on 18-3-29.
  */
-public class AniObjModelDto implements Serializable {
-
+public abstract class AniObjModelDto implements Serializable {
     private static final long serialVersionUID = 887977036816140789L;
-
     private Long modelId;
     private String name;
     private String description;
-    private ObjectType objectType;
+    protected ObjectType objectType;
     private List<StubDto> stubs;
     private List<StateMachineDto> stateMachines;
 
@@ -53,13 +51,7 @@ public class AniObjModelDto implements Serializable {
         this.description = description;
     }
 
-    public ObjectType getObjectType() {
-        return objectType;
-    }
-
-    public void setObjectType(ObjectType objectType) {
-        this.objectType = objectType;
-    }
+    public abstract ObjectType getObjectType();
 
     public List<StubDto> getStubs() {
         return stubs;
@@ -68,6 +60,5 @@ public class AniObjModelDto implements Serializable {
     public void setStubs(List<StubDto> stubs) {
         this.stubs = stubs;
     }
-
 
 }

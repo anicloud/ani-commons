@@ -7,9 +7,9 @@ import com.ani.commons.earth.enumeration.ContextType;
  * Created by zhanglina on 18-3-23.
  */
 public abstract class AniAuthState {
-    public AuthState authState;
-    public ContextType contextType;
-    public String tgt;
+    protected AuthState authState;
+    protected ContextType contextType;
+    protected String tgt;
 
     public String getTgt() {
         return tgt;
