@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>ani-commons</artifactId>
+        <groupId>com.ani.commons</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>bus-commons</artifactId>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.ani.utils</groupId>
+            <artifactId>ani-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ani.commons</groupId>
+            <artifactId>earth-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ani.commons</groupId>
+            <artifactId>earth-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ani.commons</groupId>
+            <artifactId>earth-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ani.commons</groupId>
+            <artifactId>earth-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>bus-commons</finalName>
+    </build>
+</project>
