@@ -1,16 +1,18 @@
-package com.ani.commons.bus.earth.domain.account;
+package com.ani.commons.bus.earth.domain.organization.account;
+import com.ani.commons.bus.earth.domain.account.AniAccount;
+
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-2-27.
  */
-public class AniOrgAccount extends AniAccount implements Serializable{
+public class OrgMember implements Serializable{
     private static final long serialVersionUID = -1592699861144156040L;
     /**
      * Account name
      */
+    AniAccount account;
     String name;
-
     String desc;
 
     public String getName() {
@@ -29,7 +31,7 @@ public class AniOrgAccount extends AniAccount implements Serializable{
         this.desc = desc;
     }
 
-    public AniOrgAccount() {
+    public OrgMember() {
 
     }
 

@@ -1,4 +1,4 @@
-package com.ani.commons.bus.earth.enumeration;
+package com.ani.commons.bus.earth.enumeration.Exception;
 
 /**
  * Created by zhanglina on 18-3-21.
@@ -13,5 +13,8 @@ public enum ExceptionType {
     CODE_EXPIRED,
     PHONE_ERROR,
     EMAIL_ERROR,
-    CODE_ERROR
+    CODE_ERROR,
+    ACCOUNT_ID_NULL,
+    ORG_ID_NULL,
+    NO_PRIVILEGED
 }
