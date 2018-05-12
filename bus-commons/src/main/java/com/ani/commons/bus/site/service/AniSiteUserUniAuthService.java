@@ -1,6 +1,6 @@
 package com.ani.commons.bus.site.service;
 
-import com.ani.commons.bus.earth.domain.auth.AniAccountAuthState;
+import com.ani.commons.earth.domain.auth.AniAccountAuthState;
 import com.ani.commons.bus.site.dto.AniUserValidateDto;
 import com.ani.utils.exception.AniRuleException;
 
