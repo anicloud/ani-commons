@@ -14,8 +14,18 @@ public class OTNodeDetail implements Serializable {
     private Long nodeId;
     private String name;
     private NodeType nodeType;
+    private String privilege;
+    private Boolean hasChildren;
     private Long parentId;
     private boolean canDeploy;
+
+    public Boolean getHasChildren() {
+        return hasChildren;
+    }
+
+    public void setHasChildren(Boolean hasChildren) {
+        this.hasChildren = hasChildren;
+    }
 
     public boolean isCanDeploy() {
         return canDeploy;
@@ -27,6 +37,14 @@ public class OTNodeDetail implements Serializable {
 
     private Timestamp createTime;
     private Timestamp updateTime;
+
+    public String getPrivilege() {
+        return privilege;
+    }
+
+    public void setPrivilege(String privilege) {
+        this.privilege = privilege;
+    }
 
     public Long getNodeId() {
         return nodeId;

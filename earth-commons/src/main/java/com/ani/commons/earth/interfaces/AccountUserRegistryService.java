@@ -9,6 +9,7 @@ import com.ani.commons.earth.dto.register.AccountRegisterDto;
 import com.ani.commons.earth.dto.register.AccountTransparentRegisterDto;
 import com.ani.commons.earth.dto.verification.AccountPwdVerifyDto;
 import com.ani.commons.earth.dto.verification.AccountIdVerifyDto;
+import com.ani.commons.earth.dto.verification.AccountVerifyDto;
 import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
 
@@ -68,12 +69,15 @@ public interface AccountUserRegistryService {
      * <h2>Change user account password in case of being verified.</h2>
      * <p>User should be verified by email, phone etc.</p>
      *
-     * @param accountPwdVerifyDto
+     * @param sessionId
+     * @param tgt
      * @param newPwd
+     * @param flag
+     *
      * @throws AniRuleException
      */
-    public void changePassword(AccountPwdVerifyDto accountPwdVerifyDto, Byte[] newPwd) throws AniRuleException;
+    public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, Byte[] newPwd,Boolean flag) throws AniRuleException;
 
-    public AniAccount modifyProfile(AccountProfileDto accountProfileDto, String prefix) throws AniRuleException, IOException;
+    public AniAccount modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
 
 }

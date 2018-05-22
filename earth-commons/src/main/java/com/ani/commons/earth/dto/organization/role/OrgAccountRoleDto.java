@@ -14,13 +14,21 @@ import java.util.Set;
 public class OrgAccountRoleDto extends AniDto implements Serializable {
 
     private static final long serialVersionUID = 3389168006262797060L;
-
+    private Long roleId;
     private Long orgId;
     private String name;
 
     private Map<TransparencyType, Set<PrivilegeType>> privileges;
 
     private Long opAccountId;
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
 
     public Long getOpAccountId() {
         return opAccountId;

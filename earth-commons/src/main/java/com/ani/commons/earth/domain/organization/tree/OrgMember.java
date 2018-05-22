@@ -22,7 +22,7 @@ public class OrgMember implements Serializable {
     private String roleId;
     private String tel;
     private String politics;
-    private Date birthday;
+    private String birthday;
     private Sex sex;
     private String citizenId;
     private DataState state;
@@ -93,11 +93,11 @@ public class OrgMember implements Serializable {
         this.politics = politics;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
