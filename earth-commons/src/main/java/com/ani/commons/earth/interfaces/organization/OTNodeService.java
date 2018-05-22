@@ -5,7 +5,6 @@ import com.ani.commons.earth.domain.organization.tree.OTNodeDetail;
 import com.ani.commons.earth.domain.organization.tree.OTNode;
 import com.ani.commons.earth.domain.organization.tree.OTNodeMember;
 import com.ani.commons.earth.domain.organization.tree.OrgMember;
-import com.ani.commons.bus.earth.dto.organization.node.*;
 import com.ani.commons.earth.dto.organization.node.*;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniRuleException;

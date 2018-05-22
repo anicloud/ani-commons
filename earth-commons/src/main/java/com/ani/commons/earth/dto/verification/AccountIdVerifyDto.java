@@ -8,7 +8,9 @@ import java.io.Serializable;
 public class AccountIdVerifyDto extends AccountVerifyDto implements Serializable {
 
     private static final long serialVersionUID = -4801011937925907280L;
+
     private String verificationCode;
+
     public AccountIdVerifyDto() {
     }
 
