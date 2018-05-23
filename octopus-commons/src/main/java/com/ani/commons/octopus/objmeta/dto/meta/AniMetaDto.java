@@ -1,15 +1,20 @@
 package com.ani.commons.octopus.objmeta.dto.meta;
 
+import com.ani.utils.core.data.meta.AniMeta;
 import com.ani.utils.core.data.meta.AniMetaMapper;
 import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
+import com.ani.utils.exception.AniRuleException;
 
 import java.util.Objects;
 
-public abstract class AniMetaDto extends AniDto {
+public class AniMetaDto extends AniDto {
 
     private static final long serialVersionUID = -5608482326014409419L;
 
+    @AniRequiredField
     private Integer groupId;
+    @AniRequiredField
     private Integer metaId;
 
     public AniMetaDto() {
@@ -19,7 +24,6 @@ public abstract class AniMetaDto extends AniDto {
         this.groupId = groupId;
         this.metaId = metaId;
     }
-
 
     public Integer getGroupId() {
         return groupId;
@@ -35,6 +39,10 @@ public abstract class AniMetaDto extends AniDto {
 
     public void setMetaId(Integer metaId) {
         this.metaId = metaId;
+    }
+
+    public Long getLongId() throws AniRuleException {
+        return AniMeta.getLongId(this.groupId, this.metaId);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.ani.commons.octopus.objmeta.object.state;
+package com.ani.commons.octopus.objmeta.domain.state;
 
 import com.ani.utils.core.data.meta.AniMeta;
 import com.ani.utils.core.data.meta.AniMetaParam;

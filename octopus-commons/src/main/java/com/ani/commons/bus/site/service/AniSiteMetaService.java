@@ -2,8 +2,8 @@ package com.ani.commons.bus.site.service;
 
 import com.ani.commons.bus.site.domain.site.AniSite;
 import com.ani.commons.bus.site.dto.site.AniSiteModelApplicationDto;
-import com.ani.commons.bus.site.dto.site.AniSiteModelInitDto;
 import com.ani.commons.bus.site.dto.site.AniWCMetaSubmitDto;
+import com.ani.commons.bus.site.dto.site.SiteModelInitDto;
 import com.ani.utils.exception.AniRuleException;
 
 /**
@@ -11,7 +11,7 @@ import com.ani.utils.exception.AniRuleException;
  */
 public interface AniSiteMetaService {
 
-    public AniSiteModelInitDto applySite(AniSiteModelApplicationDto siteApply) throws AniRuleException;
+    public SiteModelInitDto applySite(AniSiteModelApplicationDto siteApply) throws AniRuleException;
 
     public AniSite submitWcSite(AniWCMetaSubmitDto wcMetaSubmit);
 

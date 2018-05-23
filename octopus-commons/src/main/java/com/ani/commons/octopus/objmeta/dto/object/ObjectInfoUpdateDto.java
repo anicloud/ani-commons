@@ -5,7 +5,7 @@ import com.ani.utils.dto.AniDto;
 /**
  * Created by zhanglina on 18-3-29.
  */
-public class ObjectUpdateDto extends AniDto {
+public class ObjectInfoUpdateDto extends AniDto {
 
     private static final long serialVersionUID = -1565345687060065809L;
 

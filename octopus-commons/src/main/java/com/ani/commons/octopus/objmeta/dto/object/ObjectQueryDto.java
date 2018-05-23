@@ -11,10 +11,14 @@ public class ObjectQueryDto extends AniDto {
 
     private Long objectId;
 
-    public ObjectQueryDto() {}
+    private Long accountId;
 
-    public ObjectQueryDto(Long objectId) {
+    public ObjectQueryDto() {
+    }
+
+    public ObjectQueryDto(Long objectId, Long accountId) {
         this.objectId = objectId;
+        this.accountId = accountId;
     }
 
     public Long getObjectId() {
@@ -23,5 +27,13 @@ public class ObjectQueryDto extends AniDto {
 
     public void setObjectId(Long objectId) {
         this.objectId = objectId;
+    }
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 }

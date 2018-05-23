@@ -1,22 +1,23 @@
 package com.ani.commons.octopus.objmeta.service;
 
-import com.ani.commons.octopus.objmeta.dto.meta.StubDto;
-import com.ani.commons.octopus.objmeta.object.AniObjectMaster;
+import com.ani.commons.octopus.objmeta.domain.AniObjectMaster;
+import com.ani.commons.octopus.objmeta.domain.ObjectType;
+import com.ani.commons.octopus.objmeta.dto.meta.AniMetaDto;
 import com.ani.commons.octopus.objmeta.dto.meta.StateMachineDto;
+import com.ani.commons.octopus.objmeta.dto.meta.StateMachineUpdateDto;
+import com.ani.commons.octopus.objmeta.dto.object.ObjectInfoUpdateDto;
 import com.ani.commons.octopus.objmeta.dto.object.ObjectRegisterDto;
-import com.ani.commons.octopus.objmeta.dto.object.ObjectUpdateDto;
-import com.ani.commons.octopus.objmeta.object.ObjectType;
 
 import java.util.List;
 
 /**
  * Created by zhanglina on 18-3-29.
  */
-public interface AniObjectMetaService {
+public interface AniObjectService {
 
     public void registerObjectMaster(ObjectRegisterDto registerDto);
 
-    public void updateObjectMaster(ObjectUpdateDto updateDto);
+    public void updateObjectMaster(ObjectInfoUpdateDto updateDto);
 
     public AniObjectMaster getObjectMaster(long objectId);
 
@@ -30,8 +31,8 @@ public interface AniObjectMetaService {
 
     public void releaseFromAccount(Long objectId);
 
-    public void updateObjectStub(Long objectId, List<StubDto> stubs, boolean isFull);
+    public void updateObjectStub(Long objectId, List<AniMetaDto> stubs, boolean isFull);
 
-    public void updateObjectState(Long objectId, List<StateMachineDto> states, boolean isFull);
+    public void updateObjectStateMachines(Long objectId, List<StateMachineUpdateDto> stateMachine, boolean isFull);
 
 }

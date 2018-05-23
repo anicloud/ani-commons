@@ -2,6 +2,7 @@ package com.ani.commons.octopus.objmeta.dto.object;
 
 import com.ani.utils.core.AniArray;
 import com.ani.utils.core.AniByte;
+import com.ani.utils.core.AniByteArray;
 import com.ani.utils.core.AniSecureUtils;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.exception.AniRuleException;
@@ -15,7 +16,7 @@ public abstract class ObjectRegisterDto extends AniDto {
     private String name;
 
     /**
-     * Authentication code for registering object
+     * Authentication code for registering domain
      * 0-63bit: modelId
      * 64-127bit: timestamp
      * HMAC( token, (modelId && timestamp) )

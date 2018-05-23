@@ -18,21 +18,6 @@
             <artifactId>earth-commons</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.ani.commons</groupId>
-            <artifactId>earth-commons</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.ani.commons</groupId>
-            <artifactId>earth-commons</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.ani.commons</groupId>
-            <artifactId>earth-commons</artifactId>
-            <version>1.0</version>
-        </dependency>
     </dependencies>
     <build>
         <finalName>bus-commons</finalName>

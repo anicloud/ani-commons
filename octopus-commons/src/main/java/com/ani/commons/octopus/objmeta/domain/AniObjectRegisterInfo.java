@@ -1,4 +1,4 @@
-package com.ani.commons.octopus.objmeta.object;
+package com.ani.commons.octopus.objmeta.domain;
 
 import com.ani.utils.core.AniByte;
 

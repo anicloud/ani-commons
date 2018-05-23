@@ -1,32 +1,33 @@
-package com.ani.commons.octopus.objmeta.object;
+package com.ani.commons.octopus.objmeta.domain;
 
-  import com.ani.commons.octopus.objmeta.object.state.StateMachine;
-  import com.ani.commons.octopus.objmeta.object.stub.StubMapper;
-  import com.ani.utils.core.AniByte;
+import com.ani.commons.octopus.objmeta.domain.state.StateMachineMeta;
+import com.ani.commons.octopus.objmeta.domain.stub.StubMeta;
+import com.ani.utils.core.DataState;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
-public class ObjectModel extends AniObjectMeta {
+public class ObjectModel extends AniBaseObject {
 
     private static final long serialVersionUID = -7225989167187564700L;
+
     private Long modelId;
     private String name;
-    private AniByte token;
     private ObjectType objectType;
     private Long devAccountId;
+    private DataState modelState;
 
     public ObjectModel() {
     }
 
-    public ObjectModel(Collection<StubMapper> stubs, List<StateMachine> stateMachines, Long modelId, String name, AniByte token, ObjectType objectType, Long devAccountId) {
-        super(stubs, stateMachines);
+    public ObjectModel(Collection<StubMeta> stubsMeta, List<StateMachineMeta> stateMachinesMeta, Long modelId, String name, ObjectType objectType, Long devAccountId, DataState modelState) {
+        super(stubsMeta, stateMachinesMeta);
         this.modelId = modelId;
         this.name = name;
-        this.token = token;
         this.objectType = objectType;
         this.devAccountId = devAccountId;
+        this.modelState = modelState;
     }
 
     public Long getModelId() {
@@ -45,14 +46,6 @@ public class ObjectModel extends AniObjectMeta {
         this.name = name;
     }
 
-    public AniByte getToken() {
-        return token;
-    }
-
-    public void setToken(AniByte token) {
-        this.token = token;
-    }
-
     public ObjectType getObjectType() {
         return objectType;
     }
@@ -67,6 +60,14 @@ public class ObjectModel extends AniObjectMeta {
 
     public void setDevAccountId(Long devAccountId) {
         this.devAccountId = devAccountId;
+    }
+
+    public DataState getModelState() {
+        return modelState;
+    }
+
+    public void setModelState(DataState modelState) {
+        this.modelState = modelState;
     }
 
     @Override

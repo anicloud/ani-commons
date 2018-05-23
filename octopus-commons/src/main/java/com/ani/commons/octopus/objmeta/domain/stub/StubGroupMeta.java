@@ -1,4 +1,4 @@
-package com.ani.commons.octopus.objmeta.object.stub;
+package com.ani.commons.octopus.objmeta.domain.stub;
 
 import com.ani.utils.core.data.meta.AniMetaGroup;
 
