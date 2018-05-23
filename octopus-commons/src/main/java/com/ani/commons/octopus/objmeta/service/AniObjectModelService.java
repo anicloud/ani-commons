@@ -65,24 +65,27 @@ public interface AniObjectModelService {
     /**
      * <h2>Batch create models STATE MACHINEs (sm) and states mapping of each sm.</h2>
      *
+     * @param modelId
      * @param smsMetaDto
      */
-    public void createModelStateMachines(List<StateMachineMetaDto> smsMetaDto) throws AniRuleException, AniDataException;
+    public void createModelStateMachines(Long modelId, List<StateMachineMetaDto> smsMetaDto) throws AniRuleException, AniDataException;
 
     /**
      * <h2>Update models STATE MACHINE (sm) and states mapping of sm.</h2>
      *
+     * @param modelId
      * @param smUpdateDto
      */
-    public void updateModelStateMachine(StateMachineUpdateDto smUpdateDto) throws AniRuleException, AniDataException;
+    public void updateModelStateMachine(Long modelId, StateMachineUpdateDto smUpdateDto) throws AniRuleException, AniDataException;
 
     /**
      * <h2>Get models under specific account of developer by unique devAccountId.</h2>
      *
-     * @param accountId
+     * @param reqAccountId
+     * @param devAccountId
      * @return <p>Multi ModelInfoDto if the account has models.</p>
      */
-    public List<ModelBriefInfoDto> getModelByDevAccountId(Long accountId) throws AniRuleException, AniDataException;
+    public List<ModelBriefInfoDto> getModelByDevAccountId(Long reqAccountId, Long devAccountId) throws AniRuleException, AniDataException;
 
     /**
      * <h2>Get specific model if the privilege settings allowed.</h2>
