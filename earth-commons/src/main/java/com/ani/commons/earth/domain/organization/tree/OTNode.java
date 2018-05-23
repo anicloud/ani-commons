@@ -1,5 +1,7 @@
 package com.ani.commons.earth.domain.organization.tree;
 
+import com.ani.commons.earth.enumeration.organization.NodeType;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,10 +12,30 @@ public class OTNode implements Serializable {
     private static final long serialVersionUID = 5520644352781449962L;
     private String nodeId;
     private String name;
+    private NodeType nodeType;
+    private String privilege;
     private Boolean canDeploy;
+    private Boolean hasChildren;
     private List<OTNode> children;
+
+    public NodeType getNodeType() {
+        return nodeType;
+    }
+
+    public void setNodeType(NodeType nodeType) {
+        this.nodeType = nodeType;
+    }
+
     public String getNodeId() {
         return nodeId;
+    }
+
+    public String getPrivilege() {
+        return privilege;
+    }
+
+    public void setPrivilege(String privilege) {
+        this.privilege = privilege;
     }
 
     public void setNodeId(String nodeId) {
@@ -42,5 +64,13 @@ public class OTNode implements Serializable {
 
     public void setCanDeploy(Boolean canDeploy) {
         this.canDeploy = canDeploy;
+    }
+
+    public Boolean getHasChildren() {
+        return hasChildren;
+    }
+
+    public void setHasChildren(Boolean hasChildren) {
+        this.hasChildren = hasChildren;
     }
 }

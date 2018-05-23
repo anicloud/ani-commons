@@ -13,12 +13,21 @@ public class Organization implements Serializable {
     private String name;
     private String description;
     private Long ownerId;
+    private String fileType;
     public Long getOrgId() {
         return orgId;
     }
 
     public void setOrgId(Long orgId) {
         this.orgId = orgId;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
     }
 
     public String getName() {

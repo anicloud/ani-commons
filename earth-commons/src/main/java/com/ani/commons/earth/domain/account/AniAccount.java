@@ -11,6 +11,9 @@ public abstract class AniAccount implements Serializable{
      */
     Long accountId;
 
+    String phone;
+
+    String email;
     /**
      * Have set password
      */
@@ -24,9 +27,25 @@ public abstract class AniAccount implements Serializable{
     /**
      * File path rule: /[accountId]/[portraitId](timestamp).jpg
      */
-    Long portraitId;
+    String fileType;
 
     public AniAccount() {
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Long getAccountId() {
@@ -53,12 +72,12 @@ public abstract class AniAccount implements Serializable{
         this.type = type;
     }
 
-    public Long getPortraitId() {
-        return portraitId;
+    public String getFileType() {
+        return fileType;
     }
 
-    public void setPortraitId(Long portraitId) {
-        this.portraitId = portraitId;
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
     }
 
     @Override

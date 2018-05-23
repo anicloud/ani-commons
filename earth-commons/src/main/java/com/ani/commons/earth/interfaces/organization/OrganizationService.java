@@ -8,6 +8,7 @@ import com.ani.commons.earth.dto.organization.org.OrgUpdateDto;
 import com.ani.commons.earth.dto.organization.role.OrgAccountRoleDto;
 import com.ani.commons.earth.dto.organization.role.OrgRoleOperationDto;
 import com.ani.utils.exception.AniAuthException;
+import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
 
 import java.util.List;
@@ -25,9 +26,9 @@ public interface OrganizationService {
 
     public List<OrgAccountRole> getRolesByOrgId(Long orgId) throws AniRuleException;
 
-    public List<OrgAccountRole> updateOrgRoles(OrgAccountRoleDto orgRole)throws AniRuleException;
+    public List<OrgAccountRole> updateOrgRoles(OrgAccountRoleDto orgRole)throws AniRuleException,AniDataException;
 
-    public OrgAccountRole addOrgRole(OrgAccountRoleDto orgRole)throws AniRuleException;
+    public OrgAccountRole addOrgRole(OrgAccountRoleDto orgRole)throws AniRuleException,AniDataException;
 
     public void addMemberToOrg(OrgMemberInfoDto orgMemberInfoDto);
 
@@ -39,6 +40,6 @@ public interface OrganizationService {
 
     public void removeOrg(Long accountId,Long orgId);
 
-
+    public OrgAccountRole getOrgRole(OrgRoleOperationDto roleOperationDto);
 
 }
