@@ -6,6 +6,7 @@ import com.ani.commons.octopus.objmeta.domain.stub.StubGroupMeta;
 import com.ani.commons.octopus.objmeta.domain.stub.StubMeta;
 import com.ani.commons.octopus.objmeta.dto.meta.AniMetaDto;
 import com.ani.utils.exception.AniDataException;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 /**
  * Created by zhanglina on 18-3-29.
  */
+@Service
 public interface AniMetaService {
 
     // state
