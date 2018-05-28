@@ -1,9 +1,8 @@
 package com.ani.commons.octopus.objmeta.service;
 
-import com.ani.commons.octopus.objmeta.domain.AniObjectMaster;
+import com.ani.commons.octopus.objmeta.domain.ObjectMaster;
 import com.ani.commons.octopus.objmeta.domain.ObjectType;
 import com.ani.commons.octopus.objmeta.dto.meta.AniMetaDto;
-import com.ani.commons.octopus.objmeta.dto.meta.StateMachineDto;
 import com.ani.commons.octopus.objmeta.dto.meta.StateMachineUpdateDto;
 import com.ani.commons.octopus.objmeta.dto.object.ObjectInfoUpdateDto;
 import com.ani.commons.octopus.objmeta.dto.object.ObjectRegisterDto;
@@ -19,13 +18,13 @@ public interface AniObjectService {
 
     public void updateObjectMaster(ObjectInfoUpdateDto updateDto);
 
-    public AniObjectMaster getObjectMaster(long objectId);
+    public ObjectMaster getObjectMaster(long objectId);
 
-    public List<AniObjectMaster> getObjectMasterByOwnerId(long accountId);
+    public List<ObjectMaster> getObjectMasterByOwnerId(long accountId);
 
-    public List<AniObjectMaster> getObjectMasterByOwnerIdAndType(long accountId, ObjectType type);
+    public List<ObjectMaster> getObjectMasterByOwnerIdAndType(long accountId, ObjectType type);
 
-    public List<AniObjectMaster> getObjectMasterByDevAccountId(long accountId);
+    public List<ObjectMaster> getObjectMasterByDevAccountId(long accountId);
 
     public void bindAccount(Long objectId, Long accountId);
 

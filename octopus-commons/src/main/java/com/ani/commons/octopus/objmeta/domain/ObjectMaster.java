@@ -9,18 +9,18 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-public class AniObjectMaster extends AniObject {
+public abstract class ObjectMaster extends AniObject {
 
     private static final long serialVersionUID = -7713960489119720503L;
 
     private Long ownerAccountId;
     private Map<AniByte, ConnState> antennasState;
 
-    public AniObjectMaster() {
+    public ObjectMaster() {
         super();
     }
 
-    public AniObjectMaster(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
+    public ObjectMaster(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
         super(stubs, stateMachines, model);
         this.ownerAccountId = ownerAccountId;
         this.antennasState = antennasState;

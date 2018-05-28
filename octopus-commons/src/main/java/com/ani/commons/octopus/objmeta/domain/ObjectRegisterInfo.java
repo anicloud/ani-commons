@@ -4,7 +4,7 @@ import com.ani.utils.core.AniByte;
 
 import java.io.Serializable;
 
-public class AniObjectRegisterInfo implements Serializable {
+public class ObjectRegisterInfo implements Serializable {
 
     private static final long serialVersionUID = 4395572270868642594L;
 
@@ -12,7 +12,7 @@ public class AniObjectRegisterInfo implements Serializable {
     private Long objectId;
     private AniByte token;
 
-    public AniObjectRegisterInfo() {
+    public ObjectRegisterInfo() {
     }
 
     public Long getModelId() {
