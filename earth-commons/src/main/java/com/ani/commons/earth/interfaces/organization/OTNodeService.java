@@ -50,4 +50,5 @@ public interface OTNodeService {
 
     public void addOrgMemberToNode(OTNodeOpDto otNodeOpDto,List<NodeAddMemberDto> nodeAddMemberDtos) throws AniDataException;
 
+    public void checkHaveRootPrivilege(Long opAccountId, Long orgId) throws AniAuthException;
 }

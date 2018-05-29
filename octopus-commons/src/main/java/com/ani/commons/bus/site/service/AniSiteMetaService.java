@@ -11,11 +11,11 @@ import com.ani.utils.exception.AniRuleException;
  */
 public interface AniSiteMetaService {
 
-    public SiteModelInitDto applySite(AniSiteModelApplicationDto siteApply) throws AniRuleException;
-
-    public AniSite submitWcSite(AniWCMetaSubmitDto wcMetaSubmit);
-
-    public AniSite findSiteModelById(Long modelId);
+//    public SiteModelInitDto applySite(AniSiteModelApplicationDto siteApply) throws AniRuleException;
+//
+//    public AniSite submitWcSite(AniWCMetaSubmitDto wcMetaSubmit);
+//
+//    public AniSite findSiteModelById(Long modelId);
 
 
 }

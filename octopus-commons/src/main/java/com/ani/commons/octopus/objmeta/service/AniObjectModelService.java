@@ -95,4 +95,43 @@ public interface AniObjectModelService {
      */
     public ObjectModel getAccessibleModelById(ModelQueryDto query) throws AniRuleException, AniDataException;
 
+    /**
+     * <h2>add models to org</h2>
+     * @param orgModelRegDto
+     * @return void
+     *
+     */
+    public void addModelToOrg(OrgModelRegDto orgModelRegDto)throws AniRuleException,AniAuthException;
+
+    /**
+     * <h2>update node models </h2>
+     * @param orgNodeModelMappingDto
+     * @return void
+     *
+     */
+    public void updateNodeModel(OrgNodeModelMappingDto orgNodeModelMappingDto) throws AniRuleException;
+    /**
+     * <h2>remove models by org</h2>
+     * @param orgModelQuery
+     * @return void
+     *
+     */
+    public void removeOrgModel(OrgModelQueryDto orgModelQuery) throws AniRuleException,AniAuthException;
+
+    /**
+     * <h2>Get models by organization node</h2>
+     * @param orgModelQuery query by orgId and nodeId
+     * @return ModelInfoDto if the org node has models
+     *
+     */
+    public List<ModelBriefInfoDto> getModelByOrgAndNodeId(OrgNodeModelQueryDto orgNodeModelQuery) throws AniRuleException;
+
+    /**
+     * <h2>Get models by organization node</h2>
+     * @Param query by orgId
+     * @return ModelInfoDto if the org has models
+     *
+     */
+    public List<ModelBriefInfoDto> getModeByOrgId(OrgModelQueryDto orgModelQuery) throws AniRuleException;
+
 }

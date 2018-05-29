@@ -36,6 +36,7 @@ public interface AccountUserRegistryService {
      */
     public Long register(String sessionId, AccountRegisterDto accountRegisterDto) throws AniRuleException;
 
+    public Long registerInside(AccountIdInfoDto accountIdInfoDto)throws AniRuleException;
     /**
      * <h2>Register account without basic info</h2>
      *
@@ -76,7 +77,7 @@ public interface AccountUserRegistryService {
      *
      * @throws AniRuleException
      */
-    public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, Byte[] newPwd,Boolean flag) throws AniRuleException;
+    public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, byte[] newPwd,Boolean flag) throws AniRuleException;
 
     public AniAccount modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
 

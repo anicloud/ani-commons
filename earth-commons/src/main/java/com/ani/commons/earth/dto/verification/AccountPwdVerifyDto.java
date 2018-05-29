@@ -9,17 +9,16 @@ public class AccountPwdVerifyDto extends AccountVerifyDto implements Serializabl
 
     private static final long serialVersionUID = -5129235984576413777L;
 
-    Byte[] password;
+    byte[] password;
 
     public AccountPwdVerifyDto() {
     }
 
-    public Byte[] getPassword() {
+    public byte[] getPassword() {
         return password;
     }
 
-    public void setPassword(Byte[] password) {
+    public void setPassword(byte[] password) {
         this.password = password;
     }
-
 }

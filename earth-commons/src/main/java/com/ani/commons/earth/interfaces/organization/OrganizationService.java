@@ -42,4 +42,5 @@ public interface OrganizationService {
 
     public OrgAccountRole getOrgRole(OrgRoleOperationDto roleOperationDto);
 
+    public void checkHaveRootPrivilege(Long opAccountId,Long orgId);
 }

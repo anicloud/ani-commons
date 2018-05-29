@@ -12,14 +12,6 @@ import java.util.List;
 public class OrgAccountInfoDto extends AniDto implements Serializable {
 
     private static final long serialVersionUID = 5964602716066922903L;
-    //    private String email;
-//    private String phoneNumber;
-//    private String birthDay;
-//    private Sex sex;
-//    private String citizenId;
-//    private String politics;
-//
-//    private String name;
     private List<Long> employeeId;
     private OTNodeOpDto otNodeOpDto;
 

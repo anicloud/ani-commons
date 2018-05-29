@@ -1,6 +1,8 @@
 package com.ani.commons.earth.dto.id;
 
+import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
 
 /**
  * Created by zhanglina on 17-12-29.
@@ -11,6 +13,9 @@ public abstract class AccountIdInfoDto extends AniDto {
 
     private Long accountId;
 
+    @AniRequiredField
+    private AccountType type;
+
     public AccountIdInfoDto() {
     }
 
@@ -20,5 +25,13 @@ public abstract class AccountIdInfoDto extends AniDto {
 
     public void setAccountId(Long accountId) {
         this.accountId = accountId;
+    }
+
+    public AccountType getType() {
+        return type;
+    }
+
+    public void setType(AccountType type) {
+        this.type = type;
     }
 }
