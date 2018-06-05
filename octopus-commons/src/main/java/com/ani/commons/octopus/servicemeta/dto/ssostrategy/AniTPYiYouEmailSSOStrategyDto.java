@@ -12,7 +12,7 @@ public class AniTPYiYouEmailSSOStrategyDto extends AniThirdPartyStrategyDto {
     private String suffixDomain;
 
     public AniTPYiYouEmailSSOStrategyDto() {
-//        this.dealPage="/sso/Eu5";
+//        this.dealPage="/sso/Eu5";k
         this.partyType= ThirdPartyType.YIYOUEMAIL;
     }
 

@@ -1,6 +1,7 @@
-package com.ani.commons.octopus.servicemeta.dto;
+package com.ani.commons.octopus.servicemeta.dto.service;
 
-import com.ani.commons.octopus.servicemeta.dto.ssostrategy.AniSSOStrategyDto;
+import com.ani.commons.octopus.objmeta.dto.object.ObjectModelRegisterDto;
+import com.ani.commons.octopus.servicemeta.dto.account.AccountOpDto;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.TwoCertification;
 
@@ -10,23 +11,17 @@ import java.io.Serializable;
  * Created by zhanglina on 18-5-22.
  */
 public class AniServiceDto implements Serializable {
-    private static final long serialVersionUID = 2297358921824654904L;
 
-    protected Long modelId;
+    private static final long serialVersionUID = 2297358921824654904L;
+    protected ObjectModelRegisterDto objectModelRegisterDto;
     protected String desc;
     protected String detail;
     protected String logoFileType;
     protected Transparency transparency;
     protected String serviceType;
-    protected TwoCertification twoCertification;
-
-    public Long getModelId() {
-        return modelId;
-    }
-
-    public void setModelId(Long modelId) {
-        this.modelId = modelId;
-    }
+    protected TwoCertification twoCertification;//dual
+    private AccountOpDto accountOpDto;
+    //private AniServiceOpDto accountOpDto;
 
     public String getDesc() {
         return desc;
@@ -76,4 +71,11 @@ public class AniServiceDto implements Serializable {
         this.twoCertification = twoCertification;
     }
 
+    public AniServiceOpDto getAccountOpDto() {
+        return accountOpDto;
+    }
+
+    public void setAccountOpDto(AniServiceOpDto accountOpDto) {
+        this.accountOpDto = accountOpDto;
+    }
 }

@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.dto.account.AccountOpDto;
 import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
 
 import java.io.Serializable;
@@ -15,6 +16,7 @@ public abstract class AniSSOStrategyDto implements Serializable {
     protected String loginUrl;
     protected String logoutUrl;
     protected IntegrationType integrationType;
+    protected AccountOpDto accountOpDto;
 
     public Boolean getSSOLogout() {
         return isSSOLogout;
@@ -46,5 +48,13 @@ public abstract class AniSSOStrategyDto implements Serializable {
 
     public void setIntegrationType(IntegrationType integrationType) {
         this.integrationType = integrationType;
+    }
+
+    public AccountOpDto getAccountOpDto() {
+        return accountOpDto;
+    }
+
+    public void setAccountOpDto(AccountOpDto accountOpDto) {
+        this.accountOpDto = accountOpDto;
     }
 }

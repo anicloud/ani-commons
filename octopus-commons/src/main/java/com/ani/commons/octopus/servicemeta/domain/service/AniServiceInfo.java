@@ -1,19 +1,16 @@
 package com.ani.commons.octopus.servicemeta.domain.service;
 
-import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniSSOStrategy;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.TwoCertification;
 
 import java.io.Serializable;
 
 /**
- * Created by zhanglina on 18-5-23.
+ * Created by zhanglina on 18-5-31.
  */
-public class AniService implements Serializable {
+public class AniServiceInfo implements Serializable {
 
-    private static final long serialVersionUID = 7067512857059614105L;
-
-//    private ObjectModhel objectModel;
+    private static final long serialVersionUID = 1995190142525682784L;
 
     private Long modelId;
 
@@ -23,7 +20,7 @@ public class AniService implements Serializable {
 
     private String detail;
 
-    private String logoFileType;
+//    private String logoFileType;
 
     private Transparency transparency;
 
@@ -31,7 +28,20 @@ public class AniService implements Serializable {
 
     private TwoCertification twoCertification;
 
-    private AniSSOStrategy ssoStrategy;
+
+    public AniServiceInfo() {
+    }
+
+    public AniServiceInfo(Long modelId, String modelName, String desc, String detail, String logoFileType, Transparency transparency, String serviceType, TwoCertification twoCertification) {
+        this.modelId = modelId;
+        this.modelName = modelName;
+        this.desc = desc;
+        this.detail = detail;
+        this.logoFileType = logoFileType;
+        this.transparency = transparency;
+        this.serviceType = serviceType;
+        this.twoCertification = twoCertification;
+    }
 
     public Long getModelId() {
         return modelId;
@@ -63,14 +73,6 @@ public class AniService implements Serializable {
 
     public void setDetail(String detail) {
         this.detail = detail;
-    }
-
-    public AniSSOStrategy getSsoStrategy() {
-        return ssoStrategy;
-    }
-
-    public void setSsoStrategy(AniSSOStrategy ssoStrategy) {
-        this.ssoStrategy = ssoStrategy;
     }
 
     public String getLogoFileType() {

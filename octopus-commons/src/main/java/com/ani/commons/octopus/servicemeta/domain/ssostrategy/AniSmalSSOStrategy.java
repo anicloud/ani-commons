@@ -15,7 +15,7 @@ public class AniSmalSSOStrategy extends AniSSOStrategy {
     private Integer assertTimeoutMs;
 
     public AniSmalSSOStrategy(){
-        this.integrationType= IntegrationType.SMAL;
+        this.integrationType= IntegrationType.SAML;
     }
 
     public String getIdpName() {
