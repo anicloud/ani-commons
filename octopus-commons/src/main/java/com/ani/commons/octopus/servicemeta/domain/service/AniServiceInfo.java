@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.service;
 
+import com.ani.commons.octopus.objmeta.domain.ObjectModel;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.TwoCertification;
 
@@ -12,15 +13,7 @@ public class AniServiceInfo implements Serializable {
 
     private static final long serialVersionUID = 1995190142525682784L;
 
-    private Long modelId;
-
-    private String modelName;
-
-    private String desc;
-
-    private String detail;
-
-//    private String logoFileType;
+    private ObjectModel objectModel;
 
     private Transparency transparency;
 
@@ -28,59 +21,22 @@ public class AniServiceInfo implements Serializable {
 
     private TwoCertification twoCertification;
 
-
-    public AniServiceInfo() {
+    public ObjectModel getObjectModel() {
+        return objectModel;
     }
 
-    public AniServiceInfo(Long modelId, String modelName, String desc, String detail, String logoFileType, Transparency transparency, String serviceType, TwoCertification twoCertification) {
-        this.modelId = modelId;
-        this.modelName = modelName;
-        this.desc = desc;
-        this.detail = detail;
-        this.logoFileType = logoFileType;
+    public void setObjectModel(ObjectModel objectModel) {
+        this.objectModel = objectModel;
+    }
+
+    public AniServiceInfo() {
+
+    }
+
+    public AniServiceInfo(Transparency transparency, String serviceType, TwoCertification twoCertification) {
         this.transparency = transparency;
         this.serviceType = serviceType;
         this.twoCertification = twoCertification;
-    }
-
-    public Long getModelId() {
-        return modelId;
-    }
-
-    public void setModelId(Long modelId) {
-        this.modelId = modelId;
-    }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
-
-    public String getLogoFileType() {
-        return logoFileType;
-    }
-
-    public void setLogoFileType(String logoFileType) {
-        this.logoFileType = logoFileType;
     }
 
     public Transparency getTransparency() {

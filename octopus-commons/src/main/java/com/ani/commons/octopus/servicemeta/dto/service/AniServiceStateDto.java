@@ -1,6 +1,8 @@
 package com.ani.commons.octopus.servicemeta.dto.service;
 
 
+import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
+
 import java.io.Serializable;
 
 /**
@@ -10,15 +12,15 @@ public class AniServiceStateDto implements Serializable{
 
     private static final long serialVersionUID = 3455725211676011250L;
 
-    private AniServiceOpDto serviceOpDto;
+    private ModelQueryDto modelQueryDto;
     private Boolean forbid;
 
-    public AniServiceOpDto getServiceOpDto() {
-        return serviceOpDto;
+    public ModelQueryDto getModelQueryDto() {
+        return modelQueryDto;
     }
 
-    public void setServiceOpDto(AniServiceOpDto serviceOpDto) {
-        this.serviceOpDto = serviceOpDto;
+    public void setModelQueryDto(ModelQueryDto modelQueryDto) {
+        this.modelQueryDto = modelQueryDto;
     }
 
     public Boolean getForbid() {

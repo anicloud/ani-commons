@@ -1,6 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto;
 
-import com.ani.commons.octopus.servicemeta.dto.service.AniServiceOpDto;
+import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
 import com.ani.commons.octopus.servicemeta.enumeration.InterfaceType;
 import com.ani.commons.octopus.servicemeta.enumeration.InterfaceVersion;
 import com.ani.commons.octopus.servicemeta.enumeration.SynDataType;
@@ -32,7 +32,8 @@ public class AniDataSynStrategyDto implements Serializable{
 
     private String interfaceMethod;
 
-    private AniServiceOpDto aniServiceOpDto;
+    private ModelQueryDto modelQueryDto;
+
     public String getUniUserField() {
         return uniUserField;
     }
@@ -105,11 +106,11 @@ public class AniDataSynStrategyDto implements Serializable{
         this.interfaceType = interfaceType;
     }
 
-    public AniServiceOpDto getAniServiceOpDto() {
-        return aniServiceOpDto;
+    public ModelQueryDto getModelQueryDto() {
+        return modelQueryDto;
     }
 
-    public void setAniServiceOpDto(AniServiceOpDto aniServiceOpDto) {
-        this.aniServiceOpDto = aniServiceOpDto;
+    public void setModelQueryDto(ModelQueryDto modelQueryDto) {
+        this.modelQueryDto = modelQueryDto;
     }
 }

@@ -11,7 +11,6 @@ import java.io.Serializable;
 public abstract class AniSSOStrategy implements Serializable {
 
     private static final long serialVersionUID = 732278579108449531L;
-
     protected Boolean isSSOLogout;
     protected String loginUrl;
     protected String logoutUrl;

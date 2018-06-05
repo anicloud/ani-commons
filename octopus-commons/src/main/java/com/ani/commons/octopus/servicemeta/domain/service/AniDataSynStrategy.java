@@ -11,8 +11,6 @@ import java.io.Serializable;
  */
 public class AniDataSynStrategy implements  Serializable {
     private static final long serialVersionUID = 3918847286984069990L;
-    private Long modelId;
-
     private String uniUserField;
 
     private String uniNodeField;
@@ -30,14 +28,6 @@ public class AniDataSynStrategy implements  Serializable {
     private String interfaceAddress;
 
     private String interfaceMethod;
-
-    public Long getModelId() {
-        return modelId;
-    }
-
-    public void setModelId(Long modelId) {
-        this.modelId = modelId;
-    }
 
     public String getUniUserField() {
         return uniUserField;

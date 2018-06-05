@@ -1,51 +1,25 @@
 package com.ani.commons.octopus.servicemeta.dto.service;
 
+import com.ani.commons.octopus.objmeta.dto.model.ModelRegisterDto;
+import com.ani.commons.octopus.objmeta.dto.object.ObjectModelAccountRegisterDto;
 import com.ani.commons.octopus.objmeta.dto.object.ObjectModelRegisterDto;
-import com.ani.commons.octopus.servicemeta.dto.account.AccountOpDto;
+import com.ani.commons.octopus.servicemeta.dto.account.AccountDto;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.TwoCertification;
+import com.ani.utils.dto.AniDto;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-5-22.
  */
-public class AniServiceDto implements Serializable {
+public abstract class AniServiceDto extends AniDto{
 
     private static final long serialVersionUID = 2297358921824654904L;
-    protected ObjectModelRegisterDto objectModelRegisterDto;
-    protected String desc;
-    protected String detail;
-    protected String logoFileType;
+
     protected Transparency transparency;
     protected String serviceType;
-    protected TwoCertification twoCertification;//dual
-    private AccountOpDto accountOpDto;
-    //private AniServiceOpDto accountOpDto;
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
-
-    public String getLogoFileType() {
-        return logoFileType;
-    }
-
-    public void setLogoFileType(String logoFileType) {
-        this.logoFileType = logoFileType;
-    }
+    protected TwoCertification twoCertification;
 
     public Transparency getTransparency() {
         return transparency;
@@ -71,11 +45,4 @@ public class AniServiceDto implements Serializable {
         this.twoCertification = twoCertification;
     }
 
-    public AniServiceOpDto getAccountOpDto() {
-        return accountOpDto;
-    }
-
-    public void setAccountOpDto(AniServiceOpDto accountOpDto) {
-        this.accountOpDto = accountOpDto;
-    }
 }
