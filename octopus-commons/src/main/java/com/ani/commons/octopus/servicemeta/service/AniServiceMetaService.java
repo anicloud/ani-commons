@@ -8,6 +8,8 @@ import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
 import com.ani.commons.octopus.servicemeta.dto.service.*;
 import com.ani.commons.octopus.servicemeta.dto.ssostrategy.AniSSOStrategyRegisterDto;
 import com.ani.utils.exception.AniAuthException;
+import com.ani.utils.exception.AniDataException;
+import com.ani.utils.exception.AniRuleException;
 
 import java.util.List;
 
@@ -16,7 +18,7 @@ import java.util.List;
  */
 public interface AniServiceMetaService {
 
-     public void addService(AniServiceRegisterDto registerDto) throws AniAuthException;
+     public void addService(AniServiceRegisterDto registerDto) throws AniRuleException,AniDataException;
 
      public void updateServiceInfo(AniServiceUpdateDto updateDto) throws AniAuthException;
 
