@@ -5,7 +5,7 @@ import com.ani.commons.octopus.objmeta.domain.ObjectType;
 /**
  * Created by zhanglina on 18-3-29.
  */
-public class ObjectModelRegisterDto extends ObjectRegisterDto {
+public class  ObjectModelRegisterDto extends ObjectRegisterDto {
 
     private static final long serialVersionUID = -7893713192108329556L;
 

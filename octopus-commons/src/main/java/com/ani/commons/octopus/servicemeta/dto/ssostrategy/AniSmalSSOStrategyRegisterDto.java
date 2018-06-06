@@ -1,12 +1,13 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.SignType;
 
 /**
  * Created by zhanglina on 18-5-22.
  */
-public class AniSmalSSOStrategyDto extends AniSSOStrategyDto  {
+public class
+AniSmalSSOStrategyRegisterDto extends AniSSOStrategyRegisterDto {
     private String idpName;
     private String idpNameFormat;
     private SignType signType;
@@ -44,8 +45,8 @@ public class AniSmalSSOStrategyDto extends AniSSOStrategyDto  {
         this.assertTimeoutMs = assertTimeoutMs;
     }
 
-    public AniSmalSSOStrategyDto(){
-        this.integrationType= IntegrationType.SMAL;
+    public AniSmalSSOStrategyRegisterDto(){
+        this.integrateType = IntegrateType.SAML;
     }
 
 

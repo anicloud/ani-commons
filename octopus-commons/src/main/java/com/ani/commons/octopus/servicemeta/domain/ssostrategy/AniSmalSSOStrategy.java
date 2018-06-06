@@ -1,6 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.SignType;
 
 /**
@@ -15,7 +15,7 @@ public class AniSmalSSOStrategy extends AniSSOStrategy {
     private Integer assertTimeoutMs;
 
     public AniSmalSSOStrategy(){
-        this.integrationType= IntegrationType.SMAL;
+        this.integrateType = IntegrateType.SAML;
     }
 
     public String getIdpName() {

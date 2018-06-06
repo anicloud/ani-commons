@@ -1,20 +1,22 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-5-23.
  */
-public abstract class AniSSOStrategyDto implements Serializable {
+public abstract class AniSSOStrategyRegisterDto implements Serializable {
 
     private static final long serialVersionUID = 8386958343290101151L;
 
     protected Boolean isSSOLogout;
     protected String loginUrl;
     protected String logoutUrl;
-    protected IntegrationType integrationType;
+    protected IntegrateType integrateType;
+    protected ModelQueryDto modelQueryDto;
 
     public Boolean getSSOLogout() {
         return isSSOLogout;
@@ -40,11 +42,19 @@ public abstract class AniSSOStrategyDto implements Serializable {
         this.logoutUrl = logoutUrl;
     }
 
-    public IntegrationType getIntegrationType() {
-        return integrationType;
+    public IntegrateType getIntegrateType() {
+        return integrateType;
     }
 
-    public void setIntegrationType(IntegrationType integrationType) {
-        this.integrationType = integrationType;
+    public void setIntegrateType(IntegrateType integrateType) {
+        this.integrateType = integrateType;
+    }
+
+    public ModelQueryDto getModelQueryDto() {
+        return modelQueryDto;
+    }
+
+    public void setModelQueryDto(ModelQueryDto modelQueryDto) {
+        this.modelQueryDto = modelQueryDto;
     }
 }

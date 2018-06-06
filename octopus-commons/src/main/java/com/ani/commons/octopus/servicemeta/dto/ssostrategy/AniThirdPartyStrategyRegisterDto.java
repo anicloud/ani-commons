@@ -1,12 +1,11 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniThirdPartySSOStrategy;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
  * Created by zhanglina on 18-5-23.
  */
-public abstract class AniThirdPartyStrategyDto extends AniSSOStrategyDto{
+public abstract class AniThirdPartyStrategyRegisterDto extends AniSSOStrategyRegisterDto {
 
     private static final long serialVersionUID = -1480333872371904271L;
     protected ThirdPartyType partyType;

@@ -1,6 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -15,7 +15,7 @@ public abstract class AniThirdPartySSOStrategy extends AniSSOStrategy  {
 
 
     public AniThirdPartySSOStrategy() {
-        this.integrationType= IntegrationType.THIRDPARTY;
+        this.integrateType = IntegrateType.THIRDPARTY;
     }
 
     public ThirdPartyType getPartyType() {

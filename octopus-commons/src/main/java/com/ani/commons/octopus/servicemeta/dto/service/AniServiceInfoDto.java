@@ -1,32 +1,23 @@
-package com.ani.commons.octopus.servicemeta.domain.service;
+package com.ani.commons.octopus.servicemeta.dto.service;
 
 import com.ani.commons.octopus.objmeta.domain.ObjectModel;
-import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniSSOStrategy;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 
 import java.io.Serializable;
 
 /**
- * Created by zhanglina on 18-5-23.
+ * Created by zhanglina on 18-5-31.
  */
-public class AniService implements Serializable {
+public class AniServiceInfoDto implements Serializable {
 
-    private static final long serialVersionUID = 7067512857059614105L;
+    private static final long serialVersionUID = 1995190142525682784L;
+
 
     private ObjectModel objectModel;
+    private Transparency transparency;
     private String serviceType;
     private DualAuth dualAuth;
-    private AniSSOStrategy ssoStrategy;
-    private AniDataSynStrategy aniDataSynStrategy;
-
-    public AniDataSynStrategy getAniDataSynStrategy() {
-        return aniDataSynStrategy;
-    }
-
-    public void setAniDataSynStrategy(AniDataSynStrategy aniDataSynStrategy) {
-        this.aniDataSynStrategy = aniDataSynStrategy;
-    }
 
     public ObjectModel getObjectModel() {
         return objectModel;
@@ -36,12 +27,22 @@ public class AniService implements Serializable {
         this.objectModel = objectModel;
     }
 
-    public AniSSOStrategy getSsoStrategy() {
-        return ssoStrategy;
+    public AniServiceInfoDto() {
+
     }
 
-    public void setSsoStrategy(AniSSOStrategy ssoStrategy) {
-        this.ssoStrategy = ssoStrategy;
+    public AniServiceInfoDto(Transparency transparency, String serviceType, DualAuth dualAuth) {
+        this.transparency = transparency;
+        this.serviceType = serviceType;
+        this.dualAuth = dualAuth;
+    }
+
+    public Transparency getTransparency() {
+        return transparency;
+    }
+
+    public void setTransparency(Transparency transparency) {
+        this.transparency = transparency;
     }
 
     public String getServiceType() {
