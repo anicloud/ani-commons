@@ -42,13 +42,7 @@ public abstract class AniSSOStrategyRegisterDto implements Serializable {
         this.logoutUrl = logoutUrl;
     }
 
-    public IntegrateType getIntegrateType() {
-        return integrateType;
-    }
 
-    public void setIntegrateType(IntegrateType integrateType) {
-        this.integrateType = integrateType;
-    }
 
     public ModelQueryDto getModelQueryDto() {
         return modelQueryDto;
