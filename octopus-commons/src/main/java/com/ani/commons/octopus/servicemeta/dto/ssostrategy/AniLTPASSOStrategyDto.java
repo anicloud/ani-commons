@@ -11,6 +11,31 @@ public class AniLTPASSOStrategyDto extends AniSSOStrategyDto {
     private String secretKey;
     private String domain;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public String getTokenName() {
+        return tokenName;
+    }
 
+    public void setTokenName(String tokenName) {
+        this.tokenName = tokenName;
+    }
+
+    public String getSecretKey() {
+        return secretKey;
+    }
+
+    public void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
 }

@@ -1,7 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
 import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
-import com.ani.commons.octopus.servicemeta.dto.account.AccountDto;
 import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
 
 import java.io.Serializable;
