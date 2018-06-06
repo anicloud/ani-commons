@@ -1,6 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.SignType;
 
 import java.io.Serializable;
@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-5-22.
  */
-public class AniJsonSSOStrategyDto extends AniSSOStrategyDto implements Serializable{
+public class AniJsonSSOStrategyRegisterDto extends AniSSOStrategyRegisterDto implements Serializable{
 
     private static final long serialVersionUID = 4804332374262898221L;
 
@@ -16,8 +16,8 @@ public class AniJsonSSOStrategyDto extends AniSSOStrategyDto implements Serializ
 
     private Integer assertTimeoutMs;
 
-    public AniJsonSSOStrategyDto(){
-        this.integrationType= IntegrationType.JSON;
+    public AniJsonSSOStrategyRegisterDto(){
+        this.integrateType = IntegrateType.JSON;
     }
 
     public SignType getSignType() {

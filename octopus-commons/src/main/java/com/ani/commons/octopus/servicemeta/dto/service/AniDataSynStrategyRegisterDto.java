@@ -1,6 +1,7 @@
-package com.ani.commons.octopus.servicemeta.dto;
+package com.ani.commons.octopus.servicemeta.dto.service;
 
 import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
+import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
 import com.ani.commons.octopus.servicemeta.enumeration.InterfaceType;
 import com.ani.commons.octopus.servicemeta.enumeration.InterfaceVersion;
 import com.ani.commons.octopus.servicemeta.enumeration.SynDataType;
@@ -8,11 +9,11 @@ import com.ani.commons.octopus.servicemeta.enumeration.SynDataType;
 import java.io.Serializable;
 
 /**
- * Created by zhanglina on 18-6-1.
+ * Created by zhanglina on 18-6-6.
  */
-public class AniDataSynStrategyDto implements Serializable{
+public class AniDataSynStrategyRegisterDto implements Serializable {
 
-    private static final long serialVersionUID = 2617264248224800642L;
+    private static final long serialVersionUID = 7854278135303787411L;
 
     private String uniUserField;
 
@@ -22,7 +23,7 @@ public class AniDataSynStrategyDto implements Serializable{
 
     private String character;
 
-    private String sysCircle;
+    private String synCircle;
 
     private InterfaceVersion interfaceVersion ;
 
@@ -33,6 +34,10 @@ public class AniDataSynStrategyDto implements Serializable{
     private String interfaceMethod;
 
     private ModelQueryDto modelQueryDto;
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
     public String getUniUserField() {
         return uniUserField;
@@ -66,12 +71,12 @@ public class AniDataSynStrategyDto implements Serializable{
         this.character = character;
     }
 
-    public String getSysCircle() {
-        return sysCircle;
+    public String getSynCircle() {
+        return synCircle;
     }
 
-    public void setSysCircle(String sysCircle) {
-        this.sysCircle = sysCircle;
+    public void setSynCircle(String synCircle) {
+        this.synCircle = synCircle;
     }
 
     public InterfaceVersion getInterfaceVersion() {
@@ -80,6 +85,14 @@ public class AniDataSynStrategyDto implements Serializable{
 
     public void setInterfaceVersion(InterfaceVersion interfaceVersion) {
         this.interfaceVersion = interfaceVersion;
+    }
+
+    public InterfaceType getInterfaceType() {
+        return interfaceType;
+    }
+
+    public void setInterfaceType(InterfaceType interfaceType) {
+        this.interfaceType = interfaceType;
     }
 
     public String getInterfaceAddress() {
@@ -96,14 +109,6 @@ public class AniDataSynStrategyDto implements Serializable{
 
     public void setInterfaceMethod(String interfaceMethod) {
         this.interfaceMethod = interfaceMethod;
-    }
-
-    public InterfaceType getInterfaceType() {
-        return interfaceType;
-    }
-
-    public void setInterfaceType(InterfaceType interfaceType) {
-        this.interfaceType = interfaceType;
     }
 
     public ModelQueryDto getModelQueryDto() {

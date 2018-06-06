@@ -5,7 +5,7 @@ import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 /**
  * Created by zhanglina on 18-5-23.
  */
-public class AniTPTencentEmailSSOStrategyDto extends AniThirdPartyStrategyDto {
+public class AniTPTencentEmailSSOStrategyRegisterDto extends AniThirdPartyStrategyRegisterDto {
 
     private static final long serialVersionUID = -6115883146280428055L;
 
@@ -17,7 +17,7 @@ public class AniTPTencentEmailSSOStrategyDto extends AniThirdPartyStrategyDto {
 
     private String apiAddress;
 
-    public AniTPTencentEmailSSOStrategyDto() {
+    public AniTPTencentEmailSSOStrategyRegisterDto() {
         this.partyType= ThirdPartyType.TENCENTEMAIL;
     }
 }

@@ -5,13 +5,13 @@ import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 /**
  * Created by zhanglina on 18-5-23.
  */
-public class AniTPYiYouEmailSSOStrategyDto extends AniThirdPartyStrategyDto {
+public class AniTPYiYouEmailSSOStrategyRegisterDto extends AniThirdPartyStrategyRegisterDto {
     private static final long serialVersionUID = -3259140525728178876L;
     private String apiKey;
     private String apiSecret;
     private String suffixDomain;
 
-    public AniTPYiYouEmailSSOStrategyDto() {
+    public AniTPYiYouEmailSSOStrategyRegisterDto() {
 //        this.dealPage="/sso/Eu5";k
         this.partyType= ThirdPartyType.YIYOUEMAIL;
     }
