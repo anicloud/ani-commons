@@ -3,6 +3,7 @@ package com.ani.commons.octopus.objmeta.domain;
 import com.ani.commons.octopus.objmeta.domain.state.StateMachineMeta;
 import com.ani.commons.octopus.objmeta.domain.stub.StubMeta;
 import com.ani.utils.core.DataState;
+import com.ani.utils.core.data.type.PrivacyType;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,6 +17,7 @@ public class ObjectModel extends AniBaseObject {
     private String name;
     private ObjectType objectType;
     private Long devAccountId;
+    private PrivacyType privacy;
     private DataState modelState;
 
     public ObjectModel() {
@@ -60,6 +62,14 @@ public class ObjectModel extends AniBaseObject {
 
     public void setDevAccountId(Long devAccountId) {
         this.devAccountId = devAccountId;
+    }
+
+    public PrivacyType getPrivacy() {
+        return privacy;
+    }
+
+    public void setPrivacy(PrivacyType privacy) {
+        this.privacy = privacy;
     }
 
     public DataState getModelState() {

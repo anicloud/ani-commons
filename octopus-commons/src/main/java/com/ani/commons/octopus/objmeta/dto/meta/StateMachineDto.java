@@ -19,7 +19,7 @@ public abstract class StateMachineDto extends AniDto {
     public StateMachineDto() {
     }
 
-    public StateMachineDto(Long modelId, List<AniMetaDto> states, Long opAccountId) {
+    public StateMachineDto(List<AniMetaDto> states, Long opAccountId) {
         this.states = states;
         this.opAccountId = opAccountId;
     }

@@ -14,8 +14,8 @@ public class StateMachineMetaDto extends StateMachineDto {
     public StateMachineMetaDto() {
     }
 
-    public StateMachineMetaDto(Long modelId, List<AniMetaDto> states, Long opAccountId, String name) {
-        super(modelId, states, opAccountId);
+    public StateMachineMetaDto(List<AniMetaDto> states, Long opAccountId, String name) {
+        super(states, opAccountId);
         this.name = name;
     }
 

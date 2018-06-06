@@ -18,8 +18,8 @@ public class StateMachineUpdateDto extends StateMachineDto {
     public StateMachineUpdateDto() {
     }
 
-    public StateMachineUpdateDto(Long modelId, List<AniMetaDto> states, Long opAccountId, Integer smIdx, Operation updateOp) {
-        super(modelId, states, opAccountId);
+    public StateMachineUpdateDto(List<AniMetaDto> states, Long opAccountId, Integer smIdx, Operation updateOp) {
+        super(states, opAccountId);
         this.smIdx = smIdx;
         this.updateOp = updateOp;
     }
