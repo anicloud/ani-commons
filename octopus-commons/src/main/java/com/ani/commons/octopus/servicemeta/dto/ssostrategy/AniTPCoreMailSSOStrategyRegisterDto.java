@@ -2,12 +2,10 @@ package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
-import java.io.Serializable;
-
 /**
  * Created by zhanglina on 18-5-23.
  */
-public class AniTPCoreMailSSOStrategyDto extends AniThirdPartyStrategyDto {
+public class AniTPCoreMailSSOStrategyRegisterDto extends AniThirdPartyStrategyRegisterDto {
 
     private static final long serialVersionUID = 1052457803040862519L;
 
@@ -31,7 +29,7 @@ public class AniTPCoreMailSSOStrategyDto extends AniThirdPartyStrategyDto {
         this.adminLoginPage = adminLoginPage;
     }
 
-    public AniTPCoreMailSSOStrategyDto() {
+    public AniTPCoreMailSSOStrategyRegisterDto() {
         this.dealPage="/";
         this.partyType= ThirdPartyType.COREMAIL;
     }

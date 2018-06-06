@@ -1,8 +1,9 @@
 package com.ani.commons.octopus.servicemeta.domain.service;
 
+import com.ani.commons.octopus.objmeta.domain.ObjectModel;
 import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniSSOStrategy;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
-import com.ani.commons.octopus.servicemeta.enumeration.TwoCertification;
+import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 
 import java.io.Serializable;
 
@@ -13,56 +14,26 @@ public class AniService implements Serializable {
 
     private static final long serialVersionUID = 7067512857059614105L;
 
-//    private ObjectModhel objectModel;
-
-    private Long modelId;
-
-    private String modelName;
-
-    private String desc;
-
-    private String detail;
-
-    private String logoFileType;
-
-    private Transparency transparency;
-
+    private ObjectModel objectModel;
     private String serviceType;
-
-    private TwoCertification twoCertification;
-
+    private DualAuth dualAuth;
     private AniSSOStrategy ssoStrategy;
+    private AniDataSynStrategy aniDataSynStrategy;
 
-    public Long getModelId() {
-        return modelId;
+    public AniDataSynStrategy getAniDataSynStrategy() {
+        return aniDataSynStrategy;
     }
 
-    public void setModelId(Long modelId) {
-        this.modelId = modelId;
+    public void setAniDataSynStrategy(AniDataSynStrategy aniDataSynStrategy) {
+        this.aniDataSynStrategy = aniDataSynStrategy;
     }
 
-    public String getModelName() {
-        return modelName;
+    public ObjectModel getObjectModel() {
+        return objectModel;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
+    public void setObjectModel(ObjectModel objectModel) {
+        this.objectModel = objectModel;
     }
 
     public AniSSOStrategy getSsoStrategy() {
@@ -73,22 +44,6 @@ public class AniService implements Serializable {
         this.ssoStrategy = ssoStrategy;
     }
 
-    public String getLogoFileType() {
-        return logoFileType;
-    }
-
-    public void setLogoFileType(String logoFileType) {
-        this.logoFileType = logoFileType;
-    }
-
-    public Transparency getTransparency() {
-        return transparency;
-    }
-
-    public void setTransparency(Transparency transparency) {
-        this.transparency = transparency;
-    }
-
     public String getServiceType() {
         return serviceType;
     }
@@ -97,11 +52,11 @@ public class AniService implements Serializable {
         this.serviceType = serviceType;
     }
 
-    public TwoCertification getTwoCertification() {
-        return twoCertification;
+    public DualAuth getDualAuth() {
+        return dualAuth;
     }
 
-    public void setTwoCertification(TwoCertification twoCertification) {
-        this.twoCertification = twoCertification;
+    public void setDualAuth(DualAuth dualAuth) {
+        this.dualAuth = dualAuth;
     }
 }

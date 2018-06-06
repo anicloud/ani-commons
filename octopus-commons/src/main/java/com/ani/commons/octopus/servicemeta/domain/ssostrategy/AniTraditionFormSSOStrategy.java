@@ -1,6 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.SubmitMethod;
 
 /**
@@ -15,7 +15,7 @@ public class AniTraditionFormSSOStrategy extends AniSSOStrategy {
     private String handlePage;
     private String fileType;
     public AniTraditionFormSSOStrategy(){
-        this.integrationType= IntegrationType.TRIDATIONFORM;
+        this.integrateType = IntegrateType.TRIDATIONFORM;
     }
 
     public String getUsernameField() {

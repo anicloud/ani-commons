@@ -1,11 +1,11 @@
-package com.ani.commons.octopus.servicemeta.domain.service;
+package com.ani.commons.octopus.servicemeta.dto.service;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-6-1.
  */
-public class AniServiceBriefInfo implements Serializable {
+public class AniServiceBriefInfoDto implements Serializable {
 
     private static final long serialVersionUID = -3364853920873221375L;
 

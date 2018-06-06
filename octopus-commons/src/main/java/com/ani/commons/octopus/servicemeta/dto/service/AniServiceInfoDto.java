@@ -1,25 +1,23 @@
-package com.ani.commons.octopus.servicemeta.domain.service;
+package com.ani.commons.octopus.servicemeta.dto.service;
 
 import com.ani.commons.octopus.objmeta.domain.ObjectModel;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
-import com.ani.commons.octopus.servicemeta.enumeration.TwoCertification;
+import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-5-31.
  */
-public class AniServiceInfo implements Serializable {
+public class AniServiceInfoDto implements Serializable {
 
     private static final long serialVersionUID = 1995190142525682784L;
 
+
     private ObjectModel objectModel;
-
     private Transparency transparency;
-
     private String serviceType;
-
-    private TwoCertification twoCertification;
+    private DualAuth dualAuth;
 
     public ObjectModel getObjectModel() {
         return objectModel;
@@ -29,14 +27,14 @@ public class AniServiceInfo implements Serializable {
         this.objectModel = objectModel;
     }
 
-    public AniServiceInfo() {
+    public AniServiceInfoDto() {
 
     }
 
-    public AniServiceInfo(Transparency transparency, String serviceType, TwoCertification twoCertification) {
+    public AniServiceInfoDto(Transparency transparency, String serviceType, DualAuth dualAuth) {
         this.transparency = transparency;
         this.serviceType = serviceType;
-        this.twoCertification = twoCertification;
+        this.dualAuth = dualAuth;
     }
 
     public Transparency getTransparency() {
@@ -55,11 +53,11 @@ public class AniServiceInfo implements Serializable {
         this.serviceType = serviceType;
     }
 
-    public TwoCertification getTwoCertification() {
-        return twoCertification;
+    public DualAuth getDualAuth() {
+        return dualAuth;
     }
 
-    public void setTwoCertification(TwoCertification twoCertification) {
-        this.twoCertification = twoCertification;
+    public void setDualAuth(DualAuth dualAuth) {
+        this.dualAuth = dualAuth;
     }
 }

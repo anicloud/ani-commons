@@ -1,11 +1,8 @@
 package com.ani.commons.octopus.servicemeta.dto.service;
 
-
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
-import com.ani.commons.octopus.servicemeta.enumeration.TwoCertification;
+import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 import com.ani.utils.dto.AniDto;
-
-import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-5-22.
@@ -16,7 +13,7 @@ public abstract class AniServiceDto extends AniDto{
 
     protected Transparency transparency;
     protected String serviceType;
-    protected TwoCertification twoCertification;
+    protected DualAuth dualAuth;
 
     public Transparency getTransparency() {
         return transparency;
@@ -34,12 +31,12 @@ public abstract class AniServiceDto extends AniDto{
         this.serviceType = serviceType;
     }
 
-    public TwoCertification getTwoCertification() {
-        return twoCertification;
+    public DualAuth getDualAuth() {
+        return dualAuth;
     }
 
-    public void setTwoCertification(TwoCertification twoCertification) {
-        this.twoCertification = twoCertification;
+    public void setDualAuth(DualAuth dualAuth) {
+        this.dualAuth = dualAuth;
     }
 
 }

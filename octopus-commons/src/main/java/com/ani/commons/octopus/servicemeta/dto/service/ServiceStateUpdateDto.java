@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-6-1.
  */
-public class AniServiceStateDto implements Serializable{
+public class ServiceStateUpdateDto implements Serializable{
 
     private static final long serialVersionUID = 3455725211676011250L;
 

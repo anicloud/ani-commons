@@ -1,6 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.SubmitMethod;
 
 import java.io.Serializable;
@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-5-22.
  */
-public class AniLDAPSafeTokenSSOStrategyDto extends AniSSOStrategyDto implements Serializable {
+public class AniLDAPSafeTokenSSOStrategyRegisterDto extends AniSSOStrategyRegisterDto implements Serializable {
 
     private static final long serialVersionUID = 7794555206942901800L;
 
@@ -18,9 +18,9 @@ public class AniLDAPSafeTokenSSOStrategyDto extends AniSSOStrategyDto implements
     private String handlePage;
     private String proxyServerAddress;
 
-    public AniLDAPSafeTokenSSOStrategyDto() {
+    public AniLDAPSafeTokenSSOStrategyRegisterDto() {
         this.handlePage="";
-        this.integrationType= IntegrationType.LDAPSAFETOKEN;
+        this.integrateType = IntegrateType.LDAPSAFETOKEN;
     }
 
     public String getUsernameField() {

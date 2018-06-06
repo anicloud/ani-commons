@@ -1,12 +1,12 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
-import com.ani.commons.octopus.servicemeta.enumeration.IntegrationType;
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.SubmitMethod;
 
 /**
  * Created by zhanglina on 18-5-22.
  */
-public class AniTraditionFormSSOStrategyDto extends AniSSOStrategyDto {
+public class AniTraditionFormSSOStrategyRegisterDto extends AniSSOStrategyRegisterDto {
 
     private static final long serialVersionUID = -6529008458846751330L;
 
@@ -60,7 +60,7 @@ public class AniTraditionFormSSOStrategyDto extends AniSSOStrategyDto {
         this.fileType = fileType;
     }
 
-    public AniTraditionFormSSOStrategyDto() {
-        this.integrationType= IntegrationType.TRIDATIONFORM;
+    public AniTraditionFormSSOStrategyRegisterDto() {
+        this.integrateType = IntegrateType.TRIDATIONFORM;
     }
 }
