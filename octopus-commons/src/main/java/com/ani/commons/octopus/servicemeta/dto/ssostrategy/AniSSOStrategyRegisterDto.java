@@ -2,13 +2,14 @@ package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
 import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
 import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
+import com.ani.utils.dto.AniDto;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-5-23.
  */
-public abstract class AniSSOStrategyRegisterDto implements Serializable {
+public abstract class AniSSOStrategyRegisterDto extends AniDto {
 
     private static final long serialVersionUID = 8386958343290101151L;
 
@@ -20,10 +21,6 @@ public abstract class AniSSOStrategyRegisterDto implements Serializable {
 
     public Boolean getSSOLogout() {
         return isSSOLogout;
-    }
-
-    public void setSSOLogout(Boolean SSOLogout) {
-        isSSOLogout = SSOLogout;
     }
 
     public String getLoginUrl() {

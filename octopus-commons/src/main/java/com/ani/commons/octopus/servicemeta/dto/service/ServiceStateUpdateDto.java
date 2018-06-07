@@ -2,13 +2,14 @@ package com.ani.commons.octopus.servicemeta.dto.service;
 
 
 import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
+import com.ani.utils.dto.AniDto;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-6-1.
  */
-public class ServiceStateUpdateDto implements Serializable{
+public class ServiceStateUpdateDto extends AniDto {
 
     private static final long serialVersionUID = 3455725211676011250L;
 

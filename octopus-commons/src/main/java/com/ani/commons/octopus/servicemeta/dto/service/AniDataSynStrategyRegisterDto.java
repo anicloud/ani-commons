@@ -5,13 +5,14 @@ import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
 import com.ani.commons.octopus.servicemeta.enumeration.InterfaceType;
 import com.ani.commons.octopus.servicemeta.enumeration.InterfaceVersion;
 import com.ani.commons.octopus.servicemeta.enumeration.SynDataType;
+import com.ani.utils.dto.AniDto;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-6-6.
  */
-public class AniDataSynStrategyRegisterDto implements Serializable {
+public class AniDataSynStrategyRegisterDto extends AniDto {
 
     private static final long serialVersionUID = 7854278135303787411L;
 

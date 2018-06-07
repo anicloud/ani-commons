@@ -20,23 +20,23 @@ import java.util.List;
  */
 public interface AniServiceMetaService {
 
-     public void addService(AniServiceRegisterDto registerDto) throws AniRuleException,AniDataException;
+     public void addService(AniServiceRegisterDto registerDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public void updateServiceInfo(AniServiceUpdateDto updateDto) throws AniAuthException;
+     public void updateServiceInfo(AniServiceUpdateDto updateDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public void setSSOStrategy(AniSSOStrategyRegisterDto aniSSOStrategyDto) throws AniAuthException;
+     public void setSSOStrategy(AniSSOStrategyRegisterDto aniSSOStrategyDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public void addDataSynStrategy(AniDataSynStrategyRegisterDto registerDto) throws AniAuthException;
+     public void addDataSynStrategy(AniDataSynStrategyRegisterDto registerDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public void removeService(ModelQueryDto modelQueryDto)throws AniAuthException;
+     public void removeService(ModelQueryDto modelQueryDto)throws AniAuthException, AniRuleException, AniDataException;
 
-     public AniServiceInfoDto getAniServiceById(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException;
+     public AniServiceInfoDto getAniServiceById(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public AniSSOStrategy getSSOStrategyByService(ModelQueryDto modelQueryDto) throws AniAuthException;
+     public AniSSOStrategy getSSOStrategyByService(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public AniDataSynStrategy getDataSysStrategy(ModelQueryDto modelQueryDto) throws AniAuthException;
+     public AniDataSynStrategy getDataSysStrategy(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public void updateServiceState(ServiceStateUpdateDto serviceStateUpdateDto) throws AniAuthException;
+     public void updateServiceState(ServiceStateUpdateDto serviceStateUpdateDto)  throws AniAuthException, AniRuleException, AniDataException ;
 
      public List<AniServiceBasicInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto);
 
