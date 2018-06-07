@@ -1,12 +1,11 @@
 package com.ani.commons.octopus.servicemeta.service;
 
 import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
+import com.ani.commons.octopus.objmeta.dto.model.ModelStateUpdateDto;
 import com.ani.commons.octopus.objmeta.dto.model.OrgModelQueryDto;
 import com.ani.commons.octopus.objmeta.dto.model.OrgNodeModelQueryDto;
 import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniSSOStrategy;
 import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
-import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
-import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniSSOStrategy;
 import com.ani.commons.octopus.servicemeta.dto.service.*;
 import com.ani.commons.octopus.servicemeta.dto.ssostrategy.AniSSOStrategyRegisterDto;
 import com.ani.utils.exception.AniAuthException;
@@ -36,7 +35,7 @@ public interface AniServiceMetaService {
 
      public AniDataSynStrategy getDataSysStrategy(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public void updateServiceState(ServiceStateUpdateDto serviceStateUpdateDto)  throws AniAuthException, AniRuleException, AniDataException ;
+     public void updateServiceState(ModelStateUpdateDto modelStateUpdateDto)  throws AniAuthException, AniRuleException, AniDataException ;
 
      public List<AniServiceBasicInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto);
 

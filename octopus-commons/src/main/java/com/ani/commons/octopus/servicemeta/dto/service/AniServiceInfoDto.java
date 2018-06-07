@@ -15,7 +15,6 @@ public class AniServiceInfoDto implements Serializable {
 
 
     private ObjectModel objectModel;
-    private Transparency transparency;
     private String serviceType;
     private DualAuth dualAuth;
 
@@ -31,18 +30,9 @@ public class AniServiceInfoDto implements Serializable {
 
     }
 
-    public AniServiceInfoDto(Transparency transparency, String serviceType, DualAuth dualAuth) {
-        this.transparency = transparency;
+    public AniServiceInfoDto(String serviceType, DualAuth dualAuth) {
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
-    }
-
-    public Transparency getTransparency() {
-        return transparency;
-    }
-
-    public void setTransparency(Transparency transparency) {
-        this.transparency = transparency;
     }
 
     public String getServiceType() {

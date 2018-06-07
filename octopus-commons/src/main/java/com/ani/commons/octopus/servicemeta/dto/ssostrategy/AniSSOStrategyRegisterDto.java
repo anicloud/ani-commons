@@ -19,6 +19,14 @@ public abstract class AniSSOStrategyRegisterDto extends AniDto {
     protected IntegrateType integrateType;
     protected ModelQueryDto modelQueryDto;
 
+    public IntegrateType getIntegrateType() {
+        return integrateType;
+    }
+
+    public void setIntegrateType(IntegrateType integrateType) {
+        this.integrateType = integrateType;
+    }
+
     public Boolean getSSOLogout() {
         return isSSOLogout;
     }

@@ -2,6 +2,7 @@ package com.ani.commons.octopus.servicemeta.dto.service;
 
 
 import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
+import com.ani.utils.core.DataState;
 import com.ani.utils.dto.AniDto;
 
 import java.io.Serializable;
@@ -14,7 +15,7 @@ public class ServiceStateUpdateDto extends AniDto {
     private static final long serialVersionUID = 3455725211676011250L;
 
     private ModelQueryDto modelQueryDto;
-    private Boolean forbid;
+    private DataState forbid;
 
     public ModelQueryDto getModelQueryDto() {
         return modelQueryDto;
@@ -24,11 +25,11 @@ public class ServiceStateUpdateDto extends AniDto {
         this.modelQueryDto = modelQueryDto;
     }
 
-    public Boolean getForbid() {
+    public DataState getForbid() {
         return forbid;
     }
 
-    public void setForbid(Boolean forbid) {
+    public void setForbid(DataState forbid) {
         this.forbid = forbid;
     }
 }
