@@ -37,7 +37,7 @@ public interface AniServiceMetaService {
 
      public void updateServiceState(ModelStateUpdateDto modelStateUpdateDto)  throws AniAuthException, AniRuleException, AniDataException ;
 
-     public List<AniServiceBasicInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto);
+     public List<AniServiceBasicInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
      public List<AniServiceBasicInfoDto> getServiceBasicInfoByNodeId(OrgNodeModelQueryDto orgNodeModelQueryDto);
 

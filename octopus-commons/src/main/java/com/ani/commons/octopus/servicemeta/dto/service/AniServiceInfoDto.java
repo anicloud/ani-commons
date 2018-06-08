@@ -18,6 +18,10 @@ public class AniServiceInfoDto implements Serializable {
     private String serviceType;
     private DualAuth dualAuth;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
     public ObjectModel getObjectModel() {
         return objectModel;
     }
@@ -30,7 +34,8 @@ public class AniServiceInfoDto implements Serializable {
 
     }
 
-    public AniServiceInfoDto(String serviceType, DualAuth dualAuth) {
+    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth) {
+        this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
     }

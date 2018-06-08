@@ -6,35 +6,34 @@ import com.ani.commons.octopus.servicemeta.enumeration.InterfaceType;
 import com.ani.commons.octopus.servicemeta.enumeration.InterfaceVersion;
 import com.ani.commons.octopus.servicemeta.enumeration.SynDataType;
 import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-6-6.
  */
-public class AniDataSynStrategyRegisterDto extends AniDto {
+public class AniDataSynStrategyRegisterDto extends ModelQueryDto {
 
     private static final long serialVersionUID = 7854278135303787411L;
-
+    @AniRequiredField
     private String uniUserField;
-
+    @AniRequiredField
     private String uniNodeField;
-
+    @AniRequiredField
     private SynDataType synDataType;
-
+    @AniRequiredField
     private String character;
-
+    @AniRequiredField
     private String synCircle;
-
+    @AniRequiredField
     private InterfaceVersion interfaceVersion ;
-
+    @AniRequiredField
     private InterfaceType interfaceType;
-
+    @AniRequiredField
     private String interfaceAddress;
-
+    @AniRequiredField
     private String interfaceMethod;
-
-    private ModelQueryDto modelQueryDto;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -112,11 +111,4 @@ public class AniDataSynStrategyRegisterDto extends AniDto {
         this.interfaceMethod = interfaceMethod;
     }
 
-    public ModelQueryDto getModelQueryDto() {
-        return modelQueryDto;
-    }
-
-    public void setModelQueryDto(ModelQueryDto modelQueryDto) {
-        this.modelQueryDto = modelQueryDto;
-    }
 }

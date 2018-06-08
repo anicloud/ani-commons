@@ -3,22 +3,27 @@ package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
 import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniFieldFormat;
+import com.ani.utils.dto.AniPattern;
+import com.ani.utils.dto.AniRequiredField;
 
 import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-5-23.
  */
-public abstract class AniSSOStrategyRegisterDto extends AniDto {
+public abstract class AniSSOStrategyRegisterDto extends ModelQueryDto {
 
     private static final long serialVersionUID = 8386958343290101151L;
-
+    @AniRequiredField
     protected Boolean isSSOLogout;
+    @AniFieldFormat(pattern = AniPattern.URL_PATTERN)
     protected String loginUrl;
+    @AniFieldFormat(pattern = AniPattern.URL_PATTERN)
     protected String logoutUrl;
+    @AniRequiredField
     protected IntegrateType integrateType;
-    protected ModelQueryDto modelQueryDto;
-
+    // 应用基础地址
     public IntegrateType getIntegrateType() {
         return integrateType;
     }
@@ -47,13 +52,4 @@ public abstract class AniSSOStrategyRegisterDto extends AniDto {
         this.logoutUrl = logoutUrl;
     }
 
-
-
-    public ModelQueryDto getModelQueryDto() {
-        return modelQueryDto;
-    }
-
-    public void setModelQueryDto(ModelQueryDto modelQueryDto) {
-        this.modelQueryDto = modelQueryDto;
-    }
 }
