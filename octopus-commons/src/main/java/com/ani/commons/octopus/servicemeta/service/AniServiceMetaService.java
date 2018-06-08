@@ -39,7 +39,7 @@ public interface AniServiceMetaService {
 
      public List<AniServiceBasicInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public List<AniServiceBasicInfoDto> getServiceBasicInfoByNodeId(OrgNodeModelQueryDto orgNodeModelQueryDto);
+     public List<AniServiceBasicInfoDto> getServiceBasicInfoByNodeId(OrgNodeModelQueryDto orgNodeModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
      public List<AniServiceBriefInfoDto> getServiceBriefInfoByAccountId(Long accountId);
 
