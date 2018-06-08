@@ -30,7 +30,7 @@ public class AniServiceInfoDto implements Serializable {
         this.objectModel = objectModel;
     }
 
-    public AniServiceInfoDto() {
+    public      AniServiceInfoDto() {
 
     }
 

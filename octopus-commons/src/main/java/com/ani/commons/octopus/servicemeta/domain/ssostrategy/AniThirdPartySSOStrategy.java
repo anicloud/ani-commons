@@ -10,21 +10,9 @@ public abstract class AniThirdPartySSOStrategy extends AniSSOStrategy  {
 
     private static final long serialVersionUID = 8352794566772869761L;
 
-    protected ThirdPartyType partyType;
     protected String dealPage;
 
 
-    public AniThirdPartySSOStrategy() {
-        this.integrateType = IntegrateType.THIRDPARTY;
-    }
-
-    public ThirdPartyType getPartyType() {
-        return partyType;
-    }
-
-    public void setPartyType(ThirdPartyType partyType) {
-        this.partyType = partyType;
-    }
 
     public String getDealPage() {
         return dealPage;
