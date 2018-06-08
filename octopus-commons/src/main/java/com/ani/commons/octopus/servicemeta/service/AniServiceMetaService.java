@@ -33,13 +33,13 @@ public interface AniServiceMetaService {
 
      public AniSSOStrategy getSSOStrategyByService(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public AniDataSynStrategy getDataSysStrategy(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public AniDataSynStrategy getDataSynStrategy(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
      public void updateServiceState(ModelStateUpdateDto modelStateUpdateDto)  throws AniAuthException, AniRuleException, AniDataException ;
 
-     public List<AniServiceBasicInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public List<ServiceBriefInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
-     public List<AniServiceBasicInfoDto> getServiceBasicInfoByNodeId(OrgNodeModelQueryDto orgNodeModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public List<ServiceBriefInfoDto> getServiceBasicInfoByNodeId(OrgNodeModelQueryDto orgNodeModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
 
      public List<AniServiceBriefInfoDto> getServiceBriefInfoByAccountId(Long accountId);
 
