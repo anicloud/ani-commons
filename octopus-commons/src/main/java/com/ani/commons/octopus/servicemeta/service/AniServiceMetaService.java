@@ -26,7 +26,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void addService(AniServiceRegisterDto registerDto) throws AniAuthException, AniRuleException, AniDataException;
+     public void addService(AniServiceRegisterDto registerDto) throws AniRuleException, AniDataException;
 
      /**
       * <h2>Update the Service information.</h2>
@@ -35,7 +35,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void updateServiceInfo(AniServiceUpdateDto updateDto) throws AniAuthException, AniRuleException, AniDataException;
+     public void updateServiceInfo(AniServiceUpdateDto updateDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Setting integration strategy.</h2>
@@ -44,7 +44,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void setSSOStrategy(AniSSOStrategyRegisterDto aniSSOStrategyDto) throws AniAuthException, AniRuleException, AniDataException;
+     public void setSSOStrategy(AniSSOStrategyRegisterDto aniSSOStrategyDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Add data synchronization Strategy.</h2>
@@ -53,7 +53,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void addDataSynStrategy(AniDataSynStrategyRegisterDto registerDto) throws AniAuthException, AniRuleException, AniDataException;
+     public void addDataSynStrategy(AniDataSynStrategyRegisterDto registerDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Delete Service.</h2>
@@ -62,7 +62,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void removeService(ModelQueryDto modelQueryDto)throws AniAuthException, AniRuleException, AniDataException;
+     public void removeService(ModelQueryDto modelQueryDto)throws  AniRuleException, AniDataException;
 
      /**
       *<h2>Query basic information.</h2>
@@ -72,7 +72,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public AniServiceInfoDto getAniServiceById(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public AniServiceInfoDto getAniServiceById(ModelQueryDto modelQueryDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Query integration strategy.</h2>
@@ -82,7 +82,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public AniSSOStrategy getSSOStrategyByService(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public AniSSOStrategy getSSOStrategyByService(ModelQueryDto modelQueryDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Query data synchronization Strategy.</h2>
@@ -92,7 +92,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public AniDataSynStrategy getDataSynStrategy(ModelQueryDto modelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public AniDataSynStrategy getDataSynStrategy(ModelQueryDto modelQueryDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Update Service State (1.ACTIVE/2.DISABLE/3.REMOVED).</h2>
@@ -101,7 +101,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void updateServiceState(ModelStateUpdateDto modelStateUpdateDto)  throws AniAuthException, AniRuleException, AniDataException ;
+     public void updateServiceState(ModelStateUpdateDto modelStateUpdateDto)  throws  AniRuleException, AniDataException ;
 
      /**
       * <h2>Query the list of OrgModel by orgId.</h2>
@@ -111,7 +111,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public List<ServiceBriefInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public List<ServiceBriefInfoDto> getServiceBasicInfoByOrgId(OrgModelQueryDto orgModelQueryDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Query the list of OrgModel by nodeId.</h2>
@@ -121,13 +121,13 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public List<ServiceBriefInfoDto> getServiceBasicInfoByNodeId(OrgNodeModelQueryDto orgNodeModelQueryDto) throws AniAuthException, AniRuleException, AniDataException;
+     public List<ServiceBriefInfoDto> getServiceBasicInfoByNodeId(OrgNodeModelQueryDto orgNodeModelQueryDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Query the list of Service by accountId.</h2>
       * @param accountId
       * @return List<AniServiceBriefInfoDto>
       */
-     public List<AniServiceBriefInfoDto> getServiceBriefInfoByAccountId(Long accountId);
+     public List<AniServiceBriefInfoDto> getServiceBriefInfoByAccountId(Long accountId) throws  AniRuleException, AniDataException;;
 
 }
