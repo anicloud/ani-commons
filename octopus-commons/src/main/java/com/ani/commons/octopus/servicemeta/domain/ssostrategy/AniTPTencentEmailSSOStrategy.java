@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -19,7 +20,7 @@ public class AniTPTencentEmailSSOStrategy extends AniThirdPartySSOStrategy{
 
     public AniTPTencentEmailSSOStrategy() {
 
-        this.partyType= ThirdPartyType.TENCENTEMAIL;
+        this.integrateType= IntegrateType.TENCENTEMAIL;
     }
 
     public String getAdminKey() {

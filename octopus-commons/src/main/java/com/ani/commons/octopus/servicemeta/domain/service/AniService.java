@@ -20,6 +20,17 @@ public class AniService implements Serializable {
     private AniSSOStrategy ssoStrategy;
     private AniDataSynStrategy aniDataSynStrategy;
 
+
+    public AniService(){}
+
+    public AniService(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy) {
+        this.objectModel = objectModel;
+        this.serviceType = serviceType;
+        this.dualAuth = dualAuth;
+        this.ssoStrategy = ssoStrategy;
+        this.aniDataSynStrategy = aniDataSynStrategy;
+    }
+
     public AniDataSynStrategy getAniDataSynStrategy() {
         return aniDataSynStrategy;
     }

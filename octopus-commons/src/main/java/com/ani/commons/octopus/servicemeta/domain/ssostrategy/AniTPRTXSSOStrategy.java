@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -11,7 +12,7 @@ public class AniTPRTXSSOStrategy extends AniThirdPartySSOStrategy{
 
     public AniTPRTXSSOStrategy() {
 //       this.dealPage="/sso/RTX";
-       this.partyType= ThirdPartyType.RTX;
+       this.integrateType= IntegrateType.RTX;
     }
 
 }

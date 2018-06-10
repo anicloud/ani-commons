@@ -104,5 +104,18 @@ public class AniDataSynStrategy implements Serializable{
         this.interfaceType = interfaceType;
     }
 
+    public AniDataSynStrategy() {
+    }
 
+    public AniDataSynStrategy(String uniUserField, String uniNodeField, SynDataType synDataType, String character, String synCircle, InterfaceVersion interfaceVersion, InterfaceType interfaceType, String interfaceAddress, String interfaceMethod) {
+        this.uniUserField = uniUserField;
+        this.uniNodeField = uniNodeField;
+        this.synDataType = synDataType;
+        this.character = character;
+        this.synCircle = synCircle;
+        this.interfaceVersion = interfaceVersion;
+        this.interfaceType = interfaceType;
+        this.interfaceAddress = interfaceAddress;
+        this.interfaceMethod = interfaceMethod;
+    }
 }

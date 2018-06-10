@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -15,7 +16,7 @@ public class AniTPWYEmailSSOStrategy extends AniThirdPartySSOStrategy {
 
     public AniTPWYEmailSSOStrategy() {
 //        this.dealPage="/sso/neteaseEmail";
-        this.partyType= ThirdPartyType.WYEMAIL;
+        this.integrateType= IntegrateType.WYEMAIL ;
     }
 
     public String getAdminKey() {

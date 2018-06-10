@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -15,7 +16,7 @@ public class AniTPYiYouEmailSSOStrategy extends AniThirdPartySSOStrategy {
 
     public AniTPYiYouEmailSSOStrategy() {
 //        this.dealPage="/sso/Eu5";
-        this.partyType= ThirdPartyType.YIYOUEMAIL;
+        this.integrateType= IntegrateType.YIYOUEMAIL;
     }
 
 

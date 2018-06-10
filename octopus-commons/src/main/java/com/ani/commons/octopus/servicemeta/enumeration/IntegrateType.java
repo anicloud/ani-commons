@@ -9,5 +9,10 @@ public enum IntegrateType {
     LDAPSAFETOKEN,
     TRIDATIONFORM,
     LTPATOKEN,
-    THIRDPARTY
+    NC,
+    YIYOUEMAIL,
+    TENCENTEMAIL,
+    WYEMAIL,
+    COREMAIL,
+    RTX
 }

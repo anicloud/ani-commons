@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.domain.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -11,7 +12,7 @@ public class AniTPNCSSOStrategy extends AniThirdPartySSOStrategy  {
 
     public AniTPNCSSOStrategy() {
 //        this.dealPage="sso/nc";
-        this.partyType= ThirdPartyType.NC;
+        this.integrateType= IntegrateType.NC;
     }
 
 }

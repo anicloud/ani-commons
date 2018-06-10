@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-6-1.
  */
-public class AniServiceBasicInfoDto implements Serializable {
+public class ServiceBriefInfoDto implements Serializable {
 
     private static final long serialVersionUID = -7926819973737697307L;
 
