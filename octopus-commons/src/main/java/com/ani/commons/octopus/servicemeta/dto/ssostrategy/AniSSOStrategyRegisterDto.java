@@ -52,4 +52,13 @@ public abstract class AniSSOStrategyRegisterDto extends ModelQueryDto {
         this.logoutUrl = logoutUrl;
     }
 
+    public AniSSOStrategyRegisterDto(){}
+
+    public AniSSOStrategyRegisterDto(Long modelId, Long requestAccountId, Boolean isSSOLogout, String loginUrl, String logoutUrl, IntegrateType integrateType) {
+        super(modelId, requestAccountId);
+        this.isSSOLogout = isSSOLogout;
+        this.loginUrl = loginUrl;
+        this.logoutUrl = logoutUrl;
+        this.integrateType = integrateType;
+    }
 }
