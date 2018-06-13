@@ -26,7 +26,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void addService(AniServiceRegisterDto registerDto) throws AniRuleException, AniDataException;
+     public Long addService(AniServiceRegisterDto registerDto) throws AniRuleException, AniDataException;
 
      /**
       * <h2>Update the Service information.</h2>
@@ -35,7 +35,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public void updateServiceInfo(AniServiceUpdateDto updateDto) throws  AniRuleException, AniDataException;
+     public Long updateServiceInfo(AniServiceUpdateDto updateDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Setting integration strategy.</h2>

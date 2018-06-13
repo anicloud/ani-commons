@@ -1,5 +1,8 @@
 package com.ani.commons.octopus.servicemeta.dto.service;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
 import java.io.Serializable;
 
 /**
@@ -8,7 +11,7 @@ import java.io.Serializable;
 public class ServiceBriefInfoDto implements Serializable {
 
     private static final long serialVersionUID = -7926819973737697307L;
-
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long modelId;
     private String modelName;
     private String loginUrl;
