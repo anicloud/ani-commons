@@ -21,6 +21,12 @@ public class AniServiceUpdateDto extends AniDto {
     public ModelUpdateDto getModelUpdateDto() {
         return modelUpdateDto;
     }
+    public AniServiceUpdateDto(){}
+    public AniServiceUpdateDto(String serviceType, DualAuth dualAuth, ModelUpdateDto modelUpdateDto) {
+        this.serviceType = serviceType;
+        this.dualAuth = dualAuth;
+        this.modelUpdateDto = modelUpdateDto;
+    }
 
     public void setModelUpdateDto(ModelUpdateDto modelUpdateDto) {
         this.modelUpdateDto = modelUpdateDto;
