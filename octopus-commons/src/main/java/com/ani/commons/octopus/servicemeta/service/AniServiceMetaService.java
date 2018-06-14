@@ -1,9 +1,6 @@
 package com.ani.commons.octopus.servicemeta.service;
 
-import com.ani.commons.octopus.objmeta.dto.model.ModelQueryDto;
-import com.ani.commons.octopus.objmeta.dto.model.ModelStateUpdateDto;
-import com.ani.commons.octopus.objmeta.dto.model.OrgModelQueryDto;
-import com.ani.commons.octopus.objmeta.dto.model.OrgNodeModelQueryDto;
+import com.ani.commons.octopus.objmeta.dto.model.*;
 import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniSSOStrategy;
 import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
 import com.ani.commons.octopus.servicemeta.dto.service.*;
@@ -26,7 +23,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public Long addService(AniServiceRegisterDto registerDto) throws AniRuleException, AniDataException;
+     public ModelInitDto addService(AniServiceRegisterDto registerDto) throws AniRuleException, AniDataException;
 
      /**
       * <h2>Update the Service information.</h2>
