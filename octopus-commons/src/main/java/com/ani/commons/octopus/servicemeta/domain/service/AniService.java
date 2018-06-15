@@ -6,6 +6,7 @@ import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 
 import java.io.Serializable;
+import java.security.Timestamp;
 
 /**
  * Created by zhanglina on 18-5-23.
@@ -19,16 +20,35 @@ public class AniService implements Serializable {
     private DualAuth dualAuth;
     private AniSSOStrategy ssoStrategy;
     private AniDataSynStrategy aniDataSynStrategy;
-
+    private Timestamp createDate;
+    private Timestamp updateDate;
 
     public AniService(){}
 
-    public AniService(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy) {
+    public AniService(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy, Timestamp createDate, Timestamp updateDate) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
         this.ssoStrategy = ssoStrategy;
         this.aniDataSynStrategy = aniDataSynStrategy;
+        this.createDate = createDate;
+        this.updateDate = updateDate;
+    }
+
+    public Timestamp getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        this.createDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        this.updateDate = updateDate;
     }
 
     public AniDataSynStrategy getAniDataSynStrategy() {

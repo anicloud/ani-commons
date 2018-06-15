@@ -4,6 +4,8 @@ import com.ani.commons.octopus.objmeta.domain.ObjectType;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
 import com.ani.utils.exception.AniRuleException;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.validation.constraints.NotNull;
 
@@ -19,6 +21,7 @@ public class ModelRegisterDto extends AniDto {
     protected String briefDesc;
     protected String description;
     @AniRequiredField
+    @JsonSerialize(using = ToStringSerializer.class)
     protected Long devAccountId;
     @AniRequiredField
     protected ObjectType objectType;
