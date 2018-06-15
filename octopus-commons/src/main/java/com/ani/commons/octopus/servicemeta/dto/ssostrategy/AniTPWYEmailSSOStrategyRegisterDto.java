@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -15,7 +16,7 @@ public class AniTPWYEmailSSOStrategyRegisterDto extends AniThirdPartyStrategyReg
 
     public AniTPWYEmailSSOStrategyRegisterDto() {
 //        this.dealPage="/sso/neteaseEmail";
-        this.partyType= ThirdPartyType.WYEMAIL;
+        this.integrateType= IntegrateType.WYEMAIL;
     }
 
 }

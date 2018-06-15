@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -18,6 +19,6 @@ public class AniTPTencentEmailSSOStrategyRegisterDto extends AniThirdPartyStrate
     private String apiAddress;
 
     public AniTPTencentEmailSSOStrategyRegisterDto() {
-        this.partyType= ThirdPartyType.TENCENTEMAIL;
+        this.integrateType= IntegrateType.TENCENTEMAIL;
     }
 }

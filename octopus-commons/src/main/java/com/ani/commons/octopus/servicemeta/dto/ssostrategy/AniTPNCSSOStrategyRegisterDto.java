@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -10,7 +11,8 @@ public class AniTPNCSSOStrategyRegisterDto extends AniThirdPartyStrategyRegister
     private static final long serialVersionUID = -6500131113267794131L;
 
     public AniTPNCSSOStrategyRegisterDto() {
-        this.partyType= ThirdPartyType.NC;
+
+        this.integrateType= IntegrateType.NC;
     }
 
 }

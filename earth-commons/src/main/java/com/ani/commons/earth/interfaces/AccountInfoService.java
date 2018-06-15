@@ -26,5 +26,4 @@ public interface AccountInfoService {
 
     public void checkPersonalResourceAccessibility(AccessibilityDto personalResourcesAccessDto)throws AniRuleException;
 
-
 }

@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -13,7 +14,7 @@ public class AniTPYiYouEmailSSOStrategyRegisterDto extends AniThirdPartyStrategy
 
     public AniTPYiYouEmailSSOStrategyRegisterDto() {
 //        this.dealPage="/sso/Eu5";k
-        this.partyType= ThirdPartyType.YIYOUEMAIL;
+        this.integrateType= IntegrateType.YIYOUEMAIL;
     }
 
     public String getApiKey() {

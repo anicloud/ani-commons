@@ -1,5 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.ssostrategy;
 
+import com.ani.commons.octopus.servicemeta.enumeration.IntegrateType;
 import com.ani.commons.octopus.servicemeta.enumeration.ThirdPartyType;
 
 /**
@@ -31,6 +32,6 @@ public class AniTPCoreMailSSOStrategyRegisterDto extends AniThirdPartyStrategyRe
 
     public AniTPCoreMailSSOStrategyRegisterDto() {
         this.dealPage="/";
-        this.partyType= ThirdPartyType.COREMAIL;
+        this.integrateType= IntegrateType.COREMAIL;
     }
 }

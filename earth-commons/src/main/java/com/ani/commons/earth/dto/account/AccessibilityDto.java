@@ -14,9 +14,9 @@ public class AccessibilityDto extends AniDto {
     private static final long serialVersionUID = 4311476169839110844L;
 
     private Long requestAccountId;
-    private Long resourceOwnerAccountId;
+
     private PrivacyType privacy;
-    private PrivilegeType privilegeType;
+
 
     public AccessibilityDto() {}
 
