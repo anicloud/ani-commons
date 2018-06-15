@@ -32,7 +32,7 @@ public interface AniServiceMetaService {
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public Long updateServiceInfo(AniServiceUpdateDto updateDto) throws  AniRuleException, AniDataException;
+     public void updateServiceInfo(AniServiceUpdateDto updateDto) throws  AniRuleException, AniDataException;
 
      /**
       * <h2>Setting integration strategy.</h2>
