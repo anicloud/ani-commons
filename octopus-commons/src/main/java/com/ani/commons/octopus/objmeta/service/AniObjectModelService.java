@@ -148,7 +148,7 @@ public interface AniObjectModelService {
     public void removeOrgModel(OrgModelQueryDto orgModelQuery) throws AniRuleException,AniAuthException;
 
     /**
-     * <h2>Get models by organization node</h2>
+     * <h2>Get models by ORGANIZATION node</h2>
      *
      * @param orgNodeModelQuery query by orgId and nodeId
      * @return ModelInfoDto if the org node has models
@@ -158,7 +158,7 @@ public interface AniObjectModelService {
     public List<ModelBriefInfoDto> getModelByOrgAndNodeId(OrgNodeModelQueryDto orgNodeModelQuery) throws AniRuleException;
 
     /**
-     * <h2>Get models by organization node</h2>
+     * <h2>Get models by ORGANIZATION node</h2>
      *
      * @param orgModelQuery by orgId
      * @return ModelInfoDto if the org has models
