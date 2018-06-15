@@ -1,9 +1,8 @@
 package com.ani.commons.octopus.objmeta.dto.object;
 
-import com.ani.commons.octopus.objmeta.domain.ObjectOwenType;
+import com.ani.commons.octopus.objmeta.domain.ObjectOwnerType;
 import com.ani.utils.core.AniArray;
 import com.ani.utils.core.AniByte;
-import com.ani.utils.core.AniByteArray;
 import com.ani.utils.core.AniSecureUtils;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.exception.AniRuleException;
@@ -16,7 +15,7 @@ public abstract class ObjectRegisterDto extends AniDto {
 
     private String name;
 
-    private ObjectOwenType owenType;
+    private ObjectOwnerType ownerType;
     /**
      * Authentication code for registering domain
      * 0-63bit: modelId
@@ -37,12 +36,12 @@ public abstract class ObjectRegisterDto extends AniDto {
         return this.authCode;
     }
 
-    public ObjectOwenType getOwenType() {
-        return owenType;
+    public ObjectOwnerType getOwnerType() {
+        return ownerType;
     }
 
-    public void setOwenType(ObjectOwenType owenType) {
-        this.owenType = owenType;
+    public void setOwnerType(ObjectOwnerType ownerType) {
+        this.ownerType = ownerType;
     }
 
     public Long getModelId() {

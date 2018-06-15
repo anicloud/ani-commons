@@ -3,7 +3,7 @@ package com.ani.commons.octopus.objmeta.domain;
 /**
  * Created by zhanglina on 18-5-28.
  */
-public enum  ObjectOwenType {
-     organization,
-     personal;
+public enum ObjectOwnerType {
+     ORGANIZATION,
+     PERSONAL;
 }
