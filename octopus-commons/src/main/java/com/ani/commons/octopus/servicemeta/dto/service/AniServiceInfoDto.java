@@ -5,6 +5,7 @@ import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 
 import java.io.Serializable;
+import java.security.Timestamp;
 
 /**
  * Created by zhanglina on 18-5-31.
@@ -17,6 +18,12 @@ public class AniServiceInfoDto implements Serializable {
     private ObjectModel objectModel;
     private String serviceType;
     private DualAuth dualAuth;
+    private Timestamp createDate;
+    private Timestamp updateDate;
+    private String logoPath;
+
+
+
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -31,15 +38,39 @@ public class AniServiceInfoDto implements Serializable {
     }
 
     public      AniServiceInfoDto() {
-
     }
 
-    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth) {
+    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Timestamp createDate, Timestamp updateDate) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
+        this.createDate = createDate;
+        this.updateDate = updateDate;
     }
 
+    public String getLogoPath() {
+        return logoPath;
+    }
+
+    public void setLogoPath(String logoPath) {
+        this.logoPath = logoPath;
+    }
+
+    public Timestamp getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        this.createDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        this.updateDate = updateDate;
+    }
     public String getServiceType() {
         return serviceType;
     }

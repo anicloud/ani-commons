@@ -2,6 +2,8 @@ package com.ani.commons.octopus.objmeta.dto.model;
 
 import com.ani.utils.core.Operation;
 import com.ani.utils.dto.AniRequiredField;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 public class ModelUpdateDto extends ModelDto {
 
@@ -16,6 +18,7 @@ public class ModelUpdateDto extends ModelDto {
     @AniRequiredField
     private Operation updateOp;
     @AniRequiredField
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long opAccountId;
 
     public ModelUpdateDto() {
