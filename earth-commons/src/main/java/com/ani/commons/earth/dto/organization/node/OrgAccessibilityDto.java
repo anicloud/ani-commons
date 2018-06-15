@@ -15,6 +15,10 @@ public class OrgAccessibilityDto extends AccessibilityDto {
 
     private Long resourceNodeId;
 
+    public OrgAccessibilityDto(Long requestAccountId, PrivilegeType privilegeType, Long resourceNodeId) {
+        super(requestAccountId, privilegeType);
+        this.resourceNodeId = resourceNodeId;
+    }
 
     public Long getResourceNodeId() {
         return resourceNodeId;

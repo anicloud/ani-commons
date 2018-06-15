@@ -15,11 +15,14 @@ public abstract class AccessibilityDto extends AniDto {
 
     private Long requestAccountId;
 
-
-
     private PrivilegeType privilegeType;
 
     public AccessibilityDto() {}
+
+    public AccessibilityDto(Long requestAccountId, PrivilegeType privilegeType) {
+        this.requestAccountId = requestAccountId;
+        this.privilegeType = privilegeType;
+    }
 
     public Long getRequestAccountId() {
         return requestAccountId;
