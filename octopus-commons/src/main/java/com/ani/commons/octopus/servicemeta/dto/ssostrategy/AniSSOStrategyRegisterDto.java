@@ -23,6 +23,21 @@ public abstract class AniSSOStrategyRegisterDto extends ModelQueryDto {
     protected String logoutUrl;
     @AniRequiredField
     protected IntegrateType integrateType;
+    @AniRequiredField
+    protected String baseUrl;
+
+    public void setSSOLogout(Boolean SSOLogout) {
+        isSSOLogout = SSOLogout;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
+
     // 应用基础地址
     public IntegrateType getIntegrateType() {
         return integrateType;
@@ -54,11 +69,19 @@ public abstract class AniSSOStrategyRegisterDto extends ModelQueryDto {
 
     public AniSSOStrategyRegisterDto(){}
 
-    public AniSSOStrategyRegisterDto(Long modelId, Long requestAccountId, Boolean isSSOLogout, String loginUrl, String logoutUrl, IntegrateType integrateType) {
+    public AniSSOStrategyRegisterDto(Boolean isSSOLogout, String loginUrl, String logoutUrl, IntegrateType integrateType) {
+        this.isSSOLogout = isSSOLogout;
+        this.loginUrl = loginUrl;
+        this.logoutUrl = logoutUrl;
+        this.integrateType = integrateType;
+    }
+
+    public AniSSOStrategyRegisterDto(Long modelId, Long requestAccountId, Boolean isSSOLogout, String loginUrl, String logoutUrl, IntegrateType integrateType, String baseUrl) {
         super(modelId, requestAccountId);
         this.isSSOLogout = isSSOLogout;
         this.loginUrl = loginUrl;
         this.logoutUrl = logoutUrl;
         this.integrateType = integrateType;
+        this.baseUrl = baseUrl;
     }
 }
