@@ -15,20 +15,25 @@ public class ObjectModel extends AniBaseObject {
 
     private Long modelId;
     private String name;
+    private String description;
+    private String briefDesc;
     private ObjectType objectType;
     private Long devAccountId;
-    private PrivacyType privacy;
-    private DataState modelState;
+    private PrivacyType privacy = PrivacyType.PUBLIC;
+    private DataState modelState = DataState.DISABLE;
 
     public ObjectModel() {
     }
 
-    public ObjectModel(Collection<StubMeta> stubsMeta, List<StateMachineMeta> stateMachinesMeta, Long modelId, String name, ObjectType objectType, Long devAccountId, DataState modelState) {
+    public ObjectModel(Collection<StubMeta> stubsMeta, List<StateMachineMeta> stateMachinesMeta, Long modelId, String name, String description, String briefDesc, ObjectType objectType, Long devAccountId, PrivacyType privacy, DataState modelState) {
         super(stubsMeta, stateMachinesMeta);
         this.modelId = modelId;
         this.name = name;
+        this.description = description;
+        this.briefDesc = briefDesc;
         this.objectType = objectType;
         this.devAccountId = devAccountId;
+        this.privacy = privacy;
         this.modelState = modelState;
     }
 
@@ -46,6 +51,22 @@ public class ObjectModel extends AniBaseObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getBriefDesc() {
+        return briefDesc;
+    }
+
+    public void setBriefDesc(String briefDesc) {
+        this.briefDesc = briefDesc;
     }
 
     public ObjectType getObjectType() {

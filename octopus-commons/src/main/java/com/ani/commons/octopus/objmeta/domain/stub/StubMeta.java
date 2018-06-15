@@ -17,8 +17,8 @@ public class StubMeta extends AniMeta {
     public StubMeta() {
     }
 
-    public StubMeta(Integer groupId, Integer id, String name, List<AniMetaParam> params, ConnType connType, PrivilegeType privilegeType) {
-        super(groupId, id, name, params);
+    public StubMeta(StubGroupMeta group, Integer id, String name, List<AniMetaParam> params, ConnType connType, PrivilegeType privilegeType) {
+        super(group, id, name, params);
         this.connType = connType;
         this.privilegeType = privilegeType;
     }

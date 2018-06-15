@@ -20,11 +20,11 @@ public interface AniObjectService {
 
     public ObjectMaster getObjectMaster(long objectId);
 
-    public List<ObjectMaster> getObjectMasterByOwnerId(long accountId);
+    public List<ObjectMaster> getObjectsMasterByOwnerId(long accountId);
 
-    public List<ObjectMaster> getObjectMasterByOwnerIdAndType(long accountId, ObjectType type);
+    public List<ObjectMaster> getObjectsMasterByOwnerIdAndType(long accountId, ObjectType type);
 
-    public List<ObjectMaster> getObjectMasterByDevAccountId(long accountId);
+    public List<ObjectMaster> getObjectsMasterByDevAccountId(long accountId);
 
     public void bindAccount(Long objectId, Long accountId);
 

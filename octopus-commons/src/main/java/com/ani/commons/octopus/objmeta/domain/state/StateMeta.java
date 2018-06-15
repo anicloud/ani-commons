@@ -12,7 +12,7 @@ public class StateMeta extends AniMeta {
     public StateMeta() {
     }
 
-    public StateMeta(Integer groupId, Integer id, String name, List<AniMetaParam> params) {
-        super(groupId, id, name, params);
+    public StateMeta(StateGroupMeta group, Integer id, String name, List<AniMetaParam> params) {
+        super(group, id, name, params);
     }
 }

@@ -52,5 +52,5 @@ public interface OTNodeService {
 
     public void checkHaveRootPrivilege(Long opAccountId, Long orgId) throws AniAuthException;
 
-    public void checkOrgResourceAccessibility(CheckOrgResourceAccessDto orgResourceAccessDto) throws AniRuleException;
+    public void checkOrgResourceAccessibility(OrgAccessibilityDto orgResourceAccessDto) throws AniRuleException;
 }

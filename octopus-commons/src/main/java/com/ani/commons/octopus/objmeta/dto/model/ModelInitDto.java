@@ -14,12 +14,10 @@ public class ModelInitDto extends ModelDto {
      * SUGGESTED: English only
      */
     private String name;
-
     /**
      * Calculated token, once display
      */
     private String token;
-
     private ObjectType type;
 
     public ModelInitDto() {

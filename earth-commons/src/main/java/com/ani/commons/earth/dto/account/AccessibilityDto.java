@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-6-14.
  */
-public class CheckPersonalResourcesAccessDto extends AniDto {
+public class AccessibilityDto extends AniDto {
 
     private static final long serialVersionUID = 4311476169839110844L;
 
@@ -17,6 +17,15 @@ public class CheckPersonalResourcesAccessDto extends AniDto {
     private Long resourceOwnerAccountId;
     private PrivacyType privacy;
     private PrivilegeType privilegeType;
+
+    public AccessibilityDto() {}
+
+    public AccessibilityDto(Long requestAccountId, Long resourceOwnerAccountId, PrivacyType privacy, PrivilegeType privilegeType) {
+        this.requestAccountId = requestAccountId;
+        this.resourceOwnerAccountId = resourceOwnerAccountId;
+        this.privacy = privacy;
+        this.privilegeType = privilegeType;
+    }
 
     public Long getRequestAccountId() {
         return requestAccountId;

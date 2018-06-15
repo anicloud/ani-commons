@@ -3,7 +3,7 @@ package com.ani.commons.earth.interfaces;
 import com.ani.commons.earth.domain.id.Email;
 import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.domain.account.AniAccount;
-import com.ani.commons.earth.dto.account.CheckPersonalResourcesAccessDto;
+import com.ani.commons.earth.dto.account.AccessibilityDto;
 import com.ani.utils.exception.AniRuleException;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public interface AccountInfoService {
 
     public List<AniAccount> findAccountsByEmail(List<Email> emailAdds);
 
-    public void checkPersonalResourceAccessibility(CheckPersonalResourcesAccessDto personalResourcesAccessDto)throws AniRuleException;
+    public void checkPersonalResourceAccessibility(AccessibilityDto personalResourcesAccessDto)throws AniRuleException;
 
 
 }

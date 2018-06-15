@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-6-14.
  */
-public class CheckOrgResourceAccessDto extends AniDto{
+public class OrgAccessibilityDto extends AniDto{
 
     private static final long serialVersionUID = -3327642775366338199L;
 

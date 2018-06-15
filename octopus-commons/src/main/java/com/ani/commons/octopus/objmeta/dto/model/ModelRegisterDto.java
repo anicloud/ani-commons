@@ -1,6 +1,7 @@
 package com.ani.commons.octopus.objmeta.dto.model;
 
 import com.ani.commons.octopus.objmeta.domain.ObjectType;
+import com.ani.utils.core.data.type.PrivacyType;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
 import com.ani.utils.exception.AniRuleException;
@@ -23,6 +24,7 @@ public class ModelRegisterDto extends AniDto {
     @AniRequiredField
     @JsonSerialize(using = ToStringSerializer.class)
     protected Long devAccountId;
+    protected PrivacyType privacy = PrivacyType.PUBLIC;
     @AniRequiredField
     protected ObjectType objectType;
 
@@ -42,7 +44,7 @@ public class ModelRegisterDto extends AniDto {
     }
 
     public void setName(String name) {
-        this.name = name.trim();
+        this.name = name;
     }
 
     public String getBriefDesc() {
@@ -67,6 +69,14 @@ public class ModelRegisterDto extends AniDto {
 
     public void setDevAccountId(Long devAccountId) {
         this.devAccountId = devAccountId;
+    }
+
+    public PrivacyType getPrivacy() {
+        return privacy;
+    }
+
+    public void setPrivacy(PrivacyType privacy) {
+        this.privacy = privacy;
     }
 
     public ObjectType getObjectType() {
