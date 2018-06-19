@@ -22,4 +22,20 @@ public class StubMeta extends AniMeta {
         this.connType = connType;
         this.privilegeType = privilegeType;
     }
+
+    public ConnType getConnType() {
+        return connType;
+    }
+
+    public void setConnType(ConnType connType) {
+        this.connType = connType;
+    }
+
+    public PrivilegeType getPrivilegeType() {
+        return privilegeType;
+    }
+
+    public void setPrivilegeType(PrivilegeType privilegeType) {
+        this.privilegeType = privilegeType;
+    }
 }
