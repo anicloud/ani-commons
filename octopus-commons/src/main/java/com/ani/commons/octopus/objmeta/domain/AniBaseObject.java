@@ -23,8 +23,16 @@ public abstract class AniBaseObject implements Serializable {
         this.setStateMachines(stateMachinesMeta, true);
     }
 
-    public List<StubMeta> getStubsMeta() {
-        return new ArrayList<>(stubsMeta.values());
+//    public List<StubMeta> getStubsMeta() {
+//        return new ArrayList<>(stubsMeta.values());
+//    }
+
+    public Map<Long, StubMeta> getStubsMeta() {
+        return stubsMeta;
+    }
+
+    public void setStubsMeta(Map<Long, StubMeta> stubsMeta) {
+        this.stubsMeta = stubsMeta;
     }
 
     public StubMeta getStub(int groupId, int metaId) {
