@@ -6,6 +6,7 @@ import com.ani.commons.octopus.servicemeta.enumeration.InterfaceVersion;
 import com.ani.commons.octopus.servicemeta.enumeration.SynDataType;
 
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * Created by zhanglina on 18-6-1.
@@ -18,7 +19,7 @@ public class AniDataSynStrategy implements Serializable{
 
     private String uniNodeField;
 
-    private SynDataType synDataType;
+    private Set<SynDataType> synDataType;
 
     private String character;
 
@@ -48,11 +49,11 @@ public class AniDataSynStrategy implements Serializable{
         this.uniNodeField = uniNodeField;
     }
 
-    public SynDataType getSynDataType() {
+    public Set<SynDataType> getSynDataType() {
         return synDataType;
     }
 
-    public void setSynDataType(SynDataType synDataType) {
+    public void setSynDataType(Set<SynDataType> synDataType) {
         this.synDataType = synDataType;
     }
 
@@ -107,7 +108,7 @@ public class AniDataSynStrategy implements Serializable{
     public AniDataSynStrategy() {
     }
 
-    public AniDataSynStrategy(String uniUserField, String uniNodeField, SynDataType synDataType, String character, String synCircle, InterfaceVersion interfaceVersion, InterfaceType interfaceType, String interfaceAddress, String interfaceMethod) {
+    public AniDataSynStrategy(String uniUserField, String uniNodeField, Set<SynDataType> synDataType, String character, String synCircle, InterfaceVersion interfaceVersion, InterfaceType interfaceType, String interfaceAddress, String interfaceMethod) {
         this.uniUserField = uniUserField;
         this.uniNodeField = uniNodeField;
         this.synDataType = synDataType;

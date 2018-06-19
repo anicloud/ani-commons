@@ -5,7 +5,7 @@ import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 
 import java.io.Serializable;
-import java.security.Timestamp;
+import java.sql.Date;
 
 /**
  * Created by zhanglina on 18-5-31.
@@ -18,8 +18,8 @@ public class AniServiceInfoDto implements Serializable {
     private ObjectModel objectModel;
     private String serviceType;
     private DualAuth dualAuth;
-    private Timestamp createDate;
-    private Timestamp updateDate;
+    private Date createDate;
+    private Date updateDate;
     private String logoPath;
 
 
@@ -40,7 +40,7 @@ public class AniServiceInfoDto implements Serializable {
     public      AniServiceInfoDto() {
     }
 
-    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Timestamp createDate, Timestamp updateDate) {
+    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Date createDate, Date updateDate) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
@@ -56,19 +56,19 @@ public class AniServiceInfoDto implements Serializable {
         this.logoPath = logoPath;
     }
 
-    public Timestamp getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Timestamp createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
-    public Timestamp getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(Timestamp updateDate) {
+    public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
     public String getServiceType() {
