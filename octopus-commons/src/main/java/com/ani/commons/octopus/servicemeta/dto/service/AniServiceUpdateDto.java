@@ -17,15 +17,25 @@ public class AniServiceUpdateDto extends AniDto {
     protected DualAuth dualAuth;
     @AniRequiredField
     protected ModelUpdateDto modelUpdateDto;
-
+    @AniRequiredField
+    protected String baseUrl;
     public ModelUpdateDto getModelUpdateDto() {
         return modelUpdateDto;
     }
     public AniServiceUpdateDto(){}
-    public AniServiceUpdateDto(String serviceType, DualAuth dualAuth, ModelUpdateDto modelUpdateDto) {
+    public AniServiceUpdateDto(String serviceType, DualAuth dualAuth,String baseUrl, ModelUpdateDto modelUpdateDto) {
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
+        this.baseUrl = baseUrl;
         this.modelUpdateDto = modelUpdateDto;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     public void setModelUpdateDto(ModelUpdateDto modelUpdateDto) {

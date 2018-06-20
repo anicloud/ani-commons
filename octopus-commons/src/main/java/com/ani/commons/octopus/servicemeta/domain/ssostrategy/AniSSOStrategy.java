@@ -14,6 +14,15 @@ public abstract class AniSSOStrategy implements Serializable {
     protected String loginUrl;
     protected String logoutUrl;
     protected IntegrateType integrateType;
+    protected String baseUrl;
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
 
     public Boolean getSSOLogout() {
         return isSSOLogout;

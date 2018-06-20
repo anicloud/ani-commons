@@ -21,6 +21,7 @@ public class AniServiceInfoDto implements Serializable {
     private Date createDate;
     private Date updateDate;
     private String logoPath;
+    private String baseUrl;
 
 
 
@@ -40,12 +41,21 @@ public class AniServiceInfoDto implements Serializable {
     public      AniServiceInfoDto() {
     }
 
-    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Date createDate, Date updateDate) {
+    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Date createDate, Date updateDate,String baseUrl) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
         this.createDate = createDate;
         this.updateDate = updateDate;
+        this.baseUrl = baseUrl;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     public String getLogoPath() {

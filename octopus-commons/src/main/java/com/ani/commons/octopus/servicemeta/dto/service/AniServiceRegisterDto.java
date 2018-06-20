@@ -18,11 +18,22 @@ public class AniServiceRegisterDto extends AniDto{
     protected DualAuth dualAuth;
     @AniRequiredField
     protected  ModelRegisterDto modelRegisterDto;
+    @AniRequiredField
+    protected String baseUrl;
     public AniServiceRegisterDto(){}
-    public AniServiceRegisterDto(String serviceType, DualAuth dualAuth, ModelRegisterDto modelRegisterDto) {
+    public AniServiceRegisterDto(String serviceType, DualAuth dualAuth, ModelRegisterDto modelRegisterDto,String baseUrl) {
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
         this.modelRegisterDto = modelRegisterDto;
+        this.baseUrl = baseUrl;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     public ModelRegisterDto getModelRegisterDto() {
