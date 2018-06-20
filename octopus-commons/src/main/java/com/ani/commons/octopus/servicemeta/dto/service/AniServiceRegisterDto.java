@@ -6,6 +6,8 @@ import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
 
+import java.math.BigInteger;
+
 /**
  * Created by zhanglina on 18-6-5.
  */
@@ -20,12 +22,22 @@ public class AniServiceRegisterDto extends AniDto{
     protected  ModelRegisterDto modelRegisterDto;
     @AniRequiredField
     protected String baseUrl;
+    @AniRequiredField
+    protected BigInteger logoCurrent;
     public AniServiceRegisterDto(){}
     public AniServiceRegisterDto(String serviceType, DualAuth dualAuth, ModelRegisterDto modelRegisterDto,String baseUrl) {
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
         this.modelRegisterDto = modelRegisterDto;
         this.baseUrl = baseUrl;
+    }
+
+    public BigInteger getLogoCurrent() {
+        return logoCurrent;
+    }
+
+    public void setLogoCurrent(BigInteger logoCurrent) {
+        this.logoCurrent = logoCurrent;
     }
 
     public String getBaseUrl() {
