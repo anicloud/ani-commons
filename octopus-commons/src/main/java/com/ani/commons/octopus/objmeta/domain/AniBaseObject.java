@@ -26,6 +26,7 @@ public abstract class AniBaseObject implements Serializable {
 //    public List<StubMeta> getStubsMeta() {
 //        return new ArrayList<>(stubsMeta.values());
 //    }
+//    public List getStubs
 
     public Map<Long, StubMeta> getStubsMeta() {
         return stubsMeta;
