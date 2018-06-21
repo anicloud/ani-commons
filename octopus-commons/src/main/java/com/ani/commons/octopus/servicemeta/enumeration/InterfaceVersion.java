@@ -5,5 +5,5 @@ package com.ani.commons.octopus.servicemeta.enumeration;
  */
 public enum InterfaceVersion {
     V1,
-    v2
+    V2
 }

@@ -6,7 +6,9 @@ import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.security.Timestamp;
+import java.sql.Date;
 
 /**
  * Created by zhanglina on 18-5-23.
@@ -20,12 +22,15 @@ public class AniService implements Serializable {
     private DualAuth dualAuth;
     private AniSSOStrategy ssoStrategy;
     private AniDataSynStrategy aniDataSynStrategy;
-    private Timestamp createDate;
-    private Timestamp updateDate;
+    private Date createDate;
+    private Date updateDate;
+    private String baseUrl;
+    private BigInteger logoCurrent;
 
-    public AniService(){}
+    public AniService() {
+    }
 
-    public AniService(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy, Timestamp createDate, Timestamp updateDate) {
+    public AniService(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy, Date createDate, Date updateDate, String baseUrl, BigInteger logoCurrent) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
@@ -33,21 +38,39 @@ public class AniService implements Serializable {
         this.aniDataSynStrategy = aniDataSynStrategy;
         this.createDate = createDate;
         this.updateDate = updateDate;
+        this.baseUrl = baseUrl;
+        this.logoCurrent = logoCurrent;
     }
 
-    public Timestamp getCreateDate() {
+    public BigInteger getLogoCurrent() {
+        return logoCurrent;
+    }
+
+    public void setLogoCurrent(BigInteger logoCurrent) {
+        this.logoCurrent = logoCurrent;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
+
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Timestamp createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
-    public Timestamp getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(Timestamp updateDate) {
+    public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
 

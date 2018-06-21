@@ -9,6 +9,7 @@ import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
 
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * Created by zhanglina on 18-6-6.
@@ -21,7 +22,7 @@ public class AniDataSynStrategyRegisterDto extends ModelQueryDto {
     @AniRequiredField
     private String uniNodeField;
     @AniRequiredField
-    private SynDataType synDataType;
+    private Set<SynDataType> synDataType;
     @AniRequiredField
     private String character;
     @AniRequiredField
@@ -55,11 +56,11 @@ public class AniDataSynStrategyRegisterDto extends ModelQueryDto {
         this.uniNodeField = uniNodeField;
     }
 
-    public SynDataType getSynDataType() {
+    public Set<SynDataType> getSynDataType() {
         return synDataType;
     }
 
-    public void setSynDataType(SynDataType synDataType) {
+    public void setSynDataType(Set<SynDataType> synDataType) {
         this.synDataType = synDataType;
     }
 

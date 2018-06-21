@@ -44,6 +44,15 @@ public interface AniServiceMetaService {
      public void setSSOStrategy(AniSSOStrategyRegisterDto aniSSOStrategyDto) throws  AniRuleException, AniDataException;
 
      /**
+      * <h2>update integration strategy.</h2>
+      * @param aniSSOStrategyDto
+      * @throws AniAuthException
+      * @throws AniRuleException
+      * @throws AniDataException
+      */
+     public void updateSSOStrategy(AniSSOStrategyRegisterDto aniSSOStrategyDto) throws  AniRuleException, AniDataException;
+
+     /**
       * <h2>Add data synchronization Strategy.</h2>
       * @param registerDto
       * @throws AniAuthException
@@ -52,6 +61,13 @@ public interface AniServiceMetaService {
       */
      public void addDataSynStrategy(AniDataSynStrategyRegisterDto registerDto) throws  AniRuleException, AniDataException;
 
+     /**
+      * <h2>Update data synchronization Strategy.</h2>
+      * @param registerDto
+      * @throws AniRuleException
+      * @throws AniDataException
+      */
+     public void updateDataSynStrategy(AniDataSynStrategyRegisterDto registerDto) throws  AniRuleException, AniDataException;
      /**
       * <h2>Delete Service.</h2>
       * @param modelQueryDto

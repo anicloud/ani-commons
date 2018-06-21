@@ -3,9 +3,11 @@ package com.ani.commons.octopus.servicemeta.dto.service;
 import com.ani.commons.octopus.objmeta.domain.ObjectModel;
 import com.ani.commons.octopus.servicemeta.enumeration.Transparency;
 import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
+import com.fasterxml.jackson.databind.node.BigIntegerNode;
 
 import java.io.Serializable;
-import java.security.Timestamp;
+import java.math.BigInteger;
+import java.sql.Date;
 
 /**
  * Created by zhanglina on 18-5-31.
@@ -18,11 +20,11 @@ public class AniServiceInfoDto implements Serializable {
     private ObjectModel objectModel;
     private String serviceType;
     private DualAuth dualAuth;
-    private Timestamp createDate;
-    private Timestamp updateDate;
+    private Date createDate;
+    private Date updateDate;
     private String logoPath;
-
-
+    private String baseUrl;
+    private BigInteger logoCurrent;
 
 
     public static long getSerialVersionUID() {
@@ -37,15 +39,33 @@ public class AniServiceInfoDto implements Serializable {
         this.objectModel = objectModel;
     }
 
-    public      AniServiceInfoDto() {
+    public AniServiceInfoDto() {
     }
 
-    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Timestamp createDate, Timestamp updateDate) {
+    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Date createDate, Date updateDate, String baseUrl, BigInteger logoCurrent) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
         this.createDate = createDate;
         this.updateDate = updateDate;
+        this.baseUrl = baseUrl;
+        this.logoCurrent = logoCurrent;
+    }
+
+    public BigInteger getLogoCurrent() {
+        return logoCurrent;
+    }
+
+    public void setLogoCurrent(BigInteger logoCurrent) {
+        this.logoCurrent = logoCurrent;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     public String getLogoPath() {
@@ -56,21 +76,22 @@ public class AniServiceInfoDto implements Serializable {
         this.logoPath = logoPath;
     }
 
-    public Timestamp getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Timestamp createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
-    public Timestamp getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(Timestamp updateDate) {
+    public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
+
     public String getServiceType() {
         return serviceType;
     }
