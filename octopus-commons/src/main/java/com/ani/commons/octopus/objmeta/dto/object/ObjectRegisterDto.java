@@ -1,28 +1,33 @@
 package com.ani.commons.octopus.objmeta.dto.object;
 
-import com.ani.commons.octopus.objmeta.domain.ObjectOwnerType;
-import com.ani.utils.core.AniArray;
-import com.ani.utils.core.AniByte;
-import com.ani.utils.core.AniSecureUtils;
 import com.ani.utils.dto.AniDto;
-import com.ani.utils.exception.AniRuleException;
-
-import java.util.Arrays;
+import com.ani.utils.dto.AniRequiredField;
 
 public abstract class ObjectRegisterDto extends AniDto {
 
     private static final long serialVersionUID = -9024030952112129525L;
 
+    @AniRequiredField
+    private Long modelId;
     private String name;
+    private Long ownerAccountId;
 
-    private ObjectOwnerType ownerType;
-    /**
-     * Authentication code for registering domain
-     * 0-63bit: modelId
-     * 64-127bit: timestamp
-     * HMAC( token, (modelId && timestamp) )
-     */
-    private AniByte authCode;
+    public ObjectRegisterDto() {
+    }
+
+    public ObjectRegisterDto(Long modelId, String name, Long ownerAccountId) {
+        this.modelId = modelId;
+        this.name = name;
+        this.ownerAccountId = ownerAccountId;
+    }
+
+    public Long getModelId() {
+        return modelId;
+    }
+
+    public void setModelId(Long modelId) {
+        this.modelId = modelId;
+    }
 
     public String getName() {
         return name;
@@ -32,40 +37,45 @@ public abstract class ObjectRegisterDto extends AniDto {
         this.name = name;
     }
 
-    public AniByte getAuthCode() {
-        return this.authCode;
+    public Long getOwnerAccountId() {
+        return ownerAccountId;
     }
 
-    public ObjectOwnerType getOwnerType() {
-        return ownerType;
-    }
-
-    public void setOwnerType(ObjectOwnerType ownerType) {
-        this.ownerType = ownerType;
-    }
-
-    public Long getModelId() {
-        Long modelId = new AniByte(Arrays.copyOfRange(authCode.getBytes(), 0, 63)).bytes2Long();
-        return modelId;
+    public void setOwnerAccountId(Long ownerAccountId) {
+        this.ownerAccountId = ownerAccountId;
     }
 
     /**
-     * Set authentication code by model token, model id and current timestamp
-     *
-     * @param modelToken
-     * @param modelId
-     * @param timestamp
-     * @throws AniRuleException
+     * Authentication code for registering domain
+     * 0-63bit: modelId
+     * 64-127bit: timestamp
+     * HMAC( token, (modelId && timestamp) )
      */
-    public void setAuthCode(AniByte modelToken, long modelId, long timestamp) throws AniRuleException {
-        byte[] hmacByte = AniSecureUtils.generateHMACByte(
-                modelToken.getBytes(),
-                new AniByte(modelId & timestamp).getBytes(),
-                "HmacSHA256");
-        byte[] modelBytes = new AniByte(modelId).getBytes();
-        byte[] timeByte = new AniByte(timestamp).getBytes();
-        byte[] result = AniArray.concatByteAll(modelBytes, timeByte, hmacByte);
-        this.authCode = new AniByte(result);
-    }
+//    @AniRequiredField
+//    private byte[] authCode;
+
+//    public Long getModelId() {
+//        Long modelId = new AniByte(Arrays.copyOfRange(authCode, 0, 63)).bytes2Long();
+//        return modelId;
+//    }
+
+//    /**
+//     * Set authentication code by model token, model id and current timestamp
+//     *
+//     * @param modelToken
+//     * @param modelId
+//     * @param timestamp
+//     * @throws AniRuleException
+//     */
+//    public void setAuthCode(byte[] modelToken, long modelId, long timestamp) throws AniRuleException {
+//        byte[] hmacByte = AniSecureUtils.generateHMACByte(
+//                modelToken,
+//                new AniByte(modelId & timestamp).getBytes(),
+//                "HmacSHA256");
+//        byte[] modelBytes = new AniByte(modelId).getBytes();
+//        byte[] timeByte = new AniByte(timestamp).getBytes();
+//        byte[] result = AniArray.concatByteAll(modelBytes, timeByte, hmacByte);
+//        this.authCode = result;
+//    }
 
 }

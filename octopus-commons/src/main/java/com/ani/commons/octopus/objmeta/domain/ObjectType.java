@@ -7,16 +7,18 @@ import java.util.Set;
 
 public enum ObjectType {
 
-    SERVICE(1, false),
-    DEVICE(2, true),
-    SITE(4, false);
+    SERVICE(1, false, true),
+    DEVICE(2, true, false),
+    SITE(4, false, true);
 
     private final int id;
     private final boolean canDul;
+    private final boolean isAccountRequired;
 
-    ObjectType(int id, boolean canDul) {
+    ObjectType(int id, boolean canDul, boolean isAccountRequired) {
         this.id = id;
         this.canDul = canDul;
+        this.isAccountRequired = isAccountRequired;
     }
 
     public static Integer getTypesId(ObjectType... types) throws AniRuleException {
@@ -54,5 +56,9 @@ public enum ObjectType {
 
     public boolean canDul() {
         return this.canDul;
+    }
+
+    public boolean isAccountRequired() {
+        return this.isAccountRequired;
     }
 }
