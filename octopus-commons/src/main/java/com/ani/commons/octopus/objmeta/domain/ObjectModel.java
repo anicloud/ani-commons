@@ -70,7 +70,7 @@ public class ObjectModel extends AniBaseObject {
     }
 
     public ObjectType getObjectType() {
-        return objectType;
+        return this.objectType;
     }
 
     public void setObjectType(ObjectType objectType) {

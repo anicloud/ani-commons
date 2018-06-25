@@ -107,7 +107,7 @@ public interface AniObjectModelService {
      *
      * @param modelId model unique id
      * @return ObjectModel domain
-     * @throws AniRuleException if model not exist
+     * @throws AniRuleException
      * @throws AniDataException if data system error
      */
     public ObjectModel getModelById(Long modelId) throws AniRuleException, AniDataException;
