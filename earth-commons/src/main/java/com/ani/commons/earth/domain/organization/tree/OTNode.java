@@ -17,6 +17,15 @@ public class OTNode implements Serializable {
     private Boolean canDeploy;
     private Boolean hasChildren;
     private List<OTNode> children;
+    private String parentNodeId;
+
+    public String getParentNodeId() {
+        return parentNodeId;
+    }
+
+    public void setParentNodeId(String parentNodeId) {
+        this.parentNodeId = parentNodeId;
+    }
 
     public NodeType getNodeType() {
         return nodeType;

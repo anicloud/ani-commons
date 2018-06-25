@@ -166,4 +166,14 @@ public interface AniObjectModelService {
      */
     public List<ModelBriefInfoDto> getModelByOrgId(OrgModelQueryDto orgModelQuery) throws AniRuleException;
 
+    /**
+     * <h2>Check org object model accessibility</h2>
+     *
+     * @param orgModelAccessCheckDto
+     * @return
+     *
+     */
+    public void checkOrgModelAccess(OrgModelAccessCheckDto orgModelAccessCheckDto) throws AniRuleException;
+
+
 }
