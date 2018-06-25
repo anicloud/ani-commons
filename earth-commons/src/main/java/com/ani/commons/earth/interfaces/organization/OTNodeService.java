@@ -6,6 +6,7 @@ import com.ani.commons.earth.domain.organization.tree.OTNode;
 import com.ani.commons.earth.domain.organization.tree.OTNodeMember;
 import com.ani.commons.earth.domain.organization.tree.OrgMember;
 import com.ani.commons.earth.dto.organization.node.*;
+import com.ani.commons.earth.dto.organization.org.OrgResourceAccessDto;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
@@ -52,5 +53,8 @@ public interface OTNodeService {
 
     public void checkHaveRootPrivilege(Long opAccountId, Long orgId) throws AniAuthException;
 
-    public void checkOrgResourceAccessibility(OrgAccessibilityDto orgResourceAccessDto) throws AniRuleException;
+    public void checkOrgNodeResourceAccessibility(OrgNodeAccessibilityDto orgResourceAccessDto) throws AniRuleException;
+
+    public void checkOrgResourceAccess(OrgResourceAccessDto orgResourceAccessDto) throws AniRuleException;
+
 }

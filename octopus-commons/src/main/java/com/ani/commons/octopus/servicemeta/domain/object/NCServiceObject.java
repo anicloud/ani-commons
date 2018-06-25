@@ -21,4 +21,5 @@ public abstract class NCServiceObject<T extends ObjectMaster> extends ServiceObj
     public void setCode(String code) {
         this.code = code;
     }
+
 }
