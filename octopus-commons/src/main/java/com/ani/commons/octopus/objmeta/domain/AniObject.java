@@ -16,8 +16,7 @@ public abstract class AniObject extends AniBaseObject {
     private ObjectModel model;
     private List<StateMachine> stateMachines;
 
-    public AniObject() {
-    }
+    public AniObject() {}
 
     public AniObject(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model) {
         super(stubs, stateMachines);

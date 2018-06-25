@@ -21,7 +21,7 @@ public interface AniObjectService {
 
 //    public void updateObjectMasterMeta(ObjectMetaUpdateDto updateDto);
 
-    public ObjectMaster getObjectMaster(long objectId);
+    public ObjectMaster getObjectMaster(Long objectId) throws AniRuleException, AniDataException;
 
     // TODO: 18-6-21 ObjectMaster batch querying in which returning brief meta
 //    public List<ObjectMaster> getObjectsMasterByOwnerId(long ownerAccountId);

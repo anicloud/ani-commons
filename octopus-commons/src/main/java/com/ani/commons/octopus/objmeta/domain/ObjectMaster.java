@@ -13,6 +13,7 @@ public abstract class ObjectMaster extends AniObject {
 
     private static final long serialVersionUID = -7713960489119720503L;
 
+    private Long objectId;
     private Long ownerAccountId;
     private Map<AniByte, ConnState> antennasState;
 
@@ -20,10 +21,19 @@ public abstract class ObjectMaster extends AniObject {
         super();
     }
 
-    public ObjectMaster(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
+    public ObjectMaster(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long objectId, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
         super(stubs, stateMachines, model);
+        this.objectId = objectId;
         this.ownerAccountId = ownerAccountId;
         this.antennasState = antennasState;
+    }
+
+    public Long getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(Long objectId) {
+        this.objectId = objectId;
     }
 
     public Long getOwnerAccountId() {

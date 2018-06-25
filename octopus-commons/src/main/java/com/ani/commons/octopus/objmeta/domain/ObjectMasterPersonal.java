@@ -16,7 +16,7 @@ public class ObjectMasterPersonal extends ObjectMaster {
     public ObjectMasterPersonal() {
     }
 
-    public ObjectMasterPersonal(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
-        super(stubs, stateMachines, model, ownerAccountId, antennasState);
+    public ObjectMasterPersonal(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long objectId, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
+        super(stubs, stateMachines, model, objectId, ownerAccountId, antennasState);
     }
 }

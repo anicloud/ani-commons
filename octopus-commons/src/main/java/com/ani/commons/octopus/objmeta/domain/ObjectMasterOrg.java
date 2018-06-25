@@ -17,8 +17,8 @@ public class ObjectMasterOrg extends ObjectMaster {
 
     public ObjectMasterOrg() {}
 
-    public ObjectMasterOrg(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long ownerAccountId, Map<AniByte, ConnState> antennasState, Long orgId) {
-        super(stubs, stateMachines, model, ownerAccountId, antennasState);
+    public ObjectMasterOrg(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long objectId, Long ownerAccountId, Map<AniByte, ConnState> antennasState, Long orgId) {
+        super(stubs, stateMachines, model, objectId, ownerAccountId, antennasState);
         this.orgId = orgId;
     }
 
