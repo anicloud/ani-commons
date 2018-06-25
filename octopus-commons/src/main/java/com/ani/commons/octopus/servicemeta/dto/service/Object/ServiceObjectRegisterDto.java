@@ -5,5 +5,10 @@ import com.ani.commons.octopus.objmeta.dto.object.ObjectRegisterDto;
 /**
  * Created by zhanglina on 18-6-22.
  */
-public class ServiceObjectRegisterDto extends ObjectRegisterDto{
+public abstract class ServiceObjectRegisterDto<T extends Object> {
+    protected T objectRegisterDto;
+
+    public abstract T getObjectRegisterDto();
+
+    public abstract void setObjectRegisterDto(T objectRegisterDto);
 }
