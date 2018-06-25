@@ -6,7 +6,7 @@ import com.ani.commons.octopus.servicemeta.enumeration.SignType;
 /**
  * Created by zhanglina on 18-5-22.
  */
-public class AniSmalSSOStrategy extends AniSSOStrategy {
+public class AniSamlSSOStrategy extends AniSSOStrategy {
 
     private static final long serialVersionUID = -6725762189820040902L;
     private String idpName;
@@ -14,7 +14,7 @@ public class AniSmalSSOStrategy extends AniSSOStrategy {
     private SignType signType;
     private Integer assertTimeoutMs;
 
-    public AniSmalSSOStrategy(){
+    public AniSamlSSOStrategy(){
         this.integrateType = IntegrateType.SAML;
     }
 
