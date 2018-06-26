@@ -14,10 +14,29 @@ import java.util.List;
  */
 public interface ServiceObjectMetaService {
 
+    /**
+     * <h2>Register a object.</h2>
+     * @param objectRegisterDto
+     * @throws AniRuleException
+     * @throws AniDataException
+     */
     public void registerObject(ServiceObjectRegisterDto objectRegisterDto) throws AniRuleException, AniDataException;
 
+    /**
+     * <h2>Batch register object.</h2>
+     * @param objectRegisterDtos
+     * @throws AniRuleException
+     * @throws AniDataException
+     */
     public void batchRegisterObject(List<ServiceObjectRegisterDto> objectRegisterDtos) throws AniRuleException, AniDataException;
 
+    /**
+     * <h2>Query service object.</h2>
+     * @param objectQueryDto
+     * @return
+     * @throws AniRuleException
+     * @throws AniDataException
+     */
     public ServiceObject getServiceObject(ObjectQueryDto objectQueryDto) throws AniRuleException, AniDataException;
 
 
