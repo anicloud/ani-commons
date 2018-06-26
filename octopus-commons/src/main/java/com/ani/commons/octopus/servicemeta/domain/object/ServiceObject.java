@@ -9,6 +9,9 @@ public abstract class ServiceObject<T extends ObjectMaster> {
 
     protected T objectMaster;
 
+    public ServiceObject() {
+    }
+
     public ServiceObject(T objectMaster) {
         this.objectMaster = objectMaster;
     }

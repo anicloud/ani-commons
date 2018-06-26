@@ -7,18 +7,19 @@ import com.ani.commons.octopus.objmeta.domain.ObjectMaster;
  */
 public class NCServiceObject<T extends ObjectMaster> extends ServiceObject {
     
-    private String code;
+    private String userCode;
 
+    public NCServiceObject() {}
     public NCServiceObject(T t) {
         super(t);
     }
 
     public String getCode() {
-        return code;
+        return userCode;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setCode(String userCode) {
+        this.userCode = userCode;
     }
 
 }

@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by zhanglina on 18-3-29.
  */
-@Service
+//@Service
 public interface AniMetaAdminService {
 
     // meta group
