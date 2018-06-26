@@ -17,14 +17,14 @@ public class OTNode implements Serializable {
     private Boolean canDeploy;
     private Boolean hasChildren;
     private List<OTNode> children;
-    private String parentNodeId;
+    private String parentId;
 
-    public String getParentNodeId() {
-        return parentNodeId;
+    public String getParentId() {
+        return parentId;
     }
 
-    public void setParentNodeId(String parentNodeId) {
-        this.parentNodeId = parentNodeId;
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
     }
 
     public NodeType getNodeType() {

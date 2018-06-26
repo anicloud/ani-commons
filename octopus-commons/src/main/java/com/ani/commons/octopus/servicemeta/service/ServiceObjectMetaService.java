@@ -20,5 +20,6 @@ public interface ServiceObjectMetaService {
 
     public ServiceObject getServiceObject(ObjectQueryDto objectQueryDto) throws AniRuleException, AniDataException;
 
+    // TODO: 18-6-25 add other interface
 
     }
