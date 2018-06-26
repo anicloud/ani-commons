@@ -19,5 +19,6 @@ public enum ExceptionType {
     NO_PRIVILEGED,
     MEMBER_EXISTS,
     ROLE_NAME_EXISTS,
-    ALP_EXISTS
+    ALP_EXISTS,
+
 }
