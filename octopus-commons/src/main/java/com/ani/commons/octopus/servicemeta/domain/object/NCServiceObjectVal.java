@@ -3,13 +3,13 @@ package com.ani.commons.octopus.servicemeta.domain.object;
 /**
  * Created by ebrx on 18-6-26.
  */
-public class NCServiceObjectVal {
+public class NcServiceObjectVal extends ServiceObjectVal {
     private String userCode;
 
-    public NCServiceObjectVal() {
+    public NcServiceObjectVal() {
     }
 
-    public NCServiceObjectVal(String userCode) {
+    public NcServiceObjectVal(String userCode) {
         this.userCode = userCode;
     }
 
