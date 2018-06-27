@@ -15,9 +15,7 @@ import java.util.List;
 public interface ServiceObjectMetaService {
 
     public void registerObject(ServiceObjectRegisterDto objectRegisterDto) throws AniRuleException, AniDataException;
-
     public void batchRegisterObject(List<ServiceObjectRegisterDto> objectRegisterDtos) throws AniRuleException, AniDataException;
-
     public ServiceObject getServiceObject(ObjectQueryDto objectQueryDto) throws AniRuleException, AniDataException;
 
     // TODO: 18-6-25 add other interface

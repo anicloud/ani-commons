@@ -16,6 +16,15 @@ public class OrgResourceAccessDto extends AniDto{
     private Long orgId;
     private Set<PrivilegeType> privilegeTypes;
 
+    public OrgResourceAccessDto(Long accountId, Long orgId, Set<PrivilegeType> privilegeTypes) {
+        this.accountId = accountId;
+        this.orgId = orgId;
+        this.privilegeTypes = privilegeTypes;
+    }
+
+    public OrgResourceAccessDto() {
+    }
+
     public Long getAccountId() {
         return accountId;
     }
