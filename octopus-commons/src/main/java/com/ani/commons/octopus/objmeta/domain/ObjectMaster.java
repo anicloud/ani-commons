@@ -21,8 +21,8 @@ public abstract class ObjectMaster extends AniObject {
         super();
     }
 
-    public ObjectMaster(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long objectId, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
-        super(stubs, stateMachines, model);
+    public ObjectMaster(String name, Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long objectId, Long ownerAccountId, Map<AniByte, ConnState> antennasState) {
+        super(name, stubs, stateMachines, model);
         this.objectId = objectId;
         this.ownerAccountId = ownerAccountId;
         this.antennasState = antennasState;

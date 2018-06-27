@@ -23,11 +23,11 @@ public abstract class AniUserValidateDto extends AniDto implements Serializable{
 //        this.siteId = siteId;
 //    }
 
-//    public Long getAccountId() {
+//    public Long getOwnerAccountId() {
 //        return accountId;
 //    }
 //
-//    public void setAccountId(Long accountId) {
+//    public void setOwnerAccountId(Long accountId) {
 //        this.accountId = accountId;
 //    }
 //

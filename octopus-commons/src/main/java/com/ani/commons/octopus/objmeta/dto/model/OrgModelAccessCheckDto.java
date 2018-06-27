@@ -14,6 +14,15 @@ public class OrgModelAccessCheckDto extends ModelQueryDto {
     private Long orgId;
     private Set<PrivilegeType> expPrivilege;
 
+    public OrgModelAccessCheckDto() {
+    }
+
+    public OrgModelAccessCheckDto(Long modelId, Long requestAccountId, Long orgId, Set<PrivilegeType> expPrivilege) {
+        super(modelId, requestAccountId);
+        this.orgId = orgId;
+        this.expPrivilege = expPrivilege;
+    }
+
     public Set<PrivilegeType> getExpPrivilege() {
         return expPrivilege;
     }

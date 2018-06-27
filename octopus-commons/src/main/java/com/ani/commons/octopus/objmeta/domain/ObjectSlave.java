@@ -1,6 +1,11 @@
 package com.ani.commons.octopus.objmeta.domain;
 
+import com.ani.commons.octopus.objmeta.domain.state.StateMachineMeta;
+import com.ani.commons.octopus.objmeta.domain.stub.StubMeta;
 import com.ani.utils.core.data.type.ConnState;
+
+import java.util.Collection;
+import java.util.List;
 
 public class ObjectSlave extends AniObject {
 
@@ -12,7 +17,8 @@ public class ObjectSlave extends AniObject {
 
     public ObjectSlave() {}
 
-    public ObjectSlave(Integer slaveId, ObjectMaster master, ConnState connState) {
+    public ObjectSlave(String name, Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Integer slaveId, ObjectMaster master, ConnState connState) {
+        super(name, stubs, stateMachines, model);
         this.slaveId = slaveId;
         this.master = master;
         this.connState = connState;
