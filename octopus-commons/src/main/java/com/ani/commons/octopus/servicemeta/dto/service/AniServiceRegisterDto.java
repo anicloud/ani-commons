@@ -1,7 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.service;
 
 import com.ani.commons.octopus.objmeta.dto.model.ModelRegisterDto;
-import com.ani.commons.octopus.servicemeta.domain.service.AniService;
 import com.ani.commons.octopus.servicemeta.enumeration.DualAuth;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
