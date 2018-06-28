@@ -3,29 +3,34 @@ package com.ani.commons.earth.domain.auth;
 import com.ani.commons.earth.enumeration.AuthState;
 import com.ani.commons.earth.enumeration.ContextType;
 
+import java.io.Serializable;
+
 /**
  * Created by zhanglina on 18-3-23.
  */
-public abstract class AniAuthState {
+public abstract class AniAuthState implements Serializable{
+    private static final long serialVersionUID = 2983449220440400630L;
+
     protected AuthState authState;
     protected ContextType contextType;
-    protected String tgt;
+    protected String aniSessionId;
 
-    public AniAuthState(AuthState authState, ContextType contextType, String tgt) {
-        this.authState = authState;
-        this.contextType = contextType;
-        this.tgt = tgt;
-    }
 
     public AniAuthState() {
     }
 
-    public String getTgt() {
-        return tgt;
+    public AniAuthState(AuthState authState, ContextType contextType, String aniSessionId) {
+        this.authState = authState;
+        this.contextType = contextType;
+        this.aniSessionId = aniSessionId;
     }
 
-    public void setTgt(String tgt) {
-        this.tgt = tgt;
+    public String getAniSessionId() {
+        return aniSessionId;
+    }
+
+    public void setAniSessionId(String aniSessionId) {
+        this.aniSessionId = aniSessionId;
     }
 
     public AuthState getAuthState() {

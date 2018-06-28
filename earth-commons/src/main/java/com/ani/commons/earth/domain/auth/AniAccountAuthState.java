@@ -1,5 +1,8 @@
 package com.ani.commons.earth.domain.auth;
 
+import com.ani.commons.earth.enumeration.AuthState;
+import com.ani.commons.earth.enumeration.ContextType;
+
 import java.io.Serializable;
 
 /**
@@ -7,17 +10,14 @@ import java.io.Serializable;
  */
 public class AniAccountAuthState extends AniAuthState implements Serializable {
     private static final long serialVersionUID = -2641021057324420725L;
-    String sessionId;
     Long accountId;
+    public AniAccountAuthState() {
 
-    public String getSessionId() {
-        return sessionId;
     }
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
+    public AniAccountAuthState(AuthState authState, ContextType contextType, String sessionId, Long accountId) {
+        super(authState, contextType, sessionId);
+        this.accountId = accountId;
     }
-
     public Long getAccountId() {
         return accountId;
     }
@@ -25,4 +25,5 @@ public class AniAccountAuthState extends AniAuthState implements Serializable {
     public void setAccountId(Long accountId) {
         this.accountId = accountId;
     }
+
 }
