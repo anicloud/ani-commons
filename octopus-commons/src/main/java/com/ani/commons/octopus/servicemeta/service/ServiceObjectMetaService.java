@@ -1,9 +1,11 @@
 package com.ani.commons.octopus.servicemeta.service;
 
 import com.ani.commons.octopus.objmeta.dto.object.ObjectQueryDto;
+import com.ani.commons.octopus.objmeta.dto.object.ObjectQueryOwnerDto;
 import com.ani.commons.octopus.objmeta.dto.object.ObjectQuerySimpleDto;
 import com.ani.commons.octopus.objmeta.dto.object.ObjectRegisterDto;
 import com.ani.commons.octopus.servicemeta.domain.object.ServiceObject;
+import com.ani.commons.octopus.servicemeta.dto.service.Object.ServiceObjBriefInfoDto;
 import com.ani.commons.octopus.servicemeta.dto.service.Object.ServiceObjectRegisterDto;
 import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
@@ -41,5 +43,5 @@ public interface ServiceObjectMetaService {
     public ServiceObject getServiceObject(ObjectQuerySimpleDto objectQuerySimpleDto) throws AniRuleException, AniDataException;
 
     // TODO: 18-6-25 add other interface
-
+    public List<ServiceObjBriefInfoDto> getServiceObjByOwnerId(ObjectQueryOwnerDto objectQueryOwnerDto)throws AniRuleException;
     }
