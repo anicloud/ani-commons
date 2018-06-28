@@ -42,6 +42,12 @@ public interface ServiceObjectMetaService {
      */
     public ServiceObject getServiceObject(ObjectQuerySimpleDto objectQuerySimpleDto) throws AniRuleException, AniDataException;
 
-    // TODO: 18-6-25 add other interface
-    public List<ServiceObjBriefInfoDto> getServiceObjByOwnerId(ObjectQueryOwnerDto objectQueryOwnerDto)throws AniRuleException;
+    /**
+     * <h2>Query service object.</h2>
+     * @param objectQueryOwnerDto
+     * @return
+     * @throws AniRuleException
+     * @throws AniDataException
+     */
+    public List<ServiceObjBriefInfoDto> getServiceObjByOwnerId(ObjectQueryOwnerDto objectQueryOwnerDto) throws AniRuleException, AniDataException;
     }

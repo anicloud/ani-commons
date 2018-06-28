@@ -11,14 +11,14 @@ public class ServiceObjBriefInfoDto implements Serializable{
     private static final long serialVersionUID = 1660770102672262611L;
 
     private Long objectId;
-    private Long name;
+    private String name;
     private Long modelId;
     private String logo;
 
     public ServiceObjBriefInfoDto() {
     }
 
-    public ServiceObjBriefInfoDto(Long objectId, Long name, Long modelId, String logo) {
+    public ServiceObjBriefInfoDto(Long objectId, String name, Long modelId, String logo) {
         this.objectId = objectId;
         this.name = name;
         this.modelId = modelId;
@@ -41,11 +41,11 @@ public class ServiceObjBriefInfoDto implements Serializable{
         this.objectId = objectId;
     }
 
-    public Long getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Long name) {
+    public void setName(String name) {
         this.name = name;
     }
 
