@@ -1,6 +1,7 @@
 package com.ani.commons.octopus.servicemeta.domain.object;
 
 import com.ani.commons.octopus.objmeta.domain.ObjectMaster;
+import com.ani.commons.octopus.servicemeta.domain.service.ServiceModel;
 
 import java.io.Serializable;
 
@@ -10,6 +11,8 @@ import java.io.Serializable;
 public abstract class ServiceObject<T extends ObjectMaster>  implements Serializable{
 
     private static final long serialVersionUID = -8187614245378127311L;
+
+    protected ServiceModel serviceModel;
 
     protected T objectMaster;
 
@@ -27,4 +30,13 @@ public abstract class ServiceObject<T extends ObjectMaster>  implements Serializ
     public void setObjectMaster(T objectMaster) {
         this.objectMaster = objectMaster;
     }
+
+    public ServiceModel getServiceModel() {
+        return serviceModel;
+    }
+
+    public void setServiceModel(ServiceModel serviceModel) {
+        this.serviceModel = serviceModel;
+    }
+
 }

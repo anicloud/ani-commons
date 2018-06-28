@@ -4,7 +4,6 @@ import com.ani.commons.earth.domain.organization.Organization;
 import com.ani.commons.earth.domain.organization.account.OrgAccountRole;
 import com.ani.commons.earth.dto.organization.org.OrgMemberInfoDto;
 import com.ani.commons.earth.dto.organization.org.OrgRegisterDto;
-import com.ani.commons.earth.dto.organization.org.OrgResourceAccessDto;
 import com.ani.commons.earth.dto.organization.org.OrgUpdateDto;
 import com.ani.commons.earth.dto.organization.role.OrgAccountRoleDto;
 import com.ani.commons.earth.dto.organization.role.OrgRoleOperationDto;

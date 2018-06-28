@@ -12,13 +12,15 @@ public abstract class AniBaseObject implements Serializable {
 
     private static final long serialVersionUID = 6134988385184636975L;
 
+    private String name;
     private Map<Long, StubMeta> stubsMeta;
     private List<StateMachineMeta> stateMachinesMeta;
 
     public AniBaseObject() {
     }
 
-    protected AniBaseObject(Collection<StubMeta> stubsMeta, List<StateMachineMeta> stateMachinesMeta) {
+    protected AniBaseObject(String name, Collection<StubMeta> stubsMeta, List<StateMachineMeta> stateMachinesMeta) {
+        this.name = name;
         this.setStubs(stubsMeta, true);
         this.setStateMachines(stateMachinesMeta, true);
     }
@@ -27,6 +29,15 @@ public abstract class AniBaseObject implements Serializable {
 //        return new ArrayList<>(stubsMeta.values());
 //    }
 //    public List getStubs
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Map<Long, StubMeta> getStubsMeta() {
         return stubsMeta;

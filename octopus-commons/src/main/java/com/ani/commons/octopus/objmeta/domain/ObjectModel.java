@@ -14,7 +14,6 @@ public class ObjectModel extends AniBaseObject {
     private static final long serialVersionUID = -7225989167187564700L;
 
     private Long modelId;
-    private String name;
     private String description;
     private String briefDesc;
     private ObjectType objectType;
@@ -26,9 +25,8 @@ public class ObjectModel extends AniBaseObject {
     }
 
     public ObjectModel(Collection<StubMeta> stubsMeta, List<StateMachineMeta> stateMachinesMeta, Long modelId, String name, String description, String briefDesc, ObjectType objectType, Long devAccountId, PrivacyType privacy, DataState modelState) {
-        super(stubsMeta, stateMachinesMeta);
+        super(name, stubsMeta, stateMachinesMeta);
         this.modelId = modelId;
-        this.name = name;
         this.description = description;
         this.briefDesc = briefDesc;
         this.objectType = objectType;
@@ -43,14 +41,6 @@ public class ObjectModel extends AniBaseObject {
 
     public void setModelId(Long modelId) {
         this.modelId = modelId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDescription() {

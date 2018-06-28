@@ -3,6 +3,7 @@ package com.ani.commons.octopus.objmeta.domain;
 import com.ani.commons.octopus.objmeta.domain.state.StateMachine;
 import com.ani.commons.octopus.objmeta.domain.state.StateMachineMeta;
 import com.ani.commons.octopus.objmeta.domain.stub.StubMeta;
+import com.ani.utils.core.AniGeneralUtils;
 import com.ani.utils.exception.AniRuleException;
 
 import java.util.ArrayList;
@@ -18,8 +19,8 @@ public abstract class AniObject extends AniBaseObject {
 
     public AniObject() {}
 
-    public AniObject(Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model) {
-        super(stubs, stateMachines);
+    public AniObject(String name, Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model) {
+        super(name, stubs, stateMachines);
         this.model = model;
     }
 
@@ -37,7 +38,15 @@ public abstract class AniObject extends AniBaseObject {
     }
 
     public void setStateMachines(List<StateMachine> stateMachines) {
+        if(AniGeneralUtils.isCollectionEmpty(stateMachines))
+            return;
         this.stateMachines = stateMachines;
+    }
+
+    public void setStateMachinesFromMeta(List<StateMachineMeta> smsMeta) throws AniRuleException {
+        if(AniGeneralUtils.isCollectionEmpty(smsMeta))
+            return;
+        this.initSMsFromMeta(smsMeta);
     }
 
     private StubMeta getModelStub(int groupId, int metaId) {

@@ -1,39 +1,41 @@
 package com.ani.commons.octopus.objmeta.dto.object;
 
+import com.ani.commons.octopus.objmeta.domain.ObjectType;
 import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
 
 /**
  * Created by zhanglina on 18-3-29.
  */
-public class ObjectQueryDto extends AniDto {
+public abstract class ObjectQueryDto extends AniDto {
 
     private static final long serialVersionUID = 8152487956326966853L;
 
-    private Long objectId;
-
-    private Long accountId;
+    @AniRequiredField
+    private Long opAccountId;
+    private ObjectType objType;
 
     public ObjectQueryDto() {
     }
 
-    public ObjectQueryDto(Long objectId, Long accountId) {
-        this.objectId = objectId;
-        this.accountId = accountId;
+    public ObjectQueryDto(Long opAccountId, ObjectType objType) {
+        this.opAccountId = opAccountId;
+        this.objType = objType;
     }
 
-    public Long getObjectId() {
-        return objectId;
+    public Long getOpAccountId() {
+        return opAccountId;
     }
 
-    public void setObjectId(Long objectId) {
-        this.objectId = objectId;
+    public void setOpAccountId(Long opAccountId) {
+        this.opAccountId = opAccountId;
     }
 
-    public Long getAccountId() {
-        return accountId;
+    public ObjectType getObjType() {
+        return objType;
     }
 
-    public void setAccountId(Long accountId) {
-        this.accountId = accountId;
+    public void setObjType(ObjectType objType) {
+        this.objType = objType;
     }
 }

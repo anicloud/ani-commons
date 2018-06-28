@@ -13,7 +13,7 @@ import java.sql.Date;
 /**
  * Created by zhanglina on 18-5-23.
  */
-public class AniService implements Serializable {
+public class ServiceModel implements Serializable {
 
     private static final long serialVersionUID = 7067512857059614105L;
 
@@ -27,10 +27,10 @@ public class AniService implements Serializable {
     private String baseUrl;
     private BigInteger logoCurrent;
 
-    public AniService() {
+    public ServiceModel() {
     }
 
-    public AniService(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy, Date createDate, Date updateDate, String baseUrl, BigInteger logoCurrent) {
+    public ServiceModel(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy, Date createDate, Date updateDate, String baseUrl, BigInteger logoCurrent) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
