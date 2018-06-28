@@ -15,6 +15,12 @@ public class OTNodeMemberDto implements Serializable {
     public OTNodeMemberDto() {
     }
 
+    public OTNodeMemberDto(Long roleId, OTNodeOpDto otNodeOpDto, Long targetEmployeeId) {
+        this.roleId = roleId;
+        this.otNodeOpDto = otNodeOpDto;
+        this.targetEmployeeId = targetEmployeeId;
+    }
+
     public Long getRoleId() {
         return roleId;
     }

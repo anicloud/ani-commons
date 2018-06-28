@@ -17,6 +17,18 @@ public class OrgMemberInfo implements Serializable{
     private String phone;
     private DataState state;
 
+    public OrgMemberInfo() {
+    }
+
+    public OrgMemberInfo(Long id, String employeeNum, String name, String nameAlphabet, String phone, DataState state) {
+        this.id = id;
+        this.employeeNum = employeeNum;
+        this.name = name;
+        this.nameAlphabet = nameAlphabet;
+        this.phone = phone;
+        this.state = state;
+    }
+
     public String getEmployeeNum() {
         return employeeNum;
     }

@@ -15,6 +15,15 @@ public class EmployeeStateUpdateDto implements Serializable {
     private DataState dataState;
     private OTNodeOpDto otNodeOpDto;
 
+    public EmployeeStateUpdateDto() {
+    }
+
+    public EmployeeStateUpdateDto(Long employeeId, DataState dataState, OTNodeOpDto otNodeOpDto) {
+        this.employeeId = employeeId;
+        this.dataState = dataState;
+        this.otNodeOpDto = otNodeOpDto;
+    }
+
     public Long getEmployeeId() {
         return employeeId;
     }

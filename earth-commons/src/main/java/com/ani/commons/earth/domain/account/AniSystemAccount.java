@@ -1,5 +1,7 @@
 package com.ani.commons.earth.domain.account;
 
+import com.ani.commons.earth.enumeration.AccountType;
+
 import java.io.Serializable;
 
 /**
@@ -8,4 +10,11 @@ import java.io.Serializable;
 public class AniSystemAccount extends AniAccount implements Serializable {
 
     private static final long serialVersionUID = -1338664649876099191L;
+
+    public AniSystemAccount() {
+    }
+
+    public AniSystemAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, String fileType) {
+        super(accountId, phone, email, hasPwd, type, fileType);
+    }
 }

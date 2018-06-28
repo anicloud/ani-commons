@@ -12,6 +12,14 @@ public class OTNodeUpdateTopologyDto implements Serializable {
 
     private OTNodeOpDto otNodeOpDto;
 
+    public OTNodeUpdateTopologyDto() {
+    }
+
+    public OTNodeUpdateTopologyDto(Long targetParentNodeId, OTNodeOpDto otNodeOpDto) {
+        this.targetParentNodeId = targetParentNodeId;
+        this.otNodeOpDto = otNodeOpDto;
+    }
+
     public OTNodeOpDto getOtNodeOpDto() {
         return otNodeOpDto;
     }

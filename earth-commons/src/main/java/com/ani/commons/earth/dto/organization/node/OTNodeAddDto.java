@@ -16,6 +16,16 @@ public class OTNodeAddDto extends AniDto implements Serializable {
     private NodeType type;
     private OTNodeOpDto otNodeOpDto;
 
+    public OTNodeAddDto(Long orgId, String name, NodeType type, OTNodeOpDto otNodeOpDto) {
+        this.orgId = orgId;
+        this.name = name;
+        this.type = type;
+        this.otNodeOpDto = otNodeOpDto;
+    }
+
+    public OTNodeAddDto() {
+    }
+
     public Long getOrgId() {
         return orgId;
     }

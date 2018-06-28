@@ -21,6 +21,17 @@ public class OTNodeMember implements Serializable{
 
     private DataState state;
 
+    public OTNodeMember() {
+    }
+
+    public OTNodeMember(String roleName, Long employeeId, String employeeNum, String name, DataState state) {
+        this.roleName = roleName;
+        this.employeeId = employeeId;
+        this.employeeNum = employeeNum;
+        this.name = name;
+        this.state = state;
+    }
+
     public String getRoleName() {
         return roleName;
     }

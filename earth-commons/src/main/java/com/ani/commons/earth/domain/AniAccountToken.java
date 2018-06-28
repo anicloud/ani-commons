@@ -14,6 +14,15 @@ public class AniAccountToken implements Serializable {
     Long accountId;
     Date lastOp;
 
+    public AniAccountToken() {
+    }
+
+    public AniAccountToken(String tgt, Long accountId, Date lastOp) {
+        this.tgt = tgt;
+        this.accountId = accountId;
+        this.lastOp = lastOp;
+    }
+
     public String getTgt() {
         return tgt;
     }

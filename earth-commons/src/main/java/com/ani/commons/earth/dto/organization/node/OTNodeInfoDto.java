@@ -15,6 +15,15 @@ public class OTNodeInfoDto implements Serializable {
     private NodeType nodeType;
     private OTNodeOpDto otNodeOpDto;
 
+    public OTNodeInfoDto() {
+    }
+
+    public OTNodeInfoDto(String name, NodeType nodeType, OTNodeOpDto otNodeOpDto) {
+        this.name = name;
+        this.nodeType = nodeType;
+        this.otNodeOpDto = otNodeOpDto;
+    }
+
     public String getName() {
         return name;
     }
