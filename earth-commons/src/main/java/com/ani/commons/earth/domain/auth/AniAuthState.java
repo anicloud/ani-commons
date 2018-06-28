@@ -11,6 +11,15 @@ public abstract class AniAuthState {
     protected ContextType contextType;
     protected String tgt;
 
+    public AniAuthState(AuthState authState, ContextType contextType, String tgt) {
+        this.authState = authState;
+        this.contextType = contextType;
+        this.tgt = tgt;
+    }
+
+    public AniAuthState() {
+    }
+
     public String getTgt() {
         return tgt;
     }

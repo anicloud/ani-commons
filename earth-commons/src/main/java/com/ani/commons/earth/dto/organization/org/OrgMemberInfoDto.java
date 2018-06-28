@@ -28,6 +28,25 @@ public class OrgMemberInfoDto implements Serializable {
     private String citizenId;
     private DataState dataState;
 
+    public OrgMemberInfoDto() {
+    }
+
+    public OrgMemberInfoDto(Long orgId, Long employeeId, String employeeNum, String nameAlphabet, AccountPhoneInfoDto phoneInfoDto, String email, String name, String politics, String tel, Date birthday, Sex sex, String citizenId, DataState dataState) {
+        this.orgId = orgId;
+        this.employeeId = employeeId;
+        this.employeeNum = employeeNum;
+        this.nameAlphabet = nameAlphabet;
+        this.phoneInfoDto = phoneInfoDto;
+        this.email = email;
+        this.name = name;
+        this.politics = politics;
+        this.tel = tel;
+        this.birthday = birthday;
+        this.sex = sex;
+        this.citizenId = citizenId;
+        this.dataState = dataState;
+    }
+
     public String getNameAlphabet() {
         return nameAlphabet;
     }

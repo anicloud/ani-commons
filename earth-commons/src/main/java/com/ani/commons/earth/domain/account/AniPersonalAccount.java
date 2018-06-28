@@ -1,5 +1,6 @@
 package com.ani.commons.earth.domain.account;
 
+import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.commons.earth.enumeration.Sex;
 
 import java.io.Serializable;
@@ -19,6 +20,12 @@ public class AniPersonalAccount extends AniAccount implements Serializable {
     String name;
 
     public AniPersonalAccount() {
+    }
+
+    public AniPersonalAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, String fileType, Sex sex, String name) {
+        super(accountId, phone, email, hasPwd, type, fileType);
+        this.sex = sex;
+        this.name = name;
     }
 
     public Sex getSex() {

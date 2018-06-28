@@ -12,6 +12,14 @@ public class OTNodeOpDto extends AniDto implements Serializable {
     private Long nodeId;
     private Long opEmployeeId;
 
+    public OTNodeOpDto(Long nodeId, Long opEmployeeId) {
+        this.nodeId = nodeId;
+        this.opEmployeeId = opEmployeeId;
+    }
+
+    public OTNodeOpDto() {
+    }
+
     public Long getNodeId() {
         return nodeId;
     }

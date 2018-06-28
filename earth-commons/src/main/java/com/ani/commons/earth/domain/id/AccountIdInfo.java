@@ -12,6 +12,12 @@ public class AccountIdInfo implements Serializable {
     public AccountIdInfo() {
     }
 
+    public AccountIdInfo(Long accountId, Email accountEmail, Phone accountPhone) {
+        this.accountId = accountId;
+        this.accountEmail = accountEmail;
+        this.accountPhone = accountPhone;
+    }
+
     public Long getAccountId() {
         return accountId;
     }

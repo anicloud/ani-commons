@@ -32,6 +32,15 @@ public abstract class AniAccount implements Serializable{
     public AniAccount() {
     }
 
+    public AniAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, String fileType) {
+        this.accountId = accountId;
+        this.phone = phone;
+        this.email = email;
+        this.hasPwd = hasPwd;
+        this.type = type;
+        this.fileType = fileType;
+    }
+
     public String getPhone() {
         return phone;
     }
