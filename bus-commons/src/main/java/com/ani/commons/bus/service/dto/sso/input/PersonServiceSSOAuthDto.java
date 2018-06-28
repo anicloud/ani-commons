@@ -7,7 +7,10 @@ public class PersonServiceSSOAuthDto extends ServiceSSOAuthDto {
 
     private static final long serialVersionUID = 2782826687902963072L;
 
-    public PersonServiceSSOAuthDto(Long modelId, Long accountId) {
-        super(modelId, accountId);
+    public PersonServiceSSOAuthDto() {
+    }
+
+    public PersonServiceSSOAuthDto(Long objectId, Long requestAccountId) {
+        super(objectId, requestAccountId);
     }
 }

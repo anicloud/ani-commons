@@ -6,7 +6,9 @@ import com.ani.commons.octopus.objmeta.domain.ObjectMaster;
  * Created by zhanglina on 18-6-22.
  */
 public class NCServiceObject<T extends ObjectMaster> extends ServiceObject {
-    
+
+    private static final long serialVersionUID = 911583681349118677L;
+
     private String userCode;
 
     public NCServiceObject() {}
