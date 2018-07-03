@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 17-12-27.
  */
-public class AccountPhoneInfoDto extends AccountIdInfoDto implements Serializable {
+public class AccountPhoneInfoDto extends AccountIdInfoDto {
 
     private static final long serialVersionUID = -7964278395547774683L;
     @AniRequiredField

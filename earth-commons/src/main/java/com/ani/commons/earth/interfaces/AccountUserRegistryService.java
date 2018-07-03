@@ -14,6 +14,8 @@ import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by zhanglina on 17-12-27.
@@ -46,14 +48,15 @@ public interface AccountUserRegistryService {
      */
     public AniAccountAuthState registerTransparently(AccountTransparentRegisterDto transparentRegisterDto) throws AniRuleException;
 
+    public List<Long> batchRegisterInside(List<AccountIdInfoDto> accountIdInfoDtos) throws AniRuleException;
     /**
      * <h2>Close an account</h2>
      *
      * @param accountPwdVerifyDto
      * @throws AniDataException
      */
-    public void closeAccount(AccountPwdVerifyDto accountPwdVerifyDto) throws AniRuleException;
 
+    public void closeAccount(AccountPwdVerifyDto accountPwdVerifyDto) throws AniRuleException;
     /**
      * <h2>Modify account identification info</h2>
      * <p>Modify or add a kind of identification info of an account.</p>

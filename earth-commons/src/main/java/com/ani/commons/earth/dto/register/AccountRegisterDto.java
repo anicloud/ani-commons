@@ -17,8 +17,6 @@ public abstract class AccountRegisterDto<T extends AccountIdInfoDto> extends Ani
     @AniRequiredField
     protected AccountIdInfoDto accountId;
 
-    @AniRequiredField
-    protected AccountType type;
 
     @AniRequiredField
     protected String verificationCode;
@@ -30,13 +28,6 @@ public abstract class AccountRegisterDto<T extends AccountIdInfoDto> extends Ani
 
     public abstract void setAccountId(T accountId);
 
-    public AccountType getType() {
-        return type;
-    }
-
-    public void setType(AccountType type) {
-        this.type = type;
-    }
 
     public String getVerificationCode() {
         return verificationCode;

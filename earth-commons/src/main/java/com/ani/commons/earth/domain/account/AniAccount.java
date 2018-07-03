@@ -13,6 +13,8 @@ public abstract class AniAccount implements Serializable{
 
     String phone;
 
+//    String userName;
+
     String email;
     /**
      * Have set password
@@ -40,6 +42,14 @@ public abstract class AniAccount implements Serializable{
         this.type = type;
         this.fileType = fileType;
     }
+
+//    public String getUserName() {
+//        return userName;
+//    }
+//
+//    public void setUserName(String userName) {
+//        this.userName = userName;
+//    }
 
     public String getPhone() {
         return phone;
