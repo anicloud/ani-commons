@@ -3,6 +3,7 @@ package com.ani.commons.earth.interfaces;
 import com.ani.commons.earth.domain.account.AniAccount;
 import com.ani.commons.earth.domain.auth.AniAccountAuthState;
 import com.ani.commons.earth.domain.id.AccountIdInfo;
+import com.ani.commons.earth.dto.account.AccountInsideRegInitDto;
 import com.ani.commons.earth.dto.id.AccountIdInfoDto;
 import com.ani.commons.earth.dto.info.AccountProfileDto;
 import com.ani.commons.earth.dto.register.AccountRegisterDto;
@@ -37,6 +38,7 @@ public interface AccountUserRegistryService {
      * @throws AniRuleException update by zhanglina 2018-02-26 AccountIdInfoDto to AccountIdVerifyDto
      */
     public Long register(String sessionId, AccountRegisterDto accountRegisterDto) throws AniRuleException;
+
 
     public Long registerInside(AccountIdInfoDto accountIdInfoDto)throws AniRuleException;
     /**
@@ -82,6 +84,6 @@ public interface AccountUserRegistryService {
      */
     public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, byte[] newPwd,Boolean flag) throws AniRuleException;
 
-    public AniAccount modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
+    public void  modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
 
 }

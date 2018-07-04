@@ -14,11 +14,31 @@ public abstract class AccountProfileDto extends AniDto implements Serializable {
 
     String name;
 
-     String fileType;
+    String fileType;
 
     String password;
 
+    String userName;
+
     protected AccountType accountType;
+
+
+    public AccountProfileDto(Long accountId, String name, String fileType, String password, String userName, AccountType accountType) {
+        this.accountId = accountId;
+        this.name = name;
+        this.fileType = fileType;
+        this.password = password;
+        this.userName = userName;
+        this.accountType = accountType;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public String getPassword() {
         return password;
