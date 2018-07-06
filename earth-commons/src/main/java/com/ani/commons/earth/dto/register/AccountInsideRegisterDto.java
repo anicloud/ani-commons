@@ -1,22 +1,24 @@
 package com.ani.commons.earth.dto.register;
 
+import com.ani.commons.earth.domain.id.Phone;
 import com.ani.utils.dto.AniDto;
 
 /**
  * Created by zhanglina on 18-7-5.
+ * Last Modified by xuben on 18-7-6.
  */
 public class AccountInsideRegisterDto extends AniDto{
 
     private static final long serialVersionUID = -1322098736708118531L;
 
     private String privateEmail;
-    private String privatePhone;
+    private Phone privatePhone;
     private String orgEmail;
 
     public AccountInsideRegisterDto() {
     }
 
-    public AccountInsideRegisterDto(String privateEmail, String privatePhone, String orgEmail) {
+    public AccountInsideRegisterDto(String privateEmail, Phone privatePhone, String orgEmail) {
         this.privateEmail = privateEmail;
         this.privatePhone = privatePhone;
         this.orgEmail = orgEmail;
@@ -30,11 +32,11 @@ public class AccountInsideRegisterDto extends AniDto{
         this.privateEmail = privateEmail;
     }
 
-    public String getPrivatePhone() {
+    public Phone getPrivatePhone() {
         return privatePhone;
     }
 
-    public void setPrivatePhone(String privatePhone) {
+    public void setPrivatePhone(Phone privatePhone) {
         this.privatePhone = privatePhone;
     }
 

@@ -13,7 +13,6 @@ public class AccountInsideRegInitDto implements Serializable {
 
     private Long accountId;
     private Long employeeId;
-    private String password;
 
     public Long getAccountId() {
         return accountId;
@@ -31,11 +30,4 @@ public class AccountInsideRegInitDto implements Serializable {
         this.employeeId = employeeId;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
