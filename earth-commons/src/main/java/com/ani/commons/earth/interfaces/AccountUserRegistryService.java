@@ -15,7 +15,6 @@ import com.ani.utils.exception.AniRuleException;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by zhanglina on 17-12-27.
@@ -79,4 +78,5 @@ public interface AccountUserRegistryService {
 
     public void  modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
 
+    public void modifyOrgAccountState(Long employeeId);
 }

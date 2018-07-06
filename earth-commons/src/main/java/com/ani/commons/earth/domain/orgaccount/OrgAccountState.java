@@ -1,5 +1,7 @@
 package com.ani.commons.earth.domain.orgaccount;
 
+import com.ani.utils.core.DataState;
+
 import java.io.Serializable;
 
 /**
@@ -11,26 +13,28 @@ public class OrgAccountState  implements Serializable{
 
     private Long orgId;
     private Long employeeId;
-    private Short needVerify;//0null 1 phone 2email 3phone and email
+    private String privateEmail;
+    private String phone;
     private String tgt;
+    private DataState dataState;
+
     public OrgAccountState() {
     }
 
 
-
-    public OrgAccountState(Long orgId, Long employeeId, Short needVerify, String tgt) {
+    public OrgAccountState(Long orgId, Long employeeId, String privateEmail, String phone, String tgt, DataState dataState) {
         this.orgId = orgId;
         this.employeeId = employeeId;
-        this.needVerify = needVerify;
+        this.privateEmail = privateEmail;
+        this.phone = phone;
         this.tgt = tgt;
-    }
-    public String getTgt() {
-        return tgt;
+        this.dataState = dataState;
     }
 
-    public void setTgt(String tgt) {
-        this.tgt = tgt;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
+
     public Long getOrgId() {
         return orgId;
     }
@@ -47,11 +51,35 @@ public class OrgAccountState  implements Serializable{
         this.employeeId = employeeId;
     }
 
-    public Short getNeedVerify() {
-        return needVerify;
+    public String getPrivateEmail() {
+        return privateEmail;
     }
 
-    public void setNeedVerify(Short needVerify) {
-        this.needVerify = needVerify;
+    public void setPrivateEmail(String privateEmail) {
+        this.privateEmail = privateEmail;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getTgt() {
+        return tgt;
+    }
+
+    public void setTgt(String tgt) {
+        this.tgt = tgt;
+    }
+
+    public DataState getDataState() {
+        return dataState;
+    }
+
+    public void setDataState(DataState dataState) {
+        this.dataState = dataState;
     }
 }

@@ -1,6 +1,7 @@
 package com.ani.commons.earth.dto.organization.org;
 
 
+import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.dto.id.AccountPhoneInfoDto;
 import com.ani.commons.earth.enumeration.Sex;
 import com.ani.utils.core.DataState;
@@ -18,8 +19,9 @@ public class OrgMemberInfoDto implements Serializable {
     private Long employeeId;// TODO: 18-5-11 改成id
     private String employeeNum;
     private String nameAlphabet;
-    private AccountPhoneInfoDto phoneInfoDto;
+    private Phone phone;
     private String email;
+    private String orgEmail;
     private String name;
     private String politics;
     private String tel;
@@ -31,13 +33,14 @@ public class OrgMemberInfoDto implements Serializable {
     public OrgMemberInfoDto() {
     }
 
-    public OrgMemberInfoDto(Long orgId, Long employeeId, String employeeNum, String nameAlphabet, AccountPhoneInfoDto phoneInfoDto, String email, String name, String politics, String tel, Date birthday, Sex sex, String citizenId, DataState dataState) {
+    public OrgMemberInfoDto(Long orgId, Long employeeId, String employeeNum, String nameAlphabet, Phone phone, String email, String orgEmail, String name, String politics, String tel, Date birthday, Sex sex, String citizenId, DataState dataState) {
         this.orgId = orgId;
         this.employeeId = employeeId;
         this.employeeNum = employeeNum;
         this.nameAlphabet = nameAlphabet;
-        this.phoneInfoDto = phoneInfoDto;
+        this.phone= phone;
         this.email = email;
+        this.orgEmail = orgEmail;
         this.name = name;
         this.politics = politics;
         this.tel = tel;
@@ -45,6 +48,14 @@ public class OrgMemberInfoDto implements Serializable {
         this.sex = sex;
         this.citizenId = citizenId;
         this.dataState = dataState;
+    }
+
+    public String getOrgEmail() {
+        return orgEmail;
+    }
+
+    public void setOrgEmail(String orgEmail) {
+        this.orgEmail = orgEmail;
     }
 
     public String getNameAlphabet() {
@@ -87,12 +98,12 @@ public class OrgMemberInfoDto implements Serializable {
         this.orgId = orgId;
     }
 
-    public AccountPhoneInfoDto getPhoneInfoDto() {
-        return phoneInfoDto;
+    public void setPhone(Phone phone) {
+        this.phone = phone;
     }
 
-    public void setPhoneInfoDto(AccountPhoneInfoDto phoneInfoDto) {
-        this.phoneInfoDto = phoneInfoDto;
+    public Phone getPhone() {
+        return phone;
     }
 
     public String getEmail() {

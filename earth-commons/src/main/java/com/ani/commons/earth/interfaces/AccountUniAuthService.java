@@ -20,7 +20,7 @@ public interface AccountUniAuthService {
      */
     public String login(String sessionId, AccountVerifyDto accountVerifyDto) throws AniAuthException, AniRuleException;
 
-    public OrgAccountState loginByOrg(OrgAccountVerifyDto orgAccountVerifyDto) throws AniAuthException,AniRuleException;
+    public OrgAccountState loginByOrg(String sessionId,OrgAccountVerifyDto orgAccountVerifyDto) throws AniAuthException,AniRuleException;
 
     /**
      * <h2>Check account login state by ANITGT</h2>
