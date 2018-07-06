@@ -1,6 +1,6 @@
 package com.ani.commons.earth.domain.account;
 import com.ani.commons.earth.enumeration.AccountType;
-import com.ani.commons.earth.enumeration.DataState;
+import com.ani.utils.core.DataState;
 
 import java.io.Serializable;
 import java.util.Objects;
