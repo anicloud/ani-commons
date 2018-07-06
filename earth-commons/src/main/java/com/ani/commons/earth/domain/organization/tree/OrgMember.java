@@ -28,7 +28,7 @@ public class OrgMember implements Serializable {
     private DataState state;
     private Timestamp createTime;
     private Timestamp updateTime;
-
+    private byte[] password;
     public String getEmployeeNum() {
         return employeeNum;
     }
@@ -147,5 +147,13 @@ public class OrgMember implements Serializable {
 
     public void setRoleId(String roleId) {
         this.roleId = roleId;
+    }
+
+    public byte[] getPassword() {
+        return password;
+    }
+
+    public void setPassword(byte[] password) {
+        this.password = password;
     }
 }
