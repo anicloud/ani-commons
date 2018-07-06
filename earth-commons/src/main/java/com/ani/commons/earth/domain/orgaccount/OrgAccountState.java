@@ -1,7 +1,5 @@
 package com.ani.commons.earth.domain.orgaccount;
 
-import com.ani.commons.earth.enumeration.DataState;
-
 import java.io.Serializable;
 
 /**
