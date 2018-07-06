@@ -1,5 +1,6 @@
 package com.ani.commons.earth.domain.account;
 import com.ani.commons.earth.enumeration.AccountType;
+import com.ani.commons.earth.enumeration.DataState;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -20,6 +21,16 @@ public abstract class AniAccount implements Serializable{
      * Have set password
      */
     Boolean hasPwd;
+
+    DataState state;
+
+    public DataState getState() {
+        return state;
+    }
+
+    public void setState(DataState state) {
+        this.state = state;
+    }
 
     /**
      * Account valueType
