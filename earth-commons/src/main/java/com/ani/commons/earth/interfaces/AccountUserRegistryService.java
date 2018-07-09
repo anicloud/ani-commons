@@ -81,6 +81,6 @@ public interface AccountUserRegistryService {
 
     public void modifyOrgAccountState(Long employeeId);
 
-    public void batchSendPassword(List<Long> employeeIds);
+    public void batchSendPassword(List<Long> employeeIds) throws AniRuleException;
 
 }
