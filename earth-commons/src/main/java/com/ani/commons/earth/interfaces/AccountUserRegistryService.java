@@ -18,6 +18,7 @@ import java.util.List;
 
 /**
  * Created by zhanglina on 17-12-27.
+ * Last Modified by xuben on 18-7-6.
  */
 public interface AccountUserRegistryService {
 
@@ -80,4 +81,7 @@ public interface AccountUserRegistryService {
     public void  modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
 
     public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
+
+    public void batchSendPassword(List<Long> employeeIds) throws AniRuleException;
+
 }

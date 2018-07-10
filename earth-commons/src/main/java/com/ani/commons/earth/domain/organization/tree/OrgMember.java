@@ -9,6 +9,7 @@ import java.sql.Timestamp;
 
 /**
  * Created by zhanglina on 18-5-9.
+ * Last Modified by xuben on 18-7-9.
  */
 public class OrgMember implements Serializable {
 
@@ -17,6 +18,7 @@ public class OrgMember implements Serializable {
     private String name;
     private String nameAlphabet;
     private String employeeNum;
+    private String orgEmail;
     private String privateEmail;
     private String phone;
     private String roleId;
@@ -115,6 +117,14 @@ public class OrgMember implements Serializable {
 
     public void setCitizenId(String citizenId) {
         this.citizenId = citizenId;
+    }
+
+    public String getOrgEmail() {
+        return orgEmail;
+    }
+
+    public void setOrgEmail(String orgEmail) {
+        this.orgEmail = orgEmail;
     }
 
     public DataState getState() {
