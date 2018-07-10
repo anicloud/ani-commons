@@ -11,13 +11,13 @@ public class ObjectMasterBriefInfoDto extends ObjectInfoDto {
 
     private Long objectId;
     private Long ownerAccountId;
-    private Long orgId;
+    private Integer orgId;
 
     public ObjectMasterBriefInfoDto() {
         super();
     }
 
-    public ObjectMasterBriefInfoDto(String name, String modelName, ObjectType type, Long objectId, Long ownerAccountId, Long orgId) {
+    public ObjectMasterBriefInfoDto(String name, String modelName, ObjectType type, Long objectId, Long ownerAccountId, Integer orgId) {
         super(name, modelName, type);
         this.objectId = objectId;
         this.ownerAccountId = ownerAccountId;
@@ -40,11 +40,11 @@ public class ObjectMasterBriefInfoDto extends ObjectInfoDto {
         this.ownerAccountId = ownerAccountId;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 }

@@ -8,15 +8,15 @@ import java.io.Serializable;
 public class OrgRoleOperationDto implements Serializable{
 
     private static final long serialVersionUID = 3178420750739059849L;
-    private Long orgId;
+    private Integer orgId;
     private Long roleId;
     private Long opAccountId;
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 

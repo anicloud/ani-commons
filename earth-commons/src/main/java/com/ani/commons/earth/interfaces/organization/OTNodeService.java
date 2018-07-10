@@ -47,11 +47,11 @@ public interface OTNodeService {
 
     public void updateEmployeeState(EmployeeStateUpdateDto employeeStateUpdateDto) throws AniAuthException;
 
-    public List<OrgMemberInfo> getMemberByNameAlp(String nameAlp, Long orgId,Long nodeId);
+    public List<OrgMemberInfo> getMemberByNameAlp(String nameAlp, Integer orgId,Long nodeId);
 
     public void addOrgMemberToNode(OTNodeOpDto otNodeOpDto,List<NodeAddMemberDto> nodeAddMemberDtos) throws AniDataException;
 
-    public void checkHaveRootPrivilege(Long opAccountId, Long orgId) throws AniAuthException;
+    public void checkHaveRootPrivilege(Long opAccountId, Integer orgId) throws AniAuthException;
 
     public void checkOrgNodeResourceAccessibility(OrgNodeAccessibilityDto orgResourceAccessDto) throws AniRuleException;
 

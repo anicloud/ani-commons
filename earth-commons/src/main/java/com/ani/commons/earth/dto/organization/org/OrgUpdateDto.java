@@ -11,7 +11,7 @@ public class OrgUpdateDto extends AniDto implements Serializable {
 
     private static final long serialVersionUID = -803195226757402738L;
 
-    private Long orgId;
+    private Integer orgId;
     private String name;
     private String description;
     private Long opAccountId;
@@ -24,11 +24,11 @@ public class OrgUpdateDto extends AniDto implements Serializable {
         this.opAccountId = opAccountId;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 

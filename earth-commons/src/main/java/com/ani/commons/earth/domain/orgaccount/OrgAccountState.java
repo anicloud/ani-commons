@@ -1,6 +1,8 @@
 package com.ani.commons.earth.domain.orgaccount;
 
 import com.ani.utils.core.DataState;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import java.io.Serializable;
 
@@ -10,24 +12,25 @@ import java.io.Serializable;
 public class OrgAccountState  implements Serializable{
 
     private static final long serialVersionUID = -793242311850096306L;
-
-    private Long orgId;
+    @JsonSerialize(using= ToStringSerializer.class)
+    private Integer orgId;
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long employeeId;
     private String privateEmail;
     private String phone;
-    private String tgt;
+
     private DataState dataState;
 
     public OrgAccountState() {
     }
 
 
-    public OrgAccountState(Long orgId, Long employeeId, String privateEmail, String phone, String tgt, DataState dataState) {
+    public OrgAccountState(Integer orgId, Long employeeId, String privateEmail, String phone, DataState dataState) {
         this.orgId = orgId;
         this.employeeId = employeeId;
         this.privateEmail = privateEmail;
         this.phone = phone;
-        this.tgt = tgt;
+
         this.dataState = dataState;
     }
 
@@ -35,11 +38,11 @@ public class OrgAccountState  implements Serializable{
         return serialVersionUID;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 
@@ -67,13 +70,6 @@ public class OrgAccountState  implements Serializable{
         this.phone = phone;
     }
 
-    public String getTgt() {
-        return tgt;
-    }
-
-    public void setTgt(String tgt) {
-        this.tgt = tgt;
-    }
 
     public DataState getDataState() {
         return dataState;

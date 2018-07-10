@@ -12,14 +12,14 @@ public class OrgAccountInsideRegisterDto extends AniDto {
 
     private static final long serialVersionUID = 7159660789280525988L;
     @AniRequiredField
-    private Long orgId;
+    private Integer orgId;
     private List<AccountInsideRegisterDto> insideRegisterDtoList;
 
 
     public OrgAccountInsideRegisterDto() {
     }
 
-    public OrgAccountInsideRegisterDto(List<AccountInsideRegisterDto> insideRegisterDtoList, Long orgId) {
+    public OrgAccountInsideRegisterDto(List<AccountInsideRegisterDto> insideRegisterDtoList, Integer orgId) {
         this.insideRegisterDtoList = insideRegisterDtoList;
         this.orgId = orgId;
     }
@@ -32,11 +32,11 @@ public class OrgAccountInsideRegisterDto extends AniDto {
         this.insideRegisterDtoList = insideRegisterDtoList;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 }

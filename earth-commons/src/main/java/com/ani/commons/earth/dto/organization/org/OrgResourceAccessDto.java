@@ -13,10 +13,10 @@ public class OrgResourceAccessDto extends AniDto{
     private static final long serialVersionUID = 1362390761162759832L;
 
     private Long accountId;
-    private Long orgId;
+    private Integer orgId;
     private Set<PrivilegeType> privilegeTypes;
 
-    public OrgResourceAccessDto(Long accountId, Long orgId, Set<PrivilegeType> privilegeTypes) {
+    public OrgResourceAccessDto(Long accountId, Integer orgId, Set<PrivilegeType> privilegeTypes) {
         this.accountId = accountId;
         this.orgId = orgId;
         this.privilegeTypes = privilegeTypes;
@@ -33,11 +33,11 @@ public class OrgResourceAccessDto extends AniDto{
         this.accountId = accountId;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 

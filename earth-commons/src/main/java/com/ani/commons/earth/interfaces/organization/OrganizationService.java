@@ -18,13 +18,13 @@ import java.util.List;
  */
 public interface OrganizationService {
 
-    public Organization addOrg(OrgRegisterDto orgRegister) throws AniRuleException;
+    public Organization addOrg(OrgRegisterDto orgRegister) throws AniRuleException, AniDataException;
 
     public Organization updateOrg(OrgUpdateDto orgUpdateDto) throws AniAuthException,AniRuleException;
 
     public List<Organization> getOrgByAccount(Long accountId) throws AniRuleException;
 
-    public List<OrgAccountRole> getRolesByOrgId(Long orgId) throws AniRuleException;
+    public List<OrgAccountRole> getRolesByOrgId(Integer orgId) throws AniRuleException;
 
     public List<OrgAccountRole> updateOrgRoles(OrgAccountRoleDto orgRole)throws AniRuleException,AniDataException;
 
@@ -32,13 +32,13 @@ public interface OrganizationService {
 
     public void addMemberToOrg(OrgMemberInfoDto orgMemberInfoDto);
 
-    public List<Long> getMembersByOrgId(Long opEmployeeId,Long orgId);
+    public List<Long> getMembersByOrgId(Long opEmployeeId,Integer orgId);
 
     public List<OrgAccountRole> removeOrgRole(OrgRoleOperationDto orgRoleOperation) throws AniAuthException,AniRuleException;
 
-    public Long getEmployeeId(Long orgId,Long accountId);
+    public Long getEmployeeId(Integer orgId,Long accountId);
 
-    public void removeOrg(Long accountId,Long orgId);
+    public void removeOrg(Long accountId,Integer orgId);
 
     public OrgAccountRole getOrgRole(OrgRoleOperationDto roleOperationDto);
 

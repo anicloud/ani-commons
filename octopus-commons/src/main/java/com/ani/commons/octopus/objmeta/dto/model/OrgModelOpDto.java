@@ -14,7 +14,7 @@ public abstract class OrgModelOpDto extends AniDto {
 
     @AniRequiredField
     @JsonSerialize(using = ToStringSerializer.class)
-    private Long orgId;
+    private Integer orgId;
     @AniRequiredField
     @JsonSerialize(using = ToStringSerializer.class)
     private Long opAccountId;
@@ -22,16 +22,16 @@ public abstract class OrgModelOpDto extends AniDto {
     public OrgModelOpDto() {
     }
 
-    public OrgModelOpDto(Long orgId, Long opAccountId) {
+    public OrgModelOpDto(Integer orgId, Long opAccountId) {
         this.orgId = orgId;
         this.opAccountId = opAccountId;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 

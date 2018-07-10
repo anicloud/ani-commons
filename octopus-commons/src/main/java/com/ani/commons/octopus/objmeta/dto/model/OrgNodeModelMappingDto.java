@@ -21,7 +21,7 @@ public class OrgNodeModelMappingDto extends OrgModelOpDto {
     public OrgNodeModelMappingDto() {
     }
 
-    public OrgNodeModelMappingDto(Long orgId, Long opAccountId, Set<Long> modelsId, Long nodeId) {
+    public OrgNodeModelMappingDto(Integer orgId, Long opAccountId, Set<Long> modelsId, Long nodeId) {
         super(orgId, opAccountId);
         this.modelsId = modelsId;
         this.nodeId = nodeId;

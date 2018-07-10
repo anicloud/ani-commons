@@ -11,22 +11,22 @@ public class ObjectRegisterForOrgDto extends ObjectRegisterDto {
     private static final long serialVersionUID = -7893713192108329556L;
 
     @AniRequiredField
-    private Long orgId;
+    private Integer orgId;
 
     public ObjectRegisterForOrgDto() {
         super();
     }
 
-    public ObjectRegisterForOrgDto(Long orgId, String name, Long ownerAccountId, Long orgId1) {
-        super(orgId, name, ownerAccountId);
-        this.orgId = orgId1;
+    public ObjectRegisterForOrgDto(Long modelId, String name, Long ownerAccountId, Integer orgId) {
+        super(modelId, name, ownerAccountId);
+        this.orgId = orgId;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 }

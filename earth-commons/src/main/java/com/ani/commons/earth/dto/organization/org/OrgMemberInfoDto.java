@@ -15,7 +15,7 @@ import java.sql.Date;
 public class OrgMemberInfoDto implements Serializable {
 
     private static final long serialVersionUID = -3731989256681013381L;
-    private Long orgId;
+    private Integer orgId;
     private Long employeeId;// TODO: 18-5-11 改成id
     private String employeeNum;
     private String nameAlphabet;
@@ -33,7 +33,14 @@ public class OrgMemberInfoDto implements Serializable {
     public OrgMemberInfoDto() {
     }
 
-    public OrgMemberInfoDto(Long orgId, Long employeeId, String employeeNum, String nameAlphabet, Phone phone, String email, String orgEmail, String name, String politics, String tel, Date birthday, Sex sex, String citizenId, DataState dataState) {
+    public OrgMemberInfoDto(Integer orgId,String name,String email,Phone phone) {
+        this.orgId= orgId;
+        this.name = name;
+        this.email=email;
+        this.phone=phone;
+    }
+
+    public OrgMemberInfoDto(Integer orgId, Long employeeId, String employeeNum, String nameAlphabet, Phone phone, String email, String orgEmail, String name, String politics, String tel, Date birthday, Sex sex, String citizenId, DataState dataState) {
         this.orgId = orgId;
         this.employeeId = employeeId;
         this.employeeNum = employeeNum;
@@ -90,11 +97,11 @@ public class OrgMemberInfoDto implements Serializable {
         this.birthday = birthday;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 

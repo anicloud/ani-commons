@@ -13,20 +13,20 @@ public class ObjectMasterOrg extends ObjectMaster {
 
     private static final long serialVersionUID = 7713960489119720503L;
 
-    private Long orgId;
+    private Integer orgId;
 
     public ObjectMasterOrg() {}
 
-    public ObjectMasterOrg(String name, Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long objectId, Long ownerAccountId, Map<AniByte, ConnState> antennasState, Long orgId) {
+    public ObjectMasterOrg(String name, Collection<StubMeta> stubs, List<StateMachineMeta> stateMachines, ObjectModel model, Long objectId, Long ownerAccountId, Map<AniByte, ConnState> antennasState, Integer orgId) {
         super(name, stubs, stateMachines, model, objectId, ownerAccountId, antennasState);
         this.orgId = orgId;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 }

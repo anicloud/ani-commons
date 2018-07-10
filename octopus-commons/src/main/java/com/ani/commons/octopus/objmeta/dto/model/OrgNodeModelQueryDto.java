@@ -18,7 +18,7 @@ public class OrgNodeModelQueryDto extends OrgModelOpDto {
     public OrgNodeModelQueryDto() {
     }
 
-    public OrgNodeModelQueryDto(Long orgId, Long opAccountId, Long nodeId) {
+    public OrgNodeModelQueryDto(Integer orgId, Long opAccountId, Long nodeId) {
         super(orgId, opAccountId);
         this.nodeId = nodeId;
     }

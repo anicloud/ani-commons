@@ -40,6 +40,7 @@ public interface AccountUserRegistryService {
 
 
     public List<AccountInsideRegInitDto> registerOrgAccountInside(OrgAccountInsideRegisterDto orgInsideRegisterDto) throws AniRuleException;
+    public AccountInsideRegInitDto registerSingleOrgAccount(AccountInsideRegisterDto accountInsideRegisterDto,Integer orgId,Boolean isRegisterOrg)throws AniRuleException, AniDataException ;
     /**
      * <h2>Register account without basic info</h2>
      *
@@ -78,5 +79,5 @@ public interface AccountUserRegistryService {
 
     public void  modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
 
-    public void modifyOrgAccountState(Long employeeId);
+    public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 }

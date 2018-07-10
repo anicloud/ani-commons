@@ -9,16 +9,17 @@ public class Organization implements Serializable {
 
     private static final long serialVersionUID = 974975520890838048L;
 
-    private Long orgId;
+    private Integer orgId;
     private String name;
     private String description;
     private Long ownerId;
     private String fileType;
-    public Long getOrgId() {
+
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 

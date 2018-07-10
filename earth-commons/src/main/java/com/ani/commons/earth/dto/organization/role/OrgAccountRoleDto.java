@@ -15,12 +15,23 @@ public class OrgAccountRoleDto extends AniDto implements Serializable {
 
     private static final long serialVersionUID = 3389168006262797060L;
     private Long roleId;
-    private Long orgId;
+    private Integer orgId;
     private String name;
 
     private Map<TransparencyType, Set<PrivilegeType>> privileges;
 
     private Long opAccountId;
+
+    public OrgAccountRoleDto() {
+    }
+
+    public OrgAccountRoleDto(Long roleId, Integer orgId, String name, Map<TransparencyType, Set<PrivilegeType>> privileges, Long opAccountId) {
+        this.roleId = roleId;
+        this.orgId = orgId;
+        this.name = name;
+        this.privileges = privileges;
+        this.opAccountId = opAccountId;
+    }
 
     public Long getRoleId() {
         return roleId;
@@ -38,11 +49,11 @@ public class OrgAccountRoleDto extends AniDto implements Serializable {
         this.opAccountId = opAccountId;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
 

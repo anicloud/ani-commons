@@ -11,13 +11,13 @@ import java.util.Set;
  */
 public class OrgModelAccessCheckDto extends ModelQueryDto {
     @AniRequiredField
-    private Long orgId;
+    private Integer orgId;
     private Set<PrivilegeType> expPrivilege;
 
     public OrgModelAccessCheckDto() {
     }
 
-    public OrgModelAccessCheckDto(Long modelId, Long requestAccountId, Long orgId, Set<PrivilegeType> expPrivilege) {
+    public OrgModelAccessCheckDto(Long modelId, Long requestAccountId, Integer orgId, Set<PrivilegeType> expPrivilege) {
         super(modelId, requestAccountId);
         this.orgId = orgId;
         this.expPrivilege = expPrivilege;
@@ -31,11 +31,11 @@ public class OrgModelAccessCheckDto extends ModelQueryDto {
         this.expPrivilege = expPrivilege;
     }
 
-    public Long getOrgId() {
+    public Integer getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(Integer orgId) {
         this.orgId = orgId;
     }
     
