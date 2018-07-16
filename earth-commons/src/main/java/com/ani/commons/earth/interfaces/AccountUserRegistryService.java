@@ -86,6 +86,4 @@ public interface AccountUserRegistryService {
 
     public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 
-    public void batchSendPassword(List<Long> employeeIds) throws AniRuleException;
-
 }
