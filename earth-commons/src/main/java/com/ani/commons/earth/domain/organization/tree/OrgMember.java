@@ -12,9 +12,9 @@ import java.sql.Timestamp;
  * Last Modified by xuben on 18-7-9.
  */
 public class OrgMember implements Serializable {
-
     private static final long serialVersionUID = 2336468316834700393L;
-    private Long employeeId; //id
+    private Integer orgId;
+    private Long employeeId;
     private String name;
     private String nameAlphabet;
     private String employeeNum;
@@ -31,6 +31,15 @@ public class OrgMember implements Serializable {
     private Timestamp createTime;
     private Timestamp updateTime;
     private byte[] password;
+
+    public Integer getOrgId() {
+        return orgId;
+    }
+
+    public void setOrgId(Integer orgId) {
+        this.orgId = orgId;
+    }
+
     public String getEmployeeNum() {
         return employeeNum;
     }

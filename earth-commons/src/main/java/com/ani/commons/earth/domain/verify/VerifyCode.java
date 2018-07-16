@@ -1,6 +1,5 @@
 package com.ani.commons.earth.domain.verify;
 
-import com.ani.utils.core.AniByte;
 
 import java.io.Serializable;
 

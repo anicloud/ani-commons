@@ -1,6 +1,7 @@
 package com.ani.commons.octopus.servicemeta.service;
 
 import com.ani.commons.octopus.objmeta.dto.model.*;
+import com.ani.commons.octopus.servicemeta.domain.service.ServiceModel;
 import com.ani.commons.octopus.servicemeta.domain.ssostrategy.AniSSOStrategy;
 import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
 import com.ani.commons.octopus.servicemeta.dto.service.*;
@@ -87,6 +88,7 @@ public interface AniServiceMetaService {
       */
      public AniServiceInfoDto getAniServiceById(ModelQueryDto modelQueryDto) throws  AniRuleException, AniDataException;
 
+     public ServiceModel getServiceModeById(ModelQueryDto modelQueryDto) throws  AniRuleException, AniDataException;
      /**
       * <h2>Query integration strategy.</h2>
       * @param modelQueryDto

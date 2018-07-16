@@ -1,8 +1,6 @@
 package com.ani.commons.octopus.servicemeta.dto.service;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-
+import com.ani.commons.octopus.objmeta.dto.model.ModelBriefInfoDto;
 import java.io.Serializable;
 
 /**
@@ -11,25 +9,17 @@ import java.io.Serializable;
 public class ServiceBriefInfoDto implements Serializable {
 
     private static final long serialVersionUID = -7926819973737697307L;
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long modelId;
-    private String modelName;
+
+    private ModelBriefInfoDto modelBriefInfoDto;
+
     private String loginUrl;
 
-    public Long getModelId() {
-        return modelId;
+    public ModelBriefInfoDto getModelBriefInfoDto() {
+        return modelBriefInfoDto;
     }
 
-    public void setModelId(Long modelId) {
-        this.modelId = modelId;
-    }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
+    public void setModelBriefInfoDto(ModelBriefInfoDto modelBriefInfoDto) {
+        this.modelBriefInfoDto = modelBriefInfoDto;
     }
 
     public String getLoginUrl() {
@@ -37,6 +27,14 @@ public class ServiceBriefInfoDto implements Serializable {
     }
 
     public void setLoginUrl(String loginUrl) {
+        this.loginUrl = loginUrl;
+    }
+
+    public ServiceBriefInfoDto() {
+    }
+
+    public ServiceBriefInfoDto(ModelBriefInfoDto modelBriefInfoDto, String loginUrl) {
+        this.modelBriefInfoDto = modelBriefInfoDto;
         this.loginUrl = loginUrl;
     }
 }

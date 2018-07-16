@@ -1,5 +1,8 @@
 package com.ani.commons.octopus.servicemeta.dto.service.Object;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
 import java.io.Serializable;
 import java.security.Principal;
 
@@ -9,20 +12,30 @@ import java.security.Principal;
 public class ServiceObjBriefInfoDto implements Serializable{
 
     private static final long serialVersionUID = 1660770102672262611L;
-
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long objectId;
     private String name;
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long modelId;
     private String logo;
-
+    private String url;
     public ServiceObjBriefInfoDto() {
     }
 
-    public ServiceObjBriefInfoDto(Long objectId, String name, Long modelId, String logo) {
+    public ServiceObjBriefInfoDto(Long objectId, String name, Long modelId, String logo, String url) {
         this.objectId = objectId;
         this.name = name;
         this.modelId = modelId;
         this.logo = logo;
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public Long getModelId() {

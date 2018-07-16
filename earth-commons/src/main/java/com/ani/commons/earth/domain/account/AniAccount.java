@@ -14,7 +14,7 @@ public abstract class AniAccount implements Serializable{
 
     String phone;
 
-//    String userName;
+    String userName;
 
     String email;
     /**
@@ -54,13 +54,13 @@ public abstract class AniAccount implements Serializable{
         this.fileType = fileType;
     }
 
-//    public String getUserName() {
-//        return userName;
-//    }
-//
-//    public void setUserName(String userName) {
-//        this.userName = userName;
-//    }
+    public String getUsername() {
+        return userName;
+    }
+
+    public void setUsername(String username) {
+        this.userName = username;
+    }
 
     public String getPhone() {
         return phone;

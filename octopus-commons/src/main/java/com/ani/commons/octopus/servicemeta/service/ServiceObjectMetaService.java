@@ -50,4 +50,6 @@ public interface ServiceObjectMetaService {
      * @throws AniDataException
      */
     public List<ServiceObjBriefInfoDto> getServiceObjByOwnerId(ObjectQueryOwnerDto objectQueryOwnerDto) throws AniRuleException, AniDataException;
+
+//    public List<Service>
     }

@@ -39,8 +39,8 @@ public interface AccountUserRegistryService {
      */
     public Long register(String sessionId, AccountIdVerifyDto accountIdVerifyDto) throws AniRuleException;
 
-
     public List<AccountInsideRegInitDto> registerOrgAccountInside(OrgAccountInsideRegisterDto orgInsideRegisterDto) throws AniRuleException;
+
     public AccountInsideRegInitDto registerSingleOrgAccount(AccountInsideRegisterDto accountInsideRegisterDto,Integer orgId,Boolean isRegisterOrg)throws AniRuleException, AniDataException ;
     /**
      * <h2>Register account without basic info</h2>
@@ -82,6 +82,6 @@ public interface AccountUserRegistryService {
 
     public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 
-    public void batchSendPassword(List<Long> employeeIds) throws AniRuleException;
+//    public void batchSendPassword(List<Long> employeeIds) throws AniRuleException;
 
 }
