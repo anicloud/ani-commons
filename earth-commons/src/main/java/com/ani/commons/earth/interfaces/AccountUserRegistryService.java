@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * Created by zhanglina on 17-12-27.
- * Last Modified by xuben on 18-7-6.
+ * Last Modified by xuben on 18-7-16.
  */
 public interface AccountUserRegistryService {
 
@@ -41,7 +41,11 @@ public interface AccountUserRegistryService {
 
     public List<AccountInsideRegInitDto> registerOrgAccountInside(OrgAccountInsideRegisterDto orgInsideRegisterDto) throws AniRuleException;
 
-    public AccountInsideRegInitDto registerSingleOrgAccount(AccountInsideRegisterDto accountInsideRegisterDto,Integer orgId,Boolean isRegisterOrg)throws AniRuleException, AniDataException ;
+
+    public Long bindOrRegisterAccountForOrgMember(AccountInsideRegisterDto accountInsideRegisterDto) throws AniRuleException;
+
+    public AccountInsideRegInitDto registerSingleOrgAccount(AccountInsideRegisterDto accountInsideRegisterDto, Integer orgId)throws AniRuleException, AniDataException ;
+
     /**
      * <h2>Register account without basic info</h2>
      *
@@ -82,6 +86,5 @@ public interface AccountUserRegistryService {
 
     public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 
-//    public void batchSendPassword(List<Long> employeeIds) throws AniRuleException;
 
 }
