@@ -24,7 +24,6 @@ public class AniServiceInfoDto implements Serializable {
     private Date updateDate;
     private String logoPath;
     private String baseUrl;
-    private BigInteger logoCurrent;
 
 
     public static long getSerialVersionUID() {
@@ -42,22 +41,13 @@ public class AniServiceInfoDto implements Serializable {
     public AniServiceInfoDto() {
     }
 
-    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Date createDate, Date updateDate, String baseUrl, BigInteger logoCurrent) {
+    public AniServiceInfoDto(ObjectModel objectModel, String serviceType, DualAuth dualAuth, Date createDate, Date updateDate, String baseUrl) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
         this.createDate = createDate;
         this.updateDate = updateDate;
         this.baseUrl = baseUrl;
-        this.logoCurrent = logoCurrent;
-    }
-
-    public BigInteger getLogoCurrent() {
-        return logoCurrent;
-    }
-
-    public void setLogoCurrent(BigInteger logoCurrent) {
-        this.logoCurrent = logoCurrent;
     }
 
     public String getBaseUrl() {

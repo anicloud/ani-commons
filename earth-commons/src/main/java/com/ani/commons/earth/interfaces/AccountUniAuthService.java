@@ -20,8 +20,6 @@ public interface AccountUniAuthService {
      */
     public String login(String sessionId, AccountVerifyDto accountVerifyDto) throws AniAuthException, AniRuleException;
 
-    public OrgAccountState loginByOrg(String sessionId,OrgAccountVerifyDto orgAccountVerifyDto) throws AniAuthException,AniRuleException;
-
     /**
      * <h2>Check account login state by ANITGT</h2>
      *
@@ -30,11 +28,11 @@ public interface AccountUniAuthService {
      * @throws AniAuthException
      */
 
-    public AniAuthState checkIsAnonymous(String aniSessionId, String tgt);
+    public AniAccountAuthState checkIsAnonymous(String aniSessionId, String tgt);
 
-    public SessionAuthState checkTgt(String tgt);
+    public AniAccountAuthState checkTgt(String tgt);
 
-    public AniAccountAuthState checkSession(String aniSessionId);
+    public SessionAuthState checkSession(String aniSessionId);
 
     public void logout(String sessionId, String tgt);
 

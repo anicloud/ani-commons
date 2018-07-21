@@ -17,6 +17,11 @@ public class OrgModelRegDto extends OrgModelOpDto {
     public OrgModelRegDto() {
     }
 
+    public OrgModelRegDto(Integer orgId, Long opAccountId, List<Long> modelId) {
+        super(orgId, opAccountId);
+        this.modelId = modelId;
+    }
+
     public List<Long> getModelId() {
         return modelId;
     }

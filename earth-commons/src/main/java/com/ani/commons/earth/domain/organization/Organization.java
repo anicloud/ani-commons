@@ -13,7 +13,7 @@ public class Organization implements Serializable {
     private String name;
     private String description;
     private Long ownerId;
-    private String fileType;
+
 
     public Integer getOrgId() {
         return orgId;
@@ -23,13 +23,6 @@ public class Organization implements Serializable {
         this.orgId = orgId;
     }
 
-    public String getFileType() {
-        return fileType;
-    }
-
-    public void setFileType(String fileType) {
-        this.fileType = fileType;
-    }
 
     public String getName() {
         return name;

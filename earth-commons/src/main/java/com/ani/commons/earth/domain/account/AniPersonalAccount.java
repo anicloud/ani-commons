@@ -22,8 +22,8 @@ public class AniPersonalAccount extends AniAccount implements Serializable {
     public AniPersonalAccount() {
     }
 
-    public AniPersonalAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, String fileType, Sex sex, String name) {
-        super(accountId, phone, email, hasPwd, type, fileType);
+    public AniPersonalAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, Sex sex, String name) {
+        super(accountId, phone, email, hasPwd, type);
         this.sex = sex;
         this.name = name;
     }

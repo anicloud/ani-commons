@@ -2,6 +2,8 @@ package com.ani.commons.earth.domain.organization.tree;
 
 import com.ani.commons.earth.enumeration.Sex;
 import com.ani.utils.core.DataState;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -14,6 +16,7 @@ import java.sql.Timestamp;
 public class OrgMember implements Serializable {
     private static final long serialVersionUID = 2336468316834700393L;
     private Integer orgId;
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long employeeId;
     private String name;
     private String nameAlphabet;
@@ -30,7 +33,7 @@ public class OrgMember implements Serializable {
     private DataState state;
     private Timestamp createTime;
     private Timestamp updateTime;
-    private byte[] password;
+
 
     public Integer getOrgId() {
         return orgId;
@@ -168,11 +171,5 @@ public class OrgMember implements Serializable {
         this.roleId = roleId;
     }
 
-    public byte[] getPassword() {
-        return password;
-    }
 
-    public void setPassword(byte[] password) {
-        this.password = password;
-    }
 }

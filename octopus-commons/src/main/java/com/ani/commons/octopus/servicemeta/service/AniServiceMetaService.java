@@ -7,6 +7,7 @@ import com.ani.commons.octopus.servicemeta.domain.service.AniDataSynStrategy;
 import com.ani.commons.octopus.servicemeta.dto.service.*;
 import com.ani.commons.octopus.servicemeta.dto.ssostrategy.AniSSOStrategyRegisterDto;
 import com.ani.utils.exception.AniAuthException;
+import com.ani.utils.exception.AniBaseException;
 import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
 
@@ -19,12 +20,12 @@ public interface AniServiceMetaService {
 
      /**
       * <h2>Add Service.</h2>
-      * @param registerDto
+      * @param registerDto if orgId is null register org model else register personal model
       * @throws AniAuthException
       * @throws AniRuleException
       * @throws AniDataException
       */
-     public ModelInitDto addService(AniServiceRegisterDto registerDto) throws AniRuleException, AniDataException;
+     public ModelInitDto addService(AniServiceRegisterDto registerDto) throws AniBaseException;
 
      /**
       * <h2>Update the Service information.</h2>

@@ -24,6 +24,8 @@ public abstract class AniAccount implements Serializable{
 
     DataState state;
 
+
+
     public DataState getState() {
         return state;
     }
@@ -37,21 +39,17 @@ public abstract class AniAccount implements Serializable{
      */
     AccountType type;
 
-    /**
-     * File path rule: /[accountId]/[portraitId](timestamp).jpg
-     */
-    String fileType;
 
     public AniAccount() {
     }
 
-    public AniAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, String fileType) {
+    public AniAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type) {
         this.accountId = accountId;
         this.phone = phone;
         this.email = email;
         this.hasPwd = hasPwd;
         this.type = type;
-        this.fileType = fileType;
+
     }
 
     public String getUsername() {
@@ -100,14 +98,6 @@ public abstract class AniAccount implements Serializable{
 
     public void setType(AccountType type) {
         this.type = type;
-    }
-
-    public String getFileType() {
-        return fileType;
-    }
-
-    public void setFileType(String fileType) {
-        this.fileType = fileType;
     }
 
     @Override

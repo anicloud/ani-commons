@@ -47,14 +47,6 @@ public interface AccountUserRegistryService {
     public AccountInsideRegInitDto registerSingleOrgAccount(AccountInsideRegisterDto accountInsideRegisterDto, Integer orgId)throws AniRuleException, AniDataException ;
 
     /**
-     * <h2>Register account without basic info</h2>
-     *
-     * @param transparentRegisterDto no property required
-     * @return AniAccount
-     * @throws AniRuleException
-     */
-    public AniAccountAuthState registerTransparently(AccountTransparentRegisterDto transparentRegisterDto) throws AniRuleException;
-    /**
      * <h2>Close an account</h2>
      *
      * @param accountPwdVerifyDto
@@ -82,7 +74,7 @@ public interface AccountUserRegistryService {
      */
     public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, byte[] newPwd,Boolean flag) throws AniRuleException;
 
-    public void  modifyProfile(AccountProfileDto accountProfileDto) throws AniRuleException, IOException;
+    public void  modifyProfile(AccountProfileDto accountProfileDto,boolean withPwd) throws AniRuleException, IOException;
 
     public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 

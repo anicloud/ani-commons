@@ -18,20 +18,44 @@ public class OrgAccountState  implements Serializable{
     private Long employeeId;
     private String privateEmail;
     private String phone;
-
+    private Boolean isAdmin;
     private DataState dataState;
+    private String tgt;
+
+    public Boolean getAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        isAdmin = admin;
+    }
+
+    public String getTgt() {
+        return tgt;
+    }
+
+    public void setTgt(String tgt) {
+        this.tgt = tgt;
+    }
 
     public OrgAccountState() {
     }
 
-
-    public OrgAccountState(Integer orgId, Long employeeId, String privateEmail, String phone, DataState dataState) {
+    public OrgAccountState(Integer orgId, Long employeeId, String privateEmail, String phone, Boolean isAdmin, DataState dataState) {
         this.orgId = orgId;
         this.employeeId = employeeId;
         this.privateEmail = privateEmail;
         this.phone = phone;
-
+        this.isAdmin = isAdmin;
         this.dataState = dataState;
+    }
+
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean admin) {
+        isAdmin = admin;
     }
 
     public static long getSerialVersionUID() {

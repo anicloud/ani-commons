@@ -15,20 +15,23 @@ public class OrgRegisterDto extends AniDto implements Serializable {
     private String name;
     private String description;
     private Long ownerId;
-    private String fileType;
+    private Long curUserId;
     // TODO: 18-4-26  add other info
+
+    public OrgRegisterDto() {
+    }
+
+    public OrgRegisterDto(String name, String description, Long ownerId, Long curUserId) {
+        this.name = name;
+        this.description = description;
+        this.ownerId = ownerId;
+        this.curUserId = curUserId;
+    }
 
     public Long getOwnerId() {
         return ownerId;
     }
 
-    public String getFileType() {
-        return fileType;
-    }
-
-    public void setFileType(String fileType) {
-        this.fileType = fileType;
-    }
 
     public void setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
@@ -50,5 +53,11 @@ public class OrgRegisterDto extends AniDto implements Serializable {
         this.description = description;
     }
 
+    public Long getCurUserId() {
+        return curUserId;
+    }
 
+    public void setCurUserId(Long curUserId) {
+        this.curUserId = curUserId;
+    }
 }

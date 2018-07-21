@@ -2,6 +2,7 @@ package com.ani.commons.earth.domain;
 
 import com.ani.commons.earth.enumeration.AuthState;
 import com.ani.commons.earth.enumeration.AccountType;
+import com.ani.commons.earth.enumeration.CurUserType;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -11,38 +12,35 @@ public class AniSession implements Serializable  {
     private static final long serialVersionUID = -7879345960994457975L;
     public String sessionId;
     AuthState authState;
-    AccountType accountType;
+    CurUserType curUserType;
+    Boolean isAdmin;
     Long accountId;
-    Long aniSiteId;
-    String targetUrl;
-
-    public String getTargetUrl() {
-        return targetUrl;
-    }
-
-    public void setTargetUrl(String targetUrl) {
-        this.targetUrl = targetUrl;
-    }
-
-    Date lastOp;
 
     public AniSession() {
     }
 
-    public AniSession(String sessionId, AuthState authState, AccountType accountType, Long accountId, Date lastOp) {
+    public AniSession(String sessionId, AuthState authState, CurUserType curUserType, Boolean isAdmin, Long accountId) {
         this.sessionId = sessionId;
         this.authState = authState;
-        this.accountType = accountType;
+        this.curUserType = curUserType;
+        this.isAdmin = isAdmin;
         this.accountId = accountId;
-        this.lastOp = lastOp;
     }
 
-    public Long getAniSiteId() {
-        return aniSiteId;
+    public Boolean getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setAniSiteId(Long aniSiteId) {
-        this.aniSiteId = aniSiteId;
+    public void setIsAdmin(Boolean admin) {
+        isAdmin = admin;
+    }
+
+    public CurUserType getCurUserType() {
+        return curUserType;
+    }
+
+    public void setCurUserType(CurUserType curUserType) {
+        this.curUserType = curUserType;
     }
 
     public String getSessionId() {
@@ -61,27 +59,11 @@ public class AniSession implements Serializable  {
         this.authState = authState;
     }
 
-    public AccountType getAccountType() {
-        return accountType;
-    }
-
-    public void setAccountType(AccountType accountType) {
-        this.accountType = accountType;
-    }
-
     public Long getAccountId() {
         return accountId;
     }
 
     public void setAccountId(Long accountId) {
         this.accountId = accountId;
-    }
-
-    public Date getLastOp() {
-        return lastOp;
-    }
-
-    public void setLastOp(Date lastOp) {
-        this.lastOp = lastOp;
     }
 }

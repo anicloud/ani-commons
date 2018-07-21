@@ -1,6 +1,7 @@
 package com.ani.commons.earth.domain;
 
 import com.ani.commons.earth.enumeration.AccountType;
+import com.ani.commons.earth.enumeration.CurUserType;
 import com.ani.utils.core.AniByte;
 
 import java.io.Serializable;
@@ -12,26 +13,26 @@ import java.util.Date;
 public class AniAccountToken implements Serializable {
     private static final long serialVersionUID = 8818731541882481867L;
     String tgt;
-    Long accountId;
-    AccountType accountType;
+    Long accountId;//personal accountId,org employeeId
+    CurUserType curUserType;
     Date lastOp;
 
     public AniAccountToken() {
     }
 
-    public AniAccountToken(String tgt, Long accountId, AccountType accountType, Date lastOp) {
+    public AniAccountToken(String tgt, Long accountId, CurUserType curUserType, Date lastOp) {
         this.tgt = tgt;
         this.accountId = accountId;
-        this.accountType = accountType;
+        this.curUserType = curUserType;
         this.lastOp = lastOp;
     }
 
-    public AccountType getAccountType() {
-        return accountType;
+    public CurUserType getCurUserType() {
+        return curUserType;
     }
 
-    public void setAccountType(AccountType accountType) {
-        this.accountType = accountType;
+    public void setCurUserType(CurUserType curUserType) {
+        this.curUserType = curUserType;
     }
 
     public String getTgt() {

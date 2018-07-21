@@ -25,12 +25,11 @@ public class ServiceModel implements Serializable {
     private Date createDate;
     private Date updateDate;
     private String baseUrl;
-    private BigInteger logoCurrent;
 
     public ServiceModel() {
     }
 
-    public ServiceModel(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy, Date createDate, Date updateDate, String baseUrl, BigInteger logoCurrent) {
+    public ServiceModel(ObjectModel objectModel, String serviceType, DualAuth dualAuth, AniSSOStrategy ssoStrategy, AniDataSynStrategy aniDataSynStrategy, Date createDate, Date updateDate, String baseUrl) {
         this.objectModel = objectModel;
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
@@ -39,16 +38,8 @@ public class ServiceModel implements Serializable {
         this.createDate = createDate;
         this.updateDate = updateDate;
         this.baseUrl = baseUrl;
-        this.logoCurrent = logoCurrent;
     }
 
-    public BigInteger getLogoCurrent() {
-        return logoCurrent;
-    }
-
-    public void setLogoCurrent(BigInteger logoCurrent) {
-        this.logoCurrent = logoCurrent;
-    }
 
     public String getBaseUrl() {
         return baseUrl;

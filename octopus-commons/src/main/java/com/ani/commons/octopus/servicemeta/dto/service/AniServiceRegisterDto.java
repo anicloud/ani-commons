@@ -10,7 +10,7 @@ import java.math.BigInteger;
 /**
  * Created by zhanglina on 18-6-5.
  */
-public class AniServiceRegisterDto extends AniDto{
+public  class AniServiceRegisterDto extends AniDto{
 
     private static final long serialVersionUID = 7816221974063283879L;
     @AniRequiredField
@@ -22,21 +22,17 @@ public class AniServiceRegisterDto extends AniDto{
     @AniRequiredField
     protected String baseUrl;
     @AniRequiredField
-    protected BigInteger logoCurrent;
+   // protected BigInteger logoCurrent;
+    private Integer orgId;
     public AniServiceRegisterDto(){}
-    public AniServiceRegisterDto(String serviceType, DualAuth dualAuth, ModelRegisterDto modelRegisterDto,String baseUrl) {
+
+
+    public AniServiceRegisterDto(String serviceType, DualAuth dualAuth, ModelRegisterDto modelRegisterDto, String baseUrl, Integer orgId) {
         this.serviceType = serviceType;
         this.dualAuth = dualAuth;
         this.modelRegisterDto = modelRegisterDto;
         this.baseUrl = baseUrl;
-    }
-
-    public BigInteger getLogoCurrent() {
-        return logoCurrent;
-    }
-
-    public void setLogoCurrent(BigInteger logoCurrent) {
-        this.logoCurrent = logoCurrent;
+        this.orgId = orgId;
     }
 
     public String getBaseUrl() {
@@ -69,5 +65,13 @@ public class AniServiceRegisterDto extends AniDto{
 
     public void setDualAuth(DualAuth dualAuth) {
         this.dualAuth = dualAuth;
+    }
+
+    public Integer getOrgId() {
+        return orgId;
+    }
+
+    public void setOrgId(Integer orgId) {
+        this.orgId = orgId;
     }
 }
