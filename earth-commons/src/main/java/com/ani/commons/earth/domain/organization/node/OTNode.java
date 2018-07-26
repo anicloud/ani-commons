@@ -10,24 +10,32 @@ import java.util.List;
  * Created by zhanglina on 18-5-2.
  * Last Modified by xuben on 18-7-26.
  */
-public abstract class OTNode implements Serializable {
+public class OTNode implements Serializable {
     private static final long serialVersionUID = 5520644352781449962L;
 
-    protected Long ownerId;
+    private Long ownerId;
 
-    protected Long parentNodeId;
+    private Long parentNodeId;
 
-    protected Long nodeId;
+    private Long nodeId;
 
-    protected String nodeDesc;
+    private String nodeDesc;
 
-    protected Long accountGroupId;
+    private Long accountGroupId;
 
-    protected List<Long> children;
+    private List<Long> children;
 
-    protected Timestamp createTime;
+    private Timestamp createTime;
 
-    protected Timestamp updateTime;
+    private Timestamp updateTime;
+
+    private String tel;
+
+    private Integer businessCategory;
+
+    private String postalCode;
+
+    private String postalAddress;
 
     public Long getAccountGroupId() {
         return accountGroupId;
@@ -91,5 +99,37 @@ public abstract class OTNode implements Serializable {
 
     public void setUpdateTime(Timestamp updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public Integer getBusinessCategory() {
+        return businessCategory;
+    }
+
+    public void setBusinessCategory(Integer businessCategory) {
+        this.businessCategory = businessCategory;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getPostalAddress() {
+        return postalAddress;
+    }
+
+    public void setPostalAddress(String postalAddress) {
+        this.postalAddress = postalAddress;
     }
 }
