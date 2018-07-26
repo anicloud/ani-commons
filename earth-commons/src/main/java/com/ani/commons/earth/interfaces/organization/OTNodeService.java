@@ -1,10 +1,9 @@
 package com.ani.commons.earth.interfaces.organization;
 
-import com.ani.commons.earth.domain.organization.account.OrgMemberInfo;
-import com.ani.commons.earth.domain.organization.tree.OTNodeDetail;
-import com.ani.commons.earth.domain.organization.tree.OTNode;
-import com.ani.commons.earth.domain.organization.tree.OTNodeMember;
-import com.ani.commons.earth.domain.organization.tree.OrgMember;
+import com.ani.commons.earth.domain.account.organization.OrgMemberInfo;
+import com.ani.commons.earth.domain.organization.node.OTNode;
+import com.ani.commons.earth.domain.organization.OTNodeMember;
+import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.organization.node.*;
 import com.ani.commons.earth.dto.organization.org.OrgResourceAccessDto;
 import com.ani.utils.exception.AniAuthException;

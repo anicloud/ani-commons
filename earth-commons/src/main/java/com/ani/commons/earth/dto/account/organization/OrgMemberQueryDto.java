@@ -1,4 +1,4 @@
-package com.ani.commons.earth.dto.orgaccount;
+package com.ani.commons.earth.dto.account.organization;
 
 import com.ani.utils.dto.AniDto;
 

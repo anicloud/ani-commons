@@ -1,4 +1,4 @@
-package com.ani.commons.earth.domain.organization.tree;
+package com.ani.commons.earth.domain.organization.employee;
 
 import com.ani.commons.earth.enumeration.Sex;
 import com.ani.utils.core.DataState;

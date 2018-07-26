@@ -1,5 +1,6 @@
-package com.ani.commons.earth.domain.account;
+package com.ani.commons.earth.domain.account.personal;
 
+import com.ani.commons.earth.domain.account.AniAccount;
 import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.commons.earth.enumeration.Sex;
 

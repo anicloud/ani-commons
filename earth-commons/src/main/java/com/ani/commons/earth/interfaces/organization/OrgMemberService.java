@@ -1,9 +1,9 @@
 package com.ani.commons.earth.interfaces.organization;
 
 import com.ani.commons.earth.domain.orgaccount.OrgAccountState;
-import com.ani.commons.earth.domain.organization.tree.OrgMember;
-import com.ani.commons.earth.dto.orgaccount.OrgAccountVerifyDto;
-import com.ani.commons.earth.dto.orgaccount.OrgMemberQueryDto;
+import com.ani.commons.earth.domain.organization.employee.OrgMember;
+import com.ani.commons.earth.dto.account.organization.OrgAccountVerifyDto;
+import com.ani.commons.earth.dto.account.organization.OrgMemberQueryDto;
 import com.ani.commons.earth.dto.organization.org.OrgMemberInfoDto;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniDataException;

@@ -1,6 +1,6 @@
 package com.ani.commons.earth.interfaces.organization;
 
-import com.ani.commons.earth.domain.organization.tree.OrgMember;
+import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.organization.group.OrgGroupAddDto;
 
 /**
