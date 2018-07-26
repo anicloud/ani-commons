@@ -1,10 +1,7 @@
 package com.ani.commons.earth.interfaces;
 
 import com.ani.commons.earth.domain.account.AniAccountGroup;
-import com.ani.commons.earth.dto.group.AccountGroupInfoDto;
-import com.ani.commons.earth.dto.group.GroupMemberAddDto;
-import com.ani.commons.earth.dto.group.GroupMemberRemoveDto;
-import com.ani.commons.earth.dto.group.GroupUpdateDto;
+import com.ani.commons.earth.dto.group.*;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
@@ -30,4 +27,7 @@ public interface AccountGroupService {
 
     public void addMemberToGroup(Long opAccountId, GroupMemberAddDto groupMemberAddDto)throws AniRuleException,AniDataException;
 
+    public void updateMemberRole(Long opAccountId, GroupUpdateDto groupUpdateDto);
+
+    public List<GroupMemberInfoDto> getGroupMember(Long opAccountId,Long groupId);
 }
