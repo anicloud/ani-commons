@@ -9,6 +9,8 @@ import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
 
+import java.util.List;
+
 /**
  * Created by zhanglina on 18-7-6.
  */
@@ -22,9 +24,9 @@ public interface OrgMemberService {
 
     /**
      * <H2>Delete employee info by id.</H2>
-     * @param employeeId
+     * @param memberQueryDto
      */
-    public void deleteOrgMemberInfoById(Long employeeId,Long accoundId);
+    public void deleteOrgMemberInfoById(OrgMemberQueryDto memberQueryDto);
 
     /**
      * <H2>Update employee info.</H2>
@@ -39,6 +41,13 @@ public interface OrgMemberService {
      * @return OrgMember
      */
     public OrgMember getOrgMemberById(OrgMemberQueryDto memberQueryDto);
+
+    /**
+     * <H2>Query employee list.</H2>
+     * @param memberQueryDto
+     * @return
+     */
+    public List<OrgMember> getOrgMemberListByNodeId(OrgMemberQueryDto memberQueryDto);
 
     /**
      * <H2>Login state check.</H2>

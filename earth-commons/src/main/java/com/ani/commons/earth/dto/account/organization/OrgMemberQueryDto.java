@@ -8,11 +8,11 @@ import com.ani.utils.dto.AniDto;
 public class OrgMemberQueryDto extends AniDto {
     private static final long serialVersionUID = -8895996549350890621L;
     public Long employeeId;
-    private Long opEmployeeId;
+    private Long opAccountId;
 
-    public OrgMemberQueryDto(Long employeeId, Long opEmployeeId) {
+    public OrgMemberQueryDto(Long employeeId, Long opAccountId) {
         this.employeeId = employeeId;
-        this.opEmployeeId = opEmployeeId;
+        this.opAccountId = opAccountId;
     }
 
     public OrgMemberQueryDto() {
@@ -26,11 +26,11 @@ public class OrgMemberQueryDto extends AniDto {
         this.employeeId = employeeId;
     }
 
-    public Long getOpEmployeeId() {
-        return opEmployeeId;
+    public Long getOpAccountId() {
+        return opAccountId;
     }
 
-    public void setOpEmployeeId(Long opEmployeeId) {
-        this.opEmployeeId = opEmployeeId;
+    public void setOpAccountId(Long opAccountId) {
+        this.opAccountId = opAccountId;
     }
 }

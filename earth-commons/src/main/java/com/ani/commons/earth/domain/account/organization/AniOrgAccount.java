@@ -10,7 +10,6 @@ import com.ani.commons.earth.enumeration.AccountType;
 public class AniOrgAccount extends AniAccount {
 
     private static final long serialVersionUID = -134318695674072172L;
-
     private Integer currentNum;
 
     private String tel;
