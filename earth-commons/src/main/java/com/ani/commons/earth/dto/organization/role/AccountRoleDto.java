@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 /**
  * Created by zhanglina on 18-7-25.
  */
-public class OrgRoleDto implements Serializable {
+public class AccountRoleDto implements Serializable {
 
     private static final long serialVersionUID = -1532531020505464389L;
 
