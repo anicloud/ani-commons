@@ -15,56 +15,65 @@ import java.sql.Timestamp;
  */
 public class OrgMember implements Serializable {
     private static final long serialVersionUID = 2336468316834700393L;
-    private Integer orgId;
+
     @JsonSerialize(using= ToStringSerializer.class)
-    private Long employeeId;
+    private Long employee_id;
+    private Long node_id;
+    private Long account_id;
+    private String org_email;
+    private boolean hasPwd;
+    private Integer employeeNum;
     private String name;
     private String nameAlphabet;
-    private String employeeNum;
-    private String orgEmail;
     private String privateEmail;
     private String phone;
-    private String roleId;
     private String tel;
     private String politics;
-    private String birthday;
+    private Date birthday;
     private Sex sex;
     private String citizenId;
     private DataState state;
-    private Timestamp createTime;
     private Timestamp updateTime;
+    private Timestamp createTime;
 
-
-    public Integer getOrgId() {
-        return orgId;
+    public Long getEmployee_id() {
+        return employee_id;
     }
 
-    public void setOrgId(Integer orgId) {
-        this.orgId = orgId;
+    public void setEmployee_id(Long employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public String getEmployeeNum() {
+    public Long getNode_id() {
+        return node_id;
+    }
+
+    public void setNode_id(Long node_id) {
+        this.node_id = node_id;
+    }
+
+    public Long getAccount_id() {
+        return account_id;
+    }
+
+    public void setAccount_id(Long account_id) {
+        this.account_id = account_id;
+    }
+
+    public String getOrg_email() {
+        return org_email;
+    }
+
+    public void setOrg_email(String org_email) {
+        this.org_email = org_email;
+    }
+
+    public Integer getEmployeeNum() {
         return employeeNum;
     }
 
-    public void setEmployeeNum(String employeeNum) {
+    public void setEmployeeNum(Integer employeeNum) {
         this.employeeNum = employeeNum;
-    }
-
-    public String getNameAlphabet() {
-        return nameAlphabet;
-    }
-
-    public void setNameAlphabet(String nameAlphabet) {
-        this.nameAlphabet = nameAlphabet;
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
     }
 
     public String getName() {
@@ -73,6 +82,14 @@ public class OrgMember implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getNameAlphabet() {
+        return nameAlphabet;
+    }
+
+    public void setNameAlphabet(String nameAlphabet) {
+        this.nameAlphabet = nameAlphabet;
     }
 
     public String getPrivateEmail() {
@@ -107,11 +124,11 @@ public class OrgMember implements Serializable {
         this.politics = politics;
     }
 
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
@@ -131,28 +148,12 @@ public class OrgMember implements Serializable {
         this.citizenId = citizenId;
     }
 
-    public String getOrgEmail() {
-        return orgEmail;
-    }
-
-    public void setOrgEmail(String orgEmail) {
-        this.orgEmail = orgEmail;
-    }
-
     public DataState getState() {
         return state;
     }
 
     public void setState(DataState state) {
         this.state = state;
-    }
-
-    public Timestamp getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
     }
 
     public Timestamp getUpdateTime() {
@@ -163,13 +164,19 @@ public class OrgMember implements Serializable {
         this.updateTime = updateTime;
     }
 
-    public String getRoleId() {
-        return roleId;
+    public Timestamp getCreateTime() {
+        return createTime;
     }
 
-    public void setRoleId(String roleId) {
-        this.roleId = roleId;
+    public void setCreateTime(Timestamp createTime) {
+        this.createTime = createTime;
     }
 
+    public boolean isHasPwd() {
+        return hasPwd;
+    }
 
+    public void setHasPwd(boolean hasPwd) {
+        this.hasPwd = hasPwd;
+    }
 }

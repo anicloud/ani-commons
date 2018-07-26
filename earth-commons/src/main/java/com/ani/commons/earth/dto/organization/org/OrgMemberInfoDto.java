@@ -8,6 +8,7 @@ import com.ani.utils.core.DataState;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by zhanglina on 18-5-2.
@@ -15,110 +16,75 @@ import java.sql.Date;
 public class OrgMemberInfoDto implements Serializable {
 
     private static final long serialVersionUID = -3731989256681013381L;
-    private Integer orgId;
-    private Long employeeId;// TODO: 18-5-11 改成id
-    private String employeeNum;
-    private String nameAlphabet;
-    private Phone phone;
-    private String email;
-    private String orgEmail;
+
+    private Long employee_id;
+    private Long node_id;
+    private Long account_id;
+    private String org_email;
+    private byte[] password;
+    private Integer employeeNum;
     private String name;
-    private String politics;
+    private String nameAlphabet;
+    private String privateEmail;
+    private String phone;
     private String tel;
+    private String politics;
     private Date birthday;
     private Sex sex;
     private String citizenId;
-    private DataState dataState;
+    private DataState state;
+    private Timestamp updateTime;
+    private Timestamp createTime;
 
     public OrgMemberInfoDto() {
     }
 
-    public OrgMemberInfoDto(Integer orgId,String name,String email,Phone phone) {
-        this.orgId= orgId;
-        this.name = name;
-        this.email=email;
-        this.phone=phone;
+    public Long getEmployee_id() {
+        return employee_id;
     }
 
-    public OrgMemberInfoDto(Integer orgId, Long employeeId, String employeeNum, String nameAlphabet, Phone phone, String email, String orgEmail, String name, String politics, String tel, Date birthday, Sex sex, String citizenId, DataState dataState) {
-        this.orgId = orgId;
-        this.employeeId = employeeId;
-        this.employeeNum = employeeNum;
-        this.nameAlphabet = nameAlphabet;
-        this.phone= phone;
-        this.email = email;
-        this.orgEmail = orgEmail;
-        this.name = name;
-        this.politics = politics;
-        this.tel = tel;
-        this.birthday = birthday;
-        this.sex = sex;
-        this.citizenId = citizenId;
-        this.dataState = dataState;
+    public void setEmployee_id(Long employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public String getOrgEmail() {
-        return orgEmail;
+    public Long getNode_id() {
+        return node_id;
     }
 
-    public void setOrgEmail(String orgEmail) {
-        this.orgEmail = orgEmail;
+    public void setNode_id(Long node_id) {
+        this.node_id = node_id;
     }
 
-    public String getNameAlphabet() {
-        return nameAlphabet;
+    public Long getAccount_id() {
+        return account_id;
     }
 
-    public void setNameAlphabet(String nameAlphabet) {
-        this.nameAlphabet = nameAlphabet;
+    public void setAccount_id(Long account_id) {
+        this.account_id = account_id;
     }
 
-    public String getEmployeeNum() {
+    public String getOrg_email() {
+        return org_email;
+    }
+
+    public void setOrg_email(String org_email) {
+        this.org_email = org_email;
+    }
+
+    public byte[] getPassword() {
+        return password;
+    }
+
+    public void setPassword(byte[] password) {
+        this.password = password;
+    }
+
+    public Integer getEmployeeNum() {
         return employeeNum;
     }
 
-    public void setEmployeeNum(String employeeNum) {
+    public void setEmployeeNum(Integer employeeNum) {
         this.employeeNum = employeeNum;
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
-
-    public Integer getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Integer orgId) {
-        this.orgId = orgId;
-    }
-
-    public void setPhone(Phone phone) {
-        this.phone = phone;
-    }
-
-    public Phone getPhone() {
-        return phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getName() {
@@ -129,8 +95,36 @@ public class OrgMemberInfoDto implements Serializable {
         this.name = name;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    public String getNameAlphabet() {
+        return nameAlphabet;
+    }
+
+    public void setNameAlphabet(String nameAlphabet) {
+        this.nameAlphabet = nameAlphabet;
+    }
+
+    public String getPrivateEmail() {
+        return privateEmail;
+    }
+
+    public void setPrivateEmail(String privateEmail) {
+        this.privateEmail = privateEmail;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
     public String getPolitics() {
@@ -141,12 +135,12 @@ public class OrgMemberInfoDto implements Serializable {
         this.politics = politics;
     }
 
-    public String getTel() {
-        return tel;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setTel(String tel) {
-        this.tel = tel;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public Sex getSex() {
@@ -165,11 +159,27 @@ public class OrgMemberInfoDto implements Serializable {
         this.citizenId = citizenId;
     }
 
-    public DataState getDataState() {
-        return dataState;
+    public DataState getState() {
+        return state;
     }
 
-    public void setDataState(DataState dataState) {
-        this.dataState = dataState;
+    public void setState(DataState state) {
+        this.state = state;
+    }
+
+    public Timestamp getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Timestamp updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Timestamp getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Timestamp createTime) {
+        this.createTime = createTime;
     }
 }
