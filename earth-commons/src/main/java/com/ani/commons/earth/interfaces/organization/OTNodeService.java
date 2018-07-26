@@ -19,9 +19,18 @@ import java.util.Set;
  */
 public interface OTNodeService {
 
-    public OTNodeBasicDto addNode(OTNodeAddDto otNodeAddDto, Long opEmployeeId) throws AniAuthException,AniRuleException;
+    public OTNodeBasicDto addNode(OTNodeInfoDto otNodeInfoDto, Long opEmployeeId) throws AniAuthException, AniRuleException;
 
-    public Long removeNode(OTNodeOpDto otNodeOpDto) throws AniAuthException,AniRuleException;
+    public void removeNode(Long nodeId, Long opEmployeeId) throws AniAuthException, AniRuleException;
+
+    public void updateNodeInfo(OTNodeInfoDto otNodeInfoDto, Long opEmployeeId) throws AniAuthException;
+
+    public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opEmployeeId) throws AniAuthException;
+
+    public OTNode getTreeByEmployeeId(Long employeeId) throws AniAuthException;
+
+    public OTNodeInfoDto getNodeDetail(Long nodeId) throws AniRuleException;
+
 
     public void addNodeMember(OTNodeMemberInfoDto otNodeMemberAddDto)throws AniAuthException,AniRuleException,AniDataException;
 
@@ -35,15 +44,7 @@ public interface OTNodeService {
 
     public void updateMemberInfo(OTNodeMemberInfoDto otNodeMemberInfoDto) throws AniAuthException,AniDataException;
 
-    public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto) throws AniAuthException;
-
-    public OTNodeBasicDto updateNodeName(OTNodeInfoDto otNodeInfoDto) throws AniAuthException;
-
-    public OTNode getTreeByEmployeeId(Long employeeId) throws AniAuthException;
-
-    public OTNodeBasicDto getNodeDetail(Long nodeId);
-
-    public OrgMember getNodeMemberByEmployeeId(OTNodeOpDto otNodeOpDto, Long employeeId) throws  AniAuthException,AniDataException;
+   public OrgMember getNodeMemberByEmployeeId(OTNodeOpDto otNodeOpDto, Long employeeId) throws  AniAuthException,AniDataException;
 
     public void updateEmployeeState(EmployeeStateUpdateDto employeeStateUpdateDto) throws AniAuthException;
 
