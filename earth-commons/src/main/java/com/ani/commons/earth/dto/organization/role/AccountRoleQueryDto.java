@@ -1,6 +1,7 @@
 package com.ani.commons.earth.dto.organization.role;
 
 import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
 
 /**
  * Created by ebrx on 18-7-26.
@@ -8,7 +9,9 @@ import com.ani.utils.dto.AniDto;
 public class AccountRoleQueryDto extends AniDto {
     private static final long serialVersionUID = 2658212645942703267L;
 
+    @AniRequiredField
     private Long id;
+    @AniRequiredField
     private Long owner_id;
 
     public AccountRoleQueryDto(Long id, Long owner_id) {
