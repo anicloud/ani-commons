@@ -39,7 +39,6 @@ public interface AccountUserRegistryService {
      */
     public Long register(String sessionId, AccountIdVerifyDto accountIdVerifyDto) throws AniRuleException;
 
-    public List<AccountInsideRegInitDto> registerOrgAccountInside(OrgAccountInsideRegisterDto orgInsideRegisterDto) throws AniRuleException;
 
 
     public Long bindOrRegisterAccountForOrgMember(AccountInsideRegisterDto accountInsideRegisterDto) throws AniRuleException;

@@ -1,4 +1,4 @@
-package com.ani.commons.earth.domain.organization.account;
+package com.ani.commons.earth.domain.account.organization;
 
 
 import com.ani.utils.core.DataState;

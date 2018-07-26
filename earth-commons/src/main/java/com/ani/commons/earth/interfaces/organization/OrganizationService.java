@@ -1,8 +1,8 @@
 package com.ani.commons.earth.interfaces.organization;
 
 import com.ani.commons.earth.domain.organization.Organization;
-import com.ani.commons.earth.domain.organization.account.OrgAccountRole;
-import com.ani.commons.earth.domain.organization.tree.OrgMember;
+import com.ani.commons.earth.domain.account.organization.OrgAccountRole;
+import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.organization.org.OrgMemberInfoDto;
 import com.ani.commons.earth.dto.organization.org.OrgRegisterDto;
 import com.ani.commons.earth.dto.organization.org.OrgUpdateDto;

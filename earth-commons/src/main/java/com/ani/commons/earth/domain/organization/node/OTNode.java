@@ -1,4 +1,4 @@
-package com.ani.commons.earth.domain.organization.tree;
+package com.ani.commons.earth.domain.organization.node;
 
 import com.ani.commons.earth.enumeration.organization.NodeType;
 

@@ -1,4 +1,4 @@
-package com.ani.commons.earth.domain.organization.tree;
+package com.ani.commons.earth.domain.organization;
 
 import com.ani.utils.core.data.type.PrivilegeType;
 

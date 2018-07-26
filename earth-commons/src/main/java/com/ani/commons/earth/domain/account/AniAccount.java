@@ -24,8 +24,6 @@ public abstract class AniAccount implements Serializable{
 
     DataState state;
 
-
-
     public DataState getState() {
         return state;
     }

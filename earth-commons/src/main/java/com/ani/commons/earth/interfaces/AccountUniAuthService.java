@@ -2,10 +2,7 @@ package com.ani.commons.earth.interfaces;
 
 import com.ani.commons.earth.domain.auth.AniAccountAuthState;
 import com.ani.commons.earth.domain.auth.SessionAuthState;
-import com.ani.commons.earth.domain.orgaccount.OrgAccountState;
-import com.ani.commons.earth.dto.orgaccount.OrgAccountVerifyDto;
 import com.ani.commons.earth.dto.verification.AccountVerifyDto;
-import com.ani.commons.earth.domain.auth.AniAuthState;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniRuleException;
 
