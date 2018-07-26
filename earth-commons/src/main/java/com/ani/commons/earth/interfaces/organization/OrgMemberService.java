@@ -20,7 +20,7 @@ public interface OrgMemberService {
      * <H2>Add employee info.</H2>
      * @param orgMemberInfoDto
      */
-    public void addOrgMember(OrgMemberInfoDto orgMemberInfoDto);
+    public void addOrgMember(Long opAccountId,OrgMemberInfoDto orgMemberInfoDto);
 
     /**
      * <H2>Delete employee info by id.</H2>
@@ -30,10 +30,11 @@ public interface OrgMemberService {
 
     /**
      * <H2>Update employee info.</H2>
+     * @param memberQueryDto
      * @param orgMemberInfoDto
      * @throws AniDataException
      */
-    public void updateOrgMemberInfo(OrgMemberInfoDto orgMemberInfoDto)throws AniDataException;
+    public void updateOrgMemberInfo(OrgMemberQueryDto memberQueryDto, OrgMemberInfoDto orgMemberInfoDto)throws AniDataException;
 
     /**
      * <H2>Query employee info.</h2>

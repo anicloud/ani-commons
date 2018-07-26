@@ -1,90 +1,62 @@
 package com.ani.commons.earth.dto.organization.org;
 
 
-import com.ani.commons.earth.domain.id.Phone;
-import com.ani.commons.earth.dto.id.AccountPhoneInfoDto;
 import com.ani.commons.earth.enumeration.Sex;
 import com.ani.utils.core.DataState;
+import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
 
-import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
 
 /**
  * Created by zhanglina on 18-5-2.
  */
-public class OrgMemberInfoDto implements Serializable {
+public class OrgMemberInfoDto extends AniDto {
 
     private static final long serialVersionUID = -3731989256681013381L;
 
-    private Long employee_id;
-    private Long node_id;
-    private Long account_id;
-    private String org_email;
-    private byte[] password;
-    private Integer employeeNum;
+    private Long employeeId;
+    @AniRequiredField
+    private Long nodeId;
+    private String orgEmail;
+    @AniRequiredField
     private String name;
-    private String nameAlphabet;
+    @AniRequiredField
+    private String employeeStrId;
     private String privateEmail;
     private String phone;
     private String tel;
-    private String politics;
     private Date birthday;
     private Sex sex;
-    private String citizenId;
+    private String others;
     private DataState state;
-    private Timestamp updateTime;
-    private Timestamp createTime;
 
     public OrgMemberInfoDto() {
     }
 
-    public Long getEmployee_id() {
-        return employee_id;
+    public Long getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployee_id(Long employee_id) {
-        this.employee_id = employee_id;
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public Long getNode_id() {
-        return node_id;
+    public Long getNodeId() {
+        return nodeId;
     }
 
-    public void setNode_id(Long node_id) {
-        this.node_id = node_id;
+    public void setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
     }
 
-    public Long getAccount_id() {
-        return account_id;
+    public String getOrgEmail() {
+        return orgEmail;
     }
 
-    public void setAccount_id(Long account_id) {
-        this.account_id = account_id;
-    }
-
-    public String getOrg_email() {
-        return org_email;
-    }
-
-    public void setOrg_email(String org_email) {
-        this.org_email = org_email;
-    }
-
-    public byte[] getPassword() {
-        return password;
-    }
-
-    public void setPassword(byte[] password) {
-        this.password = password;
-    }
-
-    public Integer getEmployeeNum() {
-        return employeeNum;
-    }
-
-    public void setEmployeeNum(Integer employeeNum) {
-        this.employeeNum = employeeNum;
+    public void setOrgEmail(String orgEmail) {
+        this.orgEmail = orgEmail;
     }
 
     public String getName() {
@@ -95,12 +67,12 @@ public class OrgMemberInfoDto implements Serializable {
         this.name = name;
     }
 
-    public String getNameAlphabet() {
-        return nameAlphabet;
+    public String getEmployeeStrId() {
+        return employeeStrId;
     }
 
-    public void setNameAlphabet(String nameAlphabet) {
-        this.nameAlphabet = nameAlphabet;
+    public void setEmployeeStrId(String employeeStrId) {
+        this.employeeStrId = employeeStrId;
     }
 
     public String getPrivateEmail() {
@@ -127,14 +99,6 @@ public class OrgMemberInfoDto implements Serializable {
         this.tel = tel;
     }
 
-    public String getPolitics() {
-        return politics;
-    }
-
-    public void setPolitics(String politics) {
-        this.politics = politics;
-    }
-
     public Date getBirthday() {
         return birthday;
     }
@@ -151,12 +115,28 @@ public class OrgMemberInfoDto implements Serializable {
         this.sex = sex;
     }
 
-    public String getCitizenId() {
-        return citizenId;
+    public OrgMemberInfoDto(Long employeeId, Long nodeId, String orgEmail, String name, String employeeStrId, String privateEmail, String phone, String tel, Date birthday, Sex sex, String others, DataState state) {
+        this.employeeId = employeeId;
+        this.nodeId = nodeId;
+        this.orgEmail = orgEmail;
+        this.name = name;
+        this.employeeStrId = employeeStrId;
+        this.privateEmail = privateEmail;
+        this.phone = phone;
+        this.tel = tel;
+        this.birthday = birthday;
+        this.sex = sex;
+        this.others = others;
+        this.state = state;
     }
 
-    public void setCitizenId(String citizenId) {
-        this.citizenId = citizenId;
+    public String getOthers() {
+
+        return others;
+    }
+
+    public void setOthers(String others) {
+        this.others = others;
     }
 
     public DataState getState() {
@@ -167,19 +147,4 @@ public class OrgMemberInfoDto implements Serializable {
         this.state = state;
     }
 
-    public Timestamp getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Timestamp updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public Timestamp getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
-    }
 }
