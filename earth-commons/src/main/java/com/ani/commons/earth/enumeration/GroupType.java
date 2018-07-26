@@ -6,5 +6,5 @@ package com.ani.commons.earth.enumeration;
  */
 public enum GroupType {
     NORMAL,
-    ORGANIZATION;
+    ORG_TREE;
 }
