@@ -9,9 +9,11 @@ import com.ani.commons.earth.enumeration.AccountType;
 public class AniOrgAccount extends AniAccount {
 
     private static final long serialVersionUID = -134318695674072172L;
-
     private Integer currentNum;
-
+    private String tel;
+    private Integer businessCategory;
+    private String postalCode;
+    private String postalAddress;
 
     public AniOrgAccount() {
         super();
