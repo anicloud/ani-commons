@@ -1,6 +1,8 @@
 package com.ani.commons.earth.dto.organization.node;
 
 import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
+
 import java.io.Serializable;
 
 /**
@@ -11,11 +13,11 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
     private static final long serialVersionUID = -463500843397755139L;
 
     private Long nodeId;
-
+    @AniRequiredField
     private Long ownerId;
 
     private String nodeDesc;
-
+    @AniRequiredField
     private Long parentNodeId;
 
     private String tel;

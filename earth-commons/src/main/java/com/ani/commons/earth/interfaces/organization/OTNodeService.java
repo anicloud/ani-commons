@@ -32,30 +32,30 @@ public interface OTNodeService {
     public OTNodeInfoDto getNodeDetail(Long nodeId) throws AniRuleException;
 
 
-    public void addNodeMember(OTNodeMemberInfoDto otNodeMemberAddDto)throws AniAuthException,AniRuleException,AniDataException;
-
-    public Set<OTNodeBasicDto> getNodeChildren(OTNodeOpDto otNodeOpDto) throws AniAuthException;
-
-    public List<OTNodeMember> getNodeMembers(OTNodeOpDto otNodeOpDto) throws AniAuthException;
-
-    public void removeMember(OTNodeMemberOpDto removeDto,boolean isAll) throws AniAuthException;
-
-    public void updateMemberRole(OTNodeMemberDto otNodeMemberDto) throws AniAuthException;
-
-    public void updateMemberInfo(OTNodeMemberInfoDto otNodeMemberInfoDto) throws AniAuthException,AniDataException;
-
-   public OrgMember getNodeMemberByEmployeeId(OTNodeOpDto otNodeOpDto, Long employeeId) throws  AniAuthException,AniDataException;
-
-    public void updateEmployeeState(EmployeeStateUpdateDto employeeStateUpdateDto) throws AniAuthException;
-
-    public List<OrgMemberInfo> getMemberByNameAlp(String nameAlp, Integer orgId,Long nodeId);
-
-    public void addOrgMemberToNode(OTNodeOpDto otNodeOpDto,List<NodeAddMemberDto> nodeAddMemberDtos) throws AniDataException;
-
-    public void checkHaveRootPrivilege(Long opAccountId, Integer orgId) throws AniAuthException;
-
-    public void checkOrgNodeResourceAccessibility(OrgNodeAccessibilityDto orgResourceAccessDto) throws AniRuleException;
-
-    public void checkOrgResourceAccess(OrgResourceAccessDto orgResourceAccessDto) throws AniRuleException;
+//    public void addNodeMember(OTNodeMemberInfoDto otNodeMemberAddDto)throws AniAuthException,AniRuleException,AniDataException;
+//
+//    public Set<OTNodeBasicDto> getNodeChildren(OTNodeOpDto otNodeOpDto) throws AniAuthException;
+//
+//    public List<OTNodeMember> getNodeMembers(OTNodeOpDto otNodeOpDto) throws AniAuthException;
+//
+//    public void removeMember(OTNodeMemberOpDto removeDto,boolean isAll) throws AniAuthException;
+//
+//    public void updateMemberRole(OTNodeMemberDto otNodeMemberDto) throws AniAuthException;
+//
+//    public void updateMemberInfo(OTNodeMemberInfoDto otNodeMemberInfoDto) throws AniAuthException,AniDataException;
+//
+//   public OrgMember getNodeMemberByEmployeeId(OTNodeOpDto otNodeOpDto, Long employeeId) throws  AniAuthException,AniDataException;
+//
+//    public void updateEmployeeState(EmployeeStateUpdateDto employeeStateUpdateDto) throws AniAuthException;
+//
+//    public List<OrgMemberInfo> getMemberByNameAlp(String nameAlp, Integer orgId,Long nodeId);
+//
+//    public void addOrgMemberToNode(OTNodeOpDto otNodeOpDto,List<NodeAddMemberDto> nodeAddMemberDtos) throws AniDataException;
+//
+//    public void checkHaveRootPrivilege(Long opAccountId, Integer orgId) throws AniAuthException;
+//
+//    public void checkOrgNodeResourceAccessibility(OrgNodeAccessibilityDto orgResourceAccessDto) throws AniRuleException;
+//
+//    public void checkOrgResourceAccess(OrgResourceAccessDto orgResourceAccessDto) throws AniRuleException;
 
 }
