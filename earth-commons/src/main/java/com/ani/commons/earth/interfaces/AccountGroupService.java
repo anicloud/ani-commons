@@ -22,4 +22,5 @@ public interface AccountGroupService {
     public boolean removeGroupFromAccount(Long accountId, Long groupId);
 
     public boolean clearGroup(Long accountId, Long groupId);
+
 }

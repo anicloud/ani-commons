@@ -2,6 +2,7 @@ package com.ani.commons.earth.domain.role;
 
 
 import com.ani.utils.core.data.type.PrivilegeType;
+import com.ani.utils.dto.AniDto;
 import com.sun.org.glassfish.external.statistics.TimeStatistic;
 
 import java.io.Serializable;
@@ -11,25 +12,30 @@ import java.util.Set;
 /**
  * Created by ebrx on 18-7-26.
  */
-public class AccountRole implements Serializable {
+public class AccountRole extends AniDto {
     private static final long serialVersionUID = 2835983517461985839L;
 
-    private Long id;
+    private Long roleId;
     private Long ownerId;
     private String name;
     private Set<PrivilegeType> privileges;
-    private Timestamp updateTime;
-    private Timestamp createTime;
 
     public AccountRole() {
     }
 
-    public Long getId() {
-        return id;
+    public AccountRole(Long roleId, Long ownerId, String name, Set<PrivilegeType> privileges ) {
+        this.roleId = roleId;
+        this.ownerId = ownerId;
+        this.name = name;
+        this.privileges = privileges;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long id) {
+        this.roleId = id;
     }
 
     public Long getOwnerId() {
@@ -56,19 +62,4 @@ public class AccountRole implements Serializable {
         this.privileges = privileges;
     }
 
-    public Timestamp getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Timestamp updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public Timestamp getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
-    }
 }

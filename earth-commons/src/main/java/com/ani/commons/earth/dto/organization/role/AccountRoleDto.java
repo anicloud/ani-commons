@@ -10,17 +10,27 @@ public class AccountRoleDto extends AniDto {
 
     private static final long serialVersionUID = -1532531020505464389L;
 
-    private Long id;
+    private Long roleId;
     private Long ownerId;
     private String name;
     private PrivilegeType privileges;
 
-    public Long getId() {
-        return id;
+    public AccountRoleDto() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public AccountRoleDto(Long roleId, Long ownerId, String name, PrivilegeType privileges) {
+        this.roleId = roleId;
+        this.ownerId = ownerId;
+        this.name = name;
+        this.privileges = privileges;
+    }
+
+    public Long getRoeId() {
+        return roleId;
+    }
+
+    public void setRoeId(Long roleId) {
+        this.roleId = roleId;
     }
 
     public Long getOwnerId() {
