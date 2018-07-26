@@ -31,14 +31,14 @@ public interface AccountRoleService {
 
     /**
      * <H2>Query accountRole.</H2>
-     * @param id
+     * @param accountRoleQueryDto
      * @return
      */
     public AccountRole getAccountRole(AccountRoleQueryDto accountRoleQueryDto);
 
     /**
      * <H2>Query accountRole list.</H2>
-     * @return
+     * @return accountRoleQueryDto
      */
     public List<AccountRole> getAccountRoleList(AccountRoleQueryDto accountRoleQueryDto);
 

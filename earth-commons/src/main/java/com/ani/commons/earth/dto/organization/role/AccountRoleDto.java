@@ -1,6 +1,8 @@
 package com.ani.commons.earth.dto.organization.role;
 
 import com.ani.utils.core.data.type.PrivilegeType;
+import com.ani.utils.dto.AniDto;
+import com.ani.utils.dto.AniRequiredField;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -8,7 +10,7 @@ import java.sql.Timestamp;
 /**
  * Created by zhanglina on 18-7-25.
  */
-public class AccountRoleDto implements Serializable {
+public class AccountRoleDto extends AniDto {
 
     private static final long serialVersionUID = -1532531020505464389L;
 
@@ -16,8 +18,6 @@ public class AccountRoleDto implements Serializable {
     private Long ownerId;
     private String name;
     private PrivilegeType privileges;
-    private Timestamp update_time;
-    private Timestamp create_time;
 
     public Long getId() {
         return id;
@@ -51,19 +51,4 @@ public class AccountRoleDto implements Serializable {
         this.privileges = privileges;
     }
 
-    public Timestamp getUpdate_time() {
-        return update_time;
-    }
-
-    public void setUpdate_time(Timestamp update_time) {
-        this.update_time = update_time;
-    }
-
-    public Timestamp getCreate_time() {
-        return create_time;
-    }
-
-    public void setCreate_time(Timestamp create_time) {
-        this.create_time = create_time;
-    }
 }
