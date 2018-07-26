@@ -15,9 +15,9 @@ import java.util.Set;
 
 public interface AccountGroupService {
 
-    public List<AniAccountGroup> findGroupsByAccountId(Long accountId) throws AniDataException;
+    public List<AniAccountGroup> findGroupsByAccountId(Long accountId) throws AniRuleException, AniDataException;
 
-    public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniDataException;
+    public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniRuleException,AniDataException;
 
 
     public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long accountId) throws AniRuleException, AniAuthException;
@@ -28,6 +28,6 @@ public interface AccountGroupService {
 
     public void removeMemberFromGroup(Long opAccountId, GroupMemberRemoveDto removeDto) throws AniRuleException, AniDataException;
 
-    public void addMemberToGroup(Long opAccountId, GroupMemberAddDto groupMemberAddDto);
+    public void addMemberToGroup(Long opAccountId, GroupMemberAddDto groupMemberAddDto)throws AniRuleException,AniDataException;
 
 }
