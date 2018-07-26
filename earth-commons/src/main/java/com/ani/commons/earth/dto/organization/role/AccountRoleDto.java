@@ -2,10 +2,6 @@ package com.ani.commons.earth.dto.organization.role;
 
 import com.ani.utils.core.data.type.PrivilegeType;
 import com.ani.utils.dto.AniDto;
-import com.ani.utils.dto.AniRequiredField;
-
-import java.io.Serializable;
-import java.sql.Timestamp;
 
 /**
  * Created by zhanglina on 18-7-25.
