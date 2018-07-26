@@ -3,83 +3,93 @@ package com.ani.commons.earth.domain.organization.tree;
 import com.ani.commons.earth.enumeration.organization.NodeType;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
  * Created by zhanglina on 18-5-2.
+ * Last Modified by xuben on 18-7-26.
  */
-public class OTNode implements Serializable {
+public abstract class OTNode implements Serializable {
     private static final long serialVersionUID = 5520644352781449962L;
-    private String nodeId;
-    private String name;
-    private NodeType nodeType;
-    private String privilege;
-    private Boolean canDeploy;
-    private Boolean hasChildren;
-    private List<OTNode> children;
-    private String parentId;
 
-    public String getParentId() {
-        return parentId;
+    protected Long ownerId;
+
+    protected Long parentNodeId;
+
+    protected Long nodeId;
+
+    protected String nodeDesc;
+
+    protected Long accountGroupId;
+
+    protected List<Long> children;
+
+    protected Timestamp createTime;
+
+    protected Timestamp updateTime;
+
+    public Long getAccountGroupId() {
+        return accountGroupId;
     }
 
-    public void setParentId(String parentId) {
-        this.parentId = parentId;
+    public void setAccountGroupId(Long accountGroupId) {
+        this.accountGroupId = accountGroupId;
     }
 
-    public NodeType getNodeType() {
-        return nodeType;
+    public Long getOwnerId() {
+        return ownerId;
     }
 
-    public void setNodeType(NodeType nodeType) {
-        this.nodeType = nodeType;
+    public void setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
     }
 
-    public String getNodeId() {
+    public Long getParentNodeId() {
+        return parentNodeId;
+    }
+
+    public void setParentNodeId(Long parentNodeId) {
+        this.parentNodeId = parentNodeId;
+    }
+
+    public Long getNodeId() {
         return nodeId;
     }
 
-    public String getPrivilege() {
-        return privilege;
-    }
-
-    public void setPrivilege(String privilege) {
-        this.privilege = privilege;
-    }
-
-    public void setNodeId(String nodeId) {
+    public void setNodeId(Long nodeId) {
         this.nodeId = nodeId;
     }
 
-    public String getName() {
-        return name;
+    public String getNodeDesc() {
+        return nodeDesc;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNodeDesc(String nodeDesc) {
+        this.nodeDesc = nodeDesc;
     }
 
-    public List<OTNode> getChildren() {
+    public List<Long> getChildren() {
         return children;
     }
 
-    public void setChildren(List<OTNode> children) {
+    public void setChildren(List<Long> children) {
         this.children = children;
     }
 
-    public Boolean getCanDeploy() {
-        return canDeploy;
+    public Timestamp getCreateTime() {
+        return createTime;
     }
 
-    public void setCanDeploy(Boolean canDeploy) {
-        this.canDeploy = canDeploy;
+    public void setCreateTime(Timestamp createTime) {
+        this.createTime = createTime;
     }
 
-    public Boolean getHasChildren() {
-        return hasChildren;
+    public Timestamp getUpdateTime() {
+        return updateTime;
     }
 
-    public void setHasChildren(Boolean hasChildren) {
-        this.hasChildren = hasChildren;
+    public void setUpdateTime(Timestamp updateTime) {
+        this.updateTime = updateTime;
     }
 }
