@@ -27,7 +27,7 @@ public interface AccountGroupService {
 
     public void addMemberToGroup(Long opAccountId, GroupMemberAddDto groupMemberAddDto)throws AniRuleException,AniDataException;
 
-    public void updateMemberRole(Long opAccountId, GroupUpdateDto groupUpdateDto);
+    public void updateMemberRole(Long opAccountId, GroupMemberUpdateDto memberUpdateDto);
 
     public List<GroupMemberInfoDto> getGroupMember(Long opAccountId,Long groupId);
 }

@@ -13,4 +13,37 @@ public class GroupMemberInfoDto extends AniDto {
     private Long accountId;
     private String name;
     private Set<OrgAccountRole> roles;
+
+    public GroupMemberInfoDto() {
+    }
+
+    public GroupMemberInfoDto(Long accountId, String name, Set<OrgAccountRole> roles) {
+        this.accountId = accountId;
+        this.name = name;
+        this.roles = roles;
+    }
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<OrgAccountRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<OrgAccountRole> roles) {
+        this.roles = roles;
+    }
 }

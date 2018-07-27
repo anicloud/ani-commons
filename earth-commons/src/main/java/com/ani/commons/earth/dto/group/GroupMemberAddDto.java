@@ -13,5 +13,27 @@ public class GroupMemberAddDto extends AniDto {
     private Long groupId;
     private Map<Long,Set<Long>> members;
 
+    public GroupMemberAddDto(Long groupId, Map<Long, Set<Long>> members) {
+        this.groupId = groupId;
+        this.members = members;
+    }
 
+    public GroupMemberAddDto() {
+    }
+
+    public Long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
+    }
+
+    public Map<Long, Set<Long>> getMembers() {
+        return members;
+    }
+
+    public void setMembers(Map<Long, Set<Long>> members) {
+        this.members = members;
+    }
 }
