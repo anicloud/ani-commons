@@ -15,19 +15,19 @@ import java.util.Set;
 
 /**
  * Created by zhanglina on 18-4-26.
- * Last Modified by xuben on 18-7-26.
+ * Last Modified by xuben on 18-7-27.
  */
 public interface OTNodeService {
 
-    public OTNodeBasicDto addNode(OTNodeInfoDto otNodeInfoDto, Long opEmployeeId) throws AniAuthException, AniRuleException;
+    public OTNodeBasicDto addNode(OTNodeInfoDto otNodeInfoDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
-    public void removeNode(Long nodeId, Long opEmployeeId) throws AniAuthException, AniRuleException;
+    public void removeNode(Long nodeId, Long opAccountId) throws AniAuthException, AniRuleException;
 
-    public void updateNodeInfo(OTNodeInfoDto otNodeInfoDto, Long opEmployeeId) throws AniAuthException;
+    public void updateNodeInfo(OTNodeInfoDto otNodeInfoDto, Long opAccountId) throws AniAuthException;
 
-    public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opEmployeeId) throws AniAuthException;
+    public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opAccountId) throws AniAuthException;
 
-    public OTNode getTreeByEmployeeId(Long employeeId) throws AniAuthException;
+    public OTNode getTreeByEmployeeId(Long accountId) throws AniAuthException;
 
     public OTNodeInfoDto getNodeDetail(Long nodeId) throws AniRuleException;
 
