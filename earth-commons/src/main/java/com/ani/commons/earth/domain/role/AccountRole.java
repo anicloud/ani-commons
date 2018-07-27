@@ -14,7 +14,6 @@ import java.util.Set;
  */
 public class AccountRole extends AniDto {
     private static final long serialVersionUID = 2835983517461985839L;
-
     private Long roleId;
     private Long ownerId;
     private String name;

@@ -1,7 +1,5 @@
 package com.ani.commons.earth.domain.organization.node;
 
-import com.ani.commons.earth.enumeration.organization.NodeType;
-
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
@@ -11,30 +9,20 @@ import java.util.List;
  * Last Modified by xuben on 18-7-26.
  */
 public class OTNode implements Serializable {
+
     private static final long serialVersionUID = 5520644352781449962L;
 
     private Long ownerId;
-
     private Long parentNodeId;
-
     private Long nodeId;
-
     private String nodeDesc;
-
     private Long accountGroupId;
-
-    private List<Long> children;
-
+    private List<Long> childrenId;
     private Timestamp createTime;
-
     private Timestamp updateTime;
-
     private String tel;
-
     private Integer businessCategory;
-
     private String postalCode;
-
     private String postalAddress;
 
     public Long getAccountGroupId() {
@@ -78,11 +66,11 @@ public class OTNode implements Serializable {
     }
 
     public List<Long> getChildren() {
-        return children;
+        return childrenId;
     }
 
     public void setChildren(List<Long> children) {
-        this.children = children;
+        this.childrenId = children;
     }
 
     public Timestamp getCreateTime() {

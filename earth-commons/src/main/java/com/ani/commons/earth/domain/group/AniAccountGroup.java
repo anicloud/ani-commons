@@ -1,6 +1,7 @@
 package com.ani.commons.earth.domain.group;
 
 import com.ani.commons.earth.enumeration.GroupType;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Map;
@@ -15,19 +16,12 @@ public class AniAccountGroup implements Serializable {
     private static final long serialVersionUID = -4738146609913572672L;
 
     private Long ownerId;
-
     private String name;
-
     private String description;
-
     private GroupType groupType;
-
-    private Map<Long, Set<Long>> members;
-
+    private Map<Long, Set<Long>> membersRolesId;
     private Timestamp createTime;
-
     private Timestamp updateTime;
-
     private Long groupId;
 
     public AniAccountGroup() {
@@ -65,12 +59,12 @@ public class AniAccountGroup implements Serializable {
         this.groupType = groupType;
     }
 
-    public Map<Long, Set<Long>> getMembers() {
-        return members;
+    public Map<Long, Set<Long>> getMembersRolesId() {
+        return membersRolesId;
     }
 
-    public void setMembers(Map<Long, Set<Long>> members) {
-        this.members = members;
+    public void setMembersRolesId(Map<Long, Set<Long>> membersRolesId) {
+        this.membersRolesId = membersRolesId;
     }
 
     public Timestamp getCreateTime() {

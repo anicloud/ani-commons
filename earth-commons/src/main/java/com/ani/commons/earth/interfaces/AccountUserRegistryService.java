@@ -1,5 +1,6 @@
 package com.ani.commons.earth.interfaces;
 
+import com.ani.commons.earth.dto.account.personal.AccountPersonalProfileDto;
 import com.ani.commons.earth.dto.id.AccountIdInfoDto;
 import com.ani.commons.earth.dto.account.organization.AccountOrgProfileDto;
 import com.ani.commons.earth.dto.account.AccountProfileDto;
@@ -70,7 +71,7 @@ public interface AccountUserRegistryService {
      */
     public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, byte[] newPwd,Boolean flag) throws AniRuleException;
 
-    public void  modifyProfile(AccountProfileDto accountProfileDto,boolean withPwd) throws AniRuleException, IOException;
+    public void modifyPersonalProfile(AccountPersonalProfileDto personalProfileDto, boolean withPwd) throws AniRuleException, IOException;
 
     public void  modifyOrgProFile(AccountOrgProfileDto orgProfileDto) throws AniRuleException;
 

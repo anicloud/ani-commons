@@ -15,14 +15,19 @@ public class AniOrgAccount extends AniAccount {
     private static final long serialVersionUID = -134318695674072172L;
 
     private Integer currentNum;
-
     private String tel;
-
-    private Set<BusinessCategoryType> businessCategorys;
-
+    private Set<BusinessCategoryType> businessCategories;
     private String postalCode;
-
     private String postalAddress;
+
+    public AniOrgAccount() {
+        super();
+    }
+
+    public AniOrgAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, Integer currentNum) {
+        super(accountId, phone, email, hasPwd, type);
+        this.currentNum = currentNum;
+    }
 
     public String getTel() {
         return tel;
@@ -32,12 +37,12 @@ public class AniOrgAccount extends AniAccount {
         this.tel = tel;
     }
 
-    public Set<BusinessCategoryType> getBusinessCategorys() {
-        return businessCategorys;
+    public Set<BusinessCategoryType> getBusinessCategories() {
+        return businessCategories;
     }
 
-    public void setBusinessCategorys(Set<BusinessCategoryType> businessCategorys) {
-        this.businessCategorys = businessCategorys;
+    public void setBusinessCategories(Set<BusinessCategoryType> businessCategories) {
+        this.businessCategories = businessCategories;
     }
 
     public String getPostalCode() {
@@ -56,20 +61,11 @@ public class AniOrgAccount extends AniAccount {
         this.postalAddress = postalAddress;
     }
 
-    public AniOrgAccount() {
-        super();
-    }
-
     public Integer getCurrentNum() {
         return currentNum;
     }
 
     public void setCurrentNum(Integer currentNum) {
-        this.currentNum = currentNum;
-    }
-
-    public AniOrgAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, Integer currentNum) {
-        super(accountId, phone, email, hasPwd, type);
         this.currentNum = currentNum;
     }
 }

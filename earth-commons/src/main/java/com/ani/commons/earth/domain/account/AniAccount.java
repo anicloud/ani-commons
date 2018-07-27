@@ -11,17 +11,13 @@ public abstract class AniAccount implements Serializable{
      * Account logic id
      */
     Long accountId;
-
     String phone;
-
     String userName;
-
     String email;
     /**
      * Have set password
      */
     Boolean hasPwd;
-
     DataState state;
 
     public DataState getState() {

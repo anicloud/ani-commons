@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.Map;
 
 /**
  * Created by zhanglina on 18-5-9.
@@ -16,64 +17,62 @@ import java.sql.Timestamp;
 public class OrgMember implements Serializable {
     private static final long serialVersionUID = 2336468316834700393L;
 
-    @JsonSerialize(using= ToStringSerializer.class)
-    private Long employee_id;
-    private Long node_id;
-    private Long account_id;
-    private String org_email;
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long nodeId;
+    private Long accountId;
+    private String employeeEmail;
     private boolean hasPwd;
-    private Integer employeeNum;
+    private Integer employeeCount;
     private String name;
-    private String nameAlphabet;
-    private String privateEmail;
-    private String phone;
+    private String employeeId;
+    private String personalEmail;
+    private String mobile;
     private String tel;
-    private String politics;
     private Date birthday;
     private Sex sex;
-    private String citizenId;
+    private Map<String, String> customFieldsValue;
     private DataState state;
-    private Timestamp updateTime;
-    private Timestamp createTime;
+    private Timestamp entryTime;
+    private Timestamp resignTime;
 
-    public Long getEmployee_id() {
-        return employee_id;
+//    public Long getEmployeeId() {
+//        return employeeId;
+//    }
+//
+//    public void setEmployeeId(Long employeeId) {
+//        this.employeeId = employeeId;
+//    }
+
+    public Long getNodeId() {
+        return nodeId;
     }
 
-    public void setEmployee_id(Long employee_id) {
-        this.employee_id = employee_id;
+    public void setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
     }
 
-    public Long getNode_id() {
-        return node_id;
+    public Long getAccountId() {
+        return accountId;
     }
 
-    public void setNode_id(Long node_id) {
-        this.node_id = node_id;
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 
-    public Long getAccount_id() {
-        return account_id;
+    public String getEmployeeEmail() {
+        return employeeEmail;
     }
 
-    public void setAccount_id(Long account_id) {
-        this.account_id = account_id;
+    public void setEmployeeEmail(String employeeEmail) {
+        this.employeeEmail = employeeEmail;
     }
 
-    public String getOrg_email() {
-        return org_email;
+    public Integer getEmployeeCount() {
+        return employeeCount;
     }
 
-    public void setOrg_email(String org_email) {
-        this.org_email = org_email;
-    }
-
-    public Integer getEmployeeNum() {
-        return employeeNum;
-    }
-
-    public void setEmployeeNum(Integer employeeNum) {
-        this.employeeNum = employeeNum;
+    public void setEmployeeCount(Integer employeeCount) {
+        this.employeeCount = employeeCount;
     }
 
     public String getName() {
@@ -84,28 +83,20 @@ public class OrgMember implements Serializable {
         this.name = name;
     }
 
-    public String getNameAlphabet() {
-        return nameAlphabet;
+    public String getPersonalEmail() {
+        return personalEmail;
     }
 
-    public void setNameAlphabet(String nameAlphabet) {
-        this.nameAlphabet = nameAlphabet;
+    public void setPersonalEmail(String personalEmail) {
+        this.personalEmail = personalEmail;
     }
 
-    public String getPrivateEmail() {
-        return privateEmail;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setPrivateEmail(String privateEmail) {
-        this.privateEmail = privateEmail;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getTel() {
@@ -114,14 +105,6 @@ public class OrgMember implements Serializable {
 
     public void setTel(String tel) {
         this.tel = tel;
-    }
-
-    public String getPolitics() {
-        return politics;
-    }
-
-    public void setPolitics(String politics) {
-        this.politics = politics;
     }
 
     public Date getBirthday() {
@@ -140,36 +123,12 @@ public class OrgMember implements Serializable {
         this.sex = sex;
     }
 
-    public String getCitizenId() {
-        return citizenId;
-    }
-
-    public void setCitizenId(String citizenId) {
-        this.citizenId = citizenId;
-    }
-
     public DataState getState() {
         return state;
     }
 
     public void setState(DataState state) {
         this.state = state;
-    }
-
-    public Timestamp getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Timestamp updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public Timestamp getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
     }
 
     public boolean isHasPwd() {
