@@ -8,6 +8,7 @@ import com.ani.utils.dto.AniRequiredField;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.Map;
 
 /**
  * Created by zhanglina on 18-5-2.
@@ -19,20 +20,35 @@ public class OrgMemberInfoDto extends AniDto {
     private Long employeeId;
     @AniRequiredField
     private Long nodeId;
-    private String orgEmail;
+    private String employeeEmail;
     @AniRequiredField
     private String name;
-    @AniRequiredField
-    private String employeeStrId;
     private String privateEmail;
     private String phone;
+    private String others;
+    @AniRequiredField
+    private String employeeStrId;
     private String tel;
     private Date birthday;
     private Sex sex;
-    private String others;
     private DataState state;
 
     public OrgMemberInfoDto() {
+    }
+
+    public OrgMemberInfoDto(Long employeeId, Long nodeId, String employeeEmail, String name, String privateEmail, String phone, String others, String employeeStrId, String tel, Date birthday, Sex sex, DataState state) {
+        this.employeeId = employeeId;
+        this.nodeId = nodeId;
+        this.employeeEmail = employeeEmail;
+        this.name = name;
+        this.privateEmail = privateEmail;
+        this.phone = phone;
+        this.others = others;
+        this.employeeStrId = employeeStrId;
+        this.tel = tel;
+        this.birthday = birthday;
+        this.sex = sex;
+        this.state = state;
     }
 
     public Long getEmployeeId() {
@@ -51,12 +67,12 @@ public class OrgMemberInfoDto extends AniDto {
         this.nodeId = nodeId;
     }
 
-    public String getOrgEmail() {
-        return orgEmail;
+    public String getEmployeeEmail() {
+        return employeeEmail;
     }
 
-    public void setOrgEmail(String orgEmail) {
-        this.orgEmail = orgEmail;
+    public void setEmployeeEmail(String employeeEmail) {
+        this.employeeEmail = employeeEmail;
     }
 
     public String getName() {
@@ -65,14 +81,6 @@ public class OrgMemberInfoDto extends AniDto {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getEmployeeStrId() {
-        return employeeStrId;
-    }
-
-    public void setEmployeeStrId(String employeeStrId) {
-        this.employeeStrId = employeeStrId;
     }
 
     public String getPrivateEmail() {
@@ -89,6 +97,22 @@ public class OrgMemberInfoDto extends AniDto {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getOthers() {
+        return others;
+    }
+
+    public void setOthers(String others) {
+        this.others = others;
+    }
+
+    public String getEmployeeStrId() {
+        return employeeStrId;
+    }
+
+    public void setEmployeeStrId(String employeeStrId) {
+        this.employeeStrId = employeeStrId;
     }
 
     public String getTel() {
@@ -115,30 +139,6 @@ public class OrgMemberInfoDto extends AniDto {
         this.sex = sex;
     }
 
-    public OrgMemberInfoDto(Long employeeId, Long nodeId, String orgEmail, String name, String employeeStrId, String privateEmail, String phone, String tel, Date birthday, Sex sex, String others, DataState state) {
-        this.employeeId = employeeId;
-        this.nodeId = nodeId;
-        this.orgEmail = orgEmail;
-        this.name = name;
-        this.employeeStrId = employeeStrId;
-        this.privateEmail = privateEmail;
-        this.phone = phone;
-        this.tel = tel;
-        this.birthday = birthday;
-        this.sex = sex;
-        this.others = others;
-        this.state = state;
-    }
-
-    public String getOthers() {
-
-        return others;
-    }
-
-    public void setOthers(String others) {
-        this.others = others;
-    }
-
     public DataState getState() {
         return state;
     }
@@ -146,5 +146,4 @@ public class OrgMemberInfoDto extends AniDto {
     public void setState(DataState state) {
         this.state = state;
     }
-
 }

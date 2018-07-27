@@ -18,13 +18,14 @@ public class OrgMember implements Serializable {
     private static final long serialVersionUID = 2336468316834700393L;
 
     @JsonSerialize(using = ToStringSerializer.class)
+    private Long employeeId;
     private Long nodeId;
     private Long accountId;
     private String employeeEmail;
     private boolean hasPwd;
     private Integer employeeCount;
     private String name;
-    private String employeeId;
+    private String employeeStrId;
     private String personalEmail;
     private String mobile;
     private String tel;
@@ -35,13 +36,45 @@ public class OrgMember implements Serializable {
     private Timestamp entryTime;
     private Timestamp resignTime;
 
-//    public Long getEmployeeId() {
-//        return employeeId;
-//    }
-//
-//    public void setEmployeeId(Long employeeId) {
-//        this.employeeId = employeeId;
-//    }
+    public Long getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getEmployeeStrId() {
+        return employeeStrId;
+    }
+
+    public void setEmployeeStrId(String employeeStrId) {
+        this.employeeStrId = employeeStrId;
+    }
+
+    public Map<String, String> getCustomFieldsValue() {
+        return customFieldsValue;
+    }
+
+    public void setCustomFieldsValue(Map<String, String> customFieldsValue) {
+        this.customFieldsValue = customFieldsValue;
+    }
+
+    public Timestamp getEntryTime() {
+        return entryTime;
+    }
+
+    public void setEntryTime(Timestamp entryTime) {
+        this.entryTime = entryTime;
+    }
+
+    public Timestamp getResignTime() {
+        return resignTime;
+    }
+
+    public void setResignTime(Timestamp resignTime) {
+        this.resignTime = resignTime;
+    }
 
     public Long getNodeId() {
         return nodeId;
