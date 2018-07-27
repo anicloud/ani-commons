@@ -27,14 +27,6 @@ public class AccountRoleDto extends AniDto {
         this.privileges = privileges;
     }
 
-    public Long getRoeId() {
-        return roleId;
-    }
-
-    public void setRoeId(Long roleId) {
-        this.roleId = roleId;
-    }
-
     public Long getOwnerId() {
         return ownerId;
     }
@@ -51,4 +43,19 @@ public class AccountRoleDto extends AniDto {
         this.name = name;
     }
 
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
+
+    public Set<PrivilegeType> getPrivileges() {
+        return privileges;
+    }
+
+    public void setPrivileges(Set<PrivilegeType> privileges) {
+        this.privileges = privileges;
+    }
 }
