@@ -2,8 +2,9 @@ package com.ani.commons.earth.domain.id;
 
 import java.io.Serializable;
 
-public class Email extends AccountId implements Serializable {
+public class Email implements Serializable {
 
+    private static final long serialVersionUID = -3538023069825487345L;
     String email;
 
     public Email() {

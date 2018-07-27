@@ -2,6 +2,9 @@ package com.ani.commons.earth.domain.account.organization;
 
 import com.ani.commons.earth.domain.account.AniAccount;
 import com.ani.commons.earth.enumeration.AccountType;
+import com.ani.commons.earth.enumeration.BusinessCategoryType;
+
+import java.util.Set;
 
 /**
  * Created by zhanglina on 18-7-26.
@@ -10,11 +13,12 @@ import com.ani.commons.earth.enumeration.AccountType;
 public class AniOrgAccount extends AniAccount {
 
     private static final long serialVersionUID = -134318695674072172L;
+
     private Integer currentNum;
 
     private String tel;
 
-    private Integer businessCategory;
+    private Set<BusinessCategoryType> businessCategorys;
 
     private String postalCode;
 
@@ -28,12 +32,12 @@ public class AniOrgAccount extends AniAccount {
         this.tel = tel;
     }
 
-    public Integer getBusinessCategory() {
-        return businessCategory;
+    public Set<BusinessCategoryType> getBusinessCategorys() {
+        return businessCategorys;
     }
 
-    public void setBusinessCategory(Integer businessCategory) {
-        this.businessCategory = businessCategory;
+    public void setBusinessCategorys(Set<BusinessCategoryType> businessCategorys) {
+        this.businessCategorys = businessCategorys;
     }
 
     public String getPostalCode() {
@@ -54,6 +58,14 @@ public class AniOrgAccount extends AniAccount {
 
     public AniOrgAccount() {
         super();
+    }
+
+    public Integer getCurrentNum() {
+        return currentNum;
+    }
+
+    public void setCurrentNum(Integer currentNum) {
+        this.currentNum = currentNum;
     }
 
     public AniOrgAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, Integer currentNum) {

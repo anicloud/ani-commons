@@ -1,6 +1,6 @@
 package com.ani.commons.octopus.objmeta.dto.model;
 
-import com.ani.commons.earth.dto.info.AccountProfileDto;
+import com.ani.commons.earth.dto.account.AccountProfileDto;
 import com.ani.commons.octopus.objmeta.domain.ObjectType;
 import com.ani.commons.octopus.objmeta.domain.state.StateMachineMeta;
 import com.ani.commons.octopus.objmeta.domain.stub.StubMeta;

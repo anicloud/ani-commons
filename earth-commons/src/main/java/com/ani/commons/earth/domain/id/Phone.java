@@ -2,7 +2,7 @@ package com.ani.commons.earth.domain.id;
 
 import java.io.Serializable;
 
-public class Phone extends AccountId implements Serializable {
+public class Phone implements Serializable {
 
     private static final long serialVersionUID = -1404713055789281247L;
 

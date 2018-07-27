@@ -1,6 +1,6 @@
 package com.ani.commons.earth.interfaces.organization;
 
-import com.ani.commons.earth.domain.orgaccount.OrgAccountState;
+import com.ani.commons.earth.domain.account.organization.OrgAccountState;
 import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.account.organization.OrgAccountVerifyDto;
 import com.ani.commons.earth.dto.account.organization.OrgMemberQueryDto;

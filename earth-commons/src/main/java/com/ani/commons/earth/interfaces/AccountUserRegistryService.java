@@ -1,12 +1,10 @@
 package com.ani.commons.earth.interfaces;
 
-import com.ani.commons.earth.domain.auth.AniAccountAuthState;
 import com.ani.commons.earth.dto.id.AccountIdInfoDto;
-import com.ani.commons.earth.dto.info.AccountProfileDto;
+import com.ani.commons.earth.dto.account.organization.AccountOrgProfileDto;
+import com.ani.commons.earth.dto.account.AccountProfileDto;
 import com.ani.commons.earth.dto.register.AccountInsideRegInitDto;
 import com.ani.commons.earth.dto.register.AccountInsideRegisterDto;
-import com.ani.commons.earth.dto.register.AccountTransparentRegisterDto;
-import com.ani.commons.earth.dto.register.OrgAccountInsideRegisterDto;
 import com.ani.commons.earth.dto.verification.AccountPwdVerifyDto;
 import com.ani.commons.earth.dto.verification.AccountIdVerifyDto;
 import com.ani.commons.earth.dto.verification.AccountVerifyDto;
@@ -14,7 +12,6 @@ import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by zhanglina on 17-12-27.
@@ -74,6 +71,8 @@ public interface AccountUserRegistryService {
     public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, byte[] newPwd,Boolean flag) throws AniRuleException;
 
     public void  modifyProfile(AccountProfileDto accountProfileDto,boolean withPwd) throws AniRuleException, IOException;
+
+    public void  modifyOrgProFile(AccountOrgProfileDto orgProfileDto) throws AniRuleException;
 
     public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 

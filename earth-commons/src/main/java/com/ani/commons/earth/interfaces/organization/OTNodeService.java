@@ -1,17 +1,9 @@
 package com.ani.commons.earth.interfaces.organization;
 
-import com.ani.commons.earth.domain.account.organization.OrgMemberInfo;
 import com.ani.commons.earth.domain.organization.node.OTNode;
-import com.ani.commons.earth.domain.organization.OTNodeMember;
-import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.organization.node.*;
-import com.ani.commons.earth.dto.organization.org.OrgResourceAccessDto;
 import com.ani.utils.exception.AniAuthException;
-import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
-
-import java.util.List;
-import java.util.Set;
 
 /**
  * Created by zhanglina on 18-4-26.
