@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-4-26.
- * Last Modified by xuben on 18-7-26.
+ * Last Modified by xuben on 18-7-30.
  */
 public class OTNodeInfoDto extends AniDto implements Serializable {
     private static final long serialVersionUID = -463500843397755139L;
@@ -15,6 +15,8 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
     private Long nodeId;
     @AniRequiredField
     private Long ownerId;
+
+    private String name;
 
     private String nodeDesc;
     @AniRequiredField
@@ -118,5 +120,13 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
 
     public void setNodeId(Long nodeId) {
         this.nodeId = nodeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
