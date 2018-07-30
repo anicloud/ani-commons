@@ -9,22 +9,23 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-2-27.
  */
-public class AniPersonalAccount extends AniAccount implements Serializable {
+public class  AniPersonalAccount extends AniAccount implements Serializable {
     private static final long serialVersionUID = -909456961243482140L;
     /**
      * Account sex
      */
-    Sex sex;
+    private Sex sex;
     /**
      * Account name
      */
-    String name;
+    private String name;
 
+    private String hasPwd;
     public AniPersonalAccount() {
     }
 
-    public AniPersonalAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, Sex sex, String name) {
-        super(accountId, phone, email, hasPwd, type);
+    public AniPersonalAccount(Long accountId, String phone, String email,AccountType type, Sex sex, String name) {
+        super(accountId, phone, email, type);
         this.sex = sex;
         this.name = name;
     }

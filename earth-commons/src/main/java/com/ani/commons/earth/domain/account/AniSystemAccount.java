@@ -14,7 +14,5 @@ public class AniSystemAccount extends AniAccount implements Serializable {
     public AniSystemAccount() {
     }
 
-    public AniSystemAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type) {
-        super(accountId, phone, email, hasPwd, type);
-    }
+
 }

@@ -23,7 +23,6 @@ public interface OTNodeService {
 
     public OTNodeInfoDto getNodeDetail(Long nodeId, Long opAccountId) throws AniRuleException;
 
-
 //    public void addNodeMember(OTNodeMemberInfoDto otNodeMemberAddDto)throws AniAuthException,AniRuleException,AniDataException;
 //
 //    public Set<OTNodeBasicDto> getNodeChildren(OTNodeOpDto otNodeOpDto) throws AniAuthException;

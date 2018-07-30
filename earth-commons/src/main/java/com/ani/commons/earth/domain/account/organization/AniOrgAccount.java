@@ -16,17 +16,20 @@ public class AniOrgAccount extends AniAccount {
 
     private Integer currentNum;
     private String tel;
-    private Set<BusinessCategoryType> businessCategories;
+    private Set<BusinessCategoryType> businessCategorys;
     private String postalCode;
     private String postalAddress;
-
     public AniOrgAccount() {
         super();
     }
 
-    public AniOrgAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type, Integer currentNum) {
-        super(accountId, phone, email, hasPwd, type);
+    public AniOrgAccount(Long accountId, String phone, String email, AccountType type, Integer currentNum, String tel, Set<BusinessCategoryType> businessCategorys, String postalCode, String postalAddress) {
+        super(accountId, phone, email, type);
         this.currentNum = currentNum;
+        this.tel = tel;
+        this.businessCategorys = businessCategorys;
+        this.postalCode = postalCode;
+        this.postalAddress = postalAddress;
     }
 
     public String getTel() {
@@ -37,12 +40,12 @@ public class AniOrgAccount extends AniAccount {
         this.tel = tel;
     }
 
-    public Set<BusinessCategoryType> getBusinessCategories() {
-        return businessCategories;
+    public Set<BusinessCategoryType> getBusinessCategorys() {
+        return businessCategorys;
     }
 
-    public void setBusinessCategories(Set<BusinessCategoryType> businessCategories) {
-        this.businessCategories = businessCategories;
+    public void setBusinessCategorys(Set<BusinessCategoryType> businessCategorys) {
+        this.businessCategorys = businessCategorys;
     }
 
     public String getPostalCode() {

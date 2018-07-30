@@ -13,16 +13,11 @@ public class EmployeeStateUpdateDto implements Serializable {
 
     private Long employeeId;
     private DataState dataState;
-    private OTNodeOpDto otNodeOpDto;
 
     public EmployeeStateUpdateDto() {
     }
 
-    public EmployeeStateUpdateDto(Long employeeId, DataState dataState, OTNodeOpDto otNodeOpDto) {
-        this.employeeId = employeeId;
-        this.dataState = dataState;
-        this.otNodeOpDto = otNodeOpDto;
-    }
+
 
     public Long getEmployeeId() {
         return employeeId;
@@ -40,11 +35,5 @@ public class EmployeeStateUpdateDto implements Serializable {
         this.dataState = dataState;
     }
 
-    public OTNodeOpDto getOtNodeOpDto() {
-        return otNodeOpDto;
-    }
 
-    public void setOtNodeOpDto(OTNodeOpDto otNodeOpDto) {
-        this.otNodeOpDto = otNodeOpDto;
-    }
 }

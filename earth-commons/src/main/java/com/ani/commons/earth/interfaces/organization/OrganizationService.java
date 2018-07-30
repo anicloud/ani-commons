@@ -1,11 +1,9 @@
 package com.ani.commons.earth.interfaces.organization;
 
-import com.ani.commons.earth.domain.organization.Organization;
 import com.ani.commons.earth.domain.account.organization.OrgAccountRole;
 import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.organization.org.OrgMemberInfoDto;
-import com.ani.commons.earth.dto.organization.org.OrgRegisterDto;
-import com.ani.commons.earth.dto.organization.org.OrgUpdateDto;
+
 import com.ani.commons.earth.dto.organization.role.OrgAccountRoleDto;
 import com.ani.commons.earth.dto.organization.role.OrgRoleOperationDto;
 import com.ani.utils.exception.AniAuthException;
@@ -19,13 +17,7 @@ import java.util.List;
  */
 public interface OrganizationService {
 
-    public Organization addOrg(OrgRegisterDto orgRegister) throws AniRuleException, AniDataException;
 
-    public Organization updateOrg(OrgUpdateDto orgUpdateDto) throws AniAuthException,AniRuleException;
-
-    public List<Organization> getOrgByAccount(Long accountId) throws AniRuleException;
-
-    public Organization getOrgById(Integer orgId);
 
     public List<OrgAccountRole> getRolesByOrgId(Integer orgId) throws AniRuleException;
 

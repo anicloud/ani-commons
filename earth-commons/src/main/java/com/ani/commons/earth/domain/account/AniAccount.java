@@ -14,10 +14,6 @@ public abstract class AniAccount implements Serializable{
     String phone;
     String userName;
     String email;
-    /**
-     * Have set password
-     */
-    Boolean hasPwd;
     DataState state;
 
     public DataState getState() {
@@ -37,11 +33,10 @@ public abstract class AniAccount implements Serializable{
     public AniAccount() {
     }
 
-    public AniAccount(Long accountId, String phone, String email, Boolean hasPwd, AccountType type) {
+    public AniAccount(Long accountId, String phone, String email, AccountType type) {
         this.accountId = accountId;
         this.phone = phone;
         this.email = email;
-        this.hasPwd = hasPwd;
         this.type = type;
 
     }
@@ -76,14 +71,6 @@ public abstract class AniAccount implements Serializable{
 
     public void setAccountId(Long accountId) {
         this.accountId = accountId;
-    }
-
-    public Boolean getHasPwd() {
-        return hasPwd;
-    }
-
-    public void setHasPwd(Boolean hasPwd) {
-        this.hasPwd = hasPwd;
     }
 
     public AccountType getType() {
