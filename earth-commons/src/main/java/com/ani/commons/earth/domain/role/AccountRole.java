@@ -3,10 +3,7 @@ package com.ani.commons.earth.domain.role;
 
 import com.ani.utils.core.data.type.PrivilegeType;
 import com.ani.utils.dto.AniDto;
-import com.sun.org.glassfish.external.statistics.TimeStatistic;
 
-import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.Set;
 
 /**

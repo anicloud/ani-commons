@@ -1,5 +1,6 @@
 package com.ani.commons.earth.dto.account;
 
+import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.commons.earth.enumeration.Sex;
 import com.ani.utils.core.DataState;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -16,22 +17,34 @@ public class AccountInfoDto implements Serializable {
 
     @JsonSerialize(using= ToStringSerializer.class)
 
-    Long accountId;
+    private Long accountId;
 
-    String phone;
+    private String phone;
 
-    String userName;
+    private String userName;
 
-    String email;
+    private String email;
 
-    Sex sex;
+    private Sex sex;
 
-    String name;
+    private String name;
 
-    String url;
+    private String url;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    private AccountType accountType;
+
+    public AccountInfoDto() {
+    }
+
+    public AccountInfoDto(Long accountId, String phone, String userName, String email, Sex sex, String name, String url, AccountType accountType) {
+        this.accountId = accountId;
+        this.phone = phone;
+        this.userName = userName;
+        this.email = email;
+        this.sex = sex;
+        this.name = name;
+        this.url = url;
+        this.accountType = accountType;
     }
 
     public Long getAccountId() {
@@ -88,5 +101,13 @@ public class AccountInfoDto implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
     }
 }

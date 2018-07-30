@@ -20,5 +20,6 @@ public enum ExceptionType {
     MEMBER_EXISTS,
     ROLE_NAME_EXISTS,
     ALP_EXISTS,
-    USERNAME_EXISTS
+    USERNAME_EXISTS,
+    ACCOUNT_TYPE_ERROR,
 }
