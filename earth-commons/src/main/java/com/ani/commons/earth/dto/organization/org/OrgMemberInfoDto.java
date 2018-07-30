@@ -24,6 +24,7 @@ public class OrgMemberInfoDto extends AniDto {
     @AniRequiredField
     private String name;
     private String privateEmail;
+    private Integer employeeCount;
     private String phone;
     private String others;
     @AniRequiredField
@@ -36,7 +37,8 @@ public class OrgMemberInfoDto extends AniDto {
     public OrgMemberInfoDto() {
     }
 
-    public OrgMemberInfoDto(Long employeeId, Long nodeId, String employeeEmail, String name, String privateEmail, String phone, String others, String employeeStrId, String tel, Date birthday, Sex sex, DataState state) {
+    public OrgMemberInfoDto(Integer employeeCount,Long employeeId, Long nodeId, String employeeEmail, String name, String privateEmail, String phone, String others, String employeeStrId, String tel, Date birthday, Sex sex, DataState state) {
+        this.employeeCount = employeeCount;
         this.employeeId = employeeId;
         this.nodeId = nodeId;
         this.employeeEmail = employeeEmail;
@@ -51,6 +53,13 @@ public class OrgMemberInfoDto extends AniDto {
         this.state = state;
     }
 
+    public Integer getEmployeeCount() {
+        return employeeCount;
+    }
+
+    public void setEmployeeCount(Integer employeeCount) {
+        this.employeeCount = employeeCount;
+    }
     public Long getEmployeeId() {
         return employeeId;
     }

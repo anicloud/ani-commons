@@ -1,6 +1,7 @@
 package com.ani.commons.earth.interfaces.organization;
 
 import com.ani.commons.earth.domain.account.organization.OrgAccountState;
+import com.ani.commons.earth.domain.account.organization.OrgMemberInfo;
 import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.account.organization.OrgAccountVerifyDto;
 import com.ani.commons.earth.dto.account.organization.OrgMemberQueryDto;
@@ -20,7 +21,7 @@ public interface OrgMemberService {
      * <H2>Add employee info.</H2>
      * @param orgMemberInfoDto
      */
-    public void addOrgMember(Long opAccountId,OrgMemberInfoDto orgMemberInfoDto);
+    public void addOrgMember(Long opAccountId,OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException;
 
     /**
      * <H2>Delete employee info by id.</H2>
@@ -34,7 +35,7 @@ public interface OrgMemberService {
      * @param orgMemberInfoDto
      * @throws AniDataException
      */
-    public void updateOrgMemberInfo(OrgMemberQueryDto memberQueryDto, OrgMemberInfoDto orgMemberInfoDto)throws AniDataException;
+    public void updateOrgMemberInfo(OrgMemberQueryDto memberQueryDto, OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException;
 
     /**
      * <H2>Query employee info.</h2>
@@ -45,10 +46,10 @@ public interface OrgMemberService {
 
     /**
      * <H2>Query employee list.</H2>
-     * @param memberQueryDto
+     * @param nodeId,accountId
      * @return
      */
-    public List<OrgMember> getOrgMemberListByNodeId(OrgMemberQueryDto memberQueryDto);
+    public List<OrgMemberInfo> getOrgMemberListByNodeId(Long nodeId, Long accountId);
 
     /**
      * <H2>Login state check.</H2>
