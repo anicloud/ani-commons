@@ -10,39 +10,39 @@ import java.io.Serializable;
  */
 public class OrgMemberInfo implements Serializable{
     private static final long serialVersionUID = 6395031521628568782L;
-    private Long id ;
-    private String employeeNum;
+    private Long employeeId ;
+    private Integer employeeCount;
     private String name;
-    private String nameAlphabet;
+    private String employeeStrId;
     private String phone;
     private DataState state;
 
     public OrgMemberInfo() {
     }
 
-    public OrgMemberInfo(Long id, String employeeNum, String name, String nameAlphabet, String phone, DataState state) {
-        this.id = id;
-        this.employeeNum = employeeNum;
+    public OrgMemberInfo(Long employeeId, Integer employeeCount, String name, String employeeStrId, String phone, DataState state) {
+        this.employeeId = employeeId;
+        this.employeeCount = employeeCount;
         this.name = name;
-        this.nameAlphabet = nameAlphabet;
+        this.employeeStrId = employeeStrId;
         this.phone = phone;
         this.state = state;
     }
 
-    public String getEmployeeNum() {
-        return employeeNum;
+    public Long getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployeeNum(String employeeNum) {
-        this.employeeNum = employeeNum;
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public Long getId() {
-        return id;
+    public Integer getEmployeeCount() {
+        return employeeCount;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setEmployeeCount(Integer employeeCount) {
+        this.employeeCount = employeeCount;
     }
 
     public String getName() {
@@ -53,12 +53,12 @@ public class OrgMemberInfo implements Serializable{
         this.name = name;
     }
 
-    public String getNameAlphabet() {
-        return nameAlphabet;
+    public String getEmployeeStrId() {
+        return employeeStrId;
     }
 
-    public void setNameAlphabet(String nameAlphabet) {
-        this.nameAlphabet = nameAlphabet;
+    public void setEmployeeStrId(String employeeStrId) {
+        this.employeeStrId = employeeStrId;
     }
 
     public String getPhone() {

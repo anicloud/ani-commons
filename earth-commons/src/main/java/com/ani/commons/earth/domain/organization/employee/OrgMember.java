@@ -36,6 +36,29 @@ public class OrgMember implements Serializable {
     private Timestamp entryTime;
     private Timestamp resignTime;
 
+    public OrgMember() {
+    }
+
+    public OrgMember(Long employeeId, Long nodeId, Long accountId, String employeeEmail, boolean hasPwd, Integer employeeCount, String name, String employeeStrId, String personalEmail, String mobile, String tel, Date birthday, Sex sex, Map<String, String> customFieldsValue, DataState state, Timestamp entryTime, Timestamp resignTime) {
+        this.employeeId = employeeId;
+        this.nodeId = nodeId;
+        this.accountId = accountId;
+        this.employeeEmail = employeeEmail;
+        this.hasPwd = hasPwd;
+        this.employeeCount = employeeCount;
+        this.name = name;
+        this.employeeStrId = employeeStrId;
+        this.personalEmail = personalEmail;
+        this.mobile = mobile;
+        this.tel = tel;
+        this.birthday = birthday;
+        this.sex = sex;
+        this.customFieldsValue = customFieldsValue;
+        this.state = state;
+        this.entryTime = entryTime;
+        this.resignTime = resignTime;
+    }
+
     public Long getEmployeeId() {
         return employeeId;
     }
