@@ -7,38 +7,38 @@ import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-4-26.
- * Last Modified by xuben on 18-7-26.
+ * Last Modified by xuben on 18-7-30.
  */
 public class OTNodeInfoDto extends AniDto implements Serializable {
     private static final long serialVersionUID = -463500843397755139L;
 
     private Long nodeId;
-    @AniRequiredField
+
     private Long ownerId;
 
+    private String name;
+
     private String nodeDesc;
-    @AniRequiredField
+
     private Long parentNodeId;
 
     private String tel;
 
-    private Integer businessCategory;
+    private Short businessCategory;
 
     private String postalCode;
 
     private String postalAddress;
 
-    public OTNodeInfoDto(Long ownerId, String nodeDesc, Long parentNodeId, String tel, Integer businessCategory, String postalCode, String postalAddress) {
-        this.ownerId = ownerId;
+    public OTNodeInfoDto(String nodeDesc, String tel, Short businessCategory, String postalCode, String postalAddress) {
         this.nodeDesc = nodeDesc;
-        this.parentNodeId = parentNodeId;
         this.tel = tel;
         this.businessCategory = businessCategory;
         this.postalCode = postalCode;
         this.postalAddress = postalAddress;
     }
 
-    public OTNodeInfoDto(Long nodeId, Long ownerId, String nodeDesc, Long parentNodeId, String tel, Integer businessCategory, String postalCode, String postalAddress) {
+    public OTNodeInfoDto(Long nodeId, Long ownerId, String nodeDesc, Long parentNodeId, String tel, Short businessCategory, String postalCode, String postalAddress) {
         this.nodeId = nodeId;
         this.ownerId = ownerId;
         this.nodeDesc = nodeDesc;
@@ -88,11 +88,11 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
         this.tel = tel;
     }
 
-    public Integer getBusinessCategory() {
+    public Short getBusinessCategory() {
         return businessCategory;
     }
 
-    public void setBusinessCategory(Integer businessCategory) {
+    public void setBusinessCategory(Short businessCategory) {
         this.businessCategory = businessCategory;
     }
 
@@ -118,5 +118,13 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
 
     public void setNodeId(Long nodeId) {
         this.nodeId = nodeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

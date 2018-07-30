@@ -10,28 +10,28 @@ public class AccountRoleQueryDto extends AniDto {
     private static final long serialVersionUID = 2658212645942703267L;
 
     @AniRequiredField
-    private Long id;
+    private Long roleId;
     @AniRequiredField
-    private Long owner_id;
+    private Long ownerId;
 
-    public AccountRoleQueryDto(Long id, Long owner_id) {
-        this.id = id;
-        this.owner_id = owner_id;
+    public AccountRoleQueryDto(Long roleId, Long ownerId) {
+        this.roleId = roleId;
+        this.ownerId = ownerId;
     }
 
-    public Long getId() {
-        return id;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setRoleId(Long id) {
+        this.roleId = roleId;
     }
 
-    public Long getOwner_id() {
-        return owner_id;
+    public Long getOwnerId() {
+        return ownerId;
     }
 
-    public void setOwner_id(Long owner_id) {
-        this.owner_id = owner_id;
+    public void setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
     }
 }
