@@ -17,7 +17,7 @@ public interface OTNodeService {
 
     public void updateNodeInfo(OTNodeInfoDto otNodeInfoDto, Long opAccountId) throws AniAuthException;
 
-    public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opAccountId) throws AniAuthException;
+    public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
     public OTNode getTreeByEmployeeId(Long accountId) throws AniAuthException;
 
