@@ -22,7 +22,7 @@ public class OTNode implements Serializable {
     private Timestamp createTime;
     private Timestamp updateTime;
     private String tel;
-    private Integer businessCategory;
+    private Short businessCategory;
     private String postalCode;
     private String postalAddress;
 
@@ -98,11 +98,11 @@ public class OTNode implements Serializable {
         this.tel = tel;
     }
 
-    public Integer getBusinessCategory() {
+    public Short getBusinessCategory() {
         return businessCategory;
     }
 
-    public void setBusinessCategory(Integer businessCategory) {
+    public void setBusinessCategory(Short businessCategory) {
         this.businessCategory = businessCategory;
     }
 
