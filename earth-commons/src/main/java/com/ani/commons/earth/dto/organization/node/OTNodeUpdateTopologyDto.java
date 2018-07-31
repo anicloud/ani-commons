@@ -4,12 +4,14 @@ import java.io.Serializable;
 
 /**
  * Created by zhanglina on 18-5-2.
- * Last Modified by xuben on 18-7-26.
+ * Last Modified by xuben on 18-7-31.
  */
 public class OTNodeUpdateTopologyDto implements Serializable {
     private static final long serialVersionUID = -8038150633677883643L;
 
     private Long nodeId;
+
+    private Long currentParentNodeId;
 
     private Long targetParentNodeId;
 
@@ -35,5 +37,13 @@ public class OTNodeUpdateTopologyDto implements Serializable {
 
     public void setNodeId(Long nodeId) {
         this.nodeId = nodeId;
+    }
+
+    public Long getCurrentParentNodeId() {
+        return currentParentNodeId;
+    }
+
+    public void setCurrentParentNodeId(Long currentParentNodeId) {
+        this.currentParentNodeId = currentParentNodeId;
     }
 }
