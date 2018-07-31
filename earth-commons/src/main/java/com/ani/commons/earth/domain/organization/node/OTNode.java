@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Created by zhanglina on 18-5-2.
- * Last Modified by xuben on 18-7-26.
+ * Last Modified by xuben on 18-7-31.
  */
 public class OTNode implements Serializable {
 
@@ -15,6 +15,7 @@ public class OTNode implements Serializable {
     private Long ownerId;
     private Long parentNodeId;
     private Long nodeId;
+    private String name;
     private String nodeDesc;
     private Long accountGroupId;
     private List<Long> childrenId;
@@ -119,5 +120,21 @@ public class OTNode implements Serializable {
 
     public void setPostalAddress(String postalAddress) {
         this.postalAddress = postalAddress;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Long> getChildrenId() {
+        return childrenId;
+    }
+
+    public void setChildrenId(List<Long> childrenId) {
+        this.childrenId = childrenId;
     }
 }
