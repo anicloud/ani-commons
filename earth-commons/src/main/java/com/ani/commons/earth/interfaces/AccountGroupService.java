@@ -17,7 +17,7 @@ public interface AccountGroupService {
 
     public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long accountId) throws AniRuleException, AniAuthException;
 
-    public boolean removeGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
+    public void removeGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public void modifyGroupProfile(GroupUpdateDto groupUpdateDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
