@@ -66,14 +66,6 @@ public class OTNode implements Serializable {
         this.nodeDesc = nodeDesc;
     }
 
-    public List<Long> getChildren() {
-        return childrenId;
-    }
-
-    public void setChildren(List<Long> children) {
-        this.childrenId = children;
-    }
-
     public Timestamp getCreateTime() {
         return createTime;
     }

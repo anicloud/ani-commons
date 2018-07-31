@@ -4,10 +4,11 @@ import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by zhanglina on 18-4-26.
- * Last Modified by xuben on 18-7-30.
+ * Last Modified by xuben on 18-7-31.
  */
 public class OTNodeInfoDto extends AniDto implements Serializable {
     private static final long serialVersionUID = -463500843397755139L;
@@ -16,11 +17,15 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
 
     private Long ownerId;
 
+    private List<Long> childrenId;
+
     private String name;
 
     private String nodeDesc;
 
     private Long parentNodeId;
+
+    private Long groupId;
 
     private String tel;
 
@@ -126,5 +131,21 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Long> getChildrenId() {
+        return childrenId;
+    }
+
+    public void setChildrenId(List<Long> childrenId) {
+        this.childrenId = childrenId;
+    }
+
+    public Long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
     }
 }
