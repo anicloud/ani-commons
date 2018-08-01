@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * Last Modified by xuben on 18-7-26.
+ * Last Modified by xuben on 18-8-1.
  */
 public class AniAccountGroup implements Serializable {
 
@@ -20,8 +20,6 @@ public class AniAccountGroup implements Serializable {
     private String description;
     private GroupType groupType;
     private Map<Long, Set<Long>> membersRolesId;
-    private Timestamp createTime;
-    private Timestamp updateTime;
     private Long groupId;
 
     public AniAccountGroup() {
@@ -65,22 +63,6 @@ public class AniAccountGroup implements Serializable {
 
     public void setMembersRolesId(Map<Long, Set<Long>> membersRolesId) {
         this.membersRolesId = membersRolesId;
-    }
-
-    public Timestamp getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
-    }
-
-    public Timestamp getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Timestamp updateTime) {
-        this.updateTime = updateTime;
     }
 
     public Long getGroupId() {
