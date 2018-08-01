@@ -12,10 +12,10 @@ public interface AccountGroupService {
 
     public List<AniAccountGroup> findGroupsByAccountId(Long accountId) throws AniRuleException, AniDataException;
 
-    public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniRuleException,AniDataException;
+    public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniRuleException, AniDataException, AniAuthException;
 
 
-    public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long accountId) throws AniRuleException, AniAuthException;
+    public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public void removeGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
