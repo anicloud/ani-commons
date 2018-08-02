@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface AccountGroupService {
 
-    public List<AniAccountGroup> findGroupsByAccountId(Long accountId) throws AniRuleException, AniDataException;
+    public List<AniAccountGroup> findGroupsByOwnerId(Long accountId) throws AniRuleException, AniDataException;
 
     public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniRuleException, AniDataException, AniAuthException;
 
