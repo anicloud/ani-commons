@@ -8,18 +8,20 @@ import com.ani.utils.exception.AniRuleException;
 
 import java.util.List;
 
+/**
+ * Last Modified by xuben on 18-8-2.
+ */
 public interface AccountGroupService {
 
     public List<AniAccountGroup> findGroupsByAccountId(Long accountId) throws AniRuleException, AniDataException;
 
     public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniRuleException, AniDataException, AniAuthException;
 
-
     public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public void removeGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
-    public void modifyGroupProfile(GroupUpdateDto groupUpdateDto, Long opAccountId) throws AniRuleException, AniAuthException;
+    public void modifyGroupProfile(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public void removeMemberFromGroup(Long opAccountId, GroupMemberRemoveDto removeDto) throws AniRuleException, AniDataException;
 
