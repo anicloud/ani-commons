@@ -9,13 +9,9 @@ import com.ani.utils.exception.AniRuleException;
 import java.util.List;
 
 /**
- * Last Modified by xuben on 18-8-2.
+ * Last Modified by xuben on 18-8-3.
  */
 public interface AccountGroupService {
-
-    public List<AniAccountGroup> findGroupsByOwnerId(Long accountId) throws AniRuleException, AniDataException;
-
-    public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniRuleException, AniDataException, AniAuthException;
 
     public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
@@ -23,11 +19,16 @@ public interface AccountGroupService {
 
     public void modifyGroupProfile(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
+    public AniAccountGroup findByGroupId(Long groupId,Long opAccountId) throws AniRuleException, AniDataException, AniAuthException;
+
+    public List<AniAccountGroup> findGroupsByOwnerId(Long accountId);
+
+    public void addAMemberToGroup(Long opAccountId, GroupMemberAddDto groupMemberAddDto) throws AniRuleException, AniDataException, AniAuthException;
+
+    public void updateAllMembers(Long opAccountId, GroupMemberUpdateDto memberUpdateDto);
+
     public void removeMemberFromGroup(Long opAccountId, GroupMemberRemoveDto removeDto) throws AniRuleException, AniDataException;
 
-    public void addMemberToGroup(Long opAccountId, GroupMemberAddDto groupMemberAddDto)throws AniRuleException,AniDataException;
-
-    public void updateMemberRole(Long opAccountId, GroupMemberUpdateDto memberUpdateDto);
 
     public List<GroupMemberInfoDto> getGroupMember(Long opAccountId,Long groupId);
 }
