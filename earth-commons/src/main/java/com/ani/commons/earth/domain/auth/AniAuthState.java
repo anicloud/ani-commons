@@ -10,22 +10,16 @@ import java.io.Serializable;
  * Created by zhanglina on 18-3-23.
  */
 public abstract class AniAuthState implements Serializable{
+
     private static final long serialVersionUID = 2983449220440400630L;
 
-    protected AuthState authState;
-    protected ContextType contextType;
-    protected Long accountId;
-    protected CurUserType userType;
-    protected Boolean isAdmin;
+    private Long accountId;
 
+    private Long orgAccountId;
 
-    public AniAuthState(AuthState authState, ContextType contextType, Long accountId, CurUserType userType, Boolean isAdmin) {
-        this.authState = authState;
-        this.contextType = contextType;
-        this.accountId = accountId;
-        this.userType = userType;
-        this.isAdmin = isAdmin;
-    }
+    private Boolean isAdmin;
+
+    private AuthState authState;
 
     public Long getAccountId() {
         return accountId;
@@ -35,25 +29,24 @@ public abstract class AniAuthState implements Serializable{
         this.accountId = accountId;
     }
 
-    public CurUserType getUserType() {
-        return userType;
+    public Long getOrgAccountId() {
+        return orgAccountId;
     }
 
-    public void setUserType(CurUserType userType) {
-        this.userType = userType;
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
     }
 
-    public Boolean getIsAdmin() {
+    public Boolean getAdmin() {
         return isAdmin;
     }
 
-    public void setIsAdmin(Boolean admin) {
+    public void setAdmin(Boolean admin) {
         isAdmin = admin;
     }
 
     public AniAuthState() {
     }
-
 
     public AuthState getAuthState() {
         return authState;
@@ -63,11 +56,10 @@ public abstract class AniAuthState implements Serializable{
         this.authState = authState;
     }
 
-    public ContextType getContextType() {
-        return contextType;
-    }
-
-    public void setContextType(ContextType contextType) {
-        this.contextType = contextType;
+    public AniAuthState(Long accountId, Long orgAccountId, Boolean isAdmin, AuthState authState) {
+        this.accountId = accountId;
+        this.orgAccountId = orgAccountId;
+        this.isAdmin = isAdmin;
+        this.authState = authState;
     }
 }

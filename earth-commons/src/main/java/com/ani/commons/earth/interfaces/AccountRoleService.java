@@ -16,32 +16,32 @@ public interface AccountRoleService {
      * <H2>Add Role</H2>
      * @param accountRoleDto
      */
-    public void addRole(AccountRoleDto accountRoleDto) throws AniRuleException;
+    public void addRole(Long opAccountId,AccountRoleDto accountRoleDto) throws AniRuleException;
 
     /**
      * <H2>Check ownerId delete role by id. </H2>
-     * @param accountRoleQueryDto
+     * @param opAccountId,roleId
      */
-    public void removeRole(AccountRoleQueryDto accountRoleQueryDto) throws AniRuleException;
+    public void removeRole(Long opAccountId,Long roleId) throws AniRuleException;
 
     /**
      * <H2>Update role.</H2>
      * @param accountRoleDto
      */
-    public void updateRole(AccountRoleDto accountRoleDto) throws AniRuleException;
+    public void updateRole(Long opAccountId,AccountRoleDto accountRoleDto) throws AniRuleException;
 
     /**
      * <H2>Query accountRole.</H2>
-     * @param accountRoleQueryDto
+     * @param opAccountId roleId
      * @return
      */
-    public AccountRole getAccountRole(AccountRoleQueryDto accountRoleQueryDto) throws AniRuleException;
+    public AccountRole getAccountRole(Long opAccountId,Long roleId) throws AniRuleException;
 
     /**
      * <H2>Query accountRole list.</H2>
-     * @return accountRoleQueryDto
+     * @return opAccountId
      */
-    public List<AccountRole> getAccountRoleList(AccountRoleQueryDto accountRoleQueryDto) throws AniRuleException;
+    public List<AccountRole> getAccountRoleList(Long opAccountId) throws AniRuleException;
 
 
 }

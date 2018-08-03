@@ -22,4 +22,5 @@ public enum ExceptionType {
     ALP_EXISTS,
     USERNAME_EXISTS,
     ACCOUNT_TYPE_ERROR,
+    PARSE_ERROR
 }

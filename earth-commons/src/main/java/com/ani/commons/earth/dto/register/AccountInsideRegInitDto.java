@@ -1,7 +1,5 @@
 package com.ani.commons.earth.dto.register;
 
-import com.sun.org.apache.xml.internal.serializer.SerializerTrace;
-
 import java.io.Serializable;
 
 /**
@@ -14,7 +12,7 @@ public class AccountInsideRegInitDto implements Serializable {
 
     private Long accountId;
 
-    private Long employeeId;
+    private String employeeStrId;
 
     private byte[] password;
 
@@ -34,12 +32,11 @@ public class AccountInsideRegInitDto implements Serializable {
         this.accountId = accountId;
     }
 
-    public Long getEmployeeId() {
-        return employeeId;
+    public String getEmployeeStrId() {
+        return employeeStrId;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
+    public void setEmployeeStrId(String employeeStrId) {
+        this.employeeStrId = employeeStrId;
     }
-
 }

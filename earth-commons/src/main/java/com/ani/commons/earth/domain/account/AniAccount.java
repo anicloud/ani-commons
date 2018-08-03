@@ -10,10 +10,10 @@ public abstract class AniAccount implements Serializable{
     /**
      * Account logic id
      */
-    Long accountId;
-    String phone;
-    String userName;
-    String email;
+    private Long accountId;
+    private String phone;
+    private String email;
+    private String name;
     DataState state;
 
     public DataState getState() {
@@ -27,26 +27,28 @@ public abstract class AniAccount implements Serializable{
     /**
      * Account valueType
      */
-    AccountType type;
+    private AccountType type;
 
 
     public AniAccount() {
     }
 
-    public AniAccount(Long accountId, String phone, String email, AccountType type) {
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public AniAccount(Long accountId, String phone, String email, String name, DataState state, AccountType type) {
         this.accountId = accountId;
         this.phone = phone;
         this.email = email;
+        this.name = name;
+        this.state = state;
         this.type = type;
-
-    }
-
-    public String getUsername() {
-        return userName;
-    }
-
-    public void setUsername(String username) {
-        this.userName = username;
     }
 
     public String getPhone() {

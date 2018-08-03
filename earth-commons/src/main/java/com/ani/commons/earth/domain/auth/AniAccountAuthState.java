@@ -1,30 +1,18 @@
 package com.ani.commons.earth.domain.auth;
 
-import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.commons.earth.enumeration.AuthState;
-import com.ani.commons.earth.enumeration.ContextType;
-import com.ani.commons.earth.enumeration.CurUserType;
-
-import java.io.Serializable;
-
 /**
  * Created by zhanglina on 18-3-12.
  */
-public class AniAccountAuthState extends AniAuthState implements Serializable {
-    private static final long serialVersionUID = -2641021057324420725L;
+public class AniAccountAuthState extends AniAuthState{
 
-    private String aniSessionId;
+    private static final long serialVersionUID = -2641021057324420725L;
 
     public AniAccountAuthState() {
 
     }
 
-
-    public String getAniSessionId() {
-        return aniSessionId;
-    }
-
-    public void setAniSessionId(String aniSessionId) {
-        this.aniSessionId = aniSessionId;
+    public AniAccountAuthState(Long accountId, Long orgAccountId, Boolean isAdmin, AuthState authState) {
+        super(accountId, orgAccountId, isAdmin, authState);
     }
 }

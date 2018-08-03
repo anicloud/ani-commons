@@ -13,15 +13,14 @@ public class AccountInsideRegisterDto extends AniDto{
 
     private String privateEmail;
     private Phone privatePhone;
-    private String orgEmail;
+
 
     public AccountInsideRegisterDto() {
     }
 
-    public AccountInsideRegisterDto(String privateEmail, Phone privatePhone, String orgEmail) {
+    public AccountInsideRegisterDto(String privateEmail, Phone privatePhone) {
         this.privateEmail = privateEmail;
         this.privatePhone = privatePhone;
-        this.orgEmail = orgEmail;
     }
 
     public String getPrivateEmail() {
@@ -40,11 +39,5 @@ public class AccountInsideRegisterDto extends AniDto{
         this.privatePhone = privatePhone;
     }
 
-    public String getOrgEmail() {
-        return orgEmail;
-    }
 
-    public void setOrgEmail(String orgEmail) {
-        this.orgEmail = orgEmail;
-    }
 }

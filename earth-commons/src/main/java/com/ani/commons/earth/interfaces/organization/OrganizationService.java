@@ -16,8 +16,7 @@ import java.util.List;
  * Created by zhanglina on 18-4-26.
  */
 public interface OrganizationService {
-
-
+    
 
     public List<OrgAccountRole> getRolesByOrgId(Integer orgId) throws AniRuleException;
 

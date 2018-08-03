@@ -68,17 +68,16 @@ public interface AccountUserRegistryService {
      * @param sessionId
      * @param tgt
      * @param newPwd
-     * @param flag
      *
      * @throws AniRuleException
      */
-    public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, byte[] newPwd,Boolean flag) throws AniRuleException;
+    public void changePassword(AccountVerifyDto accountVerifyDto, String sessionId,String tgt, byte[] newPwd) throws AniRuleException;
 
     public void modifyPersonalProfile(AccountPersonalProfileDto personalProfileDto, boolean withPwd) throws AniRuleException, IOException;
 
-    public void  modifyOrgProFile(AccountOrgProfileDto orgProfileDto) throws AniRuleException;
+    public void  modifyOrgProFile(Long opAccountId,AccountOrgProfileDto orgProfileDto) throws AniRuleException;
 
-    public String bindEmailOrPhoneForOrg(String sessionId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
+    public String bindEmailOrPhoneForEmployee(String sessionId,Long orgAccountId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 
 
 }

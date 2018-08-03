@@ -8,18 +8,26 @@ import com.ani.utils.dto.AniDto;
 public  class OrgAccountVerifyDto extends AniDto {
 
     private static final long serialVersionUID = 3806968368224006095L;
-
+    private Long orgAccountId;
     private String username;
     private String password;
 
     public OrgAccountVerifyDto() {
     }
 
-    public OrgAccountVerifyDto(String username, String password) {
+    public OrgAccountVerifyDto(Long orgAccountId, String username, String password) {
+        this.orgAccountId = orgAccountId;
         this.username = username;
         this.password = password;
     }
 
+    public Long getOrgAccountId() {
+        return orgAccountId;
+    }
+
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
+    }
 
     public String getUsername() {
         return username;

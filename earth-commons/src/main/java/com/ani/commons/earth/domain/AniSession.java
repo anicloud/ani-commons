@@ -10,37 +10,26 @@ import java.util.Date;
 public class AniSession implements Serializable  {
 
     private static final long serialVersionUID = -7879345960994457975L;
-    public String sessionId;
+    private String sessionId;
+    private Long accountId;
+    private Long orgAccountId;
     AuthState authState;
-    CurUserType curUserType;
-    Boolean isAdmin;
-    Long accountId;
 
     public AniSession() {
     }
-
-    public AniSession(String sessionId, AuthState authState, CurUserType curUserType, Boolean isAdmin, Long accountId) {
+    public AniSession(String sessionId, Long accountId, Long orgAccountId, AuthState authState) {
         this.sessionId = sessionId;
-        this.authState = authState;
-        this.curUserType = curUserType;
-        this.isAdmin = isAdmin;
         this.accountId = accountId;
+        this.orgAccountId = orgAccountId;
+        this.authState = authState;
     }
 
-    public Boolean getIsAdmin() {
-        return isAdmin;
+    public Long getOrgAccountId() {
+        return orgAccountId;
     }
 
-    public void setIsAdmin(Boolean admin) {
-        isAdmin = admin;
-    }
-
-    public CurUserType getCurUserType() {
-        return curUserType;
-    }
-
-    public void setCurUserType(CurUserType curUserType) {
-        this.curUserType = curUserType;
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
     }
 
     public String getSessionId() {

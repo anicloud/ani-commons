@@ -1,38 +1,24 @@
 package com.ani.commons.earth.domain;
-
-import com.ani.commons.earth.enumeration.AccountType;
-import com.ani.commons.earth.enumeration.CurUserType;
-import com.ani.utils.core.AniByte;
-
 import java.io.Serializable;
-import java.util.Date;
-
 /**
  * Created by zhanglina on 18-3-8.
  */
 public class AniAccountToken implements Serializable {
     private static final long serialVersionUID = 8818731541882481867L;
+
     String tgt;
-    Long accountId;//personal accountId,org employeeId
-    CurUserType curUserType;
-    Date lastOp;
+
+    Short index;
+
+    Long[] accounts;
 
     public AniAccountToken() {
     }
 
-    public AniAccountToken(String tgt, Long accountId, CurUserType curUserType, Date lastOp) {
+    public AniAccountToken(String tgt, Short index, Long[] accounts) {
         this.tgt = tgt;
-        this.accountId = accountId;
-        this.curUserType = curUserType;
-        this.lastOp = lastOp;
-    }
-
-    public CurUserType getCurUserType() {
-        return curUserType;
-    }
-
-    public void setCurUserType(CurUserType curUserType) {
-        this.curUserType = curUserType;
+        this.index = index;
+        this.accounts = accounts;
     }
 
     public String getTgt() {
@@ -43,19 +29,19 @@ public class AniAccountToken implements Serializable {
         this.tgt = tgt;
     }
 
-    public Long getAccountId() {
-        return accountId;
+    public Short getIndex() {
+        return index;
     }
 
-    public void setAccountId(Long accountId) {
-        this.accountId = accountId;
+    public void setIndex(Short index) {
+        this.index = index;
     }
 
-    public Date getLastOp() {
-        return lastOp;
+    public Long[] getAccounts() {
+        return accounts;
     }
 
-    public void setLastOp(Date lastOp) {
-        this.lastOp = lastOp;
+    public void setAccounts(Long[] accounts) {
+        this.accounts = accounts;
     }
 }
