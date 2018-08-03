@@ -2,23 +2,25 @@ package com.ani.commons.earth.dto.group;
 
 import com.ani.utils.dto.AniDto;
 
-import java.util.Map;
 import java.util.Set;
 
 /**
  * Created by zhanglina on 18-7-26.
+ * Last Modified by xuben on 18-8-3.
  */
 public class GroupMemberAddDto extends AniDto {
     private static final long serialVersionUID = 7335217867980603248L;
     private Long groupId;
-    private Map<Long,Set<Long>> members;
-
-    public GroupMemberAddDto(Long groupId, Map<Long, Set<Long>> members) {
-        this.groupId = groupId;
-        this.members = members;
-    }
+    private Long accountId;
+    private Set<Long> roleIds;
 
     public GroupMemberAddDto() {
+    }
+
+    public GroupMemberAddDto(Long groupId, Long accountId, Set<Long> roleIds) {
+        this.groupId = groupId;
+        this.accountId = accountId;
+        this.roleIds = roleIds;
     }
 
     public Long getGroupId() {
@@ -29,11 +31,20 @@ public class GroupMemberAddDto extends AniDto {
         this.groupId = groupId;
     }
 
-    public Map<Long, Set<Long>> getMembers() {
-        return members;
+    public Long getAccountId() {
+        return accountId;
     }
 
-    public void setMembers(Map<Long, Set<Long>> members) {
-        this.members = members;
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
+    }
+
+    public Set<Long> getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(Set<Long> roleIds) {
+        this.roleIds = roleIds;
     }
 }
+
