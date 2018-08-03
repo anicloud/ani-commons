@@ -3,6 +3,7 @@ package com.ani.commons.earth.domain.account.organization;
 import com.ani.commons.earth.domain.account.AniAccount;
 import com.ani.commons.earth.enumeration.AccountType;
 import com.ani.commons.earth.enumeration.BusinessCategoryType;
+import com.ani.utils.core.DataState;
 
 import java.util.Set;
 
@@ -23,8 +24,8 @@ public class AniOrgAccount extends AniAccount {
         super();
     }
 
-    public AniOrgAccount(Long accountId, String phone, String email, AccountType type, Integer currentNum, String tel, Set<BusinessCategoryType> businessCategorys, String postalCode, String postalAddress) {
-        super(accountId, phone, email, type);
+    public AniOrgAccount(Long accountId, String phone, String email, String name, DataState state, AccountType type, Integer currentNum, String tel, Set<BusinessCategoryType> businessCategorys, String postalCode, String postalAddress) {
+        super(accountId, phone, email, name, state, type);
         this.currentNum = currentNum;
         this.tel = tel;
         this.businessCategorys = businessCategorys;

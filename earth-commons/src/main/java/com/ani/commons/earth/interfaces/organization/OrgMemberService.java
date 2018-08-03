@@ -1,10 +1,10 @@
 package com.ani.commons.earth.interfaces.organization;
 
 import com.ani.commons.earth.domain.account.organization.OrgAccountState;
-import com.ani.commons.earth.domain.account.organization.OrgMemberInfo;
 import com.ani.commons.earth.domain.organization.employee.OrgMember;
 import com.ani.commons.earth.dto.account.organization.OrgAccountVerifyDto;
 import com.ani.commons.earth.dto.account.organization.OrgMemberQueryDto;
+import com.ani.commons.earth.dto.organization.OrgMemberBriefDto;
 import com.ani.commons.earth.dto.organization.org.OrgMemberInfoDto;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniDataException;
@@ -27,29 +27,29 @@ public interface OrgMemberService {
      * <H2>Delete employee info by id.</H2>
      * @param memberQueryDto
      */
-    public void deleteOrgMemberInfoById(OrgMemberQueryDto memberQueryDto);
+    public void deleteOrgMemberById(OrgMemberQueryDto memberQueryDto);
 
     /**
      * <H2>Update employee info.</H2>
-     * @param memberQueryDto
+     * @param
      * @param orgMemberInfoDto
      * @throws AniDataException
      */
-    public void updateOrgMemberInfo(OrgMemberQueryDto memberQueryDto, OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException;
+    public void updateOrgMemberInfo(Long opAccountId, OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException;
 
     /**
      * <H2>Query employee info.</h2>
      * @param memberQueryDto
      * @return OrgMember
      */
-    public OrgMember getOrgMemberById(OrgMemberQueryDto memberQueryDto);
+    public OrgMember getOrgMemberById(OrgMemberQueryDto memberQueryDto) throws AniRuleException;
 
     /**
      * <H2>Query employee list.</H2>
      * @param nodeId,accountId
      * @return
      */
-    public List<OrgMemberInfo> getOrgMemberListByNodeId(Long nodeId, Long accountId);
+    public List<OrgMemberBriefDto> getOrgMemberListByNodeId(Long opAccountId, Long nodeId) throws AniRuleException;
 
     /**
      * <H2>Login state check.</H2>

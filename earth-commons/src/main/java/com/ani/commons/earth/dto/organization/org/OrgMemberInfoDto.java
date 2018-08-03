@@ -1,13 +1,13 @@
 package com.ani.commons.earth.dto.organization.org;
 
 
+import com.ani.commons.earth.domain.id.Phone;
 import com.ani.commons.earth.enumeration.Sex;
 import com.ani.utils.core.DataState;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.util.Map;
 
 /**
@@ -20,37 +20,62 @@ public class OrgMemberInfoDto extends AniDto {
     private Long employeeId;
     @AniRequiredField
     private Long nodeId;
+    private Long orgAccountId;
     private String employeeEmail;
     @AniRequiredField
     private String name;
-    private String privateEmail;
+    private String personalEmail;
     private Integer employeeCount;
-    private String phone;
+    private Phone mobile;
     private String others;
     @AniRequiredField
     private String employeeStrId;
     private String tel;
     private Date birthday;
     private Sex sex;
+    private Map<String,String> customFieldsValue;
     private DataState state;
 
     public OrgMemberInfoDto() {
+
     }
 
-    public OrgMemberInfoDto(Integer employeeCount,Long employeeId, Long nodeId, String employeeEmail, String name, String privateEmail, String phone, String others, String employeeStrId, String tel, Date birthday, Sex sex, DataState state) {
-        this.employeeCount = employeeCount;
+    public OrgMemberInfoDto(Long employeeId, Long nodeId, Long orgAccountId, String employeeEmail, String name, String personalEmail, Integer employeeCount, Phone mobile, String others, String employeeStrId, String tel, Date birthday, Sex sex, Map<String, String> customFieldsValue, DataState state) {
         this.employeeId = employeeId;
         this.nodeId = nodeId;
+        this.orgAccountId = orgAccountId;
         this.employeeEmail = employeeEmail;
         this.name = name;
-        this.privateEmail = privateEmail;
-        this.phone = phone;
+        this.personalEmail = personalEmail;
+        this.employeeCount = employeeCount;
+        this.mobile = mobile;
         this.others = others;
         this.employeeStrId = employeeStrId;
         this.tel = tel;
         this.birthday = birthday;
         this.sex = sex;
+        this.customFieldsValue = customFieldsValue;
         this.state = state;
+    }
+
+    public Long getOrgAccountId() {
+        return orgAccountId;
+    }
+
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
+    }
+
+    public void setMobile(Phone mobile) {
+        this.mobile = mobile;
+    }
+
+    public Map<String, String> getCustomFieldsValue() {
+        return customFieldsValue;
+    }
+
+    public void setCustomFieldsValue(Map<String, String> customFieldsValue) {
+        this.customFieldsValue = customFieldsValue;
     }
 
     public Integer getEmployeeCount() {
@@ -92,20 +117,16 @@ public class OrgMemberInfoDto extends AniDto {
         this.name = name;
     }
 
-    public String getPrivateEmail() {
-        return privateEmail;
+    public String getPersonalEmail() {
+        return personalEmail;
     }
 
-    public void setPrivateEmail(String privateEmail) {
-        this.privateEmail = privateEmail;
+    public void setPersonalEmail(String personalEmail) {
+        this.personalEmail = personalEmail;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public Phone getMobile() {
+        return mobile;
     }
 
     public String getOthers() {

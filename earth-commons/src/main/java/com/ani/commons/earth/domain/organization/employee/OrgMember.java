@@ -29,7 +29,7 @@ public class OrgMember implements Serializable {
     private String personalEmail;
     private String mobile;
     private String tel;
-    private Date birthday;
+    private String birthday;
     private Sex sex;
     private Map<String, String> customFieldsValue;
     private DataState state;
@@ -39,7 +39,7 @@ public class OrgMember implements Serializable {
     public OrgMember() {
     }
 
-    public OrgMember(Long employeeId, Long nodeId, Long accountId, String employeeEmail, boolean hasPwd, Integer employeeCount, String name, String employeeStrId, String personalEmail, String mobile, String tel, Date birthday, Sex sex, Map<String, String> customFieldsValue, DataState state, Timestamp entryTime, Timestamp resignTime) {
+    public OrgMember(Long employeeId, Long nodeId, Long accountId, String employeeEmail, boolean hasPwd, Integer employeeCount, String name, String employeeStrId, String personalEmail, String mobile, String tel, String birthday, Sex sex, Map<String, String> customFieldsValue, DataState state, Timestamp entryTime, Timestamp resignTime) {
         this.employeeId = employeeId;
         this.nodeId = nodeId;
         this.accountId = accountId;
@@ -163,11 +163,11 @@ public class OrgMember implements Serializable {
         this.tel = tel;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

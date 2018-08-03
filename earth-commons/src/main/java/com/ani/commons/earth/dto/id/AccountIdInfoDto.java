@@ -19,6 +19,11 @@ public abstract class AccountIdInfoDto extends AniDto {
     public AccountIdInfoDto() {
     }
 
+    public AccountIdInfoDto(Long accountId, AccountType type) {
+        this.accountId = accountId;
+        this.type = type;
+    }
+
     public Long getAccountId() {
         return accountId;
     }

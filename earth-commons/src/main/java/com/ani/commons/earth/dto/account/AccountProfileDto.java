@@ -19,6 +19,8 @@ public abstract class AccountProfileDto extends AniDto implements Serializable {
 
     String userName;
 
+    private MultipartFile portrait;
+
     protected AccountType accountType;
 
     public AccountProfileDto(Long accountId, String name, String password, String userName, AccountType accountType) {
@@ -27,6 +29,14 @@ public abstract class AccountProfileDto extends AniDto implements Serializable {
         this.password = password;
         this.userName = userName;
         this.accountType = accountType;
+    }
+
+    public MultipartFile getPortrait() {
+        return portrait;
+    }
+
+    public void setPortrait(MultipartFile portrait) {
+        this.portrait = portrait;
     }
 
     public String getUserName() {

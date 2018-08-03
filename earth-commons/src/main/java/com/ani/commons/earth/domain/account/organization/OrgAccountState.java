@@ -9,13 +9,13 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-7-5.
  */
-public class OrgAccountState  implements Serializable{
+public class    OrgAccountState  implements Serializable{
 
     private static final long serialVersionUID = -793242311850096306L;
     @JsonSerialize(using= ToStringSerializer.class)
-    private Integer orgId;
+    private Long orgAccountId;
     @JsonSerialize(using= ToStringSerializer.class)
-    private Long employeeId;
+    private Long accountId;
     private String privateEmail;
     private String phone;
     private Boolean isAdmin;
@@ -41,13 +41,14 @@ public class OrgAccountState  implements Serializable{
     public OrgAccountState() {
     }
 
-    public OrgAccountState(Integer orgId, Long employeeId, String privateEmail, String phone, Boolean isAdmin, DataState dataState) {
-        this.orgId = orgId;
-        this.employeeId = employeeId;
+    public OrgAccountState(Long orgAccountId, Long accountId, String privateEmail, String phone, Boolean isAdmin, DataState dataState, String tgt) {
+        this.orgAccountId = orgAccountId;
+        this.accountId = accountId;
         this.privateEmail = privateEmail;
         this.phone = phone;
         this.isAdmin = isAdmin;
         this.dataState = dataState;
+        this.tgt = tgt;
     }
 
     public Boolean getIsAdmin() {
@@ -62,20 +63,20 @@ public class OrgAccountState  implements Serializable{
         return serialVersionUID;
     }
 
-    public Integer getOrgId() {
-        return orgId;
+    public Long getOrgAccountId() {
+        return orgAccountId;
     }
 
-    public void setOrgId(Integer orgId) {
-        this.orgId = orgId;
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
     }
 
-    public Long getEmployeeId() {
-        return employeeId;
+    public Long getAccountId() {
+        return accountId;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 
     public String getPrivateEmail() {
