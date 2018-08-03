@@ -7,7 +7,7 @@ import com.ani.utils.exception.AniRuleException;
 
 /**
  * Created by zhanglina on 18-4-26.
- * Last Modified by xuben on 18-7-30.
+ * Last Modified by xuben on 18-8-1.
  */
 public interface OTNodeService {
 
@@ -19,9 +19,9 @@ public interface OTNodeService {
 
     public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
-    public OTNode getTreeByEmployeeId(Long accountId) throws AniAuthException;
-
     public OTNode getNodeDetail(Long nodeId, Long opAccountId) throws AniRuleException;
+
+//    public OTNode getTreeByEmployeeId(Long accountId) throws AniAuthException;
 
 //    public void addNodeMember(OTNodeMemberInfoDto otNodeMemberAddDto)throws AniAuthException,AniRuleException,AniDataException;
 //
