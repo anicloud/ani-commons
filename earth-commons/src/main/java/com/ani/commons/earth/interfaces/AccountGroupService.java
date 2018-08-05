@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Last Modified by xuben on 18-8-3.
+ * Last Modified by xuben on 18-8-5.
  */
 public interface AccountGroupService {
 
@@ -32,7 +32,7 @@ public interface AccountGroupService {
 
     public void removeMemberFromGroup(Long groupId, Long accountId, Long opAccountId);
 
-    public void clearGroup(Long groupId, Long opAccountId);
+    public void clearGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public GroupAllMembersInfoDto getAllMembersInfo(Long groupId, Long opAccountId);
 
