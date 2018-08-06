@@ -5,9 +5,11 @@ import com.ani.commons.earth.dto.organization.node.*;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniRuleException;
 
+import java.util.Set;
+
 /**
  * Created by zhanglina on 18-4-26.
- * Last Modified by xuben on 18-8-1.
+ * Last Modified by xuben on 18-8-6.
  */
 public interface OTNodeService {
 
@@ -20,6 +22,9 @@ public interface OTNodeService {
     public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
     public OTNode getNodeDetail(Long nodeId, Long opAccountId) throws AniRuleException;
+
+    public Set<Long> getDescendantNodes(Long nodeId, Long opAccountId) throws AniRuleException;
+
 
 //    public OTNode getTreeByEmployeeId(Long accountId) throws AniAuthException;
 
