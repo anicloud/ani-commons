@@ -7,30 +7,45 @@ import com.ani.utils.dto.AniDto;
  */
 public class OrgMemberQueryDto extends AniDto {
     private static final long serialVersionUID = -8895996549350890621L;
-    public Long employeeId;
-    private Long opAccountId;
+    public Long accountId;
+    private Long nodeId;
+    private Long orgAccountId;
 
-    public OrgMemberQueryDto(Long employeeId, Long opAccountId) {
-        this.employeeId = employeeId;
-        this.opAccountId = opAccountId;
+    public OrgMemberQueryDto(Long accountId, Long nodeId, Long orgAccountId) {
+        this.accountId = accountId;
+        this.nodeId = nodeId;
+        this.orgAccountId = orgAccountId;
+    }
+
+    public Long getOrgAccountId() {
+        return orgAccountId;
+    }
+
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
+    }
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
+    }
+
+    public Long getNodeId() {
+        return nodeId;
+    }
+
+    public void setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+    }
+
+    public OrgMemberQueryDto(Long accountId, Long nodeId) {
+        this.accountId = accountId;
+        this.nodeId = nodeId;
     }
 
     public OrgMemberQueryDto() {
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public Long getOpAccountId() {
-        return opAccountId;
-    }
-
-    public void setOpAccountId(Long opAccountId) {
-        this.opAccountId = opAccountId;
     }
 }

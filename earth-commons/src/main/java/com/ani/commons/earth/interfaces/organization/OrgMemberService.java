@@ -27,7 +27,7 @@ public interface OrgMemberService {
      * <H2>Delete employee info by id.</H2>
      * @param memberQueryDto
      */
-    public void deleteOrgMemberById(OrgMemberQueryDto memberQueryDto);
+    public void deleteOrgMemberById(Long opAccountId,OrgMemberQueryDto memberQueryDto);
 
     /**
      * <H2>Update employee info.</H2>
@@ -39,10 +39,10 @@ public interface OrgMemberService {
 
     /**
      * <H2>Query employee info.</h2>
-     * @param memberQueryDto
+     * @param
      * @return OrgMember
      */
-    public OrgMember getOrgMemberById(OrgMemberQueryDto memberQueryDto) throws AniRuleException;
+    public OrgMember getOrgMemberById(Long opAccountId,OrgMemberQueryDto memberQueryDto) throws AniRuleException;
 
     /**
      * <H2>Query employee list.</H2>

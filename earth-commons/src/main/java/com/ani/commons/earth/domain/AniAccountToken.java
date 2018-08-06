@@ -1,5 +1,7 @@
 package com.ani.commons.earth.domain;
 import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by zhanglina on 18-3-8.
  */
@@ -10,15 +12,17 @@ public class AniAccountToken implements Serializable {
 
     Short index;
 
-    Long[] accounts;
+    List<Long> accounts;
 
     public AniAccountToken() {
     }
 
-    public AniAccountToken(String tgt, Short index, Long[] accounts) {
-        this.tgt = tgt;
-        this.index = index;
+    public void setAccounts(List<Long> accounts) {
         this.accounts = accounts;
+    }
+
+    public List<Long> getAccounts() {
+        return accounts;
     }
 
     public String getTgt() {
@@ -37,11 +41,9 @@ public class AniAccountToken implements Serializable {
         this.index = index;
     }
 
-    public Long[] getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(Long[] accounts) {
+    public AniAccountToken(String tgt, Short index, List accounts) {
+        this.tgt = tgt;
+        this.index = index;
         this.accounts = accounts;
     }
 }

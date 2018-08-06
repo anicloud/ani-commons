@@ -22,7 +22,7 @@ public interface AccountRoleService {
      * <H2>Check ownerId delete role by id. </H2>
      * @param opAccountId,roleId
      */
-    public void removeRole(Long opAccountId,Long roleId) throws AniRuleException;
+    public void removeRole(Long opAccountId,Long ownerId,Long roleId) throws AniRuleException;
 
     /**
      * <H2>Update role.</H2>
@@ -35,13 +35,13 @@ public interface AccountRoleService {
      * @param opAccountId roleId
      * @return
      */
-    public AccountRole getAccountRole(Long opAccountId,Long roleId) throws AniRuleException;
+    public AccountRole getAccountRole(Long opAccountId,Long ownerId,Long roleId) throws AniRuleException;
 
     /**
      * <H2>Query accountRole list.</H2>
      * @return opAccountId
      */
-    public List<AccountRole> getAccountRoleList(Long opAccountId) throws AniRuleException;
+    public List<AccountRole> getAccountRoleList(Long opAccountId,Long ownerId) throws AniRuleException;
 
 
 }

@@ -2,6 +2,8 @@ package com.ani.commons.earth.dto.organization.role;
 
 import com.ani.utils.core.data.type.PrivilegeType;
 import com.ani.utils.dto.AniDto;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import java.util.Set;
 
@@ -11,9 +13,11 @@ import java.util.Set;
 public class AccountRoleDto extends AniDto {
 
     private static final long serialVersionUID = -1532531020505464389L;
-
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long roleId;
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long ownerId;
+
     private String name;
     private Set<PrivilegeType> privileges;
 

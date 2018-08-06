@@ -27,7 +27,7 @@ public interface AccountUniAuthService {
      * @throws AniAuthException
      */
 
-    public SessionAuthState checkIsAnonymous(String tgt);
+    public SessionAuthState checkIsAnonymous(String tgt,String sessionId);
 
     public SessionAuthState checkTgt(String tgt);
 
