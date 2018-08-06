@@ -36,6 +36,6 @@ public interface AccountGroupService {
 
     public GroupAllMembersInfoDto getAllMembersInfo(Long groupId, Long opAccountId);
 
-    public Set<Long> getMemberRoleIds(Long groupId, Long accountId, Long opAccountId);
+    public Set<Long> getMemberRoleIds(Long groupId, Long accountId, Long opAccountId) throws AniRuleException, AniAuthException;
 
 }
