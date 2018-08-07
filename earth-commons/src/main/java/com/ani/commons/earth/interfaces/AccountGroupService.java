@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Last Modified by xuben on 18-8-5.
+ * Last Modified by xuben on 18-8-7.
  */
 public interface AccountGroupService {
 
@@ -21,6 +21,8 @@ public interface AccountGroupService {
     public void modifyGroupProfile(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public AniAccountGroup findByGroupId(Long groupId, Long opAccountId) throws AniRuleException, AniDataException, AniAuthException;
+
+    public AccountGroupInfoDto findAccountGroupInfoDtoById(Long groupId, Long opAccountId) throws AniRuleException, AniDataException, AniAuthException;
 
     public List<AniAccountGroup> findGroupsByOwnerId(Long accountId);
 
