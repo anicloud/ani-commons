@@ -34,7 +34,7 @@ public interface AccountGroupService {
 
     public void clearGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
-    public GroupAllMembersInfoDto getAllMembersInfo(Long groupId, Long opAccountId);
+    public GroupAllMembersInfoDto getAllMembersInfo(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public Set<Long> getMemberRoleIds(Long groupId, Long accountId, Long opAccountId) throws AniRuleException, AniAuthException;
 
