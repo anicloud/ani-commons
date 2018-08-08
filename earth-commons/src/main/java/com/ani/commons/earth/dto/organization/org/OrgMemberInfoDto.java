@@ -9,6 +9,7 @@ import com.ani.utils.dto.AniRequiredField;
 
 import java.sql.Date;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by zhanglina on 18-5-2.
@@ -34,10 +35,26 @@ public class OrgMemberInfoDto extends AniDto {
     private Date birthday;
     private Sex sex;
     private Map<String,String> customFieldsValue;
+    private Set<Long> roleIds;
     private DataState state;
 
     public OrgMemberInfoDto() {
 
+    }
+
+    public Set<Long> getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(Set<Long> roleIds) {
+        this.roleIds = roleIds;
+    }
+
+    public OrgMemberInfoDto(Long nodeId, Long orgAccountId, Integer employeeCount, String employeeStrId) {
+        this.nodeId = nodeId;
+        this.orgAccountId = orgAccountId;
+        this.employeeCount = employeeCount;
+        this.employeeStrId = employeeStrId;
     }
 
     public OrgMemberInfoDto(Long employeeId, Long nodeId, Long orgAccountId, String employeeEmail, String name, String personalEmail, Integer employeeCount, Phone mobile, String others, String employeeStrId, String tel, Date birthday, Sex sex, Map<String, String> customFieldsValue, DataState state) {

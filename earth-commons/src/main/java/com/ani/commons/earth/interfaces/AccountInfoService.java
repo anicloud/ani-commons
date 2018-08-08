@@ -24,7 +24,7 @@ public interface AccountInfoService {
 
     public void checkPersonalResourceAccessibility(PersonalAccessibilityDto personalResourcesAccessDto)throws AniRuleException;
 
-    public List<OrgAccountBriefDto> getOrgAccountByEmployeeAccountId(Long accountId) throws AniRuleException;
+    public List<OrgAccountBriefDto> getOrgAccountByEmployeeAccountId(Long accountId,Long orgAccountId) throws AniRuleException;
 
 
 }

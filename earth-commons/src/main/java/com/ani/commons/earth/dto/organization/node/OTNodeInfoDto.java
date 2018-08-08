@@ -35,12 +35,14 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
 
     private String postalAddress;
 
-    public OTNodeInfoDto(String name, String nodeDesc, String tel, Short businessCategory, String postalCode, String postalAddress) {
+    public OTNodeInfoDto(String name, String nodeDesc, String tel, Short businessCategory, String postalCode, String postalAddress,Long ownerId) {
+        this.name=name;
         this.nodeDesc = nodeDesc;
         this.tel = tel;
         this.businessCategory = businessCategory;
         this.postalCode = postalCode;
         this.postalAddress = postalAddress;
+        this.ownerId = ownerId;
     }
 
     public OTNodeInfoDto(Long nodeId, Long ownerId, String name, String nodeDesc, Long parentNodeId, String tel, Short businessCategory, String postalCode, String postalAddress) {

@@ -23,7 +23,6 @@ public interface AccountRoleService {
      * @param opAccountId,roleId
      */
     public void removeRole(Long opAccountId,Long ownerId,Long roleId) throws AniRuleException;
-
     /**
      * <H2>Update role.</H2>
      * @param accountRoleDto

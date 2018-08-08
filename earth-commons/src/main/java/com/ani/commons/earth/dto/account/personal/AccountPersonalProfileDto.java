@@ -28,6 +28,7 @@ public class AccountPersonalProfileDto extends AccountProfileDto implements Seri
         this.sex = sex;
     }
 
+
     public String getRegion() {
         return region;
     }
