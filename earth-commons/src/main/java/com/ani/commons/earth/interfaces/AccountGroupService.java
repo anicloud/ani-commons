@@ -32,7 +32,7 @@ public interface AccountGroupService {
 
     public void addRoleToMember(Long groupId, Long accountId, Long roleId) throws AniRuleException;
 
-    public void removeMemberFromGroup(Long groupId, Long accountId, Long opAccountId);
+    public void removeMemberFromGroup(Long groupId, Long accountId, Long opAccountId) throws AniRuleException;
 
     public void clearGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
