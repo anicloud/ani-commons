@@ -75,7 +75,7 @@ public interface AccountUserRegistryService {
 
     public void modifyPersonalProfile(AccountPersonalProfileDto personalProfileDto, boolean withPwd) throws AniRuleException, IOException;
 
-    public void  modifyOrgProFile(Long opAccountId,AccountOrgProfileDto orgProfileDto) throws AniRuleException, AniDataException;
+    public Long  modifyOrgProFile(Long opAccountId,AccountOrgProfileDto orgProfileDto) throws AniRuleException, AniDataException;
 
     public String bindEmailOrPhoneForEmployee(String sessionId,Long orgAccountId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 

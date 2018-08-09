@@ -1,6 +1,8 @@
 package com.ani.commons.earth.dto.group;
 
 import com.ani.utils.dto.AniDto;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import java.util.Set;
 
@@ -10,7 +12,9 @@ import java.util.Set;
  */
 public class GroupMemberAddDto extends AniDto {
     private static final long serialVersionUID = 7335217867980603248L;
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long groupId;
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long accountId;
     private Set<Long> roleIds;
 
