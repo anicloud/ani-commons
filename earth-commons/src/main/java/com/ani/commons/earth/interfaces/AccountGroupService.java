@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Last Modified by xuben on 18-8-7.
+ * Last Modified by xuben on 18-8-9.
  */
 public interface AccountGroupService {
 
-    public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId, Long targetTreeNodeId) throws AniRuleException, AniAuthException;
+    public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public void removeGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
