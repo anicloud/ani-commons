@@ -2,6 +2,8 @@ package com.ani.commons.earth.dto.group;
 
 import com.ani.commons.earth.enumeration.GroupType;
 import com.ani.utils.dto.AniDto;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import java.io.Serializable;
 
@@ -12,8 +14,10 @@ import java.io.Serializable;
 public class AccountGroupInfoDto extends AniDto implements Serializable {
     private static final long serialVersionUID = -8616835316236418983L;
 
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long groupId;
 
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long ownerId;
 
     private String name;

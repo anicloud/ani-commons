@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Last Modified by xuben on 18-8-7.
+ * Last Modified by xuben on 18-8-9.
  */
 public interface AccountGroupService {
 
-    public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId, Long targetTreeNodeId) throws AniRuleException, AniAuthException;
+    public void createGroup(AccountGroupInfoDto accountGroupInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public void removeGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
@@ -30,13 +30,13 @@ public interface AccountGroupService {
 
     public void updateAllMembers(GroupAllMembersInfoDto groupAllMembersInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
-    public void addRoleToMember(Long groupId, Long accountId, Long roleId) throws AniRuleException;
+    public void updateMemberRole(Long opAccountId,GroupMemberUpdateDto memberUpdateDto) throws AniRuleException;
 
-    public void removeMemberFromGroup(Long groupId, Long accountId, Long opAccountId);
+    public void removeMemberFromGroup(Long groupId, Long accountId, Long opAccountId) throws AniRuleException;
 
     public void clearGroup(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
-    public GroupAllMembersInfoDto getAllMembersInfo(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
+    public List<GroupMemberInfoDto> getAllMembersInfo(Long groupId, Long opAccountId) throws AniRuleException, AniAuthException;
 
     public Set<Long> getMemberRoleIds(Long groupId, Long accountId, Long opAccountId) throws AniRuleException, AniAuthException;
 
