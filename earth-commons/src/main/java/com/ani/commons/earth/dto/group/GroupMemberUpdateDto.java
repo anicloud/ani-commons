@@ -13,15 +13,25 @@ public class GroupMemberUpdateDto extends AniDto{
 
     @AniRequiredField
     private Long groupId;
+    private Long accountId;
     @AniRequiredField
     private Set<Long> roleId;
 
     public GroupMemberUpdateDto() {
     }
 
-    public GroupMemberUpdateDto(Long groupId, Set<Long> roleId) {
+    public GroupMemberUpdateDto(Long groupId, Long accountId, Set<Long> roleId) {
         this.groupId = groupId;
+        this.accountId = accountId;
         this.roleId = roleId;
+    }
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 
     public Long getGroupId() {

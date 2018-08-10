@@ -21,7 +21,7 @@ public interface AccountInfoService {
 
     public AniAccount findAniAccountById(Long accountId, AccountType accountType) throws AniRuleException;
 
-    public AniAccount findAccountByPhone(Phone phone) throws AniRuleException;
+    public AccountInfoDto findAccountByPhone(Phone phone) throws AniRuleException;
 
     public AccountInfoDto findAccountInfoById(Long accountId, AccountType accountType) throws AniRuleException;
 

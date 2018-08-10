@@ -30,7 +30,7 @@ public interface AccountGroupService {
 
     public void updateAllMembers(GroupAllMembersInfoDto groupAllMembersInfoDto, Long opAccountId) throws AniRuleException, AniAuthException;
 
-    public void addRoleToMember(Long groupId, Long accountId, Long roleId) throws AniRuleException;
+    public void updateMemberRole(Long opAccountId,GroupMemberUpdateDto memberUpdateDto) throws AniRuleException;
 
     public void removeMemberFromGroup(Long groupId, Long accountId, Long opAccountId) throws AniRuleException;
 
