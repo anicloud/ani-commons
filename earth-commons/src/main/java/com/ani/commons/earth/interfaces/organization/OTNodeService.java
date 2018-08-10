@@ -27,4 +27,6 @@ public interface OTNodeService {
 
     public Set<OTNodeBasicDto> getNodeChildren(Long nodeId, Long opAccountId) throws AniAuthException, AniRuleException;
 
+    public OTNodeDetailDto getATreeByRootNodeId(Long nodeId, Long opAccountId) throws AniRuleException;
+
 }
