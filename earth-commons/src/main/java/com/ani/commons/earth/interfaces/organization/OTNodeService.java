@@ -13,11 +13,11 @@ import java.util.Set;
  */
 public interface OTNodeService {
 
-    public OTNodeBasicDto addNode(OTNodeInfoDto otNodeInfoDto, Long opAccountId) throws AniAuthException, AniRuleException;
+    public OTNodeBasicDto addNode(OTNodeInfoUpdateDto otNodeInfoUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
     public void removeNode(Long nodeId, Long parentNodeId, Long opAccountId) throws AniAuthException, AniRuleException;
 
-    public void updateNodeInfo(OTNodeInfoDto otNodeInfoDto, Long opAccountId) throws AniAuthException, AniRuleException;
+    public void updateNodeInfo(OTNodeInfoUpdateDto otNodeInfoDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
     public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 

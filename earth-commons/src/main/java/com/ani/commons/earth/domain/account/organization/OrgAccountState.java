@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * Created by zhanglina on 18-7-5.
  */
-public class    OrgAccountState  implements Serializable{
+public class  OrgAccountState  implements Serializable{
 
     private static final long serialVersionUID = -793242311850096306L;
     @JsonSerialize(using= ToStringSerializer.class)

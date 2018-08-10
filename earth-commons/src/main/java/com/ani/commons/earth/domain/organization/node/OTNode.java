@@ -1,8 +1,11 @@
 package com.ani.commons.earth.domain.organization.node;
 
+import com.ani.commons.earth.enumeration.BusinessCategoryType;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by zhanglina on 18-5-2.
@@ -22,7 +25,7 @@ public class OTNode implements Serializable {
     private Timestamp createTime;
     private Timestamp updateTime;
     private String tel;
-    private Short businessCategory;
+    private Set<BusinessCategoryType> businessCategory;
     private String postalCode;
     private String postalAddress;
 
@@ -90,11 +93,11 @@ public class OTNode implements Serializable {
         this.tel = tel;
     }
 
-    public Short getBusinessCategory() {
+    public Set<BusinessCategoryType> getBusinessCategory() {
         return businessCategory;
     }
 
-    public void setBusinessCategory(Short businessCategory) {
+    public void setBusinessCategory(Set<BusinessCategoryType> businessCategory) {
         this.businessCategory = businessCategory;
     }
 

@@ -1,42 +1,33 @@
 package com.ani.commons.earth.dto.organization.node;
 
+import com.ani.commons.earth.enumeration.BusinessCategoryType;
 import com.ani.utils.dto.AniDto;
 import com.ani.utils.dto.AniRequiredField;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by zhanglina on 18-4-26.
  * Last Modified by xuben on 18-7-31.
  */
-public class OTNodeInfoDto extends AniDto implements Serializable {
+public class OTNodeInfoUpdateDto extends AniDto implements Serializable {
+
     private static final long serialVersionUID = -463500843397755139L;
 
     private Long nodeId;
-
     private Long ownerId;
-
-    private List<Long> childrenId;
-
     private String name;
-
     private String nodeDesc;
-
     private Long parentNodeId;
-
-    private Long groupId;
-
     private String tel;
-
-    private Short businessCategory;
-
+    private Set<BusinessCategoryType> businessCategory;
     private String postalCode;
-
     private String postalAddress;
 
-    public OTNodeInfoDto(String name, String nodeDesc, String tel, Short businessCategory, String postalCode, String postalAddress,Long ownerId) {
-        this.name=name;
+    public OTNodeInfoUpdateDto(String name, String nodeDesc, String tel, Set<BusinessCategoryType> businessCategory, String postalCode, String postalAddress, Long ownerId) {
+        this.name = name;
         this.nodeDesc = nodeDesc;
         this.tel = tel;
         this.businessCategory = businessCategory;
@@ -45,9 +36,10 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
         this.ownerId = ownerId;
     }
 
-    public OTNodeInfoDto(Long nodeId, Long ownerId, String name, String nodeDesc, Long parentNodeId, String tel, Short businessCategory, String postalCode, String postalAddress) {
+    public OTNodeInfoUpdateDto(Long nodeId, Long ownerId, String name, String nodeDesc, Long parentNodeId, String tel, Set<BusinessCategoryType> businessCategory, String postalCode, String postalAddress) {
         this.nodeId = nodeId;
         this.ownerId = ownerId;
+        this.name = name;
         this.nodeDesc = nodeDesc;
         this.parentNodeId = parentNodeId;
         this.tel = tel;
@@ -56,11 +48,11 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
         this.postalAddress = postalAddress;
     }
 
-    public OTNodeInfoDto(Long nodeId) {
+    public OTNodeInfoUpdateDto(Long nodeId) {
         this.nodeId = nodeId;
     }
 
-    public OTNodeInfoDto() {
+    public OTNodeInfoUpdateDto() {
     }
 
     public Long getOwnerId() {
@@ -95,11 +87,11 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
         this.tel = tel;
     }
 
-    public Short getBusinessCategory() {
+    public Set<BusinessCategoryType> getBusinessCategory() {
         return businessCategory;
     }
 
-    public void setBusinessCategory(Short businessCategory) {
+    public void setBusinessCategory(Set<BusinessCategoryType> businessCategory) {
         this.businessCategory = businessCategory;
     }
 
@@ -135,19 +127,4 @@ public class OTNodeInfoDto extends AniDto implements Serializable {
         this.name = name;
     }
 
-    public List<Long> getChildrenId() {
-        return childrenId;
-    }
-
-    public void setChildrenId(List<Long> childrenId) {
-        this.childrenId = childrenId;
-    }
-
-    public Long getGroupId() {
-        return groupId;
-    }
-
-    public void setGroupId(Long groupId) {
-        this.groupId = groupId;
-    }
 }

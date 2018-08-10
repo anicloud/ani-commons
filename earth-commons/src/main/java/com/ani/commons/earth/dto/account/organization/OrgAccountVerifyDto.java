@@ -1,6 +1,8 @@
 package com.ani.commons.earth.dto.account.organization;
 
 import com.ani.utils.dto.AniDto;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 /**
  * Created by zhanglina on 18-7-5.
@@ -8,7 +10,7 @@ import com.ani.utils.dto.AniDto;
 public  class OrgAccountVerifyDto extends AniDto {
 
     private static final long serialVersionUID = 3806968368224006095L;
-
+    @JsonSerialize(using= ToStringSerializer.class)
     private Long orgAccountId;
     private String username;
     private String password;
