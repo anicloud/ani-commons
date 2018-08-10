@@ -61,11 +61,4 @@ public interface OrgMemberService {
      */
     public OrgAccountState loginByOrg(String sessionId, OrgAccountVerifyDto orgAccountVerifyDto) throws AniAuthException,AniRuleException;
 
-    /**
-     * <H2>Query employee info by email.</H2>
-     * @param email
-     * @param accountId
-     * @return OrgMember
-     */
-    public OrgMember getOrgMemberById(String email,Long accountId);
 }
