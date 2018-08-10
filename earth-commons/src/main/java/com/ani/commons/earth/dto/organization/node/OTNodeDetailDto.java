@@ -1,38 +1,49 @@
-package com.ani.commons.earth.domain.organization.node;
+package com.ani.commons.earth.dto.organization.node;
 
 import com.ani.commons.earth.enumeration.BusinessCategoryType;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.List;
 import java.util.Set;
 
 /**
- * Created by zhanglina on 18-5-2.
+ * Created by xuben on 18-8-10.
  * Last Modified by xuben on 18-8-10.
  */
-public class OTNode implements Serializable {
+public class OTNodeDetailDto implements Serializable {
+    private static final long serialVersionUID = 5178457830140115174L;
 
-    private static final long serialVersionUID = 5520644352781449962L;
+    private Long nodeId;
 
     private Long ownerId;
+
     private Long parentNodeId;
-    private Long nodeId;
+
     private String name;
+
     private String nodeDesc;
+
     private Long accountGroupId;
-    private List<Long> childrenId;
+
     private String tel;
+
     private Set<BusinessCategoryType> businessCategory;
+
     private String postalCode;
+
     private String postalAddress;
 
-    public Long getAccountGroupId() {
-        return accountGroupId;
+    private List<OTNodeDetailDto> children;
+
+    public OTNodeDetailDto() {
     }
 
-    public void setAccountGroupId(Long accountGroupId) {
-        this.accountGroupId = accountGroupId;
+    public Long getNodeId() {
+        return nodeId;
+    }
+
+    public void setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
     }
 
     public Long getOwnerId() {
@@ -51,12 +62,12 @@ public class OTNode implements Serializable {
         this.parentNodeId = parentNodeId;
     }
 
-    public Long getNodeId() {
-        return nodeId;
+    public String getName() {
+        return name;
     }
 
-    public void setNodeId(Long nodeId) {
-        this.nodeId = nodeId;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getNodeDesc() {
@@ -65,6 +76,14 @@ public class OTNode implements Serializable {
 
     public void setNodeDesc(String nodeDesc) {
         this.nodeDesc = nodeDesc;
+    }
+
+    public Long getAccountGroupId() {
+        return accountGroupId;
+    }
+
+    public void setAccountGroupId(Long accountGroupId) {
+        this.accountGroupId = accountGroupId;
     }
 
     public String getTel() {
@@ -99,19 +118,12 @@ public class OTNode implements Serializable {
         this.postalAddress = postalAddress;
     }
 
-    public String getName() {
-        return name;
+    public List<OTNodeDetailDto> getChildren() {
+        return children;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Long> getChildrenId() {
-        return childrenId;
-    }
-
-    public void setChildrenId(List<Long> childrenId) {
-        this.childrenId = childrenId;
+    public void setChildren(List<OTNodeDetailDto> children) {
+        this.children = children;
     }
 }
+
