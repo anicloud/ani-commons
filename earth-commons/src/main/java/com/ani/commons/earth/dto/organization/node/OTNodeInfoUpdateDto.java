@@ -16,6 +16,7 @@ public class OTNodeInfoUpdateDto extends AniDto implements Serializable {
 
     private static final long serialVersionUID = -463500843397755139L;
 
+    private Long groupId;
     private Long nodeId;
     private Long ownerId;
     private String name;
@@ -47,6 +48,10 @@ public class OTNodeInfoUpdateDto extends AniDto implements Serializable {
         this.postalCode = postalCode;
         this.postalAddress = postalAddress;
     }
+
+    public Long getGroupId() {return groupId;}
+
+    public void setGroupId(Long groupId) {this.groupId = groupId;}
 
     public OTNodeInfoUpdateDto(Long nodeId) {
         this.nodeId = nodeId;

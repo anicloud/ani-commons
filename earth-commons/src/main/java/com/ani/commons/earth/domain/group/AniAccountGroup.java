@@ -20,6 +20,7 @@ public class AniAccountGroup implements Serializable {
     private String description;
     private GroupType groupType;
     private Map<Long, Set<Long>> membersRolesId;
+    private Set<Long> groupRolesId;
     private Long groupId;
 
     public AniAccountGroup() {
@@ -72,6 +73,11 @@ public class AniAccountGroup implements Serializable {
     public void setGroupId(Long groupId) {
         this.groupId = groupId;
     }
+
+    public Set<Long> getGroupRolesId() {return groupRolesId;}
+
+    public void setGroupRolesId(Set<Long> groupRolesId) {this.groupRolesId = groupRolesId;}
+
 
     @Override
     public int hashCode() {
