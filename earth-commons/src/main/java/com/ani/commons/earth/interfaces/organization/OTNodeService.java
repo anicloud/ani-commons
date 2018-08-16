@@ -21,12 +21,12 @@ public interface OTNodeService {
 
     public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
-    public OTNode getNodeDetail(Long nodeId, Long opAccountId) throws AniRuleException;
+    public OTNode getNodeDetail(Long nodeId, Long opAccountId,Long orgAccountId) throws AniRuleException, AniAuthException;
 
-    public Set<Long> getDescendantNodes(Long nodeId, Long opAccountId) throws AniRuleException;
+    public Set<Long> getDescendantNodes(Long nodeId, Long opAccountId,Long orgAccountId) throws AniRuleException, AniAuthException;
 
-    public Set<OTNodeBasicDto> getNodeChildren(Long nodeId, Long opAccountId) throws AniAuthException, AniRuleException;
+    public Set<OTNodeBasicDto> getNodeChildren(Long nodeId, Long opAccountId,Long orgAccountId) throws AniAuthException, AniRuleException;
 
-    public OTNodeDetailDto getATreeByRootNodeId(Long nodeId, Long opAccountId) throws AniRuleException;
+    public OTNodeDetailDto getATreeByRootNodeId(Long nodeId, Long opAccountId) throws AniRuleException, AniAuthException;
 
 }
