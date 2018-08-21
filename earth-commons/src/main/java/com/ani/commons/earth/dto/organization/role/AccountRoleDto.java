@@ -17,7 +17,6 @@ public class AccountRoleDto extends AniDto {
     private Long roleId;
     @JsonSerialize(using= ToStringSerializer.class)
     private Long ownerId;
-
     private String name;
     private Set<PrivilegeType> privileges;
 

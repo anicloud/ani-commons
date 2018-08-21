@@ -23,7 +23,7 @@ public enum BusinessCategoryType {
         return id;
     }
     public static Set<BusinessCategoryType > getByTypes(int typesSum){
-        BusinessCategoryType[] types = BusinessCategoryType .values();
+        BusinessCategoryType[] types = BusinessCategoryType.values();
         Set<BusinessCategoryType > curTypes = null;
         for(
                 int oneTypeIdx = types.length - 1;

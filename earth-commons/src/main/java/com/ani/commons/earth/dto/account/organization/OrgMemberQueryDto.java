@@ -22,6 +22,14 @@ public class OrgMemberQueryDto extends AniDto {
         this.orgAccountId = orgAccountId;
     }
 
+    public OrgMemberQueryDto(Long accountId, Long nodeId) {
+        this.accountId = accountId;
+        this.nodeId = nodeId;
+    }
+
+    public OrgMemberQueryDto() {
+    }
+
     public Long getOrgAccountId() {
         return orgAccountId;
     }
@@ -44,13 +52,5 @@ public class OrgMemberQueryDto extends AniDto {
 
     public void setNodeId(Long nodeId) {
         this.nodeId = nodeId;
-    }
-
-    public OrgMemberQueryDto(Long accountId, Long nodeId) {
-        this.accountId = accountId;
-        this.nodeId = nodeId;
-    }
-
-    public OrgMemberQueryDto() {
     }
 }

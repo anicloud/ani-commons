@@ -10,6 +10,7 @@ import com.ani.commons.earth.dto.register.OrgAccountInsideRegisterDto;
 import com.ani.commons.earth.dto.verification.AccountPwdVerifyDto;
 import com.ani.commons.earth.dto.verification.AccountIdVerifyDto;
 import com.ani.commons.earth.dto.verification.AccountVerifyDto;
+import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniDataException;
 import com.ani.utils.exception.AniRuleException;
 
@@ -75,7 +76,7 @@ public interface AccountUserRegistryService {
 
     public void modifyPersonalProfile(AccountPersonalProfileDto personalProfileDto, boolean withPwd) throws AniRuleException, IOException;
 
-    public Long  modifyOrgProFile(Long opAccountId,AccountOrgProfileDto orgProfileDto) throws AniRuleException, AniDataException;
+    public Long  modifyOrgProFile(Long opAccountId,AccountOrgProfileDto orgProfileDto) throws AniRuleException, AniDataException, AniAuthException;
 
     public String bindEmailOrPhoneForEmployee(String sessionId,Long orgAccountId,AccountIdVerifyDto accountIdVerifyDto)throws AniRuleException;
 

@@ -8,6 +8,7 @@ import java.util.List;
  * Last Modified by xuben on 18-7-26.
  */
 public class OTNodeBasicDto implements Serializable {
+
     private static final long serialVersionUID = 5178457830140115174L;
 
     private Long parentNodeId;

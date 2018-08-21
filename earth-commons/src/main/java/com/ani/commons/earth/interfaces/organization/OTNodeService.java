@@ -2,6 +2,7 @@ package com.ani.commons.earth.interfaces.organization;
 
 import com.ani.commons.earth.domain.organization.node.OTNode;
 import com.ani.commons.earth.dto.organization.node.*;
+import com.ani.utils.core.data.type.PrivilegeType;
 import com.ani.utils.exception.AniAuthException;
 import com.ani.utils.exception.AniRuleException;
 
@@ -12,6 +13,8 @@ import java.util.Set;
  * Last Modified by xuben on 18-8-10.
  */
 public interface OTNodeService {
+
+    public void checkNodeOpPrivilege(Long opAccountId, Long nodeId, PrivilegeType privilegeType) throws AniRuleException, AniAuthException;
 
     public OTNodeBasicDto addNode(OTNodeInfoUpdateDto otNodeInfoUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 

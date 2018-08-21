@@ -19,46 +19,52 @@ public interface OrgMemberService {
 
     /**
      * <H2>Add employee info.</H2>
+     *
      * @param orgMemberInfoDto
      */
-    public void addOrgMember(Long opAccountId,OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException;
+    public void addOrgMember(Long opAccountId, OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException, AniAuthException;
 
     /**
      * <H2>Delete employee info by id.</H2>
+     *
      * @param memberQueryDto
      */
-    public void deleteOrgMemberById(Long opAccountId,OrgMemberQueryDto memberQueryDto);
+    public void deleteOrgMemberById(Long opAccountId, OrgMemberQueryDto memberQueryDto) throws AniRuleException, AniAuthException;
 
     /**
      * <H2>Update employee info.</H2>
+     *
      * @param
      * @param orgMemberInfoDto
      * @throws AniDataException
      */
-    public void updateOrgMemberInfo(Long opAccountId, OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException;
+    public void updateOrgMemberInfo(Long opAccountId, OrgMemberInfoDto orgMemberInfoDto) throws AniDataException, AniRuleException, AniAuthException;
 
     /**
      * <H2>Query employee info.</h2>
+     *
      * @param
      * @return OrgMember
      */
-    public OrgMember getOrgMemberById(Long opAccountId,OrgMemberQueryDto memberQueryDto) throws AniRuleException;
+    public OrgMember getOrgMemberById(Long opAccountId, OrgMemberQueryDto memberQueryDto) throws AniRuleException;
 
     /**
      * <H2>Query employee list.</H2>
+     *
      * @param nodeId,accountId
      * @return
      */
-    public List<OrgMemberBriefDto> getOrgMemberListByNodeId(Long opAccountId, Long nodeId) throws AniRuleException;
+    public List<OrgMemberBriefDto> getOrgMemberListByNodeId(Long opAccountId, Long orgAccountId, Long nodeId) throws AniRuleException;
 
     /**
      * <H2>Login state check.</H2>
+     *
      * @param sessionId
      * @param orgAccountVerifyDto
      * @return OrgAccountState
      * @throws AniAuthException
      * @throws AniRuleException
      */
-    public OrgAccountState loginByOrg(String sessionId, OrgAccountVerifyDto orgAccountVerifyDto) throws AniAuthException,AniRuleException;
+    public OrgAccountState loginByOrg(String sessionId, OrgAccountVerifyDto orgAccountVerifyDto) throws AniAuthException, AniRuleException;
 
 }
