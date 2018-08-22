@@ -35,5 +35,5 @@ public interface AccountUniAuthService {
 
     public void logout(String sessionId, String tgt);
 
-    public SessionAuthState changeAccount(String tgt,Long accountId);
+    public SessionAuthState changeAccount(String tgt,Long accountId) throws AniRuleException;
 }

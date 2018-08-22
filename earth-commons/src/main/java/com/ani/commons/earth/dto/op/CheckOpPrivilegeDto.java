@@ -10,16 +10,16 @@ public class CheckOpPrivilegeDto extends NodeOpDto{
 
     }
 
-    public CheckOpPrivilegeDto(Long opAccountId, Long privacyGroupId, Long nodeId, Long orgaccountOpDto) {
+    public CheckOpPrivilegeDto(Long opAccountId, Long privacyGroupId, Long nodeId, Long orgAccountOpDto) {
         super(opAccountId, privacyGroupId, nodeId);
-        this.orgAccountId = orgaccountOpDto;
+        this.orgAccountId = orgAccountOpDto;
     }
 
     public Long getOrgAccountId() {
         return orgAccountId;
     }
 
-    public void setOrgAccountId(Long orgaccountOpDto) {
-        this.orgAccountId = orgaccountOpDto;
+    public void setOrgAccountId(Long orgAccountOpDto) {
+        this.orgAccountId = orgAccountOpDto;
     }
 }

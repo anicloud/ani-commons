@@ -21,6 +21,7 @@ public class OrgMember implements Serializable {
     private Long employeeId;
     private Long nodeId;
     private Long accountId;
+    private Long orgAccountId;
     private String employeeEmail;
     private boolean hasPwd;
     private Integer employeeCount;
@@ -39,10 +40,11 @@ public class OrgMember implements Serializable {
     public OrgMember() {
     }
 
-    public OrgMember(Long employeeId, Long nodeId, Long accountId, String employeeEmail, boolean hasPwd, Integer employeeCount, String name, String employeeStrId, String personalEmail, String mobile, String tel, String birthday, Sex sex, Map<String, String> customFieldsValue, DataState state, Timestamp entryTime, Timestamp resignTime) {
+    public OrgMember(Long employeeId, Long nodeId, Long accountId, Long orgAccountId, String employeeEmail, boolean hasPwd, Integer employeeCount, String name, String employeeStrId, String personalEmail, String mobile, String tel, String birthday, Sex sex, Map<String, String> customFieldsValue, DataState state, Timestamp entryTime, Timestamp resignTime) {
         this.employeeId = employeeId;
         this.nodeId = nodeId;
         this.accountId = accountId;
+        this.orgAccountId = orgAccountId;
         this.employeeEmail = employeeEmail;
         this.hasPwd = hasPwd;
         this.employeeCount = employeeCount;
@@ -57,6 +59,14 @@ public class OrgMember implements Serializable {
         this.state = state;
         this.entryTime = entryTime;
         this.resignTime = resignTime;
+    }
+
+    public Long getOrgAccountId() {
+        return orgAccountId;
+    }
+
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
     }
 
     public Long getEmployeeId() {
