@@ -1,6 +1,5 @@
 package com.ani.commons.earth.dto.group;
 
-import com.ani.commons.earth.dto.op.GroupOpDto;
 import com.ani.utils.dto.AniRequiredField;
 
 import java.util.Set;
@@ -8,7 +7,7 @@ import java.util.Set;
 /**
  * Created by zhanglina on 18-7-26.
  */
-public class GroupMemberOpDto extends GroupOpDto{
+public class GroupMemberOpDto extends GroupAdminOpDto {
 
     private static final long serialVersionUID = -2279589906861710169L;
     @AniRequiredField
@@ -19,15 +18,15 @@ public class GroupMemberOpDto extends GroupOpDto{
     public GroupMemberOpDto() {
     }
 
-    public GroupMemberOpDto(Long opAccountId, Long privacyGroupId, Long memberAccountId, Set<Long> roleId) {
-        super(opAccountId, privacyGroupId);
+    public GroupMemberOpDto(Long opAccountId, Long privilegeGroupId, Long targetGroupId, Long memberAccountId) {
+        super(opAccountId, privilegeGroupId, targetGroupId);
         this.memberAccountId = memberAccountId;
-        this.roleId = roleId;
     }
 
-    public GroupMemberOpDto(Long opAccountId, Long privacyGroupId, Long memberAccountId) {
-        super(opAccountId, privacyGroupId);
+    public GroupMemberOpDto(Long opAccountId, Long privilegeGroupId, Long targetGroupId, Long memberAccountId, Set<Long> roleId) {
+        super(opAccountId, privilegeGroupId, targetGroupId);
         this.memberAccountId = memberAccountId;
+        this.roleId = roleId;
     }
 
     public static long getSerialVersionUID() {

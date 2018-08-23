@@ -1,27 +1,28 @@
 package com.ani.commons.earth.dto.op;
 
+import com.ani.utils.core.data.type.PrivilegeType;
 import com.ani.utils.dto.AniRequiredField;
 
 /**
- * Created by changhan on 18-8-19.
+ * Created by changhan on 18-8-22.
  */
-public class GroupOpDto extends OpDto {
+public abstract class GroupOpDto extends OpDto {
 
-    private Long privacyGroupId;
+    private Long privilegeGroupId;
 
     public GroupOpDto() {
     }
 
-    public GroupOpDto(Long opAccountId, Long privacyGroupId) {
+    public GroupOpDto(Long opAccountId, Long privilegeGroupId) {
         super(opAccountId);
-        this.privacyGroupId = privacyGroupId;
+        this.privilegeGroupId = privilegeGroupId;
     }
 
-    public Long getPrivacyGroupId() {
-        return privacyGroupId;
+    public Long getPrivilegeGroupId() {
+        return privilegeGroupId;
     }
 
-    public void setPrivacyGroupId(Long privacyGroupId) {
-        this.privacyGroupId = privacyGroupId;
+    public void setPrivilegeGroupId(Long groupId) {
+        this.privilegeGroupId = groupId;
     }
 }

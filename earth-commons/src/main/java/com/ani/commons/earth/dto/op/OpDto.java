@@ -25,4 +25,5 @@ public abstract class OpDto extends AniDto {
     public void setOpAccountId(Long opAccountId) {
         this.opAccountId = opAccountId;
     }
+
 }

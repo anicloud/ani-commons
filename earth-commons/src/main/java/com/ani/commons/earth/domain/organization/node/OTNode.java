@@ -15,9 +15,8 @@ public class OTNode implements Serializable {
 
     private static final long serialVersionUID = 5520644352781449962L;
 
-    private Long ownerId;
+    private Long orgAccountId;
     private Long parentNodeId;
-    private Long nodeId;
     private String name;
     private String nodeDesc;
     private Long accountGroupId;
@@ -35,12 +34,12 @@ public class OTNode implements Serializable {
         this.accountGroupId = accountGroupId;
     }
 
-    public Long getOwnerId() {
-        return ownerId;
+    public Long getOrgAccountId() {
+        return orgAccountId;
     }
 
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public void setOrgAccountId(Long orgAccountId) {
+        this.orgAccountId = orgAccountId;
     }
 
     public Long getParentNodeId() {
@@ -49,14 +48,6 @@ public class OTNode implements Serializable {
 
     public void setParentNodeId(Long parentNodeId) {
         this.parentNodeId = parentNodeId;
-    }
-
-    public Long getNodeId() {
-        return nodeId;
-    }
-
-    public void setNodeId(Long nodeId) {
-        this.nodeId = nodeId;
     }
 
     public String getNodeDesc() {

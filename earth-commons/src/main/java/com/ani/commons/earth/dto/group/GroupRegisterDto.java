@@ -1,7 +1,5 @@
 package com.ani.commons.earth.dto.group;
 
-import com.ani.commons.earth.dto.op.GroupOpDto;
-import com.ani.commons.earth.dto.op.OpDto;
 import com.ani.commons.earth.enumeration.GroupType;
 import com.ani.utils.dto.AniRequiredField;
 import com.ani.utils.exception.AniRuleException;
@@ -9,7 +7,7 @@ import com.ani.utils.exception.AniRuleException;
 /**
  * Created by changhan on 18-8-20.
  */
-public class GroupRegisterDto extends GroupOpDto {
+public class GroupRegisterDto extends GroupAdminOpDto {
 
     private String description;
 
@@ -40,8 +38,8 @@ public class GroupRegisterDto extends GroupOpDto {
     public GroupRegisterDto() {
     }
 
-    public GroupRegisterDto(Long opAccountId, Long privacyGroupId, String description, String name, GroupType groupType, Long ownerAccountId) {
-        super(opAccountId, privacyGroupId);
+    public GroupRegisterDto(Long opAccountId, Long privilegeGroupId, Long targetGroupId, String description, String name, GroupType groupType, Long ownerAccountId) {
+        super(opAccountId, privilegeGroupId, targetGroupId);
         this.description = description;
         this.name = name;
         this.groupType = groupType;
@@ -50,7 +48,7 @@ public class GroupRegisterDto extends GroupOpDto {
 
     @Override
     public void checkFields() throws AniRuleException {
-        if(this.getPrivacyGroupId() == null && this.ownerAccountId == null) {
+        if(this.getPrivilegeGroupId() == null && this.ownerAccountId == null) {
             throw new AniRuleException("ONE_OF_OWNER_AND_PRIVACY_GROUP_MUST_BE_PROVIDED");
         }
         super.checkFields();

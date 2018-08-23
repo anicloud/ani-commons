@@ -1,31 +1,35 @@
 package com.ani.commons.earth.dto.group;
 
-import com.ani.commons.earth.domain.account.organization.OrgAccountRole;
 import com.ani.commons.earth.dto.role.RoleInfoDto;
 import com.ani.utils.dto.AniDto;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by zhanglina on 18-7-26.
  */
 public class GroupMemberInfoDto extends AniDto {
     private static final long serialVersionUID = -4889324214752309538L;
-    @JsonSerialize(using= ToStringSerializer.class)
+
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long accountId;
+
+    private Long groupId;
+
     private String name;
+
     private List<RoleInfoDto> roles;
 
     public GroupMemberInfoDto() {
     }
 
-
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    public GroupMemberInfoDto(Long accountId, Long groupId, String name, List<RoleInfoDto> roles) {
+        this.accountId = accountId;
+        this.groupId = groupId;
+        this.name = name;
+        this.roles = roles;
     }
 
     public Long getAccountId() {
@@ -36,18 +40,20 @@ public class GroupMemberInfoDto extends AniDto {
         this.accountId = accountId;
     }
 
+    public Long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public GroupMemberInfoDto(Long accountId, String name, List<RoleInfoDto> roles) {
-        this.accountId = accountId;
-        this.name = name;
-        this.roles = roles;
     }
 
     public List<RoleInfoDto> getRoles() {

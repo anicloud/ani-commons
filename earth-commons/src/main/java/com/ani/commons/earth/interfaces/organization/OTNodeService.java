@@ -14,8 +14,6 @@ import java.util.Set;
  */
 public interface OTNodeService {
 
-    public void checkNodeOpPrivilege(Long opAccountId, Long nodeId, PrivilegeType privilegeType) throws AniRuleException, AniAuthException;
-
     public OTNodeBasicDto addNode(OTNodeInfoUpdateDto otNodeInfoUpdateDto, Long opAccountId) throws AniAuthException, AniRuleException;
 
     public void removeNode(Long nodeId, Long parentNodeId, Long opAccountId) throws AniAuthException, AniRuleException;
