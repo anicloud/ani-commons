@@ -1,26 +1,24 @@
 package com.ani.commons.earth.dto.organization.node;
 
-import java.io.Serializable;
+import com.ani.utils.dto.AniRequiredField;
 
 /**
  * Created by zhanglina on 18-5-2.
  * Last Modified by xuben on 18-7-31.
  */
-public class OTNodeUpdateTopologyDto implements Serializable {
+public class OTNodeUpdateTopologyDto extends OTNodeAdminOpDto {
+
     private static final long serialVersionUID = -8038150633677883643L;
 
-    private Long nodeId;
-
-    private Long currentParentNodeId;
-
+    @AniRequiredField
     private Long targetParentNodeId;
 
-    public OTNodeUpdateTopologyDto(Long nodeId, Long targetParentNodeId) {
-        this.nodeId = nodeId;
-        this.targetParentNodeId = targetParentNodeId;
+    public OTNodeUpdateTopologyDto() {
     }
 
-    public OTNodeUpdateTopologyDto() {
+    public OTNodeUpdateTopologyDto(Long opAccountId, Long targetNodeGroupId, Long targetParentNodeId) {
+        super(opAccountId, targetNodeGroupId);
+        this.targetParentNodeId = targetParentNodeId;
     }
 
     public Long getTargetParentNodeId() {
@@ -31,19 +29,4 @@ public class OTNodeUpdateTopologyDto implements Serializable {
         this.targetParentNodeId = targetParentNodeId;
     }
 
-    public Long getNodeId() {
-        return nodeId;
-    }
-
-    public void setNodeId(Long nodeId) {
-        this.nodeId = nodeId;
-    }
-
-    public Long getCurrentParentNodeId() {
-        return currentParentNodeId;
-    }
-
-    public void setCurrentParentNodeId(Long currentParentNodeId) {
-        this.currentParentNodeId = currentParentNodeId;
-    }
 }

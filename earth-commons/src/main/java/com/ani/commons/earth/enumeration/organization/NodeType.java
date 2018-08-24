@@ -5,6 +5,7 @@ package com.ani.commons.earth.enumeration.organization;
  * Last Modified by xuben on 18-7-26.
  */
 public enum NodeType {
+    ORG,
     GROUP,
     BUSINESS,
     TEAM

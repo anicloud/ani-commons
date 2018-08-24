@@ -2,6 +2,7 @@ package com.ani.commons.earth.dto.organization.node;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by zhanglina on 18-5-8.
@@ -49,6 +50,16 @@ public class OTNodeBasicDto implements Serializable {
 
     public void setChildren(List<Long> children) {
         this.children = children;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nodeId);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.hashCode() == obj.hashCode();
     }
 }
 

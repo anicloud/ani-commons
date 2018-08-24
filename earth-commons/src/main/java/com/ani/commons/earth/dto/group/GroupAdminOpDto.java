@@ -17,7 +17,10 @@ public abstract class GroupAdminOpDto extends GroupOpByPrivilegeDto {
         super.setPrivilege(PrivilegeType.ADMIN);
     }
 
-    public GroupAdminOpDto(Long opAccountId, Long privilegeGroupId, Long targetGroupId) {
+    public GroupAdminOpDto(
+            Long opAccountId,
+            Long privilegeGroupId,
+            Long targetGroupId) {
         super(opAccountId, privilegeGroupId, PrivilegeType.ADMIN);
         this.targetGroupId = targetGroupId;
     }

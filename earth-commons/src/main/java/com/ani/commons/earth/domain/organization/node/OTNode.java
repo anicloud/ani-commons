@@ -1,9 +1,9 @@
 package com.ani.commons.earth.domain.organization.node;
 
 import com.ani.commons.earth.enumeration.BusinessCategoryType;
+import com.ani.commons.earth.enumeration.organization.NodeType;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.List;
 import java.util.Set;
 
@@ -15,16 +15,32 @@ public class OTNode implements Serializable {
 
     private static final long serialVersionUID = 5520644352781449962L;
 
-    private Long orgAccountId;
+
+    private Long orgAccountGroupId;
     private Long parentNodeId;
+    private NodeType nodeType;
     private String name;
     private String nodeDesc;
     private Long accountGroupId;
-    private List<Long> childrenId;
+    private Long childrenId;
     private String tel;
     private Set<BusinessCategoryType> businessCategory;
     private String postalCode;
     private String postalAddress;
+
+    public OTNode(Long orgAccountId, Long parentNodeId, NodeType nodeType, String name, String nodeDesc, Long accountGroupId, Long childrenId, String tel, Set<BusinessCategoryType> businessCategory, String postalCode, String postalAddress) {
+        this.orgAccountGroupId = orgAccountId;
+        this.parentNodeId = parentNodeId;
+        this.nodeType = nodeType;
+        this.name = name;
+        this.nodeDesc = nodeDesc;
+        this.accountGroupId = accountGroupId;
+        this.childrenId = childrenId;
+        this.tel = tel;
+        this.businessCategory = businessCategory;
+        this.postalCode = postalCode;
+        this.postalAddress = postalAddress;
+    }
 
     public Long getAccountGroupId() {
         return accountGroupId;
@@ -35,11 +51,11 @@ public class OTNode implements Serializable {
     }
 
     public Long getOrgAccountId() {
-        return orgAccountId;
+        return orgAccountGroupId;
     }
 
     public void setOrgAccountId(Long orgAccountId) {
-        this.orgAccountId = orgAccountId;
+        this.orgAccountGroupId = orgAccountId;
     }
 
     public Long getParentNodeId() {
@@ -48,6 +64,14 @@ public class OTNode implements Serializable {
 
     public void setParentNodeId(Long parentNodeId) {
         this.parentNodeId = parentNodeId;
+    }
+
+    public NodeType getNodeType() {
+        return nodeType;
+    }
+
+    public void setNodeType(NodeType nodeType) {
+        this.nodeType = nodeType;
     }
 
     public String getNodeDesc() {
@@ -98,11 +122,11 @@ public class OTNode implements Serializable {
         this.name = name;
     }
 
-    public List<Long> getChildrenId() {
+    public Long getChildrenId() {
         return childrenId;
     }
 
-    public void setChildrenId(List<Long> childrenId) {
+    public void setChildrenId(Long childrenId) {
         this.childrenId = childrenId;
     }
 }
