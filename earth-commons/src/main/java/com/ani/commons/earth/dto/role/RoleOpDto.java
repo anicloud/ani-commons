@@ -6,8 +6,11 @@ import java.io.Serializable;
  * Created by changhan on 18-8-9.
  */
 public class RoleOpDto implements Serializable {
+
     private static final long serialVersionUID = -6451233297556820075L;
+
     private Long roleId;
+
     private String name;
 
     public RoleOpDto(Long roleId, String name) {

@@ -1,6 +1,7 @@
 package com.ani.commons.earth.domain.group;
 
 import com.ani.commons.earth.enumeration.GroupType;
+import com.ani.utils.exception.AniRuleException;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -60,6 +61,14 @@ public class AniAccountGroup implements Serializable {
 
     public Map<Long, Set<Long>> getMembersRolesId() {
         return membersRolesId;
+    }
+
+    public Set<Long> getMemberRolesId(Long accountId) throws AniRuleException {
+        Set<Long> accountRoles = null;
+        if(accountId == null || !membersRolesId.containsKey(accountId)) {
+            throw new AniRuleException("ACCOUNT_ID_NOT_EXIST");
+        }
+        return this.membersRolesId.get(accountId);
     }
 
     public void setMembersRolesId(Map<Long, Set<Long>> membersRolesId) {
