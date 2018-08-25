@@ -12,7 +12,6 @@ import java.util.Set;
  * Last Modified by xuben on 18-8-10.
  */
 public interface OTNodeService {
-    public void checkPrivilegeOnNode(OTNodeAdminOpDto otNodeAdminOpDto) throws AniRuleException;
 
     public OTNodeBasicDto addNode(OTNodeInfoDto otNodeInfoDto) throws AniAuthException, AniRuleException;
 
@@ -20,7 +19,7 @@ public interface OTNodeService {
 
     public void updateNodeInfo(OTNodeInfoDto otNodeInfoDto) throws AniAuthException, AniRuleException;
 
-    public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto) throws AniAuthException, AniRuleException;
+    // public void updateNodeTopology(OTNodeUpdateTopologyDto otNodeUpdateDto) throws AniAuthException, AniRuleException;
 
     public OTNode getNodeDetail(OTNodeAdminOpDto otNodeAdminOpDto) throws AniRuleException, AniAuthException;
 

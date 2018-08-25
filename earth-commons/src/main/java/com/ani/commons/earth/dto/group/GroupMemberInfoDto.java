@@ -1,6 +1,6 @@
 package com.ani.commons.earth.dto.group;
 
-import com.ani.commons.earth.dto.role.RoleInfoDto;
+import com.ani.commons.earth.dto.role.RoleOpDto;
 import com.ani.utils.dto.AniDto;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
@@ -20,12 +20,12 @@ public class GroupMemberInfoDto extends AniDto {
 
     private String name;
 
-    private List<RoleInfoDto> roles;
+    private List<RoleOpDto> roles;
 
     public GroupMemberInfoDto() {
     }
 
-    public GroupMemberInfoDto(Long accountId, Long groupId, String name, List<RoleInfoDto> roles) {
+    public GroupMemberInfoDto(Long accountId, Long groupId, String name, List<RoleOpDto> roles) {
         this.accountId = accountId;
         this.groupId = groupId;
         this.name = name;
@@ -56,11 +56,11 @@ public class GroupMemberInfoDto extends AniDto {
         this.name = name;
     }
 
-    public List<RoleInfoDto> getRoles() {
+    public List<RoleOpDto> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<RoleInfoDto> roles) {
+    public void setRoles(List<RoleOpDto> roles) {
         this.roles = roles;
     }
 }

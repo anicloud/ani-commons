@@ -33,7 +33,7 @@ public class OTNodeDetailDto implements Serializable {
 
     private String postalAddress;
 
-    private List<OTNodeDetailDto> children;
+    private OTNodeDetailDto children;
 
     public OTNodeDetailDto() {
     }
@@ -118,11 +118,11 @@ public class OTNodeDetailDto implements Serializable {
         this.postalAddress = postalAddress;
     }
 
-    public List<OTNodeDetailDto> getChildren() {
+    public OTNodeDetailDto getChildren() {
         return children;
     }
 
-    public void setChildren(List<OTNodeDetailDto> children) {
+    public void setChildren(OTNodeDetailDto children) {
         this.children = children;
     }
 }

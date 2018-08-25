@@ -26,8 +26,8 @@ public class OrgMemberInfoDto extends AniDto {
     @AniRequiredField
     private String name;
     private String personalEmail;
-    private Integer employeeCount;
     private Phone mobile;
+    private Integer employeeCount;
     private String others;
     @AniRequiredField
     private String employeeStrId;

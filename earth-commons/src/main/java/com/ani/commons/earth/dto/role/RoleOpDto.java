@@ -5,17 +5,17 @@ import java.io.Serializable;
 /**
  * Created by changhan on 18-8-9.
  */
-public class RoleInfoDto implements Serializable {
+public class RoleOpDto implements Serializable {
     private static final long serialVersionUID = -6451233297556820075L;
     private Long roleId;
     private String name;
 
-    public RoleInfoDto(Long roleId, String name) {
+    public RoleOpDto(Long roleId, String name) {
         this.roleId = roleId;
         this.name = name;
     }
 
-    public RoleInfoDto() {
+    public RoleOpDto() {
     }
 
     public static long getSerialVersionUID() {

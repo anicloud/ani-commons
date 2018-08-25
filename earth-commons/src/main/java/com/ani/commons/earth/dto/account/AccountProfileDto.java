@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serializable;
 
-public abstract class AccountProfileDto extends AniDto implements Serializable {
+public abstract class AccountProfileDto extends AniDto {
 
     private static final long serialVersionUID = 2503867662892117241L;
     @AniRequiredField

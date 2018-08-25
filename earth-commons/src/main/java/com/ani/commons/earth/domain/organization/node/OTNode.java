@@ -28,8 +28,11 @@ public class OTNode implements Serializable {
     private String postalCode;
     private String postalAddress;
 
-    public OTNode(Long orgAccountId, Long parentNodeId, NodeType nodeType, String name, String nodeDesc, Long accountGroupId, Long childrenId, String tel, Set<BusinessCategoryType> businessCategory, String postalCode, String postalAddress) {
-        this.orgAccountGroupId = orgAccountId;
+    public OTNode() {
+    }
+
+    public OTNode(Long orgAccountGroupId, Long parentNodeId, NodeType nodeType, String name, String nodeDesc, Long accountGroupId, Long childrenId, String tel, Set<BusinessCategoryType> businessCategory, String postalCode, String postalAddress) {
+        this.orgAccountGroupId = orgAccountGroupId;
         this.parentNodeId = parentNodeId;
         this.nodeType = nodeType;
         this.name = name;
@@ -50,11 +53,11 @@ public class OTNode implements Serializable {
         this.accountGroupId = accountGroupId;
     }
 
-    public Long getOrgAccountId() {
+    public Long getOrgAccountGroupId() {
         return orgAccountGroupId;
     }
 
-    public void setOrgAccountId(Long orgAccountId) {
+    public void setOrgAccountGroupId(Long orgAccountId) {
         this.orgAccountGroupId = orgAccountId;
     }
 
